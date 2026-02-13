@@ -1,30 +1,22 @@
-# XXX Ontology
+# Ontología de Infraestructura Pública
 
-The XXX ontology describes the domain of XXX
+La ontología de Infraestructura Pública representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de bicicletas compartidas.
 
 
-# Purpose and scope of the vocabulary
+# Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-The purpose of the XXX ontology is to YYYY. 
-The scope of the XXX ontology is limited to ZZZ.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura pública de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamoientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
 
-# Ontology prefix and namespace
+# Prefijo y espacio de nombres (Prefix and namespace)
+El prefijo de la ontología de Infraestructura Pública es: edintinfp y es publicada en el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#) 
 
-The XXX ontology prefix is: XXX and it is published under the namespace: https://webdomain.ext/def/domain/subdomain# 
+# Modelo conceptual (Ontology conceptualization)
+![Modelo conceptual general](diagrams/diagramGeneral.png)
+![Modelo conceptual de aparcamiento](diagrams/diagramAparcamiento.png)
 
-# Ontology Conceptualization Image
+# Estructura del repositorio (Repository structure)
 
-Every ontology development repository should include, in this root README, a visual representation of the ontology conceptualization.
-This image helps users and contributors quickly understand the ontology’s structure, key concepts, and relationships.
-- The image should be located in the conceptualization folder.
-- Accepted formats: .svg, .png, or .drawio.
-- It should be referenced in this README using Markdown syntax, for example:
-
-![Ontology Conceptualization Diagram](diagrams/diagram.png)
-
-# Reposity structure
-
-The repository should contain (at least) the following folders:
+El repositorio contiene los siguientes directorios:
 
 | Folder | Description |
 |--------|--------------|
@@ -44,4 +36,4 @@ generate an issue (work in progress)
 
 # Funding
 
-Add here project funding and needed images.
+Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT).
