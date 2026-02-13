@@ -1,0 +1,21 @@
+Identifier,Responsible partner,"Version (optional)
+","Competency Question /
+ Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority 
+(High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
+INF1,UPM,v0.1.0,"¿Qué equipamientos municipales se encuentran dentro de un determinado Municipio, Distrito o Barrio?",,Proposed,,,,,,
+INF2,UPM,v0.1.0,"¿Cuál es la dirección postal exacta (calle, portal) de un equipamiento específico?",,Proposed,,,,,,
+INF3,UPM,v0.1.0,"¿Qué tipo de equipamiento es una instalación concreta (ej. Biblioteca, Centro de Salud)?",,Proposed,,,,,,
+INF4,UPM,v0.1.0,¿Qué servicios públicos específicos se prestan en este equipamiento concreto?,,Proposed,,,,,,
+INF5,UPM,v0.1.0,¿Qué organización es responsable de la gestión de un equipamiento específico?,,Proposed,,,,,,
+INF6,UPM,v0.1.0,"¿Qué rol específico (ej. titularidad, mantenimiento, explotación) ejerce una organización sobre un equipamiento?",,Proposed,,,,,,
+INF7,UPM,v0.1.0,¿Qué organizaciones externas gestionan infraestructuras públicas?,,Proposed,,,,,,
+INF8,UPM,v0.1.0,¿Qué sensores de acceso están instalados en un equipamiento concreto?,,Proposed,,,,,,
+INF9,UPM,v0.1.0, ¿Qué observaciones de acceso de vehículos se han registrado en un intervalo de tiempo determinado?,,Proposed,,,,,,
+INF10,UPM,v0.1.0,¿Por qué acceso específico entró o salió un vehículo detectado por un sensor?,,Proposed,,,,,,
+INF11,UPM,v0.1.0,¿Qué zonas del municipio están clasificadas como Zonas de Bajas Emisiones (ZBE)?,,Proposed,,,,,,ontoZonas
+INF12,UPM,v0.1.0, ¿Cuáles son los estacionamientos disponibles y son en la vía pública o fuera de ella (parkings subterráneos/edificios)?,,Proposed,,,,,,
+INF13,UPM,v0.1.0,¿Qué tarifas se aplican a un estacionamiento determinado?,,Proposed,,,,,,
+INF14,UPM,v0.1.0,"Para un aparcamiento, ¿qué grupos de plazas existen y para qué tipo de vehículo están reservadas (ej. eléctricos, motos, PMR)?",,Proposed,,,,,,
+INF15,UPM,v0.1.0,"¿Qué tipo de permiso se requiere para aparcar en un grupo de plazas (ej. residentes, carga y descarga)?",,Proposed,,,,,,
+INF16,UPM,v0.1.0, ¿Cuáles son los estacionamientos disponibles en una zona administrativa concreta?,,Proposed,,,,,,
+INF17,UPM,v0.1.0,¿Qué sensores de acceso están instalados en un estacionamiento concreto?,,Proposed,,,,,,

@@ -1,0 +1,741 @@
+@prefix : <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> rdf:type owl:Ontology ;
+                                                                                                  owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica/0.1.0> ;
+                                                                                                  <http://purl.org/dc/terms/created> "2026-01-30" ;
+                                                                                                  <http://purl.org/dc/terms/creator> "Daniel Doña" ,
+                                                                                                                                     "Edna Ruckhaus" ,
+                                                                                                                                     "Lucía Sánchez" ,
+                                                                                                                                     "Oscar Corcho" ,
+                                                                                                                                     "Socorro Bernardos" ;
+                                                                                                  <http://purl.org/dc/terms/description> "La ontología de infraestructura pública describe todos los conceptos relacionados con las instalaciones públicas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, entre otros."@es ,
+                                                                                                                                         "The public infrastructure ontology describes all concepts related to a municipality's public facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, among others."@en ;
+                                                                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                                                  <http://purl.org/dc/terms/title> "Ontología de Infraestructura Pública"@es ,
+                                                                                                                                   "The Public Infrastructure Ontology"@en ;
+                                                                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "esintinfp" ;
+                                                                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                                                                                  owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:ObjectProperty ;
+                            rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                            rdfs:comment "Dirección física de la entidad,"@es ;
+                            rdfs:isDefinedBy <http://schema.org> ;
+                            rdfs:label "address"@en ,
+                                       "dirección"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> ;
+                                                                                                   rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                                                                                                   rdfs:comment "Portal que un fenómeno geográfico contiene (por ejemplo, una vía o un tramo de vía, aunque también puede ser un barrio, distrito, ciudad, etc.)"@es ;
+                                                                                                   rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> ;
+                                                                                                   rdfs:label "contiene portal"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> ;
+                                                                                        rdfs:comment "Vía a la que pertenece un fenómeno (por ejemplo, una dirección, un tramo de vía, un portal, etc.)"@es ;
+                                                                                        rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> ;
+                                                                                        rdfs:label "pertenece a la vía"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> rdf:type owl:ObjectProperty ;
+                                                                                                                  rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                                                      owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento>
+                                                                                                                                                    ]
+                                                                                                                                                  ) ;
+                                                                                                                               rdf:type owl:Class
+                                                                                                                             ] ;
+                                                                                                                  rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal> ;
+                                                                                                                  rdfs:label "tipo de equipamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> rdf:type owl:ObjectProperty ;
+                                                                                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                                             rdfs:domain :AparcamientoEnViaPublica ;
+                                                                                                             rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> ;
+                                                                                                             rdfs:comment "Relación entre un grupo de plazas de aparcamiento en la vía pública y la zona de estacionamiento regulado a la cual pertenecen."@es ,
+                                                                                                                          "Relationship between a group of parking spaces on a street and the regulated parking zone to which they belong."@en ;
+                                                                                                             rdfs:label "part of zone"@en ,
+                                                                                                                        "parte de zona"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> rdf:type owl:ObjectProperty ;
+                                                                                                                                rdfs:domain :Aparcamiento ;
+                                                                                                                                rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> ;
+                                                                                                                                rdfs:comment "Relación entre el Aparcamiento y su Grupo de plazas por tipo de permiso, por ejemplo Residentes."@es ,
+                                                                                                                                             "Relationship between the Parking and its Group of spaces by type of permit, for example Residents."@en ;
+                                                                                                                                rdfs:label "has a group of spaces per type of permit"@en ,
+                                                                                                                                           "tiene grupo de plazas por tipo de permiso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento
+:contieneEquipamiento rdf:type owl:ObjectProperty ;
+                      rdfs:domain :EquipamientoMunicipal ;
+                      rdfs:range :EquipamientoMunicipal ;
+                      rdfs:comment "A municipal facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."@en ,
+                                   "Un equipamiento municipal puede contener otros equipamientos. Por ejemplo,m un centro cultural puede contener salas de exposiciòn, auditorios, etc."@es ;
+                      rdfs:label "contains facility"@es ,
+                                 "contiene equipamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza
+:contienePlaza rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso>
+                                           :GrupoPlazasPorTipoVehiculo
+                                         )
+                           ] ;
+               rdfs:range :Plaza ;
+               rdfs:comment "Relación entre el grupo de plazas d eun aparcamiento y la plaza específica que contiene."@es ,
+                            "Relationship between the group of parking spaces and the specific space it contains."@en ;
+               rdfs:label "contains space"@es ,
+                          "contiene plaza"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio
+:municipio rdf:type owl:ObjectProperty ;
+           rdfs:comment "Municipio al que pertenece un fenómeno geográfico o una entidad administrativa"@es ;
+           rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+           rdfs:label "pertenece a municipio"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular
+:ofreceActividadRegular rdf:type owl:ObjectProperty ;
+                        rdfs:domain :EquipamientoMunicipal ;
+                        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                            owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular>
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                        rdfs:comment "Actividad que se lleva a cabo regularmente en el equipamiento municipal."@es ,
+                                     "Activity that is carried out regularly in a municipal facility."@en ;
+                        rdfs:label "offers regular activity"@en ,
+                                   "ofrece actividad regular"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA
+:perteneceA rdf:type owl:ObjectProperty ;
+            rdfs:domain :EquipamientoMunicipal ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia>
+                                       <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio>
+                                       <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad>
+                                       <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito>
+                                       <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio>
+                                       <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia>
+                                     )
+                       ] ;
+            rdfs:comment "Relación entre un equipamiento municipal y la división administrativa a la cual pertenece la cual puede incluir un Barrio."@es ,
+                         "Relationship between a municipal facility and the administrative division to which it belongs, which may include a neighborhood."@en ;
+            rdfs:label "belongs to"@en ,
+                       "pertenece a"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico
+:prestaServicioPublico rdf:type owl:ObjectProperty ;
+                       rdfs:domain :EquipamientoMunicipal ;
+                       rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico>
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+                       rdfs:comment "Public service provided by a municipal facility, for example internet via wifi."@en ,
+                                    "Servicio público prestado por un equipamiento municipal, por ejemplo internet a través de una wifi."@es ;
+                       rdfs:label "presta servicio público"@es ,
+                                  "provides public service"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor
+:rolEjercidoPor rdf:type owl:ObjectProperty ;
+                rdfs:domain :RolDeGestion ;
+                rdfs:range :Organizacion ;
+                rdfs:comment "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."@es ,
+                             "Relationship between the management role over a municipal facility and the organization that exercises it."@en ;
+                rdfs:label "rol ejercido por"@es ,
+                           "role played by"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento
+:sobreEquipamiento rdf:type owl:ObjectProperty ;
+                   rdfs:domain :RolDeGestion ;
+                   rdfs:range :EquipamientoMunicipal ;
+                   rdfs:comment "Relación entre el rol de gestion que ejerce una organización  y el equipamiento municipal sobre el cual se realiza la gestión."@es ,
+                                "Relationship between the management role exercised by an organization and the municipal facility on which the management is carried out."@en ;
+                   rdfs:label "on facility"@en ,
+                              "sobre equipamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso
+:tieneAcceso rdf:type owl:ObjectProperty ;
+             rdfs:domain :AparcamientoFueraViaPublica ;
+             rdfs:range :AccesoAparcamiento ;
+             rdfs:comment "Relación entre un aparcamiento fuera d ela vía pública y el acceso de entrada o salida."@es ,
+                          "Relationship between an off-street parking lot and the entrance or exit access."@en ;
+             rdfs:label "has access"@en ,
+                        "tiene acceso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo
+:tieneGrupoPlazaPorTipoVehiculo rdf:type owl:ObjectProperty ;
+                                rdfs:domain :Aparcamiento ;
+                                rdfs:range :GrupoPlazasPorTipoVehiculo ;
+                                rdfs:comment "Relación entre el Aparcamiento y  su Grupo de plazas por tipo de vehículo."@es ,
+                                             "Relationship between the Parking and its Group of spaces by vehicle type."@en ;
+                                rdfs:label "has a group of spaces per type of vehicle"@en ,
+                                           "tiene grupo de plazas por tipo de vehiculo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento
+:tieneTarifaAparcamiento rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Aparcamiento ;
+                         rdfs:range :Tarifa ;
+                         rdfs:comment "Relación entre un aparcamiento y su tarifa."@es ,
+                                      "Relationship between a parking and its fee."@en ;
+                         rdfs:label "has parking fee"@en ,
+                                    "tiene tarifa de aparcamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo
+:tipoPermisoGrupo rdf:type owl:ObjectProperty ;
+                  rdfs:domain :GrupoPlazasPorTipoVehiculo ;
+                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso>
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+                  rdfs:comment "Relación entre el Grupo de plazas por tipo de permiso y la taxonomía de tipos de permiso"@es ,
+                               "Relationship between the group of places by type of permit and the taxonomy of types of permit."@en ;
+                  rdfs:label "tipo de permiso para plaza"@es ,
+                             "type of permit for parking space"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion
+:tipoRolGestion rdf:type owl:ObjectProperty ;
+                rdfs:domain :RolDeGestion ;
+                rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                    owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion>
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:comment "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es ,
+                             "Relationship between the management role and the taxonomy of management roles."@en ;
+                rdfs:label "management role type"@en ,
+                           "tipo de rol de gestión"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo
+:tipoVehiculoGrupo rdf:type owl:ObjectProperty ;
+                   rdfs:domain :GrupoPlazasPorTipoVehiculo ;
+                   rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                       owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo>
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+                   rdfs:comment "Relación entre el grupo de plazas por tipos de vehiculo y la taxonomía de tipos de vehículo."@es ,
+                                "Relationship between the group of seats by vehicle type and the taxonomy of vehicle types."@en ;
+                   rdfs:label "tipos de vehiculo para plaza"@es ,
+                              "vehicle types for parking space"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:comment "Una representación espacial de un \"feature\" determinado."@es ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                   rdfs:label "has geometry"@en ,
+                                                              "tiene geometría"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                                 rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                                 rdfs:comment "Una relación entre una Observación y la entidad cuya calidad fue observada, o entre una Actuación y la entidad cuya propiedad fue modificada, o entre un acto de muestreo y la entidad que fue muestreada."@es ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                                 rdfs:label "tiene entidad de interés"@es ,
+                                                            "has feature of interest" .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                         rdfs:range <http://www.w3.org/ns/sosa/Sensor> ;
+                                         rdfs:comment "Relación entre una observación y el sensor que realiza la observación."@es ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                         rdfs:label "made by sensor or observer"@es .
+
+
+###  http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/sosa/Sensor> ;
+                                     rdfs:range <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                     rdfs:comment "Relación entre un sensor y una propiedad observable que es capaz de detectar."@es ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                     rdfs:label "observa"@es ,
+                                                "observes"@en .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty ;
+                                           rdfs:range <http://www.w3.org/2006/time#TemporaEntity> ;
+                                           rdfs:comment "El momento en que el resultado de una observación, actuación o muestreo se aplica a la entidad de interés. No necesariamente coincide con el momento del resultado. Puede ser un intervalo, un instante o alguna otra entidad temporal compuesta."@es ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                           rdfs:label "momento del fenómeno"@es ,
+                                                      "phenomenon time"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class ;
+                           rdfs:isDefinedBy <https://schema.org/> ;
+                           rdfs:label "Person"@en ,
+                                      "Persona"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :EquipamientoMunicipal ;
+                                                                                      rdfs:comment "Lugar donde se puede tanto dejar como recoger las bicicletas. Está compuesto de anclajes"@es ;
+                                                                                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica> ;
+                                                                                      rdfs:label "Estación de bicicletas"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado
+<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria
+<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria> rdf:type owl:Class .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                   rdfs:comment "Comunidad Autónoma o Ciudad Autónoma"@es ;
+                                                                                   rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                   rdfs:label "Autonomía"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                rdfs:comment "Un barrio es cada una de las partes en que se dividen los pueblos grandes o sus distritos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es ;
+                                                                                rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                rdfs:label "Barrio"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> ;
+                                                                                rdfs:comment "Una ciudad es un área urbana en la que predominan fundamentalmente la industria y los servicios [fuente: Wikipedia]"@es ;
+                                                                                rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                rdfs:label "Ciudad" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                  rdfs:comment "Un distrito es cada una de las demarcaciones en que se subdivide un territorio o una población para distribuir y ordenar el ejercicio de los derechos civiles y políticos, o de las funciones públicas, o de los servicios administrativos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es ;
+                                                                                  rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                  rdfs:label "Distrito"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                   rdfs:comment """Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.
+Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"""@es ;
+                                                                                   rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                   rdfs:label "Municipio"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                                   rdfs:comment """Entidad local con personalidad jurídica propia, determinada por la agrupación de Municipios y división territorial para el cumplimiento de las actividades del Estado. La delimitación territorial de Provincia está recogida en el Registro Central de Cartografía del IGN [fuente: Modelo de Direcciones de la Administración General del Estado v.2]
+Su identificador, que se especifica con la propiedad dct:identifier, es el proporcionado por el INE en http://www.ine.es/daco/daco42/codmun/codmun09/09codmun.xls
+Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"""@es ;
+                                                                                   rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
+                                                                                   rdfs:label "Provincia" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> rdf:type owl:Class ;
+                                                                                           rdfs:comment "Subacceso independiente exterior (al aire libre) a una misma construcción. Para una misma construcción, con un mismo número de vía, pueden existir varias entradas que pueden estar numeradas con números o letras. [fuente: Modelo de Direcciones de la Administración General del Estado v.2]"@es ;
+                                                                                           rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> ;
+                                                                                           rdfs:label "Portal" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> rdf:type owl:Class ;
+                                                                                        rdfs:comment """Vía de comunicación construida para la circulación. 
+En su definición según el modelo de direcciones de la Administración General del Estado, Incluye calles, carreteras de todo tipo, caminos, vías de agua, pantalanes, etc. Asimismo, incluye la pseudovía., es decir todo aquello que complementa o sustituye a la vía.
+En nuestro caso, este término se utiliza para hacer referencia a las vías urbanas.
+
+Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad geonames:featureCode, dejando de lado otras opciones como R.PRMN (promenade), R.TRL (trail). Quizás en el futuro haya que relajar un poco esta opción, sobre todo, por ejemplo, para ciudades con costa y paseo marítimo."""@es ;
+                                                                                        rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> ;
+                                                                                        rdfs:label "Vía"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> rdf:type owl:Class ;
+                                                                                                           rdfs:comment """Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address
+Además de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero"""@es ;
+                                                                                                           rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> ;
+                                                                                                           rdfs:label "Dirección postal"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> rdf:type owl:Class ;
+                                                                                                              rdfs:comment "Equipamientos a los que un ciudadano puede acudir pertenecientes a una administración"@es ;
+                                                                                                              rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal> ;
+                                                                                                              rdfs:label "Equipamiento"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> rdf:type owl:Class ;
+                                                                                                                           rdfs:comment "Group of places for each type of permit, for example Resident. Indicate the number of places for each type."@en ,
+                                                                                                                                        "Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo."@es ;
+                                                                                                                           rdfs:label "Group of parking slots by type of permit"@en ,
+                                                                                                                                      "Grupo de plazas por tipo de permiso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento
+:AccesoAparcamiento rdf:type owl:Class ;
+                    rdfs:comment "Lugar en donde se entra o se sale del aparcamiento."@es ,
+                                 "Place where you enter or exit the parking lot."@en ;
+                    rdfs:label "Acceso a aparcamiento"@es ,
+                               "Parking access"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento
+:Aparcamiento rdf:type owl:Class ;
+              rdfs:comment "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es ,
+                           "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en ;
+              rdfs:label "Aparcamiento"@es ,
+                         "Parking"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica
+:AparcamientoEnViaPublica rdf:type owl:Class ;
+                          rdfs:subClassOf :Aparcamiento ;
+                          rdfs:comment "Aparcamiento en la vía pública que inluye plazas para residentes, no residentes, libres, carga y descarga, entre otros."@es ,
+                                       "On-street parking that includes spaces for residents, non-residents, free spaces, loading and unloading, among others."@en ;
+                          rdfs:label "Aparcamiento en la vía pública"@es ,
+                                     "On-street parking"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica
+:AparcamientoFueraViaPublica rdf:type owl:Class ;
+                             rdfs:subClassOf :Aparcamiento ,
+                                             :EquipamientoMunicipal ;
+                             rdfs:comment "Aparcamiento fuera de la vía pública. Incluye instalaciones o superficies de aparcamiento."@es ,
+                                          "Off-street parking. Includes parking facilities or parking surfaces."@en ;
+                             rdfs:label "Aparcamiento fuera de la vía pública"@es ,
+                                        "Off-street parking"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal
+:EquipamientoMunicipal rdf:type owl:Class ;
+                       owl:equivalentClass <https://saref.etsi.org/saref4bldg/Building> ;
+                       rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ,
+                                       <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                       rdfs:comment "Equipamientos a los que un ciudadano puede acudir pertenecientes a una administración municipal. Un equipamiento puede ser un aparcamiento, un centro educativo, una estación de bicicleta compartida y cualquier edificio que sea un centro de salud, centro educativo, centro social, comisaría, entre otros."@es ,
+                                    "Facilities that citizens can access and that belong to a municipal administration. A facility can be a parking lot, an educational center, a bike-sharing station, or any building that serves as a health center, educational center, community center, police station, among others."@en ;
+                       rdfs:label "Equipamiento municipal"@es ,
+                                  "Municipal facility"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo
+:GrupoPlazasPorTipoVehiculo rdf:type owl:Class ;
+                            rdfs:comment "Group of parking spaces for each type of vehicle: cars, motorcycles, bicycles, among others. Indicate the number of spaces per type."@en ,
+                                         "Grupo de plazas de aparcamiento para cada tipo de vehículo: coches, motocicletas, biciletas, entre otros. Indica el número de plazas por tipo."@es ;
+                            rdfs:label "Group of parking spaces by vehicle type"@en ,
+                                       "Grupo de plazas por tipo de vehículo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso
+:ObservacionAcceso rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+                   rdfs:comment "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos a aparcamientos."@es ,
+                                "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access to parking areas."@en ;
+                   rdfs:label "Access observation"@en ,
+                              "Observación de acceso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo
+:ObservacionAccesoVehiculo rdf:type owl:Class ;
+                           rdfs:subClassOf :ObservacionAcceso ;
+                           rdfs:label "Observación de acceso de vehículo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion
+:Organizacion rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
+              rdfs:comment "Department of the municipal administration or external organization that manages municipal instalaltionin any role, such as ownership, maintenance, security."@en ,
+                           "Dependencia de la administración municipal u organización externa que gestiona el equipamiento municipal  en cualquier rol, tales como la titularidad, el mantenimiento, la seguridad."@es ;
+              rdfs:label "Organización"@es ,
+                         "Organization"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna
+:OrganizacionExterna rdf:type owl:Class ;
+                     rdfs:subClassOf :Organizacion ;
+                     rdfs:comment "An organization external to the municipal administration that has a role in the management of a municipal facility."@en ,
+                                  "Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal."@es ;
+                     rdfs:label "External organization"@en ,
+                                "Organización externa"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza
+:Plaza rdf:type owl:Class ;
+       rdfs:comment "Individual parking space in an on-street or off-street parking."@en ,
+                    "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es ;
+       rdfs:label "Parking space"@en ,
+                  "Plaza"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion
+:RolDeGestion rdf:type owl:Class ;
+              rdfs:comment "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."@es ,
+                           "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."@en ;
+              rdfs:label "Management role"@en ,
+                         "Rol de gestión"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso
+:SensorAcceso rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+              rdfs:comment "A device that records the access of people or vehicles to municipal facilities. This could be an LPR camera, a building entrance door sensor, or other similar devices."@en ,
+                           "Dispositivo que registra el acceso de personas o vehículos al equipamiento municipal. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."@es ;
+              rdfs:label "Access sensor"@en ,
+                         "Sensor de acceso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo
+:SensorAccesoVehiculo rdf:type owl:Class ;
+                      rdfs:subClassOf :SensorAcceso ;
+                      rdfs:label "Sensor de acceso a vehiculo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal
+:ServicioMunicipal rdf:type owl:Class ;
+                   rdfs:subClassOf :Organizacion ;
+                   rdfs:comment "Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal."@es ,
+                                "Municipal administration or any of its departments that have a role in the management of a municipal facility."@en ;
+                   rdfs:label "Municipal service"@en ,
+                              "Servicio municipal"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa
+:Tarifa rdf:type owl:Class ;
+        rdfs:comment "Parking fee that essentially covers the right to park the vehicle in an authorized space for a certain time period."@en ,
+                     "Tarifa de un aparcamiento que cubre fundamentalmente el derecho a estacionar el vehículo en un espacio autorizado durante un tiempo determinado."@es ;
+        rdfs:label "Parking fee"@en ,
+                   "Tarifa"@es .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:comment "Esta clase representa el tipo \"feature\" de nivel superior. Es equivalente a GFI_Feature, definida en la norma ISO 19156:2011, y es la superclase de todos los tipos de \"feature\"."@es ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
+                                               rdfs:label "Feature"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:comment "La clase representa el tipo de geometría de nivel superior. Esta clase es equivalente a la clase UML GM_Object definida en la norma ISO 19107 y es la superclase de todos los tipos de geometría."@es ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ,
+                                                                 "Geometría"@es ;
+                                                rdfs:label "Geometry"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TemporaEntity
+<http://www.w3.org/2006/time#TemporaEntity> rdf:type owl:Class ;
+                                            rdfs:comment "Un intervalo temporal o un instante."@es ;
+                                            rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+                                            rdfs:label "Entidad temporal"@es ,
+                                                       "Temporal entity"@en .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
+                                        rdfs:comment "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_"@es ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+                                        rdfs:label "Organización"@es ,
+                                                   "Organization"@en .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class ;
+                                              rdfs:comment "Cosa cuya propiedad se está estimando o calculando en el curso de una Observación para llegar a un Resultado o cuya propiedad está siendo manipulada por un Actuador, o que está siendo muestreada o transformada en un acto de Muestreo."@es ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                              rdfs:label "Entidad de interés"@es ,
+                                                         "Feature Of Interest"@en .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               rdfs:comment "Una cualidad observable (propiedad, característica) de una entidad de interés."@es ;
+                                               rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                               rdfs:label "Propiedad observable"@es ,
+                                                          "Observable Property" .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
+                                        rdfs:comment "Acto de realizar un procedimiento (de observación) para estimar o calcular el valor de una propiedad de una característica de interés. Se vincula a un sensor para describir qué realizó la observación y cómo; se vincula a una propiedad observable para describir de qué propiedad es la estimación del resultado, y a una característica de interés para detallar con qué se asoció esa propiedad."@es ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                        rdfs:label "Observación"@es ,
+                                                   "Observation" .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class ;
+                                   rdfs:comment "Sistema que implementa un procedimiento de observación para determinar el valor de una Propiedad observable.Puede ser un dispositivo, una infraestructura, un agente (incluyendo humanos) o software (simulación). Un sensor responde a un estímulo, por ejemplo, un cambio en el entorno o datos de entrada compuestos por los resultados de observaciones previas."@es ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                   rdfs:label "Sensor"@en ,
+                                              "Sensor"@es .
+
+
+###  https://saref.etsi.org/saref4bldg/Building
+<https://saref.etsi.org/saref4bldg/Building> rdf:type owl:Class ;
+                                             rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+                                             rdfs:isDefinedBy <https://saref.etsi.org/saref4bldg/> ;
+                                             rdfs:label "Building"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular> rdf:type owl:NamedIndividual .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico> rdf:type owl:NamedIndividual .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso> rdf:type owl:NamedIndividual .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo> rdf:type owl:NamedIndividual .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion> rdf:type owl:NamedIndividual .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

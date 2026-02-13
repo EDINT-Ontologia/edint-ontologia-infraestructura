@@ -1,0 +1,698 @@
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://www.w3.org/2002/07/owl#versionIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica/0.1.0> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/created> "2026-01-30" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/creator> "Daniel Doña" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/creator> "Edna Ruckhaus" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/creator> "Lucía Sánchez" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/creator> "Oscar Corcho" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/creator> "Socorro Bernardos" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/description> "La ontología de infraestructura pública describe todos los conceptos relacionados con las instalaciones públicas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, entre otros."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/description> "The public infrastructure ontology describes all concepts related to a municipality's public facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, among others."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/title> "Ontología de Infraestructura Pública"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/dc/terms/title> "The Public Infrastructure Ontology"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/vocab/vann/preferredNamespacePrefix> "esintinfp" .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Dirección física de la entidad,"@es .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "dirección"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/2000/01/rdf-schema#comment> "Portal que un fenómeno geográfico contiene (por ejemplo, una vía o un tramo de vía, aunque también puede ser un barrio, distrito, ciudad, etc.)"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal> <http://www.w3.org/2000/01/rdf-schema#label> "contiene portal"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> <http://www.w3.org/2000/01/rdf-schema#comment> "Vía a la que pertenece un fenómeno (por ejemplo, una dirección, un tramo de vía, un portal, etc.)"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#via> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a la vía"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/tipoEquipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de equipamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un grupo de plazas de aparcamiento en la vía pública y la zona de estacionamiento regulado a la cual pertenecen."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a group of parking spaces on a street and the regulated parking zone to which they belong."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#label> "part of zone"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona> <http://www.w3.org/2000/01/rdf-schema#label> "parte de zona"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Aparcamiento y su Grupo de plazas por tipo de permiso, por ejemplo Residentes."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the Parking and its Group of spaces by type of permit, for example Residents."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#label> "has a group of spaces per type of permit"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#label> "tiene grupo de plazas por tipo de permiso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "A municipal facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Un equipamiento municipal puede contener otros equipamientos. Por ejemplo,m un centro cultural puede contener salas de exposiciòn, auditorios, etc."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "contains facility"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "contiene equipamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el grupo de plazas d eun aparcamiento y la plaza específica que contiene."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the group of parking spaces and the specific space it contains."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#label> "contains space"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza> <http://www.w3.org/2000/01/rdf-schema#label> "contiene plaza"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio> <http://www.w3.org/2000/01/rdf-schema#comment> "Municipio al que pertenece un fenómeno geográfico o una entidad administrativa"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a municipio"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#comment> "Actividad que se lleva a cabo regularmente en el equipamiento municipal."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity that is carried out regularly in a municipal facility."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#label> "offers regular activity"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular> <http://www.w3.org/2000/01/rdf-schema#label> "ofrece actividad regular"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un equipamiento municipal y la división administrativa a la cual pertenece la cual puede incluir un Barrio."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a municipal facility and the administrative division to which it belongs, which may include a neighborhood."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece a"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#range> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#comment> "Public service provided by a municipal facility, for example internet via wifi."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#comment> "Servicio público prestado por un equipamiento municipal, por ejemplo internet a través de una wifi."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#label> "presta servicio público"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico> <http://www.w3.org/2000/01/rdf-schema#label> "provides public service"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role over a municipal facility and the organization that exercises it."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#label> "rol ejercido por"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor> <http://www.w3.org/2000/01/rdf-schema#label> "role played by"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el rol de gestion que ejerce una organización  y el equipamiento municipal sobre el cual se realiza la gestión."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role exercised by an organization and the municipal facility on which the management is carried out."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "on facility"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "sobre equipamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un aparcamiento fuera d ela vía pública y el acceso de entrada o salida."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an off-street parking lot and the entrance or exit access."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "has access"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "tiene acceso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Aparcamiento y  su Grupo de plazas por tipo de vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the Parking and its Group of spaces by vehicle type."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "has a group of spaces per type of vehicle"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene grupo de plazas por tipo de vehiculo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un aparcamiento y su tarifa."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a parking and its fee."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "has parking fee"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tarifa de aparcamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Grupo de plazas por tipo de permiso y la taxonomía de tipos de permiso"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the group of places by type of permit and the taxonomy of types of permit."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de permiso para plaza"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo> <http://www.w3.org/2000/01/rdf-schema#label> "type of permit for parking space"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role and the taxonomy of management roles."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#label> "management role type"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de rol de gestión"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el grupo de plazas por tipos de vehiculo y la taxonomía de tipos de vehículo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the group of seats by vehicle type and the taxonomy of vehicle types."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#label> "tipos de vehiculo para plaza"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle types for parking space"@en .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Una representación espacial de un \"feature\" determinado."@es .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "tiene geometría"@es .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Una relación entre una Observación y la entidad cuya calidad fue observada, o entre una Actuación y la entidad cuya propiedad fue modificada, o entre un acto de muestreo y la entidad que fue muestreada."@es .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "tiene entidad de interés"@es .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest" .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una observación y el sensor que realiza la observación."@es .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by sensor or observer"@es .
+# 
+# http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un sensor y una propiedad observable que es capaz de detectar."@es .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observa"@es .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observes"@en .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporaEntity> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "El momento en que el resultado de una observación, actuación o muestreo se aplica a la entidad de interés. No necesariamente coincide con el momento del resultado. Puede ser un intervalo, un instante o alguna otra entidad temporal compuesta."@es .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "momento del fenómeno"@es .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "phenomenon time"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/Person
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Persona"@es .
+# 
+# http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde se puede tanto dejar como recoger las bicicletas. Está compuesto de anclajes"@es .
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica> .
+<http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta> <http://www.w3.org/2000/01/rdf-schema#label> "Estación de bicicletas"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado
+<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria
+<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> <http://www.w3.org/2000/01/rdf-schema#comment> "Comunidad Autónoma o Ciudad Autónoma"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> <http://www.w3.org/2000/01/rdf-schema#label> "Autonomía"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/2000/01/rdf-schema#comment> "Un barrio es cada una de las partes en que se dividen los pueblos grandes o sus distritos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/2000/01/rdf-schema#label> "Barrio"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> <http://www.w3.org/2000/01/rdf-schema#comment> "Una ciudad es un área urbana en la que predominan fundamentalmente la industria y los servicios [fuente: Wikipedia]"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> <http://www.w3.org/2000/01/rdf-schema#label> "Ciudad" .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/2000/01/rdf-schema#comment> "Un distrito es cada una de las demarcaciones en que se subdivide un territorio o una población para distribuir y ordenar el ejercicio de los derechos civiles y políticos, o de las funciones públicas, o de los servicios administrativos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/2000/01/rdf-schema#label> "Distrito"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/2000/01/rdf-schema#comment> "Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> <http://www.w3.org/2000/01/rdf-schema#comment> "Entidad local con personalidad jurídica propia, determinada por la agrupación de Municipios y división territorial para el cumplimiento de las actividades del Estado. La delimitación territorial de Provincia está recogida en el Registro Central de Cartografía del IGN [fuente: Modelo de Direcciones de la Administración General del Estado v.2]\nSu identificador, que se especifica con la propiedad dct:identifier, es el proporcionado por el INE en http://www.ine.es/daco/daco42/codmun/codmun09/09codmun.xls\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia" .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/2000/01/rdf-schema#comment> "Subacceso independiente exterior (al aire libre) a una misma construcción. Para una misma construcción, con un mismo número de vía, pueden existir varias entradas que pueden estar numeradas con números o letras. [fuente: Modelo de Direcciones de la Administración General del Estado v.2]"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/2000/01/rdf-schema#label> "Portal" .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#comment> "Vía de comunicación construida para la circulación. \nEn su definición según el modelo de direcciones de la Administración General del Estado, Incluye calles, carreteras de todo tipo, caminos, vías de agua, pantalanes, etc. Asimismo, incluye la pseudovía., es decir todo aquello que complementa o sustituye a la vía.\nEn nuestro caso, este término se utiliza para hacer referencia a las vías urbanas.\n\nPor esta razón, se utiliza geonames:R.ST como valor principal de la propiedad geonames:featureCode, dejando de lado otras opciones como R.PRMN (promenade), R.TRL (trail). Quizás en el futuro haya que relajar un poco esta opción, sobre todo, por ejemplo, para ciudades con costa y paseo marítimo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#label> "Vía"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#comment> "Una dirección postal en España. Se define como una especialización de las clases vcard:Address, schema:PostalAddress y locn:Address\nAdemás de las propiedades asociadas a estas clases, y definidas en su correspondiente vocabulario, también se pueden utilizar las definidas en los vocabularios de división administrativa española y en el callejero"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> <http://www.w3.org/2000/01/rdf-schema#label> "Dirección postal"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipamientos a los que un ciudadano puede acudir pertenecientes a una administración"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Equipamiento"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of places for each type of permit, for example Resident. Indicate the number of places for each type."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#label> "Group of parking slots by type of permit"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo de plazas por tipo de permiso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar en donde se entra o se sale del aparcamiento."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Place where you enter or exit the parking lot."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Acceso a aparcamiento"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Parking access"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Parking"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/2000/01/rdf-schema#comment> "Aparcamiento en la vía pública que inluye plazas para residentes, no residentes, libres, carga y descarga, entre otros."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/2000/01/rdf-schema#comment> "On-street parking that includes spaces for residents, non-residents, free spaces, loading and unloading, among others."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento en la vía pública"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica> <http://www.w3.org/2000/01/rdf-schema#label> "On-street parking"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#comment> "Aparcamiento fuera de la vía pública. Incluye instalaciones o superficies de aparcamiento."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#comment> "Off-street parking. Includes parking facilities or parking surfaces."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento fuera de la vía pública"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica> <http://www.w3.org/2000/01/rdf-schema#label> "Off-street parking"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2002/07/owl#equivalentClass> <https://saref.etsi.org/saref4bldg/Building> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipamientos a los que un ciudadano puede acudir pertenecientes a una administración municipal. Un equipamiento puede ser un aparcamiento, un centro educativo, una estación de bicicleta compartida y cualquier edificio que sea un centro de salud, centro educativo, centro social, comisaría, entre otros."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#comment> "Facilities that citizens can access and that belong to a municipal administration. A facility can be a parking lot, an educational center, a bike-sharing station, or any building that serves as a health center, educational center, community center, police station, among others."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#label> "Equipamiento municipal"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal> <http://www.w3.org/2000/01/rdf-schema#label> "Municipal facility"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of parking spaces for each type of vehicle: cars, motorcycles, bicycles, among others. Indicate the number of spaces per type."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupo de plazas de aparcamiento para cada tipo de vehículo: coches, motocicletas, biciletas, entre otros. Indica el número de plazas por tipo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "Group of parking spaces by vehicle type"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo de plazas por tipo de vehículo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos a aparcamientos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access to parking areas."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "Access observation"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "Observación de acceso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "Observación de acceso de vehículo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Department of the municipal administration or external organization that manages municipal instalaltionin any role, such as ownership, maintenance, security."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Dependencia de la administración municipal u organización externa que gestiona el equipamiento municipal  en cualquier rol, tales como la titularidad, el mantenimiento, la seguridad."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/2000/01/rdf-schema#label> "Organización"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization external to the municipal administration that has a role in the management of a municipal facility."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/2000/01/rdf-schema#comment> "Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/2000/01/rdf-schema#label> "External organization"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna> <http://www.w3.org/2000/01/rdf-schema#label> "Organización externa"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> <http://www.w3.org/2000/01/rdf-schema#comment> "Individual parking space in an on-street or off-street parking."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> <http://www.w3.org/2000/01/rdf-schema#comment> "Plaza individual de estacionamiento dentro o fuera de la vía pública."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> <http://www.w3.org/2000/01/rdf-schema#label> "Parking space"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza> <http://www.w3.org/2000/01/rdf-schema#label> "Plaza"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> <http://www.w3.org/2000/01/rdf-schema#comment> "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> <http://www.w3.org/2000/01/rdf-schema#label> "Management role"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion> <http://www.w3.org/2000/01/rdf-schema#label> "Rol de gestión"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that records the access of people or vehicles to municipal facilities. This could be an LPR camera, a building entrance door sensor, or other similar devices."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que registra el acceso de personas o vehículos al equipamiento municipal. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "Access sensor"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de acceso"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de acceso a vehiculo"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/2000/01/rdf-schema#comment> "Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/2000/01/rdf-schema#comment> "Municipal administration or any of its departments that have a role in the management of a municipal facility."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/2000/01/rdf-schema#label> "Municipal service"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal> <http://www.w3.org/2000/01/rdf-schema#label> "Servicio municipal"@es .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking fee that essentially covers the right to park the vehicle in an authorized space for a certain time period."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> <http://www.w3.org/2000/01/rdf-schema#comment> "Tarifa de un aparcamiento que cubre fundamentalmente el derecho a estacionar el vehículo en un espacio autorizado durante un tiempo determinado."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> <http://www.w3.org/2000/01/rdf-schema#label> "Parking fee"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa> <http://www.w3.org/2000/01/rdf-schema#label> "Tarifa"@es .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase representa el tipo \"feature\" de nivel superior. Es equivalente a GFI_Feature, definida en la norma ISO 19156:2011, y es la superclase de todos los tipos de \"feature\"."@es .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "La clase representa el tipo de geometría de nivel superior. Esta clase es equivalente a la clase UML GM_Object definida en la norma ISO 19107 y es la superclase de todos los tipos de geometría."@es .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Geometría"@es .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#TemporaEntity
+<http://www.w3.org/2006/time#TemporaEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#TemporaEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Un intervalo temporal o un instante."@es .
+<http://www.w3.org/2006/time#TemporaEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time> .
+<http://www.w3.org/2006/time#TemporaEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Entidad temporal"@es .
+<http://www.w3.org/2006/time#TemporaEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal entity"@en .
+# 
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_"@es .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organización"@es .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Cosa cuya propiedad se está estimando o calculando en el curso de una Observación para llegar a un Resultado o cuya propiedad está siendo manipulada por un Actuador, o que está siendo muestreada o transformada en un acto de Muestreo."@es .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Entidad de interés"@es .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature Of Interest"@en .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Una cualidad observable (propiedad, característica) de una entidad de interés."@es .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Propiedad observable"@es .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property" .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Acto de realizar un procedimiento (de observación) para estimar o calcular el valor de una propiedad de una característica de interés. Se vincula a un sensor para describir qué realizó la observación y cómo; se vincula a una propiedad observable para describir de qué propiedad es la estimación del resultado, y a una característica de interés para detallar con qué se asoció esa propiedad."@es .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observación"@es .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation" .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Sistema que implementa un procedimiento de observación para determinar el valor de una Propiedad observable.Puede ser un dispositivo, una infraestructura, un agente (incluyendo humanos) o software (simulación). Un sensor responde a un estímulo, por ejemplo, un cambio en el entorno o datos de entrada compuestos por los resultados de observaciones previas."@es .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@es .
+# 
+# https://saref.etsi.org/saref4bldg/Building
+<https://saref.etsi.org/saref4bldg/Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4bldg/Building> <http://www.w3.org/2000/01/rdf-schema#comment> "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en .
+<https://saref.etsi.org/saref4bldg/Building> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

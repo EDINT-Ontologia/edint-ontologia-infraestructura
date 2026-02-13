@@ -1,0 +1,312 @@
+CONSULTAS ASOCIADAS A PREGUNTAS DE COMPETENCIA para ontInfraestructuras (en español)
+Falta adecuar a cambios del día 11/02/2026
+
+Prefijos Comunes
+
+PREFIX edintfp: <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+
+INF1: ¿Qué equipamientos se encuentran dentro de un Municipio, Distrito o Barrio específico?
+ 
+SELECT ?equipamiento ?nombreEquipamiento ?entidadAdministrativa ?nombreEntidad
+WHERE {
+  ?equipamiento a :EquipamientoMunicipal ;
+                rdfs:label ?nombreEquipamiento ;
+                :perteneceA ?entidadAdministrativa .
+
+  ?entidadAdministrativa rdfs:label ?nombreEntidad .
+  
+  # Opcional: Filtrar por tipo de entidad (ej. solo Distritos)
+  # FILTER EXISTS { ?entidadAdministrativa a esadm:Distrito }
+}
+
+
+
+INF2: ¿Cuál es la dirección postal de un equipamiento?
+ 
+SELECT ?equipamiento ?calle ?numero ?portal
+WHERE {
+  ?equipamiento a :EquipamientoMunicipal ;
+                schema:address ?direccion .
+
+  ?direccion escjr:via ?via ;
+             xxxx:numero ?numero . # No encuentro una propiedad para número ni en escjr ni esdir
+  
+  ?via rdfs:label ?calle .
+  
+  OPTIONAL { ?direccion escjr:portal ?portal }
+}
+
+
+
+
+INF3: ¿Qué tipo de equipamiento es una instalación concreta?
+
+SELECT ?equipamiento ?tipoLabel 
+WHERE {
+  ?equipamiento a :EquipamientoMunicipal .
+  
+  # Tipo de equipamiento (SKOS)
+  OPTIONAL { 
+    ?equipamiento :tipoEquipamiento ?tipo .
+    ?tipo skos:prefLabel ?tipoLabel .
+  } 
+}
+
+INF3 + INF4: ¿Qué tipo de equipamiento es y qué servicios presta?
+ 
+SELECT ?equipamiento ?tipoLabel ?servicioLabel
+WHERE {
+  ?equipamiento a :EquipamientoMunicipal .
+  
+  # Tipo de equipamiento (SKOS)
+  OPTIONAL { 
+    ?equipamiento :tipoEquipamiento ?tipo .
+    ?tipo skos:prefLabel ?tipoLabel .
+  }
+
+  # Servicio público prestado (SKOS)
+  OPTIONAL { 
+    ?equipamiento :servicioPublicoPrestado ?servicio .
+    ?servicio skos:prefLabel ?servicioLabel .
+  }
+}
+
+INF5 y INF6 : ¿Qué organización gestiona un equipamiento y con qué rol?
+(Esta consulta cubre las tres preguntas al mostrar la organización, el rol y si es externa)
+ 
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nombreEquipamiento ?nombreOrganizacion ?rolDescripcion
+WHERE {
+  # 1. El equipamiento por su URI
+  ?equipamiento a :EquipamientoMunicipal ;
+  VALUES ?equipamiento { <URI_DEL_EQUIPAMIENTO> }.
+
+  # 2. La entidad intermedia "RolDeGestion"
+  #    Esta entidad conecta el equipamiento con la organización
+  ?rolGestion a :RolDeGestion ;
+              :sobreEquipamiento ?equipamiento ;
+              :rolEjercidoPor ?organizacion .
+
+  # 3. Obtenemos el nombre de la organización
+  ?organizacion rdfs:label ?nombreOrganizacion .
+
+  # 4. (Opcional) Obtenemos qué tipo de rol es (Titularidad, Mantenimiento, Explotación, etc.)
+  OPTIONAL {
+    ?rolGestion :tipoRolGestion ?conceptoRol .
+    ?conceptoRol skos:prefLabel ?rolDescripcion .
+  }
+}
+
+
+
+INF7: ¿Qué organizaciones externas gestionan infraestructuras públicas?
+
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?nombreOrganizacion ?nombreEquipamiento ?rolDescripcion
+WHERE {
+  # 1. Las organizaciones clasificadas como EXTERNAS
+  ?organizacion a :OrganizacionExterna ;
+                rdfs:label ?nombreOrganizacion .
+
+  # 2. El nodo intermedio "RolDeGestion" Conecta a la organización con el equipamiento
+  ?rolGestion :rolEjercidoPor ?organizacion ;
+              :sobreEquipamiento ?equipamiento .
+
+  # 3. Obtenemos el nombre del equipamiento público gestionado
+  ?equipamiento rdfs:label ?nombreEquipamiento .
+
+  # 4. (Opcional) El tipo de gestión (SKOS) para saber qué hacen
+  OPTIONAL {
+    ?rolGestion :tipoRolGestion ?tipoRol .
+    ?tipoRol skos:prefLabel ?rolDescripcion .
+  }
+}
+ORDER BY ?nombreOrganizacion
+
+
+INF8: ¿Qué sensores de acceso están instalados en un equipamiento concreto?
+
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?nombreEquipamiento ?nombreAcceso ?sensor 
+WHERE {
+  # 1. El equipamiento por nombre
+  ?equipamiento a :EquipamientoMunicipal ;
+                rdfs:label ?nombreEquipamiento .
+  
+  FILTER (CONTAINS(LCASE(?nombreEquipamiento), "nombre_del_equipamiento")) 
+
+  # 2. Los accesos del equipamiento
+  ?equipamiento :tieneAcceso ?acceso .
+  
+  OPTIONAL { ?acceso rdfs:label ?nombreAcceso }
+
+  # 3. El sensor a través de las observaciones realizadas en ese acceso
+  #    (Un sensor está "asignado" al acceso si reporta datos sobre él)
+  ?observacion sosa:hasFeatureOfInterest ?acceso ;
+               sosa:madeBySensor ?sensor .
+  ?sensor a :SensorAcceso .
+}
+ORDER BY ?nombreAcceso
+
+
+INF9: ¿Qué observaciones de acceso de vehículos se han registrado en un intervalo de tiempo determinado?
+
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+SELECT ?observacion ?accesoNombre ?tiempo ?resultado
+WHERE {
+  # 1. Instancias de Observación de Acceso de Vehículo
+  ?observacion a :ObservacionAccesoVehiculo ;
+               sosa:phenomenonTime ?tiempo .
+
+  # 2. FILTRO DE TIEMPO: Intervalo determinado
+  #    Formato: "Año-Mes-DíaTHora:Minuto:Segundo"^^xsd:dateTime
+  FILTER (?tiempo >= "fecha_inicio_intervalo"^^xsd:dateTime &&
+          ?tiempo <= "fecha_fin_intervalo"^^xsd:dateTime)
+  # Si los datos siguen la norma OWL-Time rigurosamente (objeto intermedio), habría que cambiar 
+  # ?observacion sosa:phenomenonTime ?tiempo por:
+  # ?observacion sosa:phenomenonTime/time:inXSDDateTime ?tiempo.
+
+  # 3. Contexto: ¿Sobre qué acceso ocurrió? (Feature of Interest)
+  OPTIONAL {
+    ?observacion sosa:hasFeatureOfInterest ?acceso .
+    ?acceso rdfs:label ?accesoNombre .
+  }
+
+  # 4. Resultado: ¿Qué valor arrojó el sensor? (Ej. 1, "Entrada", matríula, etc.)
+  OPTIONAL {
+    ?observacion sosa:hasSimpleResult ?resultado .
+  }
+}
+ORDER BY DESC(?tiempo)
+
+
+INF10: ¿Por qué acceso específico entró o salió un vehículo detectado por un sensor?
+
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?observacion ?nombreSensor ?nombreAcceso ?nombreEstacionamiento ?direccionOSentido ?momento
+WHERE {
+  # 1. La Observación de un vehículo
+  ?observacion a :ObservacionAccesoVehiculo ;
+               sosa:madeBySensor ?sensor ;
+               sosa:phenomenonTime ?momento .
+
+  # 2. La observación vinculada con el ACCESO físico.
+  ?observacion sosa:hasFeatureOfInterest ?acceso .
+  
+  # 3. Los nombres para que sean legibles
+  ?acceso rdfs:label ?nombreAcceso .
+  OPTIONAL { ?sensor rdfs:label ?nombreSensor }
+
+  # 4. Contexto: ¿A qué estacionamiento pertenece ese acceso?
+  OPTIONAL {
+    ?estacionamiento :tieneAcceso ?acceso ;
+                     rdfs:label ?nombreEstacionamiento .
+  }
+
+  # 5. Resultado: ¿Entró o Salió? 
+  #    Esto suele venir en 'hasSimpleResult' (ej. "IN", "OUT", "1", "-1")
+  OPTIONAL {
+    ?observacion sosa:hasSimpleResult ?direccionOSentido .
+  }
+}
+ORDER BY DESC(?momento)
+LIMIT 100
+
+
+
+INF11: ¿Qué zonas del municipio están clasificadas como Zonas de Bajas Emisiones (ZBE) --> En ontoZonas
+ 
+
+INF12: ¿Cuáles son los estacionamientos disponibles y son en la vía pública o fuera de ella (parkings subterráneos/edificios)?
+ 
+SELECT ?estacionamiento ?tipoClase
+WHERE {
+  ?estacionamiento a :Estacionamiento .
+  ?estacionamiento a ?tipoClase .
+  
+  FILTER (?tipoClase IN (:EstacionamientoFueraViaPublica, :ZonaEstacionamientoRegulado))
+}
+
+
+INF13: ¿Qué tarifas se aplican a un estacionamiento determinado?
+ 
+SELECT ?estacionamiento ?tarifa ?descripcionTarifa
+WHERE {
+  ?estacionamiento a :Estacionamiento ;
+                   :tarifaEstacionamiento ?tarifa .
+  
+  OPTIONAL { ?tarifa rdfs:label ?descripcionTarifa }
+}
+
+
+
+INF14 y INF15: Para cada aparcamiento, ¿grupos de plazas, tipos de vehículo y permisos requeridos?
+ 
+SELECT ?estacionamiento ?grupoPlazas ?tipoVehiculoLabel ?tipoPermisoLabel
+WHERE {
+  ?estacionamiento :tieneGrupoPlaza ?grupoPlazas .
+
+  # Tipo de vehículo permitido (SKOS)
+  OPTIONAL { 
+    ?grupoPlazas :tipoVehiculoPlaza ?tipoVehiculo .
+    ?tipoVehiculo skos:prefLabel ?tipoVehiculoLabel .
+  }
+
+  # Tipo de permiso necesario (SKOS)
+  OPTIONAL {
+    ?grupoPlazas :tipoPermisoPlaza ?tipoPermiso .
+    ?tipoPermiso skos:prefLabel ?tipoPermisoLabel .
+  }
+}
+
+
+INF16: ¿Cuáles son los estacionamientos disponibles en una zona administrativa concreta?
+
+PREFIX : <http://vocab.linkeddata.es/datosabiertos/def/femp-base/infraestructura-publica#>
+PREFIX zona: <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?nombreZona ?nombreEstacionamiento 
+WHERE {
+  # 1. El estacionamiento y su etiqueta
+  ?estacionamiento a :Estacionamiento ;
+                   rdfs:label ?nombreEstacionamiento ;
+                   :perteneceA ?zonaAdministrativa .
+
+  # 2. El nombre de la zona
+  ?zonaAdministrativa rdfs:label ?nombreZona .
+
+  # 3. FILTRO CLAVE: "nombre_de_zona" por la que se pregunta
+  # LCASE para convertir todo a minúsculas y evitar errores de mayúsculas
+  FILTER (CONTAINS(LCASE(?nombreZona), "nombre_de_zona"))
+}
+ORDER BY ?nombreZona
+
