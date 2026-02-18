@@ -92,10 +92,10 @@
         <Class IRI="http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="esadm:Autonomia"/>
@@ -352,8 +352,8 @@
         <Class IRI="#MunicipalFacility"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado"/>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="esadm:Autonomia"/>
@@ -546,7 +546,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#isPartOfZone"/>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#belongsTo"/>
@@ -706,6 +706,46 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta</IRI>
         <Literal xml:lang="es">Estación de bicicletas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone</IRI>
+        <Literal xml:lang="en">Public road zone where parking is subject to time regulation, fee payment, or other restrictions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone</IRI>
+        <Literal xml:lang="es">Zona de la vía pública donde el estacionamiento está sujeto a regulación horaria, pago de tasas u otras restricciones.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone</IRI>
+        <Literal xml:lang="en">Regulated parking zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone</IRI>
+        <Literal xml:lang="es">Zona de estacionamiento regulado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone</IRI>
+        <Literal xml:lang="es">Area a la que se aplica una regulacion o normativa particular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone</IRI>
+        <Literal xml:lang="en">Area to which a particular regulation or policy applies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone</IRI>
+        <Literal xml:lang="en">Regulated zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone</IRI>
+        <Literal xml:lang="es">Zona regulatoria</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1303,12 +1343,12 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#containsFacility</IRI>
-        <Literal xml:lang="es">Un equipamiento municipal puede contener otros equipamientos. Por ejemplo,m un centro cultural puede contener salas de exposiciòn, auditorios, etc.</Literal>
+        <Literal xml:lang="es">Un equipamiento municipal puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposiciòn, auditorios, etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#containsFacility</IRI>
-        <Literal xml:lang="es">contains facility</Literal>
+        <Literal xml:lang="en">contains facility</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

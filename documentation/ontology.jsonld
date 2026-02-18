@@ -9,31 +9,33 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"
     }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid19",
@@ -49,7 +51,7 @@
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -68,7 +70,7 @@
   "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -87,7 +89,7 @@
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -115,7 +117,7 @@
   "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -125,19 +127,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"
     }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
     }, {
-      "@id" : "_:genid10"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"
     } ]
   } ]
 }, {
@@ -215,17 +215,45 @@
     "@value" : "Estación de bicicletas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public road zone where parking is subject to time regulation, fee payment, or other restrictions."
+  }, {
+    "@language" : "es",
+    "@value" : "Zona de la vía pública donde el estacionamiento está sujeto a regulación horaria, pago de tasas u otras restricciones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regulated parking zone"
+  }, {
+    "@language" : "es",
+    "@value" : "Zona de estacionamiento regulado"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaRegulatoria",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Area a la que se aplica una regulacion o normativa particular."
+  }, {
+    "@language" : "en",
+    "@value" : "Area to which a particular regulation or policy applies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regulated zone"
+  }, {
+    "@language" : "es",
+    "@value" : "Zona regulatoria"
+  } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -325,6 +353,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#municipio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Municipio al que pertenece un fenómeno geográfico o una entidad administrativa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "pertenece a municipio"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal",
@@ -435,50 +477,24 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Group of places for each type of permit, for example Resident. Indicate the number of places for each type."
+    "@value" : "Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type."
   }, {
     "@language" : "es",
     "@value" : "Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Group of parking slots by type of permit"
+    "@value" : "Group of parking spots by type of permit"
   }, {
     "@language" : "es",
     "@value" : "Grupo de plazas por tipo de permiso"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#parteDeZona",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un grupo de plazas de aparcamiento en la vía pública y la zona de estacionamiento regulado a la cual pertenecen."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a group of parking spaces on a street and the regulated parking zone to which they belong."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "part of zone"
-  }, {
-    "@language" : "es",
-    "@value" : "parte de zona"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#tieneGrupoPlazasPorTipoPermiso",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#hasSpotsByPermitType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -488,17 +504,43 @@
     "@value" : "Relationship between the Parking and its Group of spaces by type of permit, for example Residents."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has a group of spaces per type of permit"
+    "@value" : "has a group of spots per type of permit"
   }, {
     "@language" : "es",
     "@value" : "tiene grupo de plazas por tipo de permiso"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#GrupoPlazasPorTipoPermiso"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#isPartOfZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un grupo de plazas de aparcamiento en la vía pública y la zona de estacionamiento regulado a la cual pertenecen."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a group of parking spaces on a street and the regulated parking zone to which they belong."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OnStreetParking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es parte de zona"
+  }, {
+    "@language" : "en",
+    "@value" : "is part of zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#RegulatedParkingZone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica",
@@ -547,83 +589,64 @@
     "@value" : "0.1.0"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Lugar en donde se entra o se sale del aparcamiento."
+    "@value" : "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos a aparcamientos."
   }, {
     "@language" : "en",
-    "@value" : "Place where you enter or exit the parking lot."
+    "@value" : "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access to parking areas."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Acceso a aparcamiento"
-  }, {
     "@language" : "en",
-    "@value" : "Parking access"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."
+    "@value" : "Access observation"
   }, {
-    "@language" : "en",
-    "@value" : "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Aparcamiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Parking"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoEnViaPublica",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento en la vía pública que inluye plazas para residentes, no residentes, libres, carga y descarga, entre otros."
-  }, {
-    "@language" : "en",
-    "@value" : "On-street parking that includes spaces for residents, non-residents, free spaces, loading and unloading, among others."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento en la vía pública"
-  }, {
-    "@language" : "en",
-    "@value" : "On-street parking"
+    "@value" : "Observación de acceso"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento"
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device that records the access of people or vehicles to municipal facilities. This could be an LPR camera, a building entrance door sensor, or other similar devices."
+  }, {
+    "@language" : "es",
+    "@value" : "Dispositivo que registra el acceso de personas o vehículos al equipamiento municipal. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de acceso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ManagementRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Aparcamiento fuera de la vía pública. Incluye instalaciones o superficies de aparcamiento."
+    "@value" : "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."
   }, {
     "@language" : "en",
-    "@value" : "Off-street parking. Includes parking facilities or parking surfaces."
+    "@value" : "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento fuera de la vía pública"
-  }, {
     "@language" : "en",
-    "@value" : "Off-street parking"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento"
+    "@value" : "Management role"
   }, {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
+    "@language" : "es",
+    "@value" : "Rol de gestión"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -648,71 +671,59 @@
     "@id" : "https://saref.etsi.org/saref4bldg/Building"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Group of parking spaces for each type of vehicle: cars, motorcycles, bicycles, among others. Indicate the number of spaces per type."
-  }, {
-    "@language" : "es",
-    "@value" : "Grupo de plazas de aparcamiento para cada tipo de vehículo: coches, motocicletas, biciletas, entre otros. Indica el número de plazas por tipo."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Group of parking spaces by vehicle type"
-  }, {
-    "@language" : "es",
-    "@value" : "Grupo de plazas por tipo de vehículo"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos a aparcamientos."
-  }, {
-    "@language" : "en",
-    "@value" : "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access to parking areas."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Access observation"
-  }, {
-    "@language" : "es",
-    "@value" : "Observación de acceso"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ]
-}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Observación de acceso de vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "Vehicle access observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAcceso"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessObservation"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OffStreetParking",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Department of the municipal administration or external organization that manages municipal instalaltionin any role, such as ownership, maintenance, security."
-  }, {
     "@language" : "es",
-    "@value" : "Dependencia de la administración municipal u organización externa que gestiona el equipamiento municipal  en cualquier rol, tales como la titularidad, el mantenimiento, la seguridad."
+    "@value" : "Aparcamiento fuera de la vía pública. Incluye instalaciones o superficies de aparcamiento."
+  }, {
+    "@language" : "en",
+    "@value" : "Off-street parking, including parking facilities or parking surfaces."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Organización"
+    "@value" : "Aparcamiento fuera de la vía pública"
   }, {
     "@language" : "en",
-    "@value" : "Organization"
+    "@value" : "Off-street parking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/org#Organization"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
+  }, {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OnStreetParking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento en la vía pública que inluye plazas para residentes, no residentes, libres, carga y descarga, entre otros."
+  }, {
+    "@language" : "en",
+    "@value" : "On-street parking that includes spaces for residents, non-residents, free spaces, loading and unloading, among others."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento en la vía pública"
+  }, {
+    "@language" : "en",
+    "@value" : "On-street parking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna",
@@ -732,61 +743,112 @@
     "@value" : "Organización externa"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organization"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Individual parking space in an on-street or off-street parking."
+    "@value" : "Department of the municipal administration or external organization that manages municipal instalaltionin any role, such as ownership, maintenance, security."
+  }, {
+    "@language" : "es",
+    "@value" : "Dependencia de la administración municipal u organización externa que gestiona el equipamiento municipal  en cualquier rol, tales como la titularidad, el mantenimiento, la seguridad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Organización"
+  }, {
+    "@language" : "en",
+    "@value" : "Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/org#Organization"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."
+  }, {
+    "@language" : "en",
+    "@value" : "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Parking"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Lugar en donde se entra o se sale del aparcamiento."
+  }, {
+    "@language" : "en",
+    "@value" : "Place where you enter or exit the parking lot."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Acceso a aparcamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Parking access"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingFee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parking fee that essentially covers the right to park the vehicle in an authorized space for a certain time period."
+  }, {
+    "@language" : "es",
+    "@value" : "Tarifa de un aparcamiento que cubre fundamentalmente el derecho a estacionar el vehículo en un espacio autorizado durante un tiempo determinado."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parking fee"
+  }, {
+    "@language" : "es",
+    "@value" : "Tarifa"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Individual parking spot in an on-street or off-street parking."
   }, {
     "@language" : "es",
     "@value" : "Plaza individual de estacionamiento dentro o fuera de la vía pública."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Parking space"
+    "@value" : "Parking spot"
   }, {
     "@language" : "es",
-    "@value" : "Plaza"
+    "@value" : "Plaza (de aparcamiento)"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."
-  }, {
-    "@language" : "en",
-    "@value" : "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Management role"
-  }, {
-    "@language" : "es",
-    "@value" : "Rol de gestión"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A device that records the access of people or vehicles to municipal facilities. This could be an LPR camera, a building entrance door sensor, or other similar devices."
+    "@value" : "Group of parking spots for each type of vehicle: cars, motorcycles, bicycles, among others. It indicates the number of slots per type."
   }, {
     "@language" : "es",
-    "@value" : "Dispositivo que registra el acceso de personas o vehículos al equipamiento municipal. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."
+    "@value" : "Grupo de plazas de aparcamiento para cada tipo de vehículo: coches, motocicletas, biciletas, entre otros. Indica el número de plazas por tipo."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Access sensor"
+    "@value" : "Group of parking spots by vehicle type"
   }, {
     "@language" : "es",
-    "@value" : "Sensor de acceso"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+    "@value" : "Grupo de plazas por tipo de vehículo"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo",
@@ -796,7 +858,7 @@
     "@value" : "Sensor de acceso a vehiculo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAcceso"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessSensor"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal",
@@ -816,110 +878,10 @@
     "@value" : "Servicio municipal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organization"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Parking fee that essentially covers the right to park the vehicle in an authorized space for a certain time period."
-  }, {
-    "@language" : "es",
-    "@value" : "Tarifa de un aparcamiento que cubre fundamentalmente el derecho a estacionar el vehículo en un espacio autorizado durante un tiempo determinado."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Parking fee"
-  }, {
-    "@language" : "es",
-    "@value" : "Tarifa"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contieneEquipamiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A municipal facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."
-  }, {
-    "@language" : "es",
-    "@value" : "Un equipamiento municipal puede contener otros equipamientos. Por ejemplo,m un centro cultural puede contener salas de exposiciòn, auditorios, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "contains facility"
-  }, {
-    "@language" : "es",
-    "@value" : "contiene equipamiento"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#contienePlaza",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el grupo de plazas d eun aparcamiento y la plaza específica que contiene."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the group of parking spaces and the specific space it contains."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid5"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "contains space"
-  }, {
-    "@language" : "es",
-    "@value" : "contiene plaza"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Plaza"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#municipio",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Municipio al que pertenece un fenómeno geográfico o una entidad administrativa"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "pertenece a municipio"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ofreceActividadRegular",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Actividad que se lleva a cabo regularmente en el equipamiento municipal."
-  }, {
-    "@language" : "en",
-    "@value" : "Activity that is carried out regularly in a municipal facility."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "offers regular activity"
-  }, {
-    "@language" : "es",
-    "@value" : "ofrece actividad regular"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid8"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#perteneceA",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -929,7 +891,7 @@
     "@value" : "Relationship between a municipal facility and the administrative division to which it belongs, which may include a neighborhood."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -939,79 +901,56 @@
     "@value" : "pertenece a"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#containsFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A municipal facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."
+  }, {
+    "@language" : "es",
+    "@value" : "Un equipamiento municipal puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposiciòn, auditorios, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contains facility"
+  }, {
+    "@language" : "es",
+    "@value" : "contiene equipamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#containsSpot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el grupo de plazas de un aparcamiento y la plaza específica que contiene."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the group of parking spots and the specific spot it contains."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid12"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#prestaServicioPublico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Public service provided by a municipal facility, for example internet via wifi."
-  }, {
-    "@language" : "es",
-    "@value" : "Servicio público prestado por un equipamiento municipal, por ejemplo internet a través de una wifi."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "presta servicio público"
-  }, {
-    "@language" : "en",
-    "@value" : "provides public service"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid19"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolEjercidoPor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the management role over a municipal facility and the organization that exercises it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "rol ejercido por"
-  }, {
-    "@language" : "en",
-    "@value" : "role played by"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organizacion"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#sobreEquipamiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el rol de gestion que ejerce una organización  y el equipamiento municipal sobre el cual se realiza la gestión."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the management role exercised by an organization and the municipal facility on which the management is carried out."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "on facility"
+    "@value" : "contains spot"
   }, {
     "@language" : "es",
-    "@value" : "sobre equipamiento"
+    "@value" : "contiene plaza"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#EquipamientoMunicipal"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpot"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneAcceso",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1021,7 +960,7 @@
     "@value" : "Relationship between an off-street parking lot and the entrance or exit access."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AparcamientoFueraViaPublica"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OffStreetParking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1031,79 +970,10 @@
     "@value" : "tiene acceso"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccesoAparcamiento"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingAccess"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneGrupoPlazaPorTipoVehiculo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el Aparcamiento y  su Grupo de plazas por tipo de vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the Parking and its Group of spaces by vehicle type."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has a group of spaces per type of vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene grupo de plazas por tipo de vehiculo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tieneTarifaAparcamiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un aparcamiento y su tarifa."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between a parking and its fee."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Aparcamiento"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has parking fee"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene tarifa de aparcamiento"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Tarifa"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoPermisoGrupo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el Grupo de plazas por tipo de permiso y la taxonomía de tipos de permiso"
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the group of places by type of permit and the taxonomy of types of permit."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de permiso para plaza"
-  }, {
-    "@language" : "en",
-    "@value" : "type of permit for parking space"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid23"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoRolGestion",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasManagementRoleType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1113,55 +983,216 @@
     "@value" : "Relationship between the management role and the taxonomy of management roles."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#RolDeGestion"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ManagementRole"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "management role type"
+    "@value" : "has management role type"
   }, {
     "@language" : "es",
-    "@value" : "tipo de rol de gestión"
+    "@value" : "tiene tipo de rol de gestión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid15"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#tipoVehiculoGrupo",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasParkingFee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un aparcamiento y su tarifa."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a parking and its fee."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has parking fee"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tarifa de aparcamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingFee"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasPermitTypeForSpots",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el Grupo de plazas por tipo de permiso y la taxonomía de tipos de permiso"
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the group of places by type of permit and the taxonomy of types of permit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has type of permit for group of parking spots"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo de permiso para grupo de plazas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasSpotsByVehicleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el Aparcamiento y  su Grupo de plazas por tipo de vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the Parking and its Group of spots by vehicle type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Parking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has a group of spots per type of vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene grupo de plazas por tipo de vehiculo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#hasVehicleTypeForSpots",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Relación entre el grupo de plazas por tipos de vehiculo y la taxonomía de tipos de vehículo."
   }, {
     "@language" : "en",
-    "@value" : "Relationship between the group of seats by vehicle type and the taxonomy of vehicle types."
+    "@value" : "Relationship between the group of spots by vehicle type and the taxonomy of vehicle types."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#GrupoPlazasPorTipoVehiculo"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has vehicle type for group of parking spots"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo de vehiculo para grupo de plazas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#madeOnFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el rol de gestion que ejerce una organización  y el equipamiento municipal sobre el cual se realiza la gestión."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the management role exercised by an organization and the municipal facility on which the management is carried out."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ManagementRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "made on facility"
+  }, {
+    "@language" : "es",
+    "@value" : "realizado sobre equipamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#offersRegularActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Actividad que se lleva a cabo regularmente en el equipamiento municipal."
+  }, {
+    "@language" : "en",
+    "@value" : "Activity that is carried out regularly in a municipal facility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "offers regular activity"
+  }, {
+    "@language" : "es",
+    "@value" : "ofrece actividad regular"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#providesPublicService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public service provided by a municipal facility, for example internet via wifi."
+  }, {
+    "@language" : "es",
+    "@value" : "Servicio público prestado por un equipamiento municipal, por ejemplo internet a través de una wifi."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "tipos de vehiculo para plaza"
+    "@value" : "presta servicio público"
   }, {
     "@language" : "en",
-    "@value" : "vehicle types for parking space"
+    "@value" : "provides public service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid31"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/#RolGestion",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#rolePlayedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the management role over a municipal facility and the organization that exercises it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ManagementRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "rol ejercido por"
+  }, {
+    "@language" : "en",
+    "@value" : "role played by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organization"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ActividadRegular",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ServicioPublico",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoPermiso",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/TipoVehiculo",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento",
