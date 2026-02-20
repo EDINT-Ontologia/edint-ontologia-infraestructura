@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintregularact: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:RegularActivity a skos:ConceptScheme ; 
+    dct:issued "2026-02-19"^^xsd:date ;
+    dct:modified "2026-02-19"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Tipo de actividad regular"@en ;
+    rdfs:label "Type of regular activity"@es ;
+    skos:hasTopConcept edintregularact:culturalcenteract;
+    dct:title "Concept scheme grouping types of activities that are offered regularly in a facility."@en ;
+    dct:title "Esquema de conceptos agrupando tipos de actividades que se ofrecen regularmente en un equipamiento."@es .
+    
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintregularact:culturalcenteract a skos:Concept;
+  skos:inScheme edintkos:RegularActivity;
+  skos:prefLabel "Actividad de Centro Cultural"@es ;
+  skos:prefLabel "Cultural Center Activity"@en .
+
+edintregularact:exhibition a skos:Concept;
+  skos:inScheme edintkos:RegularActivity;
+  skos:broader edintregularact:culturalcenteract;
+  skos:prefLabel "Exposición"@es ;
+  skos:prefLabel "Exhibition"@en .
+
+edintregularact:concert a skos:Concept;
+  skos:inScheme edintkos:RegularActivity;
+  skos:broader edintregularact:culturalcenteract;
+  skos:prefLabel "Concierto"@es ;
+  skos:prefLabel "Concert"@en .
+
+edintregularact:theatre a skos:Concept;
+  skos:inScheme edintkos:RegularActivity;
+  skos:broader edintregularact:culturalcenteract;
+  skos:prefLabel "Teatro"@es ;
+  skos:prefLabel "Teatro"@en .
+
+edintregularact:workshop a skos:Concept;
+  skos:inScheme edintkos:RegularActivity;
+  skos:broader edintregularact:culturalcenteract;
+  skos:prefLabel "Taller"@es ;
+  skos:prefLabel "Workshop"@en .
+
+
+
+
+

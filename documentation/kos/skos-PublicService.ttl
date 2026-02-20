@@ -1,0 +1,97 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintpublicservice: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:PublicService a skos:ConceptScheme ; 
+    dct:issued "2026-02-19"^^xsd:date ;
+    dct:modified "2026-02-19"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Tipo de servicio prestado"@en ;
+    rdfs:label "Type of public service provided"@es ;
+    dct:title "Concept scheme grouping types of public services provided in a facility"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de servicios públicos prestados en un equipamiento"@es ;
+    skos:hasTopConcept edintpublicservice:complementaryservice;
+    skos:hasTopConcept edintpublicservice:healthcenterservice.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintpublicservice:complementaryservice a skos:Concept;
+  skos:inScheme edintkos:PublicService;
+  skos:prefLabel "Servicio complementario"@es ;
+  skos:prefLabel "Complementary service"@en .
+
+edintpublicservice:wifi a skos:Concept;
+  skos:inScheme edintkos:PublicService;
+  skos:broader edintpublicservice:complementaryservice;
+  skos:prefLabel "Zona wifi"@es ;
+  skos:prefLabel "Wifi zone"@en .
+
+edintpublicservice:phonesupport a skos:Concept;
+  skos:inScheme edintkos:PublicService;
+  skos:broader edintpublicservice:complementaryservice;
+  skos:prefLabel "Atención telefónica"@es ;
+  skos:prefLabel "Phone support"@en .
+
+edintpublicservice:cafeteria a skos:Concept;
+  skos:inScheme edintkos:PublicService;
+  skos:broader edintpublicservice:complementaryservice;
+  skos:prefLabel "Cafetería"@es ;
+  skos:prefLabel "Cafeteria"@en .
+
+edintpublicservice:healthcenterservice a skos:Concept;
+  skos:inScheme edintkos:HealthCenterService;
+  skos:prefLabel "Servicio de Centro de salud"@es ;
+  skos:broader edintpublicservice:complementaryservice;
+  skos:prefLabel "Health facility service"@en .
+
+edintpublicservice:medicalassistance a skos:Concept;
+  skos:inScheme edintkos:HealthCenterService;
+  skos:broader edintpublicservice:healthcenterservice;
+  skos:prefLabel "Asistencia médica y enfermería"@es ;
+  skos:prefLabel "Medical and nursing care"@en . 
+
+edintpublicservice:healthprograms a skos:Concept;
+  skos:inScheme edintkos:HealthCenterService;
+  skos:broader edintpublicservice:healthcenterservice;
+  skos:prefLabel "Programas de salud"@es ;
+  skos:prefLabel "Health programs"@en . 
+
+edintpublicservice:minorsurgery a skos:Concept;
+  skos:inScheme edintkos:HealthCenterService;
+  skos:broader edintpublicservice:healthcenterservice;
+  skos:prefLabel "Diagnosis y cirugía menor"@es ;
+  skos:prefLabel "Diagnosis and minor surgery"@en . 
+
+ edintpublicservice:fisioterapia a skos:Concept;
+  skos:inScheme edintkos:HealthCenterService;
+  skos:broader edintpublicservice:healthcenterservice;
+  skos:prefLabel "Fisioterapia y rehabilitación"@es ;
+  skos:prefLabel "Physiotherapy and rehabilitation"@en . 
+
+
+
+
+
+
+
+
+

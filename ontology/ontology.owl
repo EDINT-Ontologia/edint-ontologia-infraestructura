@@ -128,13 +128,13 @@
         <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#AccessObservation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AccessSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExternalOrganization"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ManagementRole"/>
@@ -143,16 +143,13 @@
         <Class IRI="#MunicipalFacility"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ObservacionAccesoVehiculo"/>
+        <Class IRI="#MunicipalService"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OffStreetParking"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OnStreetParking"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OrganizacionExterna"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Organization"/>
@@ -170,13 +167,10 @@
         <Class IRI="#ParkingSpot"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ParkingSpotsByPermitType"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ParkingSpotsByVehicleType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SensorAccesoVehiculo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ServicioMunicipal"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gsp:Feature"/>
@@ -290,6 +284,9 @@
         <ObjectProperty abbreviatedIRI="sosa:phenomenonTime"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType"/>
     </Declaration>
     <Declaration>
@@ -300,9 +297,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento"/>
@@ -388,6 +382,10 @@
         <Class abbreviatedIRI="sosa:Sensor"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ExternalOrganization"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MunicipalFacility"/>
         <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"/>
     </SubClassOf>
@@ -396,8 +394,8 @@
         <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ObservacionAccesoVehiculo"/>
-        <Class IRI="#AccessObservation"/>
+        <Class IRI="#MunicipalService"/>
+        <Class IRI="#Organization"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OffStreetParking"/>
@@ -412,20 +410,8 @@
         <Class IRI="#Parking"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#OrganizacionExterna"/>
-        <Class IRI="#Organization"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Organization"/>
         <Class abbreviatedIRI="org:Organization"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SensorAccesoVehiculo"/>
-        <Class IRI="#AccessSensor"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ServicioMunicipal"/>
-        <Class IRI="#Organization"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#isPartOfZone"/>
@@ -458,7 +444,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#containsSpot"/>
         <ObjectUnionOf>
-            <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"/>
+            <Class IRI="#ParkingSpotsByPermitType"/>
             <Class IRI="#ParkingSpotsByVehicleType"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -542,7 +528,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#hasSpotsByPermitType"/>
-        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"/>
+        <Class IRI="#ParkingSpotsByPermitType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#isPartOfZone"/>
@@ -577,7 +563,7 @@
             <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType"/>
+                <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
     </ObjectPropertyRange>
@@ -962,26 +948,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType</IRI>
-        <Literal xml:lang="en">Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType</IRI>
-        <Literal xml:lang="es">Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType</IRI>
-        <Literal xml:lang="en">Group of parking spots by type of permit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType</IRI>
-        <Literal xml:lang="es">Grupo de plazas por tipo de permiso</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#hasSpotsByPermitType</IRI>
         <Literal xml:lang="es">Relación entre el Aparcamiento y su Grupo de plazas por tipo de permiso, por ejemplo Residentes.</Literal>
     </AnnotationAssertion>
@@ -1062,6 +1028,26 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExternalOrganization</IRI>
+        <Literal xml:lang="en">An organization external to the municipal administration that has a role in the management of a municipal facility.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExternalOrganization</IRI>
+        <Literal xml:lang="es">Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExternalOrganization</IRI>
+        <Literal xml:lang="en">External organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExternalOrganization</IRI>
+        <Literal xml:lang="es">Organización externa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ManagementRole</IRI>
         <Literal xml:lang="es">Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros.</Literal>
     </AnnotationAssertion>
@@ -1101,14 +1087,24 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <Literal xml:lang="en">Municipal facility</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ObservacionAccesoVehiculo</IRI>
-        <Literal xml:lang="es">Observación de acceso de vehículo</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MunicipalService</IRI>
+        <Literal xml:lang="es">Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MunicipalService</IRI>
+        <Literal xml:lang="en">Municipal administration or any of its departments that have a role in the management of a municipal facility.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ObservacionAccesoVehiculo</IRI>
-        <Literal xml:lang="en">Vehicle access observation</Literal>
+        <IRI>#MunicipalService</IRI>
+        <Literal xml:lang="en">Municipal service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunicipalService</IRI>
+        <Literal xml:lang="es">Servicio municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1149,26 +1145,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OnStreetParking</IRI>
         <Literal xml:lang="en">On-street parking</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#OrganizacionExterna</IRI>
-        <Literal xml:lang="en">An organization external to the municipal administration that has a role in the management of a municipal facility.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#OrganizacionExterna</IRI>
-        <Literal xml:lang="es">Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OrganizacionExterna</IRI>
-        <Literal xml:lang="en">External organization</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OrganizacionExterna</IRI>
-        <Literal xml:lang="es">Organización externa</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1272,6 +1248,26 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ParkingSpotsByPermitType</IRI>
+        <Literal xml:lang="en">Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ParkingSpotsByPermitType</IRI>
+        <Literal xml:lang="es">Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ParkingSpotsByPermitType</IRI>
+        <Literal xml:lang="en">Group of parking spots by type of permit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ParkingSpotsByPermitType</IRI>
+        <Literal xml:lang="es">Grupo de plazas por tipo de permiso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ParkingSpotsByVehicleType</IRI>
         <Literal xml:lang="en">Group of parking spots for each type of vehicle: cars, motorcycles, bicycles, among others. It indicates the number of slots per type.</Literal>
     </AnnotationAssertion>
@@ -1289,31 +1285,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ParkingSpotsByVehicleType</IRI>
         <Literal xml:lang="es">Grupo de plazas por tipo de vehículo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#SensorAccesoVehiculo</IRI>
-        <Literal xml:lang="es">Sensor de acceso a vehiculo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ServicioMunicipal</IRI>
-        <Literal xml:lang="es">Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ServicioMunicipal</IRI>
-        <Literal xml:lang="en">Municipal administration or any of its departments that have a role in the management of a municipal facility.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ServicioMunicipal</IRI>
-        <Literal xml:lang="en">Municipal service</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ServicioMunicipal</IRI>
-        <Literal xml:lang="es">Servicio municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -130,7 +130,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#hasSpotsByPermitType
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#hasSpotsByPermitType> rdf:type owl:ObjectProperty ;
                                                                                                                       rdfs:domain :Parking ;
-                                                                                                                      rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType> ;
+                                                                                                                      rdfs:range :ParkingSpotsByPermitType ;
                                                                                                                       rdfs:comment "Relación entre el Aparcamiento y su Grupo de plazas por tipo de permiso, por ejemplo Residentes."@es ,
                                                                                                                                    "Relationship between the Parking and its Group of spaces by type of permit, for example Residents."@en ;
                                                                                                                       rdfs:label "has a group of spots per type of permit"@en ,
@@ -179,7 +179,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#containsSpot
 :containsSpot rdf:type owl:ObjectProperty ;
               rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType>
+                            owl:unionOf ( :ParkingSpotsByPermitType
                                           :ParkingSpotsByVehicleType
                                         )
                           ] ;
@@ -206,7 +206,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                        rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType>
+                                                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType>
                                                          ]
                                                        ) ;
                                     rdf:type owl:Class
@@ -497,14 +497,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                                                                                               rdfs:label "Equipamiento"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType> rdf:type owl:Class ;
-                                                                                                                          rdfs:comment "Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type."@en ,
-                                                                                                                                       "Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo."@es ;
-                                                                                                                          rdfs:label "Group of parking spots by type of permit"@en ,
-                                                                                                                                     "Grupo de plazas por tipo de permiso"@es .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessObservation
 :AccessObservation rdf:type owl:Class ;
                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
@@ -521,6 +513,15 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                            "Dispositivo que registra el acceso de personas o vehículos al equipamiento municipal. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."@es ;
               rdfs:label "Access sensor"@en ,
                          "Sensor de acceso"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ExternalOrganization
+:ExternalOrganization rdf:type owl:Class ;
+                      rdfs:subClassOf :Organization ;
+                      rdfs:comment "An organization external to the municipal administration that has a role in the management of a municipal facility."@en ,
+                                   "Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal."@es ;
+                      rdfs:label "External organization"@en ,
+                                 "Organización externa"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ManagementRole
@@ -542,11 +543,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                               "Municipal facility"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo
-:ObservacionAccesoVehiculo rdf:type owl:Class ;
-                           rdfs:subClassOf :AccessObservation ;
-                           rdfs:label "Observación de acceso de vehículo"@es ,
-                                      "Vehicle access observation"@en .
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalService
+:MunicipalService rdf:type owl:Class ;
+                  rdfs:subClassOf :Organization ;
+                  rdfs:comment "Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal."@es ,
+                               "Municipal administration or any of its departments that have a role in the management of a municipal facility."@en ;
+                  rdfs:label "Municipal service"@en ,
+                             "Servicio municipal"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OffStreetParking
@@ -566,15 +569,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                               "On-street parking that includes spaces for residents, non-residents, free spaces, loading and unloading, among others."@en ;
                  rdfs:label "Aparcamiento en la vía pública"@es ,
                             "On-street parking"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna
-:OrganizacionExterna rdf:type owl:Class ;
-                     rdfs:subClassOf :Organization ;
-                     rdfs:comment "An organization external to the municipal administration that has a role in the management of a municipal facility."@en ,
-                                  "Organización externa a la administración municipal que tiene algún rol en la gestión del equipamiento municipal."@es ;
-                     rdfs:label "External organization"@en ,
-                                "Organización externa"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#Organization
@@ -618,27 +612,20 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                         "Plaza (de aparcamiento)"@es .
 
 
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByPermitType
+:ParkingSpotsByPermitType rdf:type owl:Class ;
+                          rdfs:comment "Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type."@en ,
+                                       "Grupo de plazas por cada tipo de permiso, por ejemplo Residente. Indica el número de plazas por cada tipo."@es ;
+                          rdfs:label "Group of parking spots by type of permit"@en ,
+                                     "Grupo de plazas por tipo de permiso"@es .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByVehicleType
 :ParkingSpotsByVehicleType rdf:type owl:Class ;
                            rdfs:comment "Group of parking spots for each type of vehicle: cars, motorcycles, bicycles, among others. It indicates the number of slots per type."@en ,
                                         "Grupo de plazas de aparcamiento para cada tipo de vehículo: coches, motocicletas, biciletas, entre otros. Indica el número de plazas por tipo."@es ;
                            rdfs:label "Group of parking spots by vehicle type"@en ,
                                       "Grupo de plazas por tipo de vehículo"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo
-:SensorAccesoVehiculo rdf:type owl:Class ;
-                      rdfs:subClassOf :AccessSensor ;
-                      rdfs:label "Sensor de acceso a vehiculo"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal
-:ServicioMunicipal rdf:type owl:Class ;
-                   rdfs:subClassOf :Organization ;
-                   rdfs:comment "Administración municipal o cualquiera de sus dependencias que tienen un rol en la gestión de un equipamiento municipal."@es ,
-                                "Municipal administration or any of its departments that have a role in the management of a municipal facility."@en ;
-                   rdfs:label "Municipal service"@en ,
-                              "Servicio municipal"@es .
 
 
 ###  http://www.opengis.net/ont/geosparql#Feature
@@ -723,6 +710,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 #    Individuals
 #################################################################
 
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType> rdf:type owl:NamedIndividual .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType> rdf:type owl:NamedIndividual .
 
@@ -737,10 +728,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> rdf:type owl:NamedIndividual .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType> rdf:type owl:NamedIndividual .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento

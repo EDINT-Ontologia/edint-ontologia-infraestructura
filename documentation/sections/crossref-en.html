@@ -1,4 +1,4 @@
-<h2 id="crossreference" class="list">Cross-reference for classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross-reference for infraestructurapublica classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined in the Public Infrastructure ontology.
 <div xmlns:era="http://data.europa.eu/949/"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -45,8 +45,8 @@ This section provides details for each class and property defined in the Public 
             title="http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta">Estación de bicicletas</a>
       </li>
       <li>
-         <a href="#OrganizacionExterna"
-            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna">External organization</a>
+         <a href="#ExternalOrganization"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ExternalOrganization">External organization</a>
       </li>
       <li>
          <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
@@ -58,8 +58,8 @@ This section provides details for each class and property defined in the Public 
          <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
       </li>
       <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"
-            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
+         <a href="#ParkingSpotsByPermitType"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
       </li>
       <li>
          <a href="#ParkingSpotsByVehicleType"
@@ -74,8 +74,8 @@ This section provides details for each class and property defined in the Public 
             title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalFacility">Municipal facility</a>
       </li>
       <li>
-         <a href="#ServicioMunicipal"
-            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal">Municipal service</a>
+         <a href="#MunicipalService"
+            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalService">Municipal service</a>
       </li>
       <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
@@ -141,15 +141,7 @@ This section provides details for each class and property defined in the Public 
          <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
       </li>
       <li>
-         <a href="#SensorAccesoVehiculo"
-            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo">Sensor de acceso a vehiculo</a>
-      </li>
-      <li>
          <a href="#http://www.w3.org/2006/time#TemporaEntity" title="http://www.w3.org/2006/time#TemporaEntity">Temporal entity</a>
-      </li>
-      <li>
-         <a href="#ObservacionAccesoVehiculo"
-            title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo">Vehicle access observation</a>
       </li>
       <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via"
@@ -172,12 +164,6 @@ This section provides details for each class and property defined in the Public 
             <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observación</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#ObservacionAccesoVehiculo"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo">Vehicle access observation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="AccessSensor">
@@ -194,12 +180,6 @@ This section provides details for each class and property defined in the Public 
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#SensorAccesoVehiculo"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo">Sensor de acceso a vehiculo</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -402,13 +382,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
          </dd>
       </dl>
    </div>
-   <div class="entity" id="OrganizacionExterna">
+   <div class="entity" id="ExternalOrganization">
       <h3>External organization<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna</p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ExternalOrganization</p>
       <div class="comment">
          <span class="markdown">An organization external to the municipal administration that has a role in the management of a municipal facility.</span>
       </div>
@@ -514,13 +494,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType">
+   <div class="entity" id="ParkingSpotsByPermitType">
       <h3>Group of parking spots by type of permit<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType</p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByPermitType</p>
       <div class="comment">
          <span class="markdown">Group of parking spots for each type of permit, for example Resident. It indicates the number of slots  for each type.</span>
       </div>
@@ -636,13 +616,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ServicioMunicipal">
+   <div class="entity" id="MunicipalService">
       <h3>Municipal service<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal</p>
+         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalService</p>
       <div class="comment">
          <span class="markdown">Municipal administration or any of its departments that have a role in the management of a municipal facility.</span>
       </div>
@@ -787,10 +767,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#OrganizacionExterna"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#OrganizacionExterna">External organization</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ServicioMunicipal"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ServicioMunicipal">Municipal service</a>
+            <a href="#ExternalOrganization"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ExternalOrganization">External organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MunicipalService"
+               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#MunicipalService">Municipal service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -1082,22 +1062,6 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          </dd>
       </dl>
    </div>
-   <div class="entity" id="SensorAccesoVehiculo">
-      <h3>Sensor de acceso a vehiculo<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#SensorAccesoVehiculo</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#AccessSensor"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessSensor">Access sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://www.w3.org/2006/time#TemporaEntity">
       <h3>Temporal entity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1119,22 +1083,6 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          <dd>
             <a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">phenomenon time</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ObservacionAccesoVehiculo">
-      <h3>Vehicle access observation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ObservacionAccesoVehiculo</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#AccessObservation"
-               title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#AccessObservation">Access observation</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1382,8 +1330,8 @@ Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad g
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
+               <a href="#ParkingSpotsByPermitType"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#ParkingSpotsByVehicleType"
@@ -1452,8 +1400,8 @@ Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad g
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructuraPublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
+               <a href="#ParkingSpotsByPermitType"
+                  title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#ParkingSpotsByPermitType">Group of parking spots by type of permit</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1573,9 +1521,9 @@ Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad g
                   title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType"
+               <a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType"
                   target="_blank"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/#ManagementRoleType">management role type</a>)</dd>
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType">management role type</a>)</dd>
          </dl>
       </div>
    </div>
