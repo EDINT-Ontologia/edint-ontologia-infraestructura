@@ -1,0 +1,37 @@
+
+# INF43: ¿En qué divisiones administrativas hay menos de n elementos de infraestructura de un tipo concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?admin ?adminLabel
+       (COUNT(DISTINCT ?element) AS ?numElements)
+WHERE {
+
+  # 1) Divisiones administrativas (municipio, distrito, barrio, etc.)
+  ?admin a ?adminClass .
+  VALUES ?adminClass { 
+      esadm:Municipio 
+      esadm:Distrito 
+      esadm:Barrio 
+      esadm:Provincia
+      esadm:Ciudad
+      esadm:Autonomia
+  }
+  OPTIONAL { ?admin rdfs:label ?adminLabel . }
+
+  # 2) Elementos de infraestructura que pertenecen a esa división
+  ?element a edintinf:InfrastructureElement ;
+           edintinf:belongsTo ?admin ;
+           edintinf:hasInfrastructureType ?type .
+
+  # 3) Filtro por tipo de infraestructura (SUSTITUIR etiqueta o IRI)
+  ?type (skos:prefLabel | rdfs:label) ?typeLabel .
+  FILTER( LCASE(STR(?typeLabel)) = LCASE("señal de tráfico") )
+
+}
+GROUP BY ?admin ?adminLabel
+HAVING ( COUNT(DISTINCT ?element) < 5 )     # ← SUSTITUIR n
+ORDER BY ?numElements ASC ?adminLabel

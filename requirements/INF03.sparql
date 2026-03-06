@@ -1,0 +1,44 @@
+
+# INF03: ¿Qué tipo de equipamiento es una instalación concreta?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?type ?typeLabel
+WHERE {
+    # Sustituir por la URI concreta de la instalación
+    BIND(<URI-de-la-instalacion> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Tipo de infraestructura (equipamiento) asignado
+    ?facility edintinf:hasInfrastructureType ?type .
+
+    OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type rdfs:label ?typeLabel . }
+}
+
+
+
+# Para cualquier tipo de elemento de infraestructura
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?element ?elementLabel ?type ?typeLabel
+WHERE {
+    # Sustituir por la URI del elemento de infraestructura
+    BIND(<URI-del-elemento> AS ?element)
+
+    # Nombre del elemento
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+
+    # Tipo de infraestructura asignado
+    ?element edintinf:hasInfrastructureType ?type .
+
+    # Etiquetas del tipo (SKOS u otros)
+    OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type rdfs:label ?typeLabel . }
+}

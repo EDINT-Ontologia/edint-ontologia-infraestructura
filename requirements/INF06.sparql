@@ -1,0 +1,37 @@
+
+# INF06: ¿Qué rol específico (ej. titularidad, mantenimiento, explotación) ejerce una organización sobre un equipamiento?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?facility ?facilityLabel
+       ?role ?roleLabel
+       ?roleType ?roleTypeLabel
+       ?organization ?organizationLabel
+WHERE {
+
+    # Sustituye por el IRI del equipamiento concreto
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Rol(es) de gestión sobre este equipamiento
+    ?role edintinf:madeOnInfrastructure ?facility .
+
+    OPTIONAL { ?role rdfs:label ?roleLabel . }
+
+    # Tipo del rol (titularidad, mantenimiento, seguridad...)
+    OPTIONAL {
+        ?role edintinf:hasManagementRoleType ?roleType .
+        OPTIONAL { ?roleType skos:prefLabel ?roleTypeLabel . }
+        OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
+    }
+
+    # Organización que desempeña el rol
+    ?role edintinf:rolePlayedBy ?organization .
+
+    OPTIONAL { ?organization rdfs:label ?organizationLabel . }
+}
+ORDER BY ?role ?organization
+

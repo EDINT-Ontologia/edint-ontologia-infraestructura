@@ -1,0 +1,41 @@
+
+# INF20: ¿Qué equipamientos ofrecen simultáneamente dos o más servicios públicos?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+       ?facility ?facilityLabel
+       ?service1 ?label1
+       ?service2 ?label2
+WHERE {
+    ?facility a edintinf:Facility ;
+              edintinf:providesPublicService ?service1 ,
+                                            ?service2 .
+
+    FILTER(?service1 != ?service2)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?service1 skos:prefLabel ?label1 . }
+    OPTIONAL { ?service2 skos:prefLabel ?label2 . }
+}
+ORDER BY ?facilityLabel
+
+
+# Lista única por equipamiento
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel (COUNT(DISTINCT ?service) AS ?numServices)
+WHERE {
+    ?facility a edintinf:Facility ;
+              edintinf:providesPublicService ?service .
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+}
+GROUP BY ?facility ?facilityLabel
+HAVING (COUNT(DISTINCT ?service) >= 2)
+ORDER BY DESC(?numServices)
+

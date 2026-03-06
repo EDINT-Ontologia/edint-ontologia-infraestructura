@@ -1,0 +1,57 @@
+
+#INF02: ¿Cuál es la dirección postal exacta (calle, portal) de un equipamiento específico?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX schema:   <http://schema.org/>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX escjr:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?address ?street ?streetLabel ?portal ?portalLabel
+WHERE {
+    # El equipamiento concreto (puedes sustituir el IRI por el que quieras)
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Dirección postal asociada a la infraestructura
+    ?facility schema:address ?address .
+    ?address a esdir:DireccionPostal .
+    ?address escjr:contieneVia ?street .
+	?address escjr:contieneVia ?portal .
+
+    OPTIONAL { ?street rdfs:label ?streetLabel . }
+    OPTIONAL { ?portal rdfs:label ?portalLabel . }
+}
+
+
+
+# Por nombre de equipamiento
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX schema:   <http://schema.org/>
+PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX escjr:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?address ?street ?streetLabel ?portal ?portalLabel
+WHERE {
+    ?facility a edintinf:Facility ;
+          rdfs:label ?facilityLabel ;
+          schema:address ?address .
+   
+    FILTER(CONTAINS(LCASE(?facilityLabel), "nombre_de_equipamiento"))
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Dirección postal asociada a la infraestructura
+    ?facility schema:address ?address .
+    ?address a esdir:DireccionPostal .
+
+    ?address escjr:contieneVia ?street .
+	?address escjr:contieneVia ?portal .
+
+    OPTIONAL { ?street rdfs:label ?streetLabel . }
+    OPTIONAL { ?portal rdfs:label ?portalLabel . }
+}
+

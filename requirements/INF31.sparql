@@ -1,0 +1,22 @@
+
+INF31: ¿En qué fecha y hora se registró un acceso determinado?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?access ?accessLabel
+       ?time
+WHERE {
+
+    # Sustituir por la URI concreta del acceso (AccessObservation)
+    BIND(<URI-del-acceso> AS ?access)
+
+    # Comprobamos que es una observación de acceso
+    ?access a edintinf:AccessObservation .
+
+    OPTIONAL { ?access rdfs:label ?accessLabel . }
+
+    # Fecha y hora del acceso registrado
+    OPTIONAL { ?access sosa:resultTime ?time . }
+}

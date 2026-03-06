@@ -1,0 +1,70 @@
+
+# INF17: ¿Qué sensores están instalados en un aparcamiento concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+       ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+WHERE {
+
+    # Sustituir por el IRI del aparcamiento concreto
+    BIND(<URI-del-aparcamiento> AS ?parking)
+
+    OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+    # 1. Obtener los puntos de observación del aparcamiento
+    ?parking edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # 2. Obtener sensores vinculados a esos puntos, a través de observaciones
+    ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+                 sosa:madeBySensor ?sensor .
+
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+}
+ORDER BY ?obsPoint ?sensor
+
+
+#Con geolocalización de sensores
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX geo:      <https://datos.ign.es/def/geo_core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+       ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?geom
+       ?x ?y
+WHERE {
+
+    # Aparcamiento concreto
+    BIND(<URI-del-aparcamiento> AS ?parking)
+
+    OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+    # Puntos de observación asociados al aparcamiento
+    ?parking edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Sensores vinculados a esos puntos (vía observaciones SOSA)
+    ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+                 sosa:madeBySensor ?sensor .
+
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+    # Geometría del sensor
+    ?sensor gsp:hasGeometry ?geom .
+
+    # Coordenadas ETRS89 del sensor (X/Y)
+    OPTIONAL { ?geom geo:xETRS89 ?x . }
+    OPTIONAL { ?geom geo:yETRS89 ?y . }
+}
+ORDER BY ?obsPoint ?sensor

@@ -1,0 +1,91 @@
+
+#INF01: ¿Qué equipamientos se encuentran dentro de un determinado Municipio, Distrito o Barrio?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:   <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?adminUnit ?adminUnitLabel
+WHERE {
+    # Instancias de Facility
+    ?facility a edintinf:Facility .
+
+    # Vinculación con Municipio/Distrito/Barrio
+    ?facility edintinf:belongsTo ?adminUnit .
+
+    # Permitimos cualquiera de los tres tipos administrativos
+    VALUES ?adminClass { esadm:Municipio esadm:Distrito esadm:Barrio }
+    ?adminUnit a ?adminClass .
+
+    # Filtrar por la unidad administrativa concreta (reemplazar por el IRI deseado)
+    FILTER (?adminUnit = <URI_DIVISION_ADMIN>)
+
+    # Etiquetas (si están disponibles)
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?adminUnit rdfs:label ?adminUnitLabel . }
+}
+ORDER BY ?facilityLabel
+
+
+# Para cualquier división administrativa
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?adminUnit ?adminLabel
+WHERE {
+    ?facility a edintinf:Facility ;
+              edintinf:belongsTo ?adminUnit .
+
+    # La unidad administrativa puede ser Municipio, Distrito o Barrio
+    VALUES ?adminClass {
+        esadm:Municipio
+        esadm:Distrito
+        esadm:Barrio
+    }
+
+    ?adminUnit a ?adminClass .
+
+    # Filtro opcional para buscar por nombre (puedes eliminarlo si no lo necesitas)
+    # FILTER(CONTAINS(LCASE(STR(?adminLabel)), LCASE("nombre del municipio")))
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?adminUnit rdfs:label ?adminLabel . }
+}
+ORDER BY ?adminUnit ?facility
+
+
+# Para equipamientos públicos 
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+
+SELECT ?facility ?facilityLabel ?adminUnit ?adminLabel ?owner ?ownerLabel
+WHERE {
+    # Equipamientos
+    ?facility a edintinf:Facility ;
+              edintinf:belongsTo ?adminUnit ;
+              edintinf:registeredOwner ?owner .
+
+    # La unidad administrativa puede ser Municipio, Distrito o Barrio
+    VALUES ?adminClass {
+        esadm:Municipio
+        esadm:Distrito
+        esadm:Barrio
+    }
+    ?adminUnit a ?adminClass .
+
+    # Organización titular
+    ?owner edintinf:isPublic true .
+
+    # Etiquetas opcionales
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?adminUnit rdfs:label ?adminLabel . }
+    OPTIONAL { ?owner     rdfs:label ?ownerLabel . }
+}
+ORDER BY ?adminUnit ?facility

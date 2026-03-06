@@ -1,0 +1,135 @@
+
+# INF39: ¿Qué variación de ocupación presenta un aparcamiento según lecturas disponibles?
+
+# A través de tres consultas complementarias:
+#  1. Serie temporal de ocupación (todas las lecturas ordenadas)
+#  2. Deltas entre lecturas consecutivas (variación lectura a lectura)
+#  3. Resumen estadístico (mín., máx., media) en el período indicado
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?observation ?time ?result
+WHERE {
+  # Aparcamiento (SUSTITUIR)
+  BIND(<URI-del-aparcamiento> AS ?parking)
+  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+  # Puntos de observación del aparcamiento
+  ?parking edintinf:hasObservationPoint ?obsPoint .
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # Observaciones de ocupación en esos puntos
+  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               sosa:madeBySensor ?sensor ;
+               sosa:resultTime ?time .
+  OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
+  OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+  # (Opcional) Solo si la ocupación procede de sensores de conteo
+  # ?sensor a edintinf:CountingSensor .
+
+  # (Opcional) Intervalo temporal
+  # FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&  ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+}
+ORDER BY ?obsPoint ?sensor ?time
+
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?obs1 ?t1 ?r1
+       ?obs2 ?t2 ?r2
+       (?r2 - ?r1 AS ?delta)
+       (IF(?r1 != 0, ( (?r2 - ?r1) / ?r1 ) * 100.0, UNDEF) AS ?pctChange)
+WHERE {
+  # Aparcamiento (SUSTITUIR)
+  BIND(<URI-del-aparcamiento> AS ?parking)
+  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+  # Puntos del aparcamiento
+  ?parking edintinf:hasObservationPoint ?obsPoint .
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # Observación 1 (o1)
+  ?obs1 sosa:hasFeatureOfInterest ?obsPoint ;
+        sosa:observedProperty edintinf:infrastructureOccupancy ;
+        sosa:madeBySensor ?sensor ;
+        sosa:resultTime ?t1 ;
+        sosa:hasSimpleResult ?r1 .
+
+  # Observación 2 (o2) del mismo punto y sensor, posterior a o1
+  ?obs2 sosa:hasFeatureOfInterest ?obsPoint ;
+        sosa:observedProperty edintinf:infrastructureOccupancy ;
+        sosa:madeBySensor ?sensor ;
+        sosa:resultTime ?t2 ;
+        sosa:hasSimpleResult ?r2 .
+
+  FILTER(?t2 > ?t1)
+
+  # Asegurar que o2 es la siguiente inmediata a o1 (no existe t3 entre t1 y t2)
+  FILTER NOT EXISTS {
+    ?obs3 sosa:hasFeatureOfInterest ?obsPoint ;
+          sosa:observedProperty edintinf:infrastructureOccupancy ;
+          sosa:madeBySensor ?sensor ;
+          sosa:resultTime ?t3 .
+    FILTER(?t3 > ?t1 && ?t3 < ?t2)
+  }
+
+  OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+  # (Opcional) Solo sensores de conteo
+  # ?sensor a edintinf:CountingSensor .
+
+  # (Opcional) Intervalo temporal
+  # FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime && ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+}
+ORDER BY ?obsPoint ?sensor ?t1
+
+
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?parking ?parkingLabel
+       (MIN(?r) AS ?minOcc)
+       (MAX(?r) AS ?maxOcc)
+       (AVG(?r) AS ?avgOcc)
+       (COUNT(?r) AS ?numReadings)
+WHERE {
+  BIND(<URI-del-aparcamiento> AS ?parking)
+  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+  ?parking edintinf:hasObservationPoint ?obsPoint .
+
+  ?obs sosa:hasFeatureOfInterest ?obsPoint ;
+       sosa:observedProperty edintinf:infrastructureOccupancy ;
+       sosa:resultTime ?t ;
+       sosa:hasSimpleResult ?r .
+
+  # (Opcional) Solo sensores de conteo
+  # ?obs sosa:madeBySensor ?sensor .
+  # ?sensor a edintinf:CountingSensor .
+
+  # (Opcional) Intervalo temporal
+  # FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime && ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+}
+GROUP BY ?parking ?parkingLabel

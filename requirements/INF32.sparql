@@ -1,0 +1,21 @@
+
+# INF32: ¿Cuántos accesos corresponden a un punto de acceso ?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?obsPoint ?obsPointLabel
+       (COUNT(?access) AS ?numAccesses)
+WHERE {
+
+    # Sustituir por la URI del punto de acceso concreto
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Accesos registrados en ese punto
+    ?access a edintinf:AccessObservation ;
+            sosa:hasFeatureOfInterest ?obsPoint .
+}
+GROUP BY ?obsPoint ?obsPointLabel

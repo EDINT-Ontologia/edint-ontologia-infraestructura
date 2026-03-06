@@ -1,0 +1,33 @@
+
+
+# INF42: ¿A qué elementos de infraestructura está asociado un sensor de conteo?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+       ?sensor ?sensorLabel
+       ?observation ?observationLabel
+       ?obsPoint ?obsPointLabel
+       ?infra ?infraLabel
+WHERE {
+
+    # Sensor de conteo concreto (SUSTITUIR)
+    BIND(<URI-del-sensor-de-conteo> AS ?sensor)
+    ?sensor a edintinf:CountingSensor .
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+    # Observaciones hechas por este sensor
+    ?observation sosa:madeBySensor ?sensor ;
+                 sosa:hasFeatureOfInterest ?obsPoint .
+    OPTIONAL { ?observation rdfs:label ?observationLabel . }
+
+    # Punto de observación asociado
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Infraestructura a la que pertenece ese punto
+    ?infra edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?infra rdfs:label ?infraLabel . }
+}
+ORDER BY ?infraLabel ?obsPointLabel

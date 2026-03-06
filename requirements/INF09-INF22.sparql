@@ -1,0 +1,84 @@
+
+# INF09: ¿Qué observaciones de acceso de vehículos se han registrado en un intervalo de tiempo determinado?
+# También vale para INF22: ¿Cuántas observaciones de acceso de vehículos se han registrado por sensor en un intervalo de tiempo determinado?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?observation ?observationLabel
+       ?vehicle ?vehicleLabel
+       ?time
+       ?sensor ?sensorLabel
+       ?obsPoint ?obsPointLabel
+WHERE {
+
+    # Observaciones de acceso
+    ?observation a edintinf:AccessObservation .
+
+    OPTIONAL { ?observation rdfs:label ?observationLabel . }
+
+    # Observaciones asociadas a vehículos
+    ?observation edintinf:includesVehicle ?vehicle .
+    OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
+
+    # Sustituir por fechas de intervalo con formato: "Año-Mes-DíaTHora:Minuto:Segundo"^^xsd:dateTime
+    ?observation sosa:resultTime ?time .
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+    # Sensor que realizó la observación (opcional pero útil)
+    OPTIONAL { 
+        ?observation sosa:madeBySensor ?sensor .
+        OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+    }
+
+    # Punto de observación (opcional)
+    OPTIONAL {
+        ?observation sosa:hasFeatureOfInterest ?obsPoint .
+        OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+    }
+}
+ORDER BY ?time ?vehicle
+# Si se quiere, LIMIT <número>
+
+
+# Para un punto de acceso concreto
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?observation ?observationLabel
+       ?vehicle ?vehicleLabel
+       ?time
+       ?sensor ?sensorLabel
+WHERE {
+
+    # Fijar el punto de acceso concreto
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    # Observaciones de acceso en ese punto
+    ?observation a edintinf:AccessObservation ;
+                 sosa:hasFeatureOfInterest ?obsPoint ;
+                 sosa:resultTime ?time ;
+                 edintinf:includesVehicle ?vehicle .
+
+    OPTIONAL { ?observation rdfs:label ?observationLabel . }
+    OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
+
+    # Sustituir por fechas de intervalo con formato: "Año-Mes-DíaTHora:Minuto:Segundo"^^xsd:dateTime
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+    # Sensor que realizó la observación
+    OPTIONAL {
+        ?observation sosa:madeBySensor ?sensor .
+        OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+    }
+}
+ORDER BY ?time ?vehicle

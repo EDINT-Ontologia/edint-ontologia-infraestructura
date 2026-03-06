@@ -1,0 +1,74 @@
+
+# INF40: ¿Qué aparcamientos presentan un nivel de ocupación concreto (en un periodo)?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT
+       ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?observation
+       ?time
+       ?result
+WHERE {
+
+  # Aparcamientos y sus puntos de observación
+  ?parking a edintinf:Parking ;
+           edintinf:hasObservationPoint ?obsPoint .
+  OPTIONAL { ?parking  rdfs:label ?parkingLabel . }
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # Observaciones de ocupación realizadas por SENSOR DE CONTEO
+  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               sosa:madeBySensor ?sensor ;
+               sosa:resultTime ?time ;
+               sosa:hasSimpleResult ?result .
+
+  ?sensor a edintinf:CountingSensor .
+  OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+  # Filtro temporal (SUSTITUIR)
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+  # Filtro por nivel de ocupación (SUSTITUIR condición)
+  # Si el resultado es string en tu endpoint, tipa: xsd:decimal(?result)
+  FILTER(xsd:decimal(?result) >= 75)
+}
+ORDER BY ?parkingLabel ?obsPointLabel ?sensorLabel ?time
+
+
+# Solo la lista de aparcamientos que cumplen (al menos una lectura)
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?parking ?parkingLabel
+WHERE {
+  ?parking a edintinf:Parking ;
+           edintinf:hasObservationPoint ?obsPoint .
+
+  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               sosa:madeBySensor ?sensor ;
+               sosa:resultTime ?time ;
+               sosa:hasSimpleResult ?result .
+
+  ?sensor a edintinf:CountingSensor .
+  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+  # Cambia la condición según necesites (=, >=, BETWEEN…)
+  FILTER(xsd:decimal(?result) = 75)
+}
+ORDER BY ?parkingLabel

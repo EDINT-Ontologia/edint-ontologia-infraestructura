@@ -1,0 +1,55 @@
+
+# INF27: ¿Cuál es la localización de un punto de acceso concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX geo:      <https://datos.ign.es/def/geo_core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?obsPoint ?obsPointLabel
+       ?geom
+       ?x ?y
+WHERE {
+
+    # Sustituir por la URI del punto de acceso (ObservationPoint)
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Geometría del punto de acceso
+    ?obsPoint gsp:hasGeometry ?geom .
+
+    # Coordenadas ETRS89
+    OPTIONAL { ?geom geo:xETRS89 ?x . }
+    OPTIONAL { ?geom geo:yETRS89 ?y . }
+}
+
+
+# Localización junto con el equipamiento al que pertenece
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX geo:      <https://datos.ign.es/def/geo_core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?obsPoint ?obsPointLabel
+       ?facility ?facilityLabel
+       ?geom
+       ?x ?y
+WHERE {
+
+    # Punto de acceso concreto
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Equipamiento que contiene ese punto de acceso
+    ?facility edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Geometría y coordenadas del punto
+    ?obsPoint gsp:hasGeometry ?geom .
+
+    OPTIONAL { ?geom geo:xETRS89 ?x . }
+    OPTIONAL { ?geom geo:yETRS89 ?y . }
+}

@@ -1,0 +1,40 @@
+
+INF30: ¿Cuál es el sensor de un punto de acceso y sus observaciones durante un periodo determinado?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?observation ?observationLabel
+       ?result ?time
+WHERE {
+
+    # Punto de acceso concreto
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Observaciones realizadas sobre este punto de acceso
+    ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+                 sosa:madeBySensor ?sensor ;
+                 sosa:resultTime ?time .
+
+    OPTIONAL { ?observation rdfs:label ?observationLabel . }
+
+    # Sensor asociado
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+    # Resultado simple de la observación
+    OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
+
+    # Sustituir por fechas de intervalo con formato: "Año-Mes-DíaTHora:Minuto:Segundo"^^xsd:dateTime
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+
+    )
+}
+ORDER BY ?time

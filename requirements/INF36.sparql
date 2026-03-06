@@ -1,0 +1,22 @@
+
+# INF36: ¿Cuántas denuncias asociadas a infracciones de los distintos puntos han sido anuladas?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?obsPoint ?obsPointLabel
+       (COUNT(DISTINCT ?infraction) AS ?numCancelledComplaints)
+WHERE {
+  # Observaciones en puntos de acceso
+  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               edintinf:provesViolation ?infraction .
+
+  # Etiqueta del punto (opcional)
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # Solo infracciones cuya denuncia ha sido anulada
+  ?infraction edintinf:complaintCancelled true .
+}
+GROUP BY ?obsPoint ?obsPointLabel
+ORDER BY DESC(?numCancelledComplaints) ?obsPoint

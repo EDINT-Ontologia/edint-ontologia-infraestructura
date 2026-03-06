@@ -1,0 +1,21 @@
+
+# INF04: ¿Qué servicios públicos específicos se prestan en un equipamiento concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?service ?serviceLabel
+WHERE {
+    # Sustituye por la URI del equipamiento concreto
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Servicios públicos que presta
+    ?facility edintinf:providesPublicService ?service .
+
+    # Etiquetas del servicio público (SKOS y RDFS)
+    OPTIONAL { ?service skos:prefLabel ?serviceLabel . }
+    OPTIONAL { ?service rdfs:label ?serviceLabel . }
+}
