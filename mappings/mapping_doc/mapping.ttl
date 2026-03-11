@@ -1,0 +1,350 @@
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>.
+@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>.
+@prefix edintpublicservice: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/>.
+@prefix edintregularact: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/>.
+@prefix schema: <http://www.owl-ontologies.com/schema#>.
+@prefix edintmanagementrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/>.
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <http://schema.org/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+@prefix map: <http://mapping.example.com/> .
+@base <http://example.com/ns#>.
+
+map:person_000 dct:contributor foaf:Person ;
+    rdfs:label "Jhon Toledo" ;
+    foaf:mbox <mailto:ja.toledo@upm.es> .
+
+map:rules_000 schema:contributor map:person_000 ;
+    rdf:type schema:Dataset ;
+    schema:version "1.0.0" ;
+    schema:title "Mappings RML para transformar datos de infraestructura pública municipal a RDF (EDINT Infraestructura)" ;
+    schema:dateCreated "11-03-2026" ;
+    schema:description "Este conjunto de mappings RML transforma los datos de infraestructuras públicas de un municipio a RDF, utilizando la ontología EDINT Infraestructura. El objetivo es generar un grafo RDF interoperable para representar las entidades principales de la infraestructura pública municipal, como equipamientos educativos, sociales, culturales, deportivos, aparcamientos y estaciones de bicicletas compartidas, orientado a los usos habituales de las entidades locales." .
+
+<facility_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "Madrid_atencion_social.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{pk}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintinf:Facility;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant dct:identifier;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "pk";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdfs:label;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "nombre";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdfs:comment;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "descripcion_entidad";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant geosparql:hasGeometry;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:belongsTo;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/{barrio}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:hasObservationPoint;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:hasInfrastructureType;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/{tipo}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:hasRegisteredOwner;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{pk}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant schema:address;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/{codigo_postal}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant schema:openingHours;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "horario";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:providesPublicService;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/{servicio}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:offersRegularActivity;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/{actividad_regular}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:containsFacility;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{parent_equipamiento_municipal_id}";
+			rr:termType rr:IRI
+		];
+	].
+
+
+<locations_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "Madrid_atencion_social.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant geosparql:Geometry;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant dct:identifier;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "pk";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant geosparql:asWKT;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "POINT ({longitud} {latitud})";
+			rr:datatype geosparql:wktLiteral
+		];
+	].
+
+
+<observationPoint_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "Madrid_atencion_social.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintinf:ObservationPoint;
+		];
+	].
+
+
+<postalAddress_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "Madrid_atencion_social.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/{codigo_postal}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant esdir:DireccionPostal;
+		];
+	].
+
+
+<rolDeGestion_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "Madrid_atencion_social.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/rol-de-gestion/{rol}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintinf:ManagementRole;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:rolePlayedBy;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{company}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:hasRoleType;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/{rol}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintinf:madeOnInfrastructure;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{equipamiento_municipal}";
+			rr:termType rr:IRI
+		];
+	].
+
+
