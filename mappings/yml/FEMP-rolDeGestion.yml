@@ -1,5 +1,5 @@
 prefixes:
-  edintinfp: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#
+  edintinf: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#
   schema: http://www.owl-ontologies.com/schema#
   edintmanagementrole: http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/
 
@@ -12,7 +12,7 @@ mappings:
       - rolDeGestion-source
     s: http://vocab.linkeddata.es/datosabiertos/recurso/rol-de-gestion/$(rol) #
     po:
-      - [a, edintinfp:ManagementRole]
-      - [edintinfp:rolePlayedBy, "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/$(company)~iri"] # Esto va a Organizacion
-      - [edintinfp:hasRoleType, "edintmanagementrole:$(rol)~iri"] # SKOS: basicservices, facilitysecurity, humanresources, maintenance
-      - [edintinfp:madeOnInfrastructure, "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/$(equipamiento_municipal)~iri"] # Esto va a equipamientoMunicipal
+      - [a, edintinf:ManagementRole]
+      - [edintinf:rolePlayedBy, "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/$(company)~iri"] # Esto va a Organizacion
+      - [edintinf:hasRoleType, "edintmanagementrole:$(rol)~iri"] # SKOS: basicservices, facilitysecurity, humanresources, maintenance
+      - [edintinf:madeOnInfrastructure, "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/$(equipamiento_municipal)~iri"] # Esto va a equipamientoMunicipal
