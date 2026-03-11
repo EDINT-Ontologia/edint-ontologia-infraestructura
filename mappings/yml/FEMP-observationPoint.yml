@@ -1,0 +1,13 @@
+prefixes:
+  edintinf: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#
+
+sources:
+  observation-point-source: ['Madrid_con_punto_observ_id.csv~csv']
+
+mappings:
+  observationPoint:
+    sources:
+      - observation-point-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/$(punto_observ_id)
+    po:
+      - [a, edintinf:ObservationPoint]
