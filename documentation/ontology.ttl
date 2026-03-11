@@ -283,14 +283,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType
 :hasInfrastructureType rdf:type owl:ObjectProperty ;
                        rdfs:domain :InfrastructureElement ;
-                       rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType>
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] ;
                        rdfs:comment "Relación entre un elemento de infraestructura y un concepto de la taxonomía de tipos de elemento de infraestructura."@es ,
                                     "Relationship between an infrastructure element and a concept from the taxonomy of infrastructure element types."@en ;
                        rdfs:label "has infrastructure element type"@en ,
@@ -305,6 +297,16 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                   "Relationship between an infrastructure element and an observation point."@en ;
                      rdfs:label "has observation point"@en ,
                                 "tiene punto de observación"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner
+:hasRegisteredOwner rdf:type owl:ObjectProperty ;
+                    rdfs:domain :InfrastructureElement ;
+                    rdfs:range :Organization ;
+                    rdfs:comment "Relación entre un elemento de infraestructura y su titular, generalmente una organización"@en ,
+                                 "Relationship between an infrastructure element and its owner, which is usually an organization."@en ;
+                    rdfs:label "has registered owner"@en ,
+                               "tiene titular registrado"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType
@@ -413,16 +415,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                     "Servicio público prestado por un equipamiento, por ejemplo internet a través de una wifi."@es ;
                        rdfs:label "presta servicio público"@es ,
                                   "provides public service"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner
-:registeredOwner rdf:type owl:ObjectProperty ;
-                 rdfs:domain :InfrastructureElement ;
-                 rdfs:range :Organization ;
-                 rdfs:comment "Relación entre un elemento de infraestructura y su titular, generalmente una organización"@en ,
-                              "Relationship between an infrastructure element and its owner, which is usually an organization."@en ;
-                 rdfs:label "has registered owner"@en ,
-                            "tiene titular"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#rolePlayedBy
@@ -990,6 +982,15 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                                                                                             "Vehículo"@es .
 
 
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf :Facility ;
+                                                                                               rdfs:comment "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es ,
+                                                                                                            "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en ;
+                                                                                               rdfs:label "Aparcamiento"@es ,
+                                                                                                          "Parking"@en .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> rdf:type owl:Class ;
                                                                                            owl:disjointWith <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> ;
@@ -1066,10 +1067,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
 :Facility rdf:type owl:Class ;
           rdfs:subClassOf :InfrastructureElement ;
-          rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de vehículos."@es ,
-                       "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for vehicles."@en ;
-          rdfs:label "Equipamiento generador de movilidad"@es ,
-                     "Mobility generator facility"@en .
+          rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ,
+                       "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en ;
+          rdfs:label "Equipamiento"@es ,
+                     "Facility"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement
@@ -1105,15 +1106,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                            "Cualquier organización pública o privada que sea titular o gestione un elemento de la infraestructura."@es ;
               rdfs:label "Organización"@es ,
                          "Organization"@en .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking
-:Parking rdf:type owl:Class ;
-         rdfs:subClassOf :Facility ;
-         rdfs:comment "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es ,
-                      "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en ;
-         rdfs:label "Aparcamiento"@es ,
-                    "Parking"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement
@@ -1270,6 +1262,20 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                                                                "velocidad"@es .
 
 
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access
+:access rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
+        rdfs:label "acceso"@es ,
+                   "access"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy
+:facilityOccupancy rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                   rdfs:label "facility Occupancy"@en ,
+                              "ocupación de equipamiento"@es .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#trafficDensity
 :trafficDensity rdf:type owl:NamedIndividual ,
                          <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> ;
@@ -1280,39 +1286,38 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> rdf:type owl:NamedIndividual ;
-                                                                        rdfs:label "infrastructure type"@en ,
-                                                                                   "tipo de infraestructura"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                        rdfs:label "Infrastructure type"@en ,
+                                                                                   "Tipo de infraestructura"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> rdf:type owl:NamedIndividual ;
-                                                                   rdfs:label "public service type"@en ,
-                                                                              "tipo de servicio público"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                   rdfs:label "Public service type"@en ,
+                                                                              "Tipo de servicio público"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> rdf:type owl:NamedIndividual ;
-                                                                     rdfs:label "regular activity type"@es ,
-                                                                                "tipo de actividad regular"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                     rdfs:label "Regular activity type"@es ,
+                                                                                "Tipo de actividad regular"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> rdf:type owl:NamedIndividual ;
-                                                              rdfs:label "role type"@en ,
-                                                                         "tipo de rol"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> rdf:type owl:NamedIndividual ;
-                                                                 rdfs:label "tipo de vehículo"@es ,
-                                                                            "vehicle type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                              rdfs:label "Role type"@en ,
+                                                                         "Tipo de rol"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> rdf:type owl:NamedIndividual ;
-                                                                   rdfs:label "tipo de infracción"@es ,
-                                                                              "violation type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                   rdfs:label "Tipo de infracción"@es ,
+                                                                              "Violation type"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-equipo-trafico

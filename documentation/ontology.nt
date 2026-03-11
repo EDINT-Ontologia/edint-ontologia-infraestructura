@@ -287,18 +287,6 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
-_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un elemento de infraestructura y un concepto de la taxonomía de tipos de elemento de infraestructura."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an infrastructure element and a concept from the taxonomy of infrastructure element types."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "has infrastructure element type"@en .
@@ -313,21 +301,30 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasObservationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has observation point"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasObservationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "tiene punto de observación"@es .
 # 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un elemento de infraestructura y su titular, generalmente una organización"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an infrastructure element and its owner, which is usually an organization."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has registered owner"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner> <http://www.w3.org/2000/01/rdf-schema#label> "tiene titular registrado"@es .
+# 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ManagementRole> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role and the taxonomy of management roles."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "has role type"@en .
@@ -336,18 +333,18 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid31 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relate an Infraction to a concept from the taxonomy of infraction types."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "has violation type"@en .
@@ -383,18 +380,18 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
-_:genid37 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Actividad que se lleva a cabo regularmente en el equipamiento."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity that is carried out regularly in a facility."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "offers regular activity"@en .
@@ -412,31 +409,22 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#range> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid39 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#range> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "Public service provided by a facility, for example internet via wifi."@en .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "Servicio público prestado por un equipamiento, por ejemplo internet a través de una wifi."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#label> "presta servicio público"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#label> "provides public service"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un elemento de infraestructura y su titular, generalmente una organización"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an infrastructure element and its owner, which is usually an organization."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has registered owner"@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#registeredOwner> <http://www.w3.org/2000/01/rdf-schema#label> "tiene titular"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#rolePlayedBy
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#rolePlayedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -657,15 +645,15 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#unionOf> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of directions of traffic"@en .
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de sentidos de circulación"@es .
@@ -955,6 +943,14 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehículo"@es .
 # 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/2000/01/rdf-schema#comment> "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking> <http://www.w3.org/2000/01/rdf-schema#label> "Parking"@en .
+# 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal> <http://www.w3.org/2002/07/owl#disjointWith> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> .
@@ -965,14 +961,14 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Feature> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureClass> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R.ST> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureCode> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureClass> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R.ST> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureCode> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://purl.org/dc/terms/issued> "2013-03-28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#comment> "Vía de comunicación construida para la circulación. \nEn su definición según el modelo de direcciones de la Administración General del Estado, Incluye calles, carreteras de todo tipo, caminos, vías de agua, pantalanes, etc. Asimismo, incluye la pseudovía., es decir todo aquello que complementa o sustituye a la vía.\nEn nuestro caso, este término se utiliza para hacer referencia a las vías urbanas.\n\nPor esta razón, se utiliza geonames:R.ST como valor principal de la propiedad geonames:featureCode, dejando de lado otras opciones como R.PRMN (promenade), R.TRL (trail). Quizás en el futuro haya que relajar un poco esta opción, sobre todo, por ejemplo, para ciudades con costa y paseo marítimo."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
@@ -1019,10 +1015,10 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de vehículos."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for vehicles."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Equipamiento generador de movilidad"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Mobility generator facility"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Equipamiento"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Facility"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1054,14 +1050,6 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Cualquier organización pública o privada que sea titular o gestione un elemento de la infraestructura."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organización"@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
-# 
-# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/2000/01/rdf-schema#comment> "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."@es .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/2000/01/rdf-schema#comment> "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."@en .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento"@es .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Parking> <http://www.w3.org/2000/01/rdf-schema#label> "Parking"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1203,6 +1191,18 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad> <http://www.w3.org/2000/01/rdf-schema#label> "speed"@en .
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad> <http://www.w3.org/2000/01/rdf-schema#label> "velocidad"@es .
 # 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access> <http://www.w3.org/2000/01/rdf-schema#label> "acceso"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access> <http://www.w3.org/2000/01/rdf-schema#label> "access"@en .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy> <http://www.w3.org/2000/01/rdf-schema#label> "facility Occupancy"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy> <http://www.w3.org/2000/01/rdf-schema#label> "ocupación de equipamiento"@es .
+# 
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#trafficDensity
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#trafficDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#trafficDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> .
@@ -1213,33 +1213,33 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "infrastructure type"@en .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de infraestructura"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de infraestructura"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "public service type"@en .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de servicio público"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "Public service type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de servicio público"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "regular activity type"@es .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de actividad regular"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Regular activity type"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de actividad regular"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/2000/01/rdf-schema#label> "role type"@en .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de rol"@es .
-# 
-# http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de vehículo"@es .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/2000/01/rdf-schema#label> "Role type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de rol"@es .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType
 <http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de infracción"@es .
-<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "violation type"@en .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de infracción"@es .
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Violation type"@en .
 # 
 # http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-equipo-trafico
 <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-equipo-trafico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

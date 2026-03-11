@@ -258,6 +258,9 @@
         <ObjectProperty IRI="#hasObservationPoint"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasRegisteredOwner"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasRoleType"/>
     </Declaration>
     <Declaration>
@@ -280,9 +283,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#providesPublicService"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#registeredOwner"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#rolePlayedBy"/>
@@ -417,6 +417,12 @@
         <NamedIndividual IRI="http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#access"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#facilityOccupancy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#trafficDensity"/>
     </Declaration>
     <Declaration>
@@ -430,9 +436,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType"/>
@@ -669,8 +672,36 @@
         <NamedIndividual IRI="http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#access"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <NamedIndividual IRI="#facilityOccupancy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"/>
         <NamedIndividual IRI="#trafficDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -766,6 +797,10 @@
         <Class IRI="#InfrastructureElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRegisteredOwner"/>
+        <Class IRI="#InfrastructureElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRoleType"/>
         <Class IRI="#ManagementRole"/>
     </ObjectPropertyDomain>
@@ -796,10 +831,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#providesPublicService"/>
         <Class IRI="#Facility"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#registeredOwner"/>
-        <Class IRI="#InfrastructureElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#rolePlayedBy"/>
@@ -897,18 +928,12 @@
         <Class IRI="#Facility"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInfrastructureType"/>
-        <ObjectIntersectionOf>
-            <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <ObjectHasValue>
-                <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasObservationPoint"/>
         <Class IRI="#ObservationPoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRegisteredOwner"/>
+        <Class IRI="#Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRoleType"/>
@@ -965,10 +990,6 @@
                 <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#registeredOwner"/>
-        <Class IRI="#Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#rolePlayedBy"/>
@@ -2577,6 +2598,16 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <Literal xml:lang="en">Violation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#access</IRI>
+        <Literal xml:lang="es">acceso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#access</IRI>
+        <Literal xml:lang="en">access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#belongsTo</IRI>
         <Literal xml:lang="es">Relación entre un elemento de infraestructura y la división administrativa a la cual pertenece, incluido un Barrio.</Literal>
@@ -2632,6 +2663,16 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <Literal xml:lang="es">contiene equipamiento</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#facilityOccupancy</IRI>
+        <Literal xml:lang="en">facility Occupancy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#facilityOccupancy</IRI>
+        <Literal xml:lang="es">ocupación de equipamiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasInfrastructureType</IRI>
         <Literal xml:lang="es">Relación entre un elemento de infraestructura y un concepto de la taxonomía de tipos de elemento de infraestructura.</Literal>
@@ -2670,6 +2711,26 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasObservationPoint</IRI>
         <Literal xml:lang="es">tiene punto de observación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRegisteredOwner</IRI>
+        <Literal xml:lang="en">Relación entre un elemento de infraestructura y su titular, generalmente una organización</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRegisteredOwner</IRI>
+        <Literal xml:lang="en">Relationship between an infrastructure element and its owner, which is usually an organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRegisteredOwner</IRI>
+        <Literal xml:lang="en">has registered owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRegisteredOwner</IRI>
+        <Literal xml:lang="es">tiene titular registrado</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2893,26 +2954,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#registeredOwner</IRI>
-        <Literal xml:lang="en">Relación entre un elemento de infraestructura y su titular, generalmente una organización</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#registeredOwner</IRI>
-        <Literal xml:lang="en">Relationship between an infrastructure element and its owner, which is usually an organization.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#registeredOwner</IRI>
-        <Literal xml:lang="en">has registered owner</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#registeredOwner</IRI>
-        <Literal xml:lang="es">tiene titular registrado</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#rolePlayedBy</IRI>
         <Literal xml:lang="es">Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce.</Literal>
     </AnnotationAssertion>
@@ -2954,62 +2995,52 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType</IRI>
-        <Literal xml:lang="en">infrastructure type</Literal>
+        <Literal xml:lang="en">Infrastructure type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType</IRI>
-        <Literal xml:lang="es">tipo de infraestructura</Literal>
+        <Literal xml:lang="es">Tipo de infraestructura</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService</IRI>
-        <Literal xml:lang="en">public service type</Literal>
+        <Literal xml:lang="en">Public service type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService</IRI>
-        <Literal xml:lang="es">tipo de servicio público</Literal>
+        <Literal xml:lang="es">Tipo de servicio público</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity</IRI>
-        <Literal xml:lang="es">regular activity type</Literal>
+        <Literal xml:lang="es">Regular activity type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity</IRI>
-        <Literal xml:lang="es">tipo de actividad regular</Literal>
+        <Literal xml:lang="es">Tipo de actividad regular</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType</IRI>
-        <Literal xml:lang="en">role type</Literal>
+        <Literal xml:lang="en">Role type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType</IRI>
-        <Literal xml:lang="es">tipo de rol</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType</IRI>
-        <Literal xml:lang="es">tipo de vehículo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType</IRI>
-        <Literal xml:lang="en">vehicle type</Literal>
+        <Literal xml:lang="es">Tipo de rol</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType</IRI>
-        <Literal xml:lang="es">tipo de infracción</Literal>
+        <Literal xml:lang="es">Tipo de infracción</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType</IRI>
-        <Literal xml:lang="en">violation type</Literal>
+        <Literal xml:lang="en">Violation type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
