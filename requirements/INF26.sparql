@@ -1,0 +1,49 @@
+
+# INF26: ¿Cuál es la localización de un elemento de movilidad concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX geo:      <https://datos.ign.es/def/geo_core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?element ?elementLabel
+       ?geom
+       ?x ?y
+WHERE {
+
+    # Sustituye por la URI del elemento de movilidad
+    BIND(<URI-del-elemento> AS ?element)
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+
+    # Geometría asociada al elemento
+    ?element gsp:hasGeometry ?geom .
+
+    # Coordenadas ETRS89 del elemento
+    OPTIONAL { ?geom geo:xETRS89 ?x . }
+    OPTIONAL { ?geom geo:yETRS89 ?y . }
+}
+
+
+# Localización en formato WKT
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?element ?elementLabel
+       ?geom
+       ?wkt
+WHERE {
+
+    # Sustituye por la URI del elemento de movilidad
+    BIND(<URI-del-elemento> AS ?element)
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+
+    # Geometría del elemento
+    ?element gsp:hasGeometry ?geom .
+
+    # Representación geométrica en WKT
+    OPTIONAL { ?geom gsp:asWKT ?wkt . }
+}

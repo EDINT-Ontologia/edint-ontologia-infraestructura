@@ -1,0 +1,24 @@
+
+# INF24: ¿Qué puntos de acceso tiene cada equipamiento por tipo de equipamiento?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?type ?typeLabel
+       ?facility ?facilityLabel
+       ?obsPoint ?obsPointLabel
+WHERE {
+
+    # Equipamientos que tienen puntos de acceso
+    ?facility a edintinf:Facility ;
+              edintinf:hasObservationPoint ?obsPoint ;
+              edintinf:hasInfrastructureType ?type .
+
+    # Etiquetas opcionales para legibilidad
+    OPTIONAL { ?facility   rdfs:label ?facilityLabel . }
+    OPTIONAL { ?obsPoint   rdfs:label ?obsPointLabel . }
+    OPTIONAL { ?type       skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type       rdfs:label     ?typeLabel . }
+}
+ORDER BY ?typeLabel ?facilityLabel ?obsPointLabel

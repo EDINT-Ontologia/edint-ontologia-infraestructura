@@ -1,0 +1,36 @@
+
+
+# INF7: ¿Qué organizaciones privadas tienen un rol en infraestructuras públicas?
+
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?infra ?infraLabel
+       ?publicOwner ?publicOwnerLabel
+       ?role ?roleLabel
+       ?privateOrg ?privateOrgLabel
+WHERE {
+
+    # 1. Infraestructura pública
+    ?infra a edintinf:InfrastructureElement ;
+           edintinf:registeredOwner ?publicOwner .
+
+    ?publicOwner trafico:isPublic true .   # Titularidad pública
+
+    # 2. Rol de gestión sobre esa infraestructura
+    ?role edintinf:madeOnInfrastructure ?infra ;
+          edintinf:rolePlayedBy ?privateOrg .
+
+    OPTIONAL { ?role rdfs:label ?roleLabel . }
+
+    # 3. La organización que gestiona es privada
+    ?privateOrg trafico:isPublic false .
+
+    # Etiquetas opcionales
+    OPTIONAL { ?infra rdfs:label ?infraLabel . }
+    OPTIONAL { ?publicOwner rdfs:label ?publicOwnerLabel . }
+    OPTIONAL { ?privateOrg rdfs:label ?privateOrgLabel . }
+}
+ORDER BY ?infra ?privateOrg

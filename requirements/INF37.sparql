@@ -1,0 +1,43 @@
+
+INF37: ¿Cuál es el nivel de ocupación registrado para un aparcamiento en una fecha y hora determinadas?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?observation ?observationLabel
+       ?result ?time
+WHERE {
+
+  # Aparcamiento concreto (SUSTITUIR)
+  BIND(<URI-del-aparcamiento> AS ?parking)
+  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+  # Puntos de observación del aparcamiento
+  ?parking edintinf:hasObservationPoint ?obsPoint .
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # Observaciones en esos puntos, realizadas por un sensor de conteo (CountingSensor),
+  #    cuya propiedad observada sea 'ocupación'
+  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               sosa:madeBySensor ?sensor ;
+               sosa:resultTime ?time .
+
+  ?sensor a edintinf:CountingSensor .
+
+  OPTIONAL { ?sensor      rdfs:label ?sensorLabel . }
+  OPTIONAL { ?observation rdfs:label ?observationLabel . }
+
+  # Valor observado (ocupación)
+  OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
+
+  # Filtro temporal (SUSTITUIR por el instante deseado)
+  FILTER( ?time = "FECHA-HORA"^^xsd:dateTime )
+}
+ORDER BY ?time

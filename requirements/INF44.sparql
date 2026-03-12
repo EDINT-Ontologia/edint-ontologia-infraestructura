@@ -1,0 +1,33 @@
+
+# INF44: ¿Por qué puntos de acceso pasó un vehículo (durante un periodo de tiempo)?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT
+       ?vehicle ?vehicleLabel
+       ?observation ?time
+       ?obsPoint ?obsPointLabel
+WHERE {
+
+  # 1) Vehículo concreto (SUSTITUIR URI)
+  BIND(<URI-del-vehiculo> AS ?vehicle)
+  OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
+
+  # 2) Observaciones en las que aparece ese vehículo
+  ?observation edintinf:includesVehicle ?vehicle ;
+               sosa:hasFeatureOfInterest ?obsPoint ;
+               sosa:resultTime ?time .
+
+  # 3) Puntos de acceso visitados
+  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+  # 4) Filtro temporal (SUSTITUIR RANGO)
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+
+}
+ORDER BY ?time

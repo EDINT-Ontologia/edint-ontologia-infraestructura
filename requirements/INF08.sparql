@@ -1,0 +1,34 @@
+
+# INF08: ¿Qué sensores de acceso están instalados en un equipamiento concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+WHERE {
+
+    # Sustituir por la URI del equipamiento concreto
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Puntos de observación vinculados al equipamiento
+    ?facility edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Observaciones realizadas en ese punto
+    ?observation sosa:hasFeatureOfInterest ?obsPoint .
+
+    # Sensor que hizo la observación
+    ?observation sosa:madeBySensor ?sensor .
+
+    # Filtrar solo sensores de acceso
+    ?sensor a edintinf:AccessSensor .
+
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+}
+ORDER BY ?obsPoint ?sensor
+

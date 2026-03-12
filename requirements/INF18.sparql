@@ -1,0 +1,48 @@
+
+# INF18: ¿Qué instalaciones son de un tipo concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?installation ?installationLabel
+       ?type ?typeLabel
+WHERE {
+
+    # Instalaciones (cualquier InfrastructureElement que tenga tipo asignado)
+    ?installation edintinf:hasInfrastructureType ?type .
+
+    OPTIONAL { ?installation rdfs:label ?installationLabel . }
+
+    # Etiquetas del tipo SKOS
+    OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type rdfs:label ?typeLabel . }
+
+    # Filtra por el tipo concreto (por nombre)
+    FILTER( LCASE(STR(?typeLabel)) = LCASE("tipo_instalación") )
+}
+ORDER BY ?installationLabel
+
+
+# Para cualquier elemento de infraestructura
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?element ?elementLabel
+       ?type ?typeLabel
+WHERE {
+
+    # Cualquier elemento de infraestructura que tenga tipo asignado
+    ?element a edintinf:InfrastructureElement ;
+             edintinf:hasInfrastructureType ?type .
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+    OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type rdfs:label ?typeLabel . }
+
+    # Filtrar por el tipo concreto (por etiqueta)
+    FILTER( LCASE(STR(?typeLabel)) = LCASE("tipo_elemento") )
+}
+ORDER BY ?elementLabel

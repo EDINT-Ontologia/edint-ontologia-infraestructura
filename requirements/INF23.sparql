@@ -1,0 +1,40 @@
+
+
+# INF23: ¿Qué observaciones se han producido en un punto de acceso concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?observation ?observationLabel
+       ?type ?typeLabel
+       ?result ?time
+       ?sensor ?sensorLabel
+WHERE {
+
+    # Punto de acceso concreto
+    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+
+    # Observaciones registradas en ese punto
+    ?observation sosa:hasFeatureOfInterest ?obsPoint .
+
+    # Puede incluir observaciones de acceso, conteo u otras — opcional filtrar
+    OPTIONAL { ?observation a ?type .
+               OPTIONAL { ?type rdfs:label ?typeLabel . } }
+
+    # Etiqueta de la observación
+    OPTIONAL { ?observation rdfs:label ?observationLabel . }
+
+    # Resultado simple (si existe)
+    OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
+
+    # Momento de la observación
+    OPTIONAL { ?observation sosa:resultTime ?time . }
+
+    # Sensor que la realizó
+    OPTIONAL {
+        ?observation sosa:madeBySensor ?sensor .
+        OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+    }
+}
+ORDER BY ?time ?observation

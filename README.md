@@ -1,18 +1,23 @@
-# Ontología de Infraestructura Pública (The Public Infrastructure Ontology)
+# Ontología de Infraestructura (The Infrastructure Ontology)
 
-La ontología de Infraestructura Pública representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de bicicletas compartidas.
+La ontología de Infraestructura representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de bicicletas compartidas.
 
 
 # Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura pública de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamoientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamoientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
 
 # Prefijo y espacio de nombres (Prefix and namespace)
-El prefijo de la ontología de Infraestructura Pública es: edintinfp y es publicada en el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#) 
+El prefijo de la ontología de Infraestructura es: edintinf y es publicada en el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#) 
 
 # Modelo conceptual (Ontology conceptualization)
-![Modelo conceptual general](diagrams/diagramGeneral.png)
-![Modelo conceptual de aparcamiento](diagrams/diagramAparcamiento.png)
+![Modelo conceptual general](diagrams/diagrama-conceptual-General.png)
+
+![Modelo conceptual general](diagrams/diagrama-conceptual-AccessSensors.png)
+
+![Modelo conceptual general](diagrams/diagrama-conceptual-CountingSensors.png)
+
+![Modelo conceptual general](diagrams/diagrama-conceptual-TrafficSensors.png)
 
 # Estructura del repositorio (Repository structure)
 
@@ -30,7 +35,7 @@ El repositorio contiene los siguientes directorios:
 
 # Mantenimiento y evolución (Maintenance and evolution)
 
-Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guía proporcionadas en ([Issues Management](https://github.com/infraestructura-publica/wiki/issues-management)) para generar una indicencia (trabajo en progreso).
+Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guía proporcionadas en ([Issues Management](https://github.com/telefonicasc/edint-ontologia-infraestructura/issues)) para generar una indicencia (trabajo en progreso).
 
 # Financiación (Funding)
 

@@ -1,0 +1,22 @@
+
+INF29: ¿Cuál es el horario de actividad de un equipamiento?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX schema:   <http://schema.org/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel
+       ?openingHours
+WHERE {
+
+    # Sustituir por el URI del equipamiento concreto
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    # Debe ser un equipamiento
+    ?facility a edintinf:Facility .
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Horario de actividad según schema:openingHours
+    OPTIONAL { ?facility schema:openingHours ?openingHours . }
+}

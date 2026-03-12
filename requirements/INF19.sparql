@@ -1,0 +1,24 @@
+
+# INF19: ¿Qué equipamientos prestan un servicio público concreto?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel
+       ?service ?serviceLabel
+WHERE {
+    # Equipamientos que prestan un servicio público
+    ?facility a edintinf:Facility ;
+              edintinf:providesPublicService ?service .
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Etiquetas del servicio
+    OPTIONAL { ?service skos:prefLabel ?serviceLabel . }
+    OPTIONAL { ?service rdfs:label ?serviceLabel . }
+
+    # Filtra por el servicio deseado (por etiqueta)
+    FILTER(LCASE(STR(?serviceLabel)) = LCASE("nombre_servicio"))
+}
+ORDER BY ?facility

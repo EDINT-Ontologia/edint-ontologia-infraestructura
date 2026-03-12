@@ -1,0 +1,37 @@
+
+#INF05: ¿Qué organización es responsable de la gestión de un equipamiento específico?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?facility ?facilityLabel
+       ?role ?roleLabel
+       ?roleType ?roleTypeLabel
+       ?organization ?organizationLabel
+WHERE {
+
+    # Sustituye por el IRI del equipamiento concreto
+    BIND(<URI-del-equipamiento> AS ?facility)
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+
+    # Rol de gestión aplicado a este equipamiento
+    ?role edintinf:madeOnInfrastructure ?facility .
+
+    OPTIONAL { ?role rdfs:label ?roleLabel . }
+
+    # Tipo de rol (SKOS)
+    ?role edintinf:hasManagementRoleType ?roleType .
+
+    # Filtrar para que el tipo exacto sea "responsable de gestión". Revisar valores concretos de skos
+    ?roleType (skos:prefLabel|rdfs:label) ?roleTypeLabel .
+    FILTER(LCASE(STR(?roleTypeLabel)) = "responsable de gestión")
+
+    # Organización que desempeña ese rol
+    ?role edintinf:rolePlayedBy ?organization .
+    OPTIONAL { ?organization rdfs:label ?organizationLabel . }
+}
+ORDER BY ?role ?organization
+
+

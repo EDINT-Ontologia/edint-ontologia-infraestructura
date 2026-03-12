@@ -1,0 +1,55 @@
+
+# INF41: ¿Qué elementos de infraestructura por tipo tiene una división administrativa concreta?
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?admin ?adminLabel
+       ?type ?typeLabel
+       (COUNT(DISTINCT ?element) AS ?numElements)
+WHERE {
+  # División administrativa concreta (sustituir)
+  BIND(<URI-de-la-division> AS ?admin)
+  OPTIONAL { ?admin rdfs:label ?adminLabel . }
+
+  # Elementos de infraestructura que pertenecen a esa división
+  ?element a edintinf:InfrastructureElement ;
+           edintinf:belongsTo ?admin ;
+           edintinf:hasInfrastructureType ?type .
+
+  # Etiquetas del tipo (SKOS o RDFS)
+  OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+  OPTIONAL { ?type rdfs:label     ?typeLabel . }
+}
+GROUP BY ?admin ?adminLabel ?type ?typeLabel
+ORDER BY ?adminLabel ?typeLabel
+
+
+
+# Incluyendo el tipo de los elementos
+
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?admin ?adminLabel
+       ?element ?elementLabel
+       ?type ?typeLabel
+WHERE {
+  # División administrativa concreta (sustituir)
+  BIND(<URI-de-la-division> AS ?admin)
+  OPTIONAL { ?admin rdfs:label ?adminLabel . }
+
+  # Elementos pertenecientes a esa división, con su tipo
+  ?element a edintinf:InfrastructureElement ;
+           edintinf:belongsTo ?admin ;
+           edintinf:hasInfrastructureType ?type .
+
+  OPTIONAL { ?element rdfs:label ?elementLabel . }
+  OPTIONAL { ?type    skos:prefLabel ?typeLabel . }
+  OPTIONAL { ?type    rdfs:label     ?typeLabel . }
+}
+ORDER BY ?typeLabel ?elementLabel
