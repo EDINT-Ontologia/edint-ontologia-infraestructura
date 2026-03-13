@@ -21,4 +21,65 @@ Figure 3. Conceptual model for the counting sensors</figcaption></center></p>
 Figure 4. Conceptual model for the traffic sensors</figcaption></center></p> 
 <p>For traffic-related sensors, concepts from the  <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#">Ontology for the representation of vehicle traffic data</a> are reused. Specifically, this ontology includes <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico">traffic observations, <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico">traffic measurement devices</a>, and <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico">traffic measurement properties</a>. The observable properties <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#ocupacion">traffic occupancy</a>, <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#nivel">level, <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#intensidad">intensity</a>, and <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad">speed</a> can be reused. The property <a href="#trafficDensity">traffic density</a> has been added as a new observable property.</p>
 <p>Sensors of any of the three types considered in the ontology (access, counting, and traffic) have a <a href="#http://schema.org/manufacturer">manufacturer</a>, which is an <a href="#Organization">organization</a>.</p>
+<pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
+@prefix edintkos: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/&gt; .
+@prefix edintpublicservice: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/&gt; .
+@prefix edintregularact: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/&gt; .
+@prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
+@prefix ester: &lt;http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt; .
+@prefix schema: &lt;http://schema.org/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
+# Información del Centro de Día
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/10047540&gt;
+  a edintinf:Facility ;
+  dct:identifier "10047540" ;
+  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt; ;
+  schema:openingHours "De 8,15 a 18 horas de Lunes a Viernes." ;
+  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
+  edintinf:hasInfrastructureType &lt;edintkos:CentrosDiaMayores&gt; ;
+  edintinf:hasObservationPoint &lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt; ;
+  edintinf:hasRegisteredOwner &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt; ;
+  edintinf:providesPublicService edintpublicservice:medicalassistance ;
+  geosparql:hasGeometry &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt; ;
+  rdfs:label "Centro de Día Municipal 'Nicanor Barroso'" .
+
+# Definición de la Geometría
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt;
+  a geosparql:Geometry ;
+  dct:identifier "10047540" ;
+  geosparql:asWKT "POINT (-3.6420364042780338 40.398886698528045)"^^geosparql:wktLiteral .
+
+# Propietario (Organización)
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt;
+  a edintinf:Organization ;
+  rdfs:label "Ayuntamiento de Madrid" ;
+  edintinf:isPublic "true"^^xsd:boolean .
+
+# Punto de observación asociado
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt;
+  a edintinf:ObservationPoint ;
+  rdfs:comment "Punto de conteo de personas en el acceso principal" ;
+  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; .
+
+# Dirección Postal
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt;
+  a esdir:DireccionPostal ;
+  rdfs:label "C. de la Encomienda de Palacios, 224, Moratalaz, 28030 Madrid" .
+
+# Barrio
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt;
+  a ester:Barrio ;
+  rdfs:label "Fontarrón" .
+</textarea></pre>
+<script>
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
