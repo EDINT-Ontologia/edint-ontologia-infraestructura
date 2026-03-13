@@ -5,9 +5,9 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructurapublica#> .
+@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintmanagementrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/> .
+@prefix edintrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType/> .
 
 #################################################################
 #
@@ -15,16 +15,16 @@
 #
 #################################################################
 
-edintkos:ManagementRoleType a skos:ConceptScheme ; 
+edintkos:RoleType a skos:ConceptScheme ; 
     dct:issued "2026-02-19"^^xsd:date ;
-    dct:modified "2026-02-19"^^xsd:date ;
+    dct:modified "2026-03-12"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
     rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
-    rdfs:label "Tipo de rol de gestión"@en ;
-    rdfs:label "Type of management role"@es ;
-    dct:title "Concept scheme grouping types of management roles that are exercised by an organization on a facility"@en ;
-    dct:title "Esquema de conceptos agrupando tipos de roles de gestión que ejerce una organización sobre un equipamiento"@es .
+    rdfs:label "Tipo de rol"@en ;
+    rdfs:label "Type of role"@es ;
+    dct:title "Concept scheme grouping types of  roles that are exercised by an organization on an infrastructure element"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de roles de gestión que ejerce una organización sobre un elemento de la infraestructura"@es .
     
 
 #################################################################
@@ -33,23 +33,23 @@ edintkos:ManagementRoleType a skos:ConceptScheme ;
 #
 #################################################################
 
-edintmanagementrole:basicservices a skos:Concept;
-  skos:inScheme edintkos:ManagementRoleType;
+edintrole:basicservices a skos:Concept;
+  skos:inScheme edintkos:RoleType;
   skos:prefLabel "Servicios Básicos"@es ;
   skos:prefLabel "Basic services"@en .
 
-edintmanagementrole:facilitysecurity a skos:Concept;
-  skos:inScheme edintkos:ManagementRoleType;
+edintrole:facilitysecurity a skos:Concept;
+  skos:inScheme edintkos:RoleType;
   skos:prefLabel "Seguridad de equipamientos"@es ;
   skos:prefLabel "Facility security"@en .
 
-edintmanagementrole:humanresources a skos:Concept;
-  skos:inScheme edintkos:ManagementRoleType;
+edintrole:humanresources a skos:Concept;
+  skos:inScheme edintkos:RoleType;
   skos:prefLabel "Recursos humanos"@es ;
   skos:prefLabel "Human resources"@en .
 
-edintmanagementrole:maintenance a skos:Concept;
-  skos:inScheme edintkos:ManagementRoleType;
+edintrole:maintenance a skos:Concept;
+  skos:inScheme edintkos:RoleType;
   skos:prefLabel "Mantenimiento preventivo y correctivo"@es ;
   skos:prefLabel "Preventive and corrective maintenance"@en .
 

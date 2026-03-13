@@ -1,0 +1,70 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix edintviotype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:ViolationType a skos:ConceptScheme ; 
+    dct:issued "2026-02-19"^^xsd:date ;
+    dct:modified "2026-03-12"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Tipo de rol"@en ;
+    rdfs:label "Type of role"@es ;
+    skos:hasTopConcept edintviotype:minor;
+    skos:hasTopConcept edintviotype:severe;
+    skos:hasTopConcept edintviotype:verysevere;
+    dct:title "Concept scheme grouping types of access violations for persons or vehicles"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de violaciones de acceso de personas y vehículos"@es .
+    
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintviotype:minor a skos:Concept;
+  skos:inScheme edintkos:ViolationType;
+  skos:prefLabel "Leve"@es ;
+  skos:prefLabel "Minor"@en .
+
+edintviotype:severe a skos:Concept;
+  skos:inScheme edintkos:ViolationType;
+  skos:prefLabel "Grave"@es ;
+  skos:prefLabel "Severe"@en .
+
+edintviotype:verysevere a skos:Concept;
+  skos:inScheme edintkos:ViolationType;
+  skos:prefLabel "Muy grave"@es ;
+  skos:prefLabel "Very severe"@en .
+
+edintviotype:accesslowemissionszone a skos:Concept;
+  skos:inScheme edintkos:ViolationType;
+  skos:prefLabel "Acceso no autorizado a zona de bajas emisiones"@es ;
+  skos:broader edintviotype:severe;
+  skos:prefLabel "Non-authorized access to low emissions zone"@en .
+
+edintviotype:accesspedestrianzone a skos:Concept;
+  skos:inScheme edintkos:ViolationType;
+  skos:prefLabel "Acceso no autorizado a zona peatonal"@es ;
+  skos:broader edintviotype:severe;
+  skos:prefLabel "Non-authorized access to pedestrian zone"@en .
+
+
+
+
+
+

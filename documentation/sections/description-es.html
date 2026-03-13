@@ -1,7 +1,7 @@
 <h2 id="desc" class="list">Infraestructura: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 <span class="markdown"> 
 <p>La Figura 1 presenta el modelo conceptual general de la ontología.</p>
-<p><center><img src="images/diagrama-conceptual-General.png"/><figcaption>
+<p><center><img src="images/diagrama-conceptual-General-with-DP.png"/><figcaption>
 Figura 1. Modelo conceptual principal de la ontología</figcaption></center></p> 
 <p>Los elementos públicos y privados de la infraestructura de un municipio (<a href="#InfrastructureElement">Elemento de infraestructura</a>) incluyen las (sub)clases de <a href="#UrbanElement">Elemento urbano</a>, como los semáforos o los pasos de cebra, y de <a href="#Facility">Equipamiento</a>. Los equipamientos incluyen centros educativos, sociales y culturales, deportivos, así como <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking">aparcamientos</a> dentro y fuera de la vía pública  y <a href="#http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta">estaciones de bicicleta</a>  compartidas. 
 
@@ -22,7 +22,7 @@ Un equipamiento puede <a href="#containsFacility">contener otro equipamiento</a>
  En las figuras 2, 3 y 4 se ilustra la reutilización de esta ontología para sensores de acceso, conteo y dispositivos de medición de tráfico, respectivamente. 
 
 <p>La Figura 2 desarrolla el concepto de sensores de acceso.</p>
-<p><center><img src="images/diagrama-conceptual-AccessSensors.png"/><figcaption>
+<p><center><img src="images/diagrama-conceptual-AccessSensors-with-DP.png"/><figcaption>
 Figura 2. Modelo conceptual de Sensores de Acceso</figcaption></center></p> 
 <p>En el caso de las <a href="#AccessObservation">observaciones de acceso</a>, estas las harán <a href="#AccessSensor">sensores de acceso</a> para la propiedad observable <a href="#access">acceso</a>.  Las observaciones de acceso pueden <a href="#includesVehicle">incluir los vehículos</a> que captan y pueden servir para  <a href="#provesViolation">demostrar una infracción</a>, que estará <a href="#linkedTo">relacionada con</a> a un vehículo, y que tendrá un <a href="#hasViolationType">tipo de infracción</a>, que es un concepto que pertenece a una taxonomía SKOS, tal como exceso de velocidad, uso del móvil, etc.</p>
 <p>La Figura 3 desarrolla el concepto de sensores de conteo.</p>
@@ -30,7 +30,7 @@ Figura 2. Modelo conceptual de Sensores de Acceso</figcaption></center></p>
 Figura 3. Modelo conceptual de Sensores de Conteo</figcaption></center></p> 
 <p>En el caso de las <a href="#CountingObservation">observaciones de conteo</a>, estas las harán <a href="#CountingSensor">sensores de conteo</a> para la propiedad observable de <a href="#facilityOccupancy">ocupación de un equipamiento</a>. 
 <p>La Figura 4 desarrolla el concepto de sensores de tráfico.</p>
-<p><center><img src="images/diagrama-conceptual-TrafficSensors.png"/><figcaption>
+<p><center><img src="images/diagrama-conceptual-TrafficSensors-with-DP.png"/><figcaption>
 Figura 4. Modelo conceptual de Sensores de Tráfico</figcaption></center></p> 
 <p>Para la ocupación para tráfico se reutilizan conceptos de la  <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#">Ontología para la representación de datos de tráfico de vehículos</a>. En concreto se tiene <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico">estraf:ObservacionTrafico</a>, <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico">estraf:DispositivoMedicionTrafico</a>, <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico">estraf:PropiedadMedicionTrafico</a>. Se pueden reutilizar las propiedades observables ocupación de tráfico, nivel , intensidad y velocidad. La propiedad densidad de tráfico se ha añadido como propiedad observable.</p>
 Los sensores de cualquiera de los tres tipos considerados en la ontología (acceso, conteo y tráfico) tienen un <a href="#http://schema.org/manufacturer">fabricante</a> que es una organización.
