@@ -3,6 +3,8 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
@@ -42,7 +44,7 @@ edintinftype:store a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType;
     skos:broader edintinftype:instalaciones-de-uso-administrativo; 
     skos:prefLabel "Almacén"@es ;
-    skos:prefLabel  "Warehouse"@en;
+    skos:prefLabel  "Warehouse"@en.
 
 
 ###  edintinftype:bikeparking
@@ -50,11 +52,11 @@ edintinftype:bikeparking a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType;
     skos:broader edintinftype:mobiliario ;
     skos:prefLabel "Aparcabicicletas"@es ;
-    skos:prefLabel "Bicycle rack"
+    skos:prefLabel "Bicycle rack"@en.
 
 
 ###  edintinftype:archivos
-<edintinftype:archivos> rdf:type owl:NamedIndividual ,
+<edintinftype:archivos> rdf:type 
                                                                                           skos:Concept ;
                                                                                  skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -63,7 +65,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:areas-de-activiades-deportivas
-<edintinftype:areas-de-activiades-deportivas> rdf:type owl:NamedIndividual ,
+<edintinftype:areas-de-activiades-deportivas> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:equipamiento-deportivo> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -75,7 +77,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:arquetas-y-tapas-de-registro
-<edintinftype:arquetas-y-tapas-de-registro> rdf:type owl:NamedIndividual ,
+<edintinftype:arquetas-y-tapas-de-registro> rdf:type 
                                                                                                               skos:Concept ;
                                                                                                      skos:broader <edintinftype:drenaje-y-depuracion> ;
                                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -84,7 +86,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:auditorios-y-recintos-escenicos
-<edintinftype:auditorios-y-recintos-escenicos> rdf:type owl:NamedIndividual ,
+<edintinftype:auditorios-y-recintos-escenicos> rdf:type 
                                                                                                                  skos:Concept ;
                                                                                                         skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -93,7 +95,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:aula-de-estudio
-<edintinftype:aula-de-estudio> rdf:type owl:NamedIndividual ,
+<edintinftype:aula-de-estudio> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:centros-educativos> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -102,7 +104,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:bancos
-<edintinftype:bancos> rdf:type owl:NamedIndividual ,
+<edintinftype:bancos> rdf:type 
                                                                                         skos:Concept ;
                                                                                skos:broader <edintinftype:mobiliario> ;
                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -111,7 +113,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:bancos-de-tejidos
-<edintinftype:bancos-de-tejidos> rdf:type owl:NamedIndividual ,
+<edintinftype:bancos-de-tejidos> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -120,7 +122,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:bancos-modulares
-<edintinftype:bancos-modulares> rdf:type owl:NamedIndividual ,
+<edintinftype:bancos-modulares> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:mobiliario> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -129,7 +131,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:bibliotecas
-<edintinftype:bibliotecas> rdf:type owl:NamedIndividual ,
+<edintinftype:bibliotecas> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -138,7 +140,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:bolera
-<edintinftype:bolera> rdf:type owl:NamedIndividual ,
+<edintinftype:bolera> rdf:type 
                                                                                         skos:Concept ;
                                                                                skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -147,7 +149,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:cajas-y-armarios
-<edintinftype:cajas-y-armarios> rdf:type owl:NamedIndividual ,
+<edintinftype:cajas-y-armarios> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:mobiliario> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -156,7 +158,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-beisbol
-<edintinftype:campo-de-beisbol> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-beisbol> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -165,7 +167,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-futbol
-<edintinftype:campo-de-futbol> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-futbol> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -174,7 +176,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-futbol-7
-<edintinftype:campo-de-futbol-7> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-futbol-7> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -183,7 +185,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-hockey-hierba
-<edintinftype:campo-de-hockey-hierba> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-hockey-hierba> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -192,7 +194,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-rugby
-<edintinftype:campo-de-rugby> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-rugby> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -201,7 +203,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-tiro-al-plato
-<edintinftype:campo-de-tiro-al-plato> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-tiro-al-plato> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -210,7 +212,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-tiro-con-arco
-<edintinftype:campo-de-tiro-con-arco> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-tiro-con-arco> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -219,7 +221,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campo-de-tiro-de-precision
-<edintinftype:campo-de-tiro-de-precision> rdf:type owl:NamedIndividual ,
+<edintinftype:campo-de-tiro-de-precision> rdf:type 
                                                                                                             skos:Concept ;
                                                                                                    skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -228,7 +230,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campos-de-polo
-<edintinftype:campos-de-polo> rdf:type owl:NamedIndividual ,
+<edintinftype:campos-de-polo> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -237,7 +239,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campos-polideportivos
-<edintinftype:campos-polideportivos> rdf:type owl:NamedIndividual ,
+<edintinftype:campos-polideportivos> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -246,7 +248,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas
-<edintinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas> rdf:type owl:NamedIndividual ,
+<edintinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas> rdf:type 
                                                                                                                                     skos:Concept ;
                                                                                                                            skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -255,7 +257,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:canal-de-regatas-de-piraguismo-en-eslalon
-<edintinftype:canal-de-regatas-de-piraguismo-en-eslalon> rdf:type owl:NamedIndividual ,
+<edintinftype:canal-de-regatas-de-piraguismo-en-eslalon> rdf:type 
                                                                                                                            skos:Concept ;
                                                                                                                   skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -264,7 +266,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:canal-de-regatas-para-remo
-<edintinftype:canal-de-regatas-para-remo> rdf:type owl:NamedIndividual ,
+<edintinftype:canal-de-regatas-para-remo> rdf:type 
                                                                                                             skos:Concept ;
                                                                                                    skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -273,7 +275,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:canales-y-rejillas-de-drenaje
-<edintinftype:canales-y-rejillas-de-drenaje> rdf:type owl:NamedIndividual ,
+<edintinftype:canales-y-rejillas-de-drenaje> rdf:type 
                                                                                                                skos:Concept ;
                                                                                                       skos:broader <edintinftype:drenaje-y-depuracion> ;
                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -282,7 +284,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:capillas
-<edintinftype:capillas> rdf:type owl:NamedIndividual ,
+<edintinftype:capillas> rdf:type 
                                                                                           skos:Concept ;
                                                                                  skos:broader <edintinftype:instalaciones-de-usos-funerarios> ;
                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -291,7 +293,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:carril-bici
-<edintinftype:carril-bici> rdf:type owl:NamedIndividual ,
+<edintinftype:carril-bici> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -300,7 +302,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:casa-consorcial
-<edintinftype:casa-consorcial> rdf:type owl:NamedIndividual ,
+<edintinftype:casa-consorcial> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:instalaciones-de-uso-administrativo> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -309,7 +311,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:casa-hogar-para-ancianos
-<edintinftype:casa-hogar-para-ancianos> rdf:type owl:NamedIndividual ,
+<edintinftype:casa-hogar-para-ancianos> rdf:type 
                                                                                                           skos:Concept ;
                                                                                                  skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -318,7 +320,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:casa-horgar-para-menores
-<edintinftype:casa-horgar-para-menores> rdf:type owl:NamedIndividual ,
+<edintinftype:casa-horgar-para-menores> rdf:type 
                                                                                                           skos:Concept ;
                                                                                                  skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -327,7 +329,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:casa-social
-<edintinftype:casa-social> rdf:type owl:NamedIndividual ,
+<edintinftype:casa-social> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -336,7 +338,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:casas-de-cultura
-<edintinftype:casas-de-cultura> rdf:type owl:NamedIndividual ,
+<edintinftype:casas-de-cultura> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-desarrollo-comunitario> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -345,7 +347,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:cementerios
-<edintinftype:cementerios> rdf:type owl:NamedIndividual ,
+<edintinftype:cementerios> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:instalaciones-de-usos-funerarios> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -354,7 +356,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:ceniceros-de-exterior
-<edintinftype:ceniceros-de-exterior> rdf:type owl:NamedIndividual ,
+<edintinftype:ceniceros-de-exterior> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:mobiliario> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -363,7 +365,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centro-de-atencion-primaria
-<edintinftype:centro-de-atencion-primaria> rdf:type owl:NamedIndividual ,
+<edintinftype:centro-de-atencion-primaria> rdf:type 
                                                                                                              skos:Concept ;
                                                                                                     skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -372,7 +374,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centro-de-atencion-urgente-extrahospitalaria
-<edintinftype:centro-de-atencion-urgente-extrahospitalaria> rdf:type owl:NamedIndividual ,
+<edintinftype:centro-de-atencion-urgente-extrahospitalaria> rdf:type 
                                                                                                                               skos:Concept ;
                                                                                                                      skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -381,7 +383,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centro-de-bienestar-y-desarrollo-infantil
-<edintinftype:centro-de-bienestar-y-desarrollo-infantil> rdf:type owl:NamedIndividual ,
+<edintinftype:centro-de-bienestar-y-desarrollo-infantil> rdf:type 
                                                                                                                            skos:Concept ;
                                                                                                                   skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -390,7 +392,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centro-de-desarrollo-comunitario
-<edintinftype:centro-de-desarrollo-comunitario> rdf:type owl:NamedIndividual ,
+<edintinftype:centro-de-desarrollo-comunitario> rdf:type 
                                                                                                                   skos:Concept ;
                                                                                                          skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -399,7 +401,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centro-de-integracion-juvenil
-<edintinftype:centro-de-integracion-juvenil> rdf:type owl:NamedIndividual ,
+<edintinftype:centro-de-integracion-juvenil> rdf:type 
                                                                                                                skos:Concept ;
                                                                                                       skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -408,7 +410,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-civicos
-<edintinftype:centros-civicos> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-civicos> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:centros-de-desarrollo-comunitario> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -417,7 +419,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-culturales-polivalentes
-<edintinftype:centros-culturales-polivalentes> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-culturales-polivalentes> rdf:type 
                                                                                                                  skos:Concept ;
                                                                                                         skos:broader <edintinftype:centros-de-desarrollo-comunitario> ;
                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -426,7 +428,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-arte
-<edintinftype:centros-de-arte> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-arte> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:centros-de-formacion-y-produccion-cultural> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -435,7 +437,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-atencion-y-prevencion
-<edintinftype:centros-de-atencion-y-prevencion> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-atencion-y-prevencion> rdf:type 
                                                                                                                   skos:Concept ;
                                                                                                          skos:broader <edintinftype:equipamiento-sanitario> ;
                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -472,7 +474,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-desarrollo-comunitario
-<edintinftype:centros-de-desarrollo-comunitario> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-desarrollo-comunitario> rdf:type 
                                                                                                                    skos:Concept ;
                                                                                                           skos:broader <edintinftype:equipamiento-cultural> ;
                                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -484,7 +486,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-diagnostico
-<edintinftype:centros-de-diagnostico> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-diagnostico> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -493,7 +495,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-dialisis
-<edintinftype:centros-de-dialisis> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-dialisis> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -502,7 +504,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-documentacion-e-investigacion
-<edintinftype:centros-de-documentacion-e-investigacion> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-documentacion-e-investigacion> rdf:type 
                                                                                                                           skos:Concept ;
                                                                                                                  skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -511,7 +513,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-formacion-y-produccion-cultural
-<edintinftype:centros-de-formacion-y-produccion-cultural> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-formacion-y-produccion-cultural> rdf:type 
                                                                                                                             skos:Concept ;
                                                                                                                    skos:broader <edintinftype:equipamiento-cultural> ;
                                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -522,7 +524,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural
-<edintinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural> rdf:type 
                                                                                                                                               skos:Concept ;
                                                                                                                                      skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -531,7 +533,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-interrupcion-voluntaria-del-embarazo
-<edintinftype:centros-de-interrupcion-voluntaria-del-embarazo> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-interrupcion-voluntaria-del-embarazo> rdf:type 
                                                                                                                                  skos:Concept ;
                                                                                                                         skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -540,7 +542,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-patrimonio
-<edintinftype:centros-de-patrimonio> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-patrimonio> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:equipamiento-cultural> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -556,7 +558,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-reproduccion-asistida
-<edintinftype:centros-de-reproduccion-asistida> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-reproduccion-asistida> rdf:type 
                                                                                                                   skos:Concept ;
                                                                                                          skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -565,7 +567,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-salud
-<edintinftype:centros-de-salud> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-salud> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -574,7 +576,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-salud-mental
-<edintinftype:centros-de-salud-mental> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-salud-mental> rdf:type 
                                                                                                          skos:Concept ;
                                                                                                 skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -583,7 +585,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-transfusion
-<edintinftype:centros-de-transfusion> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-transfusion> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -592,7 +594,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-vacunacion
-<edintinftype:centros-de-vacunacion> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-vacunacion> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -601,7 +603,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-educativos
-<edintinftype:centros-educativos> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-educativos> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:equipamiento-educativo> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -618,7 +620,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-especializados
-<edintinftype:centros-especializados> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-especializados> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -627,7 +629,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-moviles-de-asistencia-sanitaria
-<edintinftype:centros-moviles-de-asistencia-sanitaria> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-moviles-de-asistencia-sanitaria> rdf:type 
                                                                                                                          skos:Concept ;
                                                                                                                 skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -636,7 +638,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-polivalentes
-<edintinftype:centros-polivalentes> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-polivalentes> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -645,7 +647,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:cicuitos-de-carrera-a-pie
-<edintinftype:cicuitos-de-carrera-a-pie> rdf:type owl:NamedIndividual ,
+<edintinftype:cicuitos-de-carrera-a-pie> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -654,7 +656,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:cines-y-multicines
-<edintinftype:cines-y-multicines> rdf:type owl:NamedIndividual ,
+<edintinftype:cines-y-multicines> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -663,7 +665,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:circuito-cerrado-de-bicicleta
-<edintinftype:circuito-cerrado-de-bicicleta> rdf:type owl:NamedIndividual ,
+<edintinftype:circuito-cerrado-de-bicicleta> rdf:type 
                                                                                                                skos:Concept ;
                                                                                                       skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -672,7 +674,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:circuito-de-kart
-<edintinftype:circuito-de-kart> rdf:type owl:NamedIndividual ,
+<edintinftype:circuito-de-kart> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -681,7 +683,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:circuito-de-motocross
-<edintinftype:circuito-de-motocross> rdf:type owl:NamedIndividual ,
+<edintinftype:circuito-de-motocross> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -690,7 +692,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:circulacion-y-transporte
-<edintinftype:circulacion-y-transporte> rdf:type owl:NamedIndividual ,
+<edintinftype:circulacion-y-transporte> rdf:type 
                                                                                                           skos:Concept ;
                                                                                                  skos:broader <edintinftype:Facility> ;
                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -705,7 +707,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:clinicas-dentale
-<edintinftype:clinicas-dentale> rdf:type owl:NamedIndividual ,
+<edintinftype:clinicas-dentale> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -714,7 +716,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:colecciones
-<edintinftype:colecciones> rdf:type owl:NamedIndividual ,
+<edintinftype:colecciones> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -723,7 +725,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:colegio
-<edintinftype:colegio> rdf:type owl:NamedIndividual ,
+<edintinftype:colegio> rdf:type 
                                                                                          skos:Concept ;
                                                                                 skos:broader <edintinftype:centros-educativos> ;
                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -732,7 +734,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:columpios
-<edintinftype:columpios> rdf:type owl:NamedIndividual ,
+<edintinftype:columpios> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -741,7 +743,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:consultas-medicas
-<edintinftype:consultas-medicas> rdf:type owl:NamedIndividual ,
+<edintinftype:consultas-medicas> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -750,7 +752,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:contenedores-de-basura
-<edintinftype:contenedores-de-basura> rdf:type owl:NamedIndividual ,
+<edintinftype:contenedores-de-basura> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:gestion-de-residuos> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -759,7 +761,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:contenedores-de-recogida-selectiva
-<edintinftype:contenedores-de-recogida-selectiva> rdf:type owl:NamedIndividual ,
+<edintinftype:contenedores-de-recogida-selectiva> rdf:type 
                                                                                                                     skos:Concept ;
                                                                                                            skos:broader <edintinftype:gestion-de-residuos> ;
                                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -768,7 +770,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:contenedores-soterrados
-<edintinftype:contenedores-soterrados> rdf:type owl:NamedIndividual ,
+<edintinftype:contenedores-soterrados> rdf:type 
                                                                                                          skos:Concept ;
                                                                                                 skos:broader <edintinftype:gestion-de-residuos> ;
                                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -777,7 +779,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:cubos-de-basura
-<edintinftype:cubos-de-basura> rdf:type owl:NamedIndividual ,
+<edintinftype:cubos-de-basura> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:gestion-de-residuos> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -786,7 +788,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:drenaje-y-depuracion
-<edintinftype:drenaje-y-depuracion> rdf:type owl:NamedIndividual ,
+<edintinftype:drenaje-y-depuracion> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:equipamiento-urbano> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -799,7 +801,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:educacion-permanente-para-adultos
-<edintinftype:educacion-permanente-para-adultos> rdf:type owl:NamedIndividual ,
+<edintinftype:educacion-permanente-para-adultos> rdf:type 
                                                                                                                    skos:Concept ;
                                                                                                           skos:broader <edintinftype:centros-educativos> ;
                                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -808,7 +810,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables
-<edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> rdf:type owl:NamedIndividual ,
+<edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> rdf:type 
                                                                                                                                              skos:Concept ;
                                                                                                                                     skos:broader <edintinftype:equipamiento-urbano> ;
                                                                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -823,7 +825,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:elementos-para-viales-y-aparcamientos
-<edintinftype:elementos-para-viales-y-aparcamientos> rdf:type owl:NamedIndividual ,
+<edintinftype:elementos-para-viales-y-aparcamientos> rdf:type 
                                                                                                                        skos:Concept ;
                                                                                                               skos:broader <edintinftype:mobiliario> ;
                                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -832,7 +834,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-cultural
-<edintinftype:equipamiento-cultural> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-cultural> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:Facility> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -846,7 +848,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-deportivo
-<edintinftype:equipamiento-deportivo> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-deportivo> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:Facility> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -858,7 +860,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-educativo
-<edintinftype:equipamiento-educativo> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-educativo> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:Facility> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -868,7 +870,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-medioambiental
-<edintinftype:equipamiento-medioambiental> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-medioambiental> rdf:type 
                                                                                                              skos:Concept ;
                                                                                                     skos:broader <edintinftype:Facility> ;
                                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -878,7 +880,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-sanitario
-<edintinftype:equipamiento-sanitario> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-sanitario> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:Facility> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -888,7 +890,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamiento-urbano
-<edintinftype:equipamiento-urbano> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamiento-urbano> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:Facility> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -901,7 +903,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamientos-de-asistencia-social
-<edintinftype:equipamientos-de-asistencia-social> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamientos-de-asistencia-social> rdf:type 
                                                                                                                     skos:Concept ;
                                                                                                            skos:broader <edintinftype:Facility> ;
                                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -918,7 +920,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:equipamientos-para-playas
-<edintinftype:equipamientos-para-playas> rdf:type owl:NamedIndividual ,
+<edintinftype:equipamientos-para-playas> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:mobiliario> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -927,7 +929,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:escuela-de-musica
-<edintinftype:escuela-de-musica> rdf:type owl:NamedIndividual ,
+<edintinftype:escuela-de-musica> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:centros-educativos> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -936,7 +938,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:escuela-infantil
-<edintinftype:escuela-infantil> rdf:type owl:NamedIndividual ,
+<edintinftype:escuela-infantil> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-educativos> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -945,7 +947,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:escuelas-artisticas
-<edintinftype:escuelas-artisticas> rdf:type owl:NamedIndividual ,
+<edintinftype:escuelas-artisticas> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:centros-de-formacion-y-produccion-cultural> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -954,7 +956,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-alternativos
-<edintinftype:espacios-alternativos> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-alternativos> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-aptos-para-uso-cultural> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -963,7 +965,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-aptos-para-uso-cultural
-<edintinftype:espacios-aptos-para-uso-cultural> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-aptos-para-uso-cultural> rdf:type 
                                                                                                                   skos:Concept ;
                                                                                                          skos:broader <edintinftype:equipamiento-cultural> ;
                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -975,7 +977,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-de-hipica-para-doma
-<edintinftype:espacios-de-hipica-para-doma> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-de-hipica-para-doma> rdf:type 
                                                                                                               skos:Concept ;
                                                                                                      skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -984,7 +986,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-de-hipica-para-saltos
-<edintinftype:espacios-de-hipica-para-saltos> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-de-hipica-para-saltos> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -993,7 +995,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-deportivos-convencionales
-<edintinftype:espacios-deportivos-convencionales> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-deportivos-convencionales> rdf:type 
                                                                                                                     skos:Concept ;
                                                                                                            skos:broader <edintinftype:equipamiento-deportivo> ;
                                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1032,7 +1034,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:espacios-deportivos-singulares
-<edintinftype:espacios-deportivos-singulares> rdf:type owl:NamedIndividual ,
+<edintinftype:espacios-deportivos-singulares> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:equipamiento-deportivo> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1065,7 +1067,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-bicicletas
-<edintinftype:estacion-de-bicicletas> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-bicicletas> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -1074,7 +1076,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-cercanias
-<edintinftype:estacion-de-cercanias> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-cercanias> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1083,7 +1085,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-esqui-alpino
-<edintinftype:estacion-de-esqui-alpino> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-esqui-alpino> rdf:type 
                                                                                                           skos:Concept ;
                                                                                                  skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -1092,7 +1094,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-esqui-de-fondo
-<edintinftype:estacion-de-esqui-de-fondo> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-esqui-de-fondo> rdf:type 
                                                                                                             skos:Concept ;
                                                                                                    skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1101,7 +1103,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-metro
-<edintinftype:estacion-de-metro> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-metro> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1110,7 +1112,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:estacion-de-snowboard
-<edintinftype:estacion-de-snowboard> rdf:type owl:NamedIndividual ,
+<edintinftype:estacion-de-snowboard> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1119,7 +1121,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:extendedores-de-bolsas-higienicas
-<edintinftype:extendedores-de-bolsas-higienicas> rdf:type owl:NamedIndividual ,
+<edintinftype:extendedores-de-bolsas-higienicas> rdf:type 
                                                                                                                    skos:Concept ;
                                                                                                           skos:broader <edintinftype:mobiliario> ;
                                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1128,7 +1130,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:facility
-<edintinftype:facility> rdf:type owl:NamedIndividual ,
+<edintinftype:facility> rdf:type 
                                                                                           skos:Concept ;
                                                                                  skos:inScheme <edintinftype:> ;
                                                                                  skos:narrower <edintinftype:circulacion-y-transporte> ,
@@ -1147,7 +1149,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:farolas-y-balizas
-<edintinftype:farolas-y-balizas> rdf:type owl:NamedIndividual ,
+<edintinftype:farolas-y-balizas> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:mobiliario> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1156,7 +1158,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:fitness-de-exterior-y-circuitos-biosaludables
-<edintinftype:fitness-de-exterior-y-circuitos-biosaludables> rdf:type owl:NamedIndividual ,
+<edintinftype:fitness-de-exterior-y-circuitos-biosaludables> rdf:type 
                                                                                                                                skos:Concept ;
                                                                                                                       skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -1165,7 +1167,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:fosas-septicas
-<edintinftype:fosas-septicas> rdf:type owl:NamedIndividual ,
+<edintinftype:fosas-septicas> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:drenaje-y-depuracion> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1174,7 +1176,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:fuentes
-<edintinftype:fuentes> rdf:type owl:NamedIndividual ,
+<edintinftype:fuentes> rdf:type 
                                                                                          skos:Concept ;
                                                                                 skos:broader <edintinftype:mobiliario> ;
                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -1183,7 +1185,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:fundaciones-culturales
-<edintinftype:fundaciones-culturales> rdf:type owl:NamedIndividual ,
+<edintinftype:fundaciones-culturales> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -1192,7 +1194,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:gabinete-de-asistencia-psicologica-y-pedagogica
-<edintinftype:gabinete-de-asistencia-psicologica-y-pedagogica> rdf:type owl:NamedIndividual ,
+<edintinftype:gabinete-de-asistencia-psicologica-y-pedagogica> rdf:type 
                                                                                                                                  skos:Concept ;
                                                                                                                         skos:broader <edintinftype:centros-educativos> ;
                                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1201,7 +1203,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:galerias-de-arte
-<edintinftype:galerias-de-arte> rdf:type owl:NamedIndividual ,
+<edintinftype:galerias-de-arte> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1210,7 +1212,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:gestion-de-residuos
-<edintinftype:gestion-de-residuos> rdf:type owl:NamedIndividual ,
+<edintinftype:gestion-de-residuos> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:equipamiento-urbano> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1224,7 +1226,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:gradas-y-tribunas
-<edintinftype:gradas-y-tribunas> rdf:type owl:NamedIndividual ,
+<edintinftype:gradas-y-tribunas> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:mobiliario> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1233,7 +1235,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:guarderia
-<edintinftype:guarderia> rdf:type owl:NamedIndividual ,
+<edintinftype:guarderia> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1242,7 +1244,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hipodromos
-<edintinftype:hipodromos> rdf:type owl:NamedIndividual ,
+<edintinftype:hipodromos> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1251,7 +1253,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hornos-crematorios
-<edintinftype:hornos-crematorios> rdf:type owl:NamedIndividual ,
+<edintinftype:hornos-crematorios> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:instalaciones-de-usos-funerarios> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1260,7 +1262,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-dermatologico
-<edintinftype:hospital-dermatologico> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-dermatologico> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -1269,7 +1271,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-general
-<edintinftype:hospital-general> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-general> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1278,7 +1280,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-infantil
-<edintinftype:hospital-infantil> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-infantil> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1287,7 +1289,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-maternal
-<edintinftype:hospital-maternal> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-maternal> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1296,7 +1298,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-materno-infantil
-<edintinftype:hospital-materno-infantil> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-materno-infantil> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1305,7 +1307,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-oftalmico
-<edintinftype:hospital-oftalmico> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-oftalmico> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1314,7 +1316,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-oncologico
-<edintinftype:hospital-oncologico> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-oncologico> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1323,7 +1325,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-psiquiatrico
-<edintinftype:hospital-psiquiatrico> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-psiquiatrico> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1332,7 +1334,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-quirurgico
-<edintinftype:hospital-quirurgico> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-quirurgico> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1341,7 +1343,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-traumatologico-o-rehabilitacion
-<edintinftype:hospital-traumatologico-o-rehabilitacion> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-traumatologico-o-rehabilitacion> rdf:type 
                                                                                                                           skos:Concept ;
                                                                                                                  skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -1350,7 +1352,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:instalaciones-de-uso-administrativo
-<edintinftype:instalaciones-de-uso-administrativo> rdf:type owl:NamedIndividual ,
+<edintinftype:instalaciones-de-uso-administrativo> rdf:type 
                                                                                                                      skos:Concept ;
                                                                                                             skos:broader <edintinftype:Facility> ;
                                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1365,7 +1367,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:instalaciones-de-usos-funerarios
-<edintinftype:instalaciones-de-usos-funerarios> rdf:type owl:NamedIndividual ,
+<edintinftype:instalaciones-de-usos-funerarios> rdf:type 
                                                                                                                   skos:Concept ;
                                                                                                          skos:broader <edintinftype:Facility> ;
                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1378,7 +1380,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:instituto
-<edintinftype:instituto> rdf:type owl:NamedIndividual ,
+<edintinftype:instituto> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:centros-educativos> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1387,7 +1389,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:jardineras
-<edintinftype:jardineras> rdf:type owl:NamedIndividual ,
+<edintinftype:jardineras> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:mobiliario> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1396,7 +1398,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:juegos-de-exterior-para-mayores
-<edintinftype:juegos-de-exterior-para-mayores> rdf:type owl:NamedIndividual ,
+<edintinftype:juegos-de-exterior-para-mayores> rdf:type 
                                                                                                                  skos:Concept ;
                                                                                                         skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1405,7 +1407,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:marquesinas-y-quioscos
-<edintinftype:marquesinas-y-quioscos> rdf:type owl:NamedIndividual ,
+<edintinftype:marquesinas-y-quioscos> rdf:type 
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:mobiliario> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -1414,7 +1416,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:mobiliario
-<edintinftype:mobiliario> rdf:type owl:NamedIndividual ,
+<edintinftype:mobiliario> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:equipamiento-urbano> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1441,7 +1443,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:museos
-<edintinftype:museos> rdf:type owl:NamedIndividual ,
+<edintinftype:museos> rdf:type 
                                                                                         skos:Concept ;
                                                                                skos:broader <edintinftype:centros-de-patrimonio> ;
                                                                                skos:inScheme edintkos:InfrastructureType ;
@@ -1450,7 +1452,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:orfanato
-<edintinftype:orfanato> rdf:type owl:NamedIndividual ,
+<edintinftype:orfanato> rdf:type 
                                                                                           skos:Concept ;
                                                                                  skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -1459,7 +1461,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:otros-espacios-culturales
-<edintinftype:otros-espacios-culturales> rdf:type owl:NamedIndividual ,
+<edintinftype:otros-espacios-culturales> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:espacios-aptos-para-uso-cultural> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1468,7 +1470,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:papeleras
-<edintinftype:papeleras> rdf:type owl:NamedIndividual ,
+<edintinftype:papeleras> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:mobiliario> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1477,7 +1479,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:parada-de-bus
-<edintinftype:parada-de-bus> rdf:type owl:NamedIndividual ,
+<edintinftype:parada-de-bus> rdf:type 
                                                                                                skos:Concept ;
                                                                                       skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -1486,7 +1488,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:parques-de-agua
-<edintinftype:parques-de-agua> rdf:type owl:NamedIndividual ,
+<edintinftype:parques-de-agua> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1495,7 +1497,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:parques-infantiles
-<edintinftype:parques-infantiles> rdf:type owl:NamedIndividual ,
+<edintinftype:parques-infantiles> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1504,7 +1506,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:patinodromos
-<edintinftype:patinodromos> rdf:type owl:NamedIndividual ,
+<edintinftype:patinodromos> rdf:type 
                                                                                               skos:Concept ;
                                                                                      skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -1513,7 +1515,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pilonas-y-bolardos
-<edintinftype:pilonas-y-bolardos> rdf:type owl:NamedIndividual ,
+<edintinftype:pilonas-y-bolardos> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:mobiliario> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1522,7 +1524,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:piscinas-de-saltos
-<edintinftype:piscinas-de-saltos> rdf:type owl:NamedIndividual ,
+<edintinftype:piscinas-de-saltos> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1531,7 +1533,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:piscinas-de-waterpolo
-<edintinftype:piscinas-de-waterpolo> rdf:type owl:NamedIndividual ,
+<edintinftype:piscinas-de-waterpolo> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1540,7 +1542,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-badminton
-<edintinftype:pista-de-badminton> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-badminton> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1549,7 +1551,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-baloncesto
-<edintinftype:pista-de-baloncesto> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-baloncesto> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1558,7 +1560,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-fronton
-<edintinftype:pista-de-fronton> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-fronton> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1567,7 +1569,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-hockey-sobre-hielo
-<edintinftype:pista-de-hockey-sobre-hielo> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-hockey-sobre-hielo> rdf:type 
                                                                                                              skos:Concept ;
                                                                                                     skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -1576,7 +1578,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-padel
-<edintinftype:pista-de-padel> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-padel> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1585,7 +1587,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-patinaje-sobre-hielo
-<edintinftype:pista-de-patinaje-sobre-hielo> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-patinaje-sobre-hielo> rdf:type 
                                                                                                                skos:Concept ;
                                                                                                       skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -1594,7 +1596,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-patinaje-sobre-ruedas
-<edintinftype:pista-de-patinaje-sobre-ruedas> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-patinaje-sobre-ruedas> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1603,7 +1605,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-squash
-<edintinftype:pista-de-squash> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-squash> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1612,7 +1614,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-tenis
-<edintinftype:pista-de-tenis> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-tenis> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1621,7 +1623,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-voleibol
-<edintinftype:pista-de-voleibol> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-voleibol> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1630,7 +1632,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pista-de-voley-playa
-<edintinftype:pista-de-voley-playa> rdf:type owl:NamedIndividual ,
+<edintinftype:pista-de-voley-playa> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -1639,7 +1641,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pistas-de-petanca
-<edintinftype:pistas-de-petanca> rdf:type owl:NamedIndividual ,
+<edintinftype:pistas-de-petanca> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1648,7 +1650,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pistas-polideportivas
-<edintinftype:pistas-polideportivas> rdf:type owl:NamedIndividual ,
+<edintinftype:pistas-polideportivas> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1657,7 +1659,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-compostaje
-<edintinftype:planta-de-compostaje> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-compostaje> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:plantas> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -1666,7 +1668,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-desalacion
-<edintinftype:planta-de-desalacion> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-desalacion> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:plantas> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -1675,7 +1677,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-descalcificacion
-<edintinftype:planta-de-descalcificacion> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-descalcificacion> rdf:type 
                                                                                                             skos:Concept ;
                                                                                                    skos:broader <edintinftype:plantas> ;
                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1684,7 +1686,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-filtracion-del-agua
-<edintinftype:planta-de-filtracion-del-agua> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-filtracion-del-agua> rdf:type 
                                                                                                                skos:Concept ;
                                                                                                       skos:broader <edintinftype:plantas> ;
                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -1693,7 +1695,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-potabilizacion-del-agua
-<edintinftype:planta-de-potabilizacion-del-agua> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-potabilizacion-del-agua> rdf:type 
                                                                                                                    skos:Concept ;
                                                                                                           skos:broader <edintinftype:plantas> ;
                                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1702,7 +1704,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-purificacion-del-agua
-<edintinftype:planta-de-purificacion-del-agua> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-purificacion-del-agua> rdf:type 
                                                                                                                  skos:Concept ;
                                                                                                         skos:broader <edintinftype:plantas> ;
                                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1711,7 +1713,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-reciclaje
-<edintinftype:planta-de-reciclaje> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-reciclaje> rdf:type 
                                                                                                      skos:Concept ;
                                                                                             skos:broader <edintinftype:plantas> ;
                                                                                             skos:inScheme edintkos:InfrastructureType ;
@@ -1720,7 +1722,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-recogida-de-residuos
-<edintinftype:planta-de-recogida-de-residuos> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-recogida-de-residuos> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:plantas> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1729,7 +1731,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:planta-de-tratamiento-de-aguas-residuales
-<edintinftype:planta-de-tratamiento-de-aguas-residuales> rdf:type owl:NamedIndividual ,
+<edintinftype:planta-de-tratamiento-de-aguas-residuales> rdf:type 
                                                                                                                            skos:Concept ;
                                                                                                                   skos:broader <edintinftype:plantas> ;
                                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1738,7 +1740,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:plantas
-<edintinftype:plantas> rdf:type owl:NamedIndividual ,
+<edintinftype:plantas> rdf:type 
                                                                                          skos:Concept ;
                                                                                 skos:broader <edintinftype:equipamiento-medioambiental> ;
                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -1757,7 +1759,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:proveedores-de-asistencia-sanitario-sin-intermediario
-<edintinftype:proveedores-de-asistencia-sanitario-sin-intermediario> rdf:type owl:NamedIndividual ,
+<edintinftype:proveedores-de-asistencia-sanitario-sin-intermediario> rdf:type 
                                                                                                                                        skos:Concept ;
                                                                                                                               skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1766,7 +1768,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:punto-limpio
-<edintinftype:punto-limpio> rdf:type owl:NamedIndividual ,
+<edintinftype:punto-limpio> rdf:type 
                                                                                               skos:Concept ;
                                                                                      skos:broader <edintinftype:plantas> ;
                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -1775,7 +1777,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:recintos-culturales-en-espacios-urbanos-abiertos
-<edintinftype:recintos-culturales-en-espacios-urbanos-abiertos> rdf:type owl:NamedIndividual ,
+<edintinftype:recintos-culturales-en-espacios-urbanos-abiertos> rdf:type 
                                                                                                                                   skos:Concept ;
                                                                                                                          skos:broader <edintinftype:espacios-aptos-para-uso-cultural> ;
                                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1784,7 +1786,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:rectas-de-saltos-atleticos
-<edintinftype:rectas-de-saltos-atleticos> rdf:type owl:NamedIndividual ,
+<edintinftype:rectas-de-saltos-atleticos> rdf:type 
                                                                                                             skos:Concept ;
                                                                                                    skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1793,7 +1795,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:rocodromos
-<edintinftype:rocodromos> rdf:type owl:NamedIndividual ,
+<edintinftype:rocodromos> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -1802,7 +1804,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:rutas-ecuestres
-<edintinftype:rutas-ecuestres> rdf:type owl:NamedIndividual ,
+<edintinftype:rutas-ecuestres> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:areas-de-activiades-deportivas> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1811,7 +1813,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-artes-marciales
-<edintinftype:sala-de-artes-marciales> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-artes-marciales> rdf:type 
                                                                                                          skos:Concept ;
                                                                                                 skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -1820,7 +1822,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-billares
-<edintinftype:sala-de-billares> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-billares> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1829,7 +1831,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-esgrima
-<edintinftype:sala-de-esgrima> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-esgrima> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1838,7 +1840,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-gimnasia
-<edintinftype:sala-de-gimnasia> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-gimnasia> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1847,7 +1849,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-halterofilia
-<edintinftype:sala-de-halterofilia> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-halterofilia> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -1856,7 +1858,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-seminarios
-<edintinftype:sala-de-seminarios> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-seminarios> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:instalaciones-de-uso-administrativo> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1865,7 +1867,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sala-de-talleres
-<edintinftype:sala-de-talleres> rdf:type owl:NamedIndividual ,
+<edintinftype:sala-de-talleres> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:instalaciones-de-uso-administrativo> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1874,7 +1876,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:salas-de-exposiciones
-<edintinftype:salas-de-exposiciones> rdf:type owl:NamedIndividual ,
+<edintinftype:salas-de-exposiciones> rdf:type 
                                                                                                        skos:Concept ;
                                                                                               skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -1883,7 +1885,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:salas-de-juntas
-<edintinftype:salas-de-juntas> rdf:type owl:NamedIndividual ,
+<edintinftype:salas-de-juntas> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:instalaciones-de-uso-administrativo> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -1892,7 +1894,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:salas-de-oficinas
-<edintinftype:salas-de-oficinas> rdf:type owl:NamedIndividual ,
+<edintinftype:salas-de-oficinas> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:instalaciones-de-uso-administrativo> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -1901,7 +1903,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:salas-de-usos-multiples
-<edintinftype:salas-de-usos-multiples> rdf:type owl:NamedIndividual ,
+<edintinftype:salas-de-usos-multiples> rdf:type 
                                                                                                          skos:Concept ;
                                                                                                 skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -1910,7 +1912,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:salones-de-actos
-<edintinftype:salones-de-actos> rdf:type owl:NamedIndividual ,
+<edintinftype:salones-de-actos> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -1919,7 +1921,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sanitarios-y-aseos
-<edintinftype:sanitarios-y-aseos> rdf:type owl:NamedIndividual ,
+<edintinftype:sanitarios-y-aseos> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:mobiliario> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -1928,7 +1930,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:senalizaciones
-<edintinftype:senalizaciones> rdf:type owl:NamedIndividual ,
+<edintinftype:senalizaciones> rdf:type 
                                                                                                 skos:Concept ;
                                                                                        skos:broader <edintinftype:mobiliario> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
@@ -1937,7 +1939,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:streetLight
-<edintinftype:streetLight> rdf:type owl:NamedIndividual ,
+<edintinftype:streetLight> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:urbanElement> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -1947,7 +1949,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:sumideros-y-desagues
-<edintinftype:sumideros-y-desagues> rdf:type owl:NamedIndividual ,
+<edintinftype:sumideros-y-desagues> rdf:type 
                                                                                                       skos:Concept ;
                                                                                              skos:broader <edintinftype:drenaje-y-depuracion> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -1956,7 +1958,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:teatros
-<edintinftype:teatros> rdf:type owl:NamedIndividual ,
+<edintinftype:teatros> rdf:type 
                                                                                          skos:Concept ;
                                                                                 skos:broader <edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> ;
                                                                                 skos:inScheme edintkos:InfrastructureType ;
@@ -1965,7 +1967,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:toboganes
-<edintinftype:toboganes> rdf:type owl:NamedIndividual ,
+<edintinftype:toboganes> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -1974,7 +1976,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:trafficLight
-<edintinftype:trafficLight> rdf:type owl:NamedIndividual ,
+<edintinftype:trafficLight> rdf:type 
                                                                                               skos:Concept ;
                                                                                      skos:broader <edintinftype:urbanElement> ;
                                                                                      skos:inScheme edintkos:InfrastructureType ;
@@ -1984,7 +1986,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:universidad
-<edintinftype:universidad> rdf:type owl:NamedIndividual ,
+<edintinftype:universidad> rdf:type 
                                                                                              skos:Concept ;
                                                                                     skos:broader <edintinftype:centros-educativos> ;
                                                                                     skos:inScheme edintkos:InfrastructureType ;
@@ -1993,7 +1995,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:urbanElement
-<edintinftype:urbanElement> rdf:type owl:NamedIndividual ,
+<edintinftype:urbanElement> rdf:type 
                                                                                               skos:Concept ;
                                                                                      skos:broader <edintinftype:streetLight> ,
                                                                                                   <edintinftype:zebraCrossing> ;
@@ -2005,7 +2007,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:vallas-y-barreras
-<edintinftype:vallas-y-barreras> rdf:type owl:NamedIndividual ,
+<edintinftype:vallas-y-barreras> rdf:type 
                                                                                                    skos:Concept ;
                                                                                           skos:broader <edintinftype:mobiliario> ;
                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -2014,7 +2016,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:vehiculos-satelite
-<edintinftype:vehiculos-satelite> rdf:type owl:NamedIndividual ,
+<edintinftype:vehiculos-satelite> rdf:type 
                                                                                                     skos:Concept ;
                                                                                            skos:broader <edintinftype:gestion-de-residuos> ;
                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -2023,7 +2025,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:velatorios
-<edintinftype:velatorios> rdf:type owl:NamedIndividual ,
+<edintinftype:velatorios> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:instalaciones-de-usos-funerarios> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -2032,7 +2034,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:velodromos
-<edintinftype:velodromos> rdf:type owl:NamedIndividual ,
+<edintinftype:velodromos> rdf:type 
                                                                                             skos:Concept ;
                                                                                    skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                    skos:inScheme edintkos:InfrastructureType ;
@@ -2041,7 +2043,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:zebraCrossing
-<edintinftype:zebraCrossing> rdf:type owl:NamedIndividual ,
+<edintinftype:zebraCrossing> rdf:type 
                                                                                                skos:Concept ;
                                                                                       skos:broader <edintinftype:urbanElement> ;
                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -2050,7 +2052,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:zona-de-senderos-marcados
-<edintinftype:zona-de-senderos-marcados> rdf:type owl:NamedIndividual ,
+<edintinftype:zona-de-senderos-marcados> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:areas-de-activiades-deportivas> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -2059,7 +2061,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:zona-taxi
-<edintinftype:zona-taxi> rdf:type owl:NamedIndividual ,
+<edintinftype:zona-taxi> rdf:type 
                                                                                            skos:Concept ;
                                                                                   skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                   skos:inScheme edintkos:InfrastructureType ;
@@ -2068,7 +2070,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:zonas-de-lanzamiento-de-atletismo
-<edintinftype:zonas-de-lanzamiento-de-atletismo> rdf:type owl:NamedIndividual ,
+<edintinftype:zonas-de-lanzamiento-de-atletismo> rdf:type 
                                                                                                                    skos:Concept ;
                                                                                                           skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                           skos:inScheme edintkos:InfrastructureType ;
@@ -2077,7 +2079,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos)
-<edintinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos)> rdf:type owl:NamedIndividual ,
+<edintinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos)> rdf:type 
                                                                                                                                skos:Concept ;
                                                                                                                       skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                                       skos:inScheme edintkos:InfrastructureType ;
@@ -2086,7 +2088,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:carril-bus/taxi
-<edintinftype:carril-bus/taxi> rdf:type owl:NamedIndividual ,
+<edintinftype:carril-bus/taxi> rdf:type 
                                                                                                  skos:Concept ;
                                                                                         skos:broader <edintinftype:circulacion-y-transporte> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
@@ -2095,7 +2097,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas
-<edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> rdf:type owl:NamedIndividual ,
+<edintinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas> rdf:type 
                                                                                                                                        skos:Concept ;
                                                                                                                               skos:broader <edintinftype:equipamiento-cultural> ;
                                                                                                                               skos:inScheme edintkos:InfrastructureType ;
@@ -2111,7 +2113,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:circuito-de-velocidad-(para-motor)
-<edintinftype:circuito-de-velocidad-(para-motor)> rdf:type owl:NamedIndividual ,
+<edintinftype:circuito-de-velocidad-(para-motor)> rdf:type 
                                                                                                                     skos:Concept ;
                                                                                                            skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                            skos:inScheme edintkos:InfrastructureType ;
@@ -2120,7 +2122,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo
-<edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo> rdf:type owl:NamedIndividual ,
+<edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo> rdf:type 
                                                                                                                                                   skos:Concept ;
                                                                                                                                          skos:broader <edintinftype:areas-de-activiades-deportivas> ;
                                                                                                                                          skos:inScheme edintkos:InfrastructureType ;
@@ -2129,7 +2131,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:hospital-de-geriatria-y/o-larga-estancia
-<edintinftype:hospital-de-geriatria-y/o-larga-estancia> rdf:type owl:NamedIndividual ,
+<edintinftype:hospital-de-geriatria-y/o-larga-estancia> rdf:type 
                                                                                                                           skos:Concept ;
                                                                                                                  skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                                                  skos:inScheme edintkos:InfrastructureType ;
@@ -2138,7 +2140,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:piscinas-de-natacion-(25m,-33m,-50m)
-<edintinftype:piscinas-de-natacion-(25m,-33m,-50m)> rdf:type owl:NamedIndividual ,
+<edintinftype:piscinas-de-natacion-(25m,-33m,-50m)> rdf:type 
                                                                                                                       skos:Concept ;
                                                                                                              skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                              skos:inScheme edintkos:InfrastructureType ;
@@ -2147,7 +2149,7 @@ edintinftype:bikeparking a skos:Concept ;
 
 
 ###  edintinftype:pistas-de-atletismo-(200m,-300m-o-400m)
-<edintinftype:pistas-de-atletismo-(200m,-300m-o-400m)> rdf:type owl:NamedIndividual ,
+<edintinftype:pistas-de-atletismo-(200m,-300m-o-400m)> rdf:type 
                                                                                                                          skos:Concept ;
                                                                                                                 skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                                                 skos:inScheme edintkos:InfrastructureType ;
