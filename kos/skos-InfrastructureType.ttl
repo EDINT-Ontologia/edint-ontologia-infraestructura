@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType> .
+@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
 @base <http://www.w3.org/2002/07/owl#> .
 
 #################################################################
@@ -27,8 +27,8 @@ edintkos:InfrastructureType a skos:ConceptScheme ;
     rdfs:label "Type of infrastructure element"@es ;
     dct:title "Concept scheme grouping types of infrastructure elements"@en ;
     dct:title "Esquema de conceptos que agrupa tipos de elementos de infraestructura"@es ;
-    skos:hasTopConcept edintinftype:Facility ;
-    skos:hasTopConcept edintinftype:UrbanElement .
+    skos:hasTopConcept edintkosinftype:Facility ;
+    skos:hasTopConcept edintkosinftype:UrbanElement .
 
 #################################################################
 #
@@ -39,26 +39,26 @@ edintkos:InfrastructureType a skos:ConceptScheme ;
 
 ############ Urban Element
 
-edintinftype:UrbanElement a skos:Concept ;
+edintkosinftype:UrbanElement a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
     skos:prefLabel "Elemento urbano"@es ;
     skos:prefLabel  "Urban element"@en .
 
-edintinftype:StreeLamp a skos:Concept ;
+edintkosinftype:StreeLamp a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:UrbanElement ; 
+    skos:broader edintkosinftype:UrbanElement ; 
     skos:prefLabel "Farola"@es ;
     skos:prefLabel  "Street lamp"@en .
 
-edintinftype:ZebraCrossing a skos:Concept ;
+edintkosinftype:ZebraCrossing a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:UrbanElement ; 
+    skos:broader edintkosinftype:UrbanElement ; 
     skos:prefLabel "Paso de cebra"@es ;
     skos:prefLabel  "Zebra crossing"@en .
 
-edintinftype:TrafficLight a skos:Concept ;
+edintkosinftype:TrafficLight a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:UrbanElement ; 
+    skos:broader edintkosinftype:UrbanElement ; 
     skos:prefLabel "Semáforo"@es ;
     skos:prefLabel  "Traffic light"@en .
 
@@ -66,7 +66,7 @@ edintinftype:TrafficLight a skos:Concept ;
 
 ##################  Facility
 
-edintinftype:Facility a skos:Concept ;
+edintkosinftype:Facility a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
     skos:prefLabel "Equipamiento"@es ;
     skos:prefLabel  "Facility"@en .
@@ -74,88 +74,88 @@ edintinftype:Facility a skos:Concept ;
 
 ##### Terrace
 
-edintinftype:Terrace a skos:Concept ;
+edintkosinftype:Terrace a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:Facility ; 
+    skos:broader edintkosinftype:Facility ; 
     skos:prefLabel "Terraza"@es ;
     skos:prefLabel  "Terrace"@en .
 
-edintinftype:UncoveredTerrace a skos:Concept ;
+edintkosinftype:UncoveredTerrace a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:Terrace ; 
+    skos:broader edintkosinftype:Terrace ; 
     skos:prefLabel "Terraza descubierta"@es ;
     skos:prefLabel  "Uncovered Terrace"@en.
 
-edintinftype:CoveredTerrace a skos:Concept ;
+edintkosinftype:CoveredTerrace a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:Terrace ; 
+    skos:broader edintkosinftype:Terrace ; 
     skos:prefLabel "Terraza cubierta"@es ;
     skos:prefLabel  "Covered Terrace"@en.
 
 ##### CommercialAggregation
 
-edintinftype:CommercialAggregation a skos:Concept ;
+edintkosinftype:CommercialAggregation a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:Facility ; 
+    skos:broader edintkosinftype:Facility ; 
     skos:prefLabel "Agrupación comercial"@es ;
     skos:prefLabel  "Commercial aggregation"@en .
 
 edintkosinftype:Airport a skos:Concept ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintinftype:CommercialAggregation ;
+	skos:broader edintkosinftype:CommercialAggregation ;
 	skos:prefLabel "Aeropuerto"@es ;
 	skos:prefLabel "Airport"@en .
 
 edintkosinftype:Mall a skos:Concept ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintinftype:CommercialAggregation ;
+	skos:broader edintkosinftype:CommercialAggregation ;
 	skos:prefLabel "Centro comercial"@es ;
 	skos:prefLabel "Mall"@en .
 
 edintkosinftype:UdergroundStation a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Underground station"@es .
 
 edintkosinftype:TrainStation a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Estación de tren"@es ;
   skos:prefLabel "Train station"@en .
 
 edintkosinftype:FoodGallery a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Galería de alimentación"@es ;
   skos:prefLabel "FoodGallery"@en .
 
 edintkosinftype:TransportHub a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Intercambiador de transportes"@es ;
   skos:prefLabel "Transport hub"@en .
 
 edintkosinftype:MunicipalMarket a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Mercado municipal"@es ;
   skos:prefLabel "Municipal market"@en .
 
 edintkosinftype:StreetMarket a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Mercadillo"@es ;
   skos:prefLabel "Street market"@en .
 
 edintkosinftype:ShoppingArcade a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Pasaje comercial"@es ;
   skos:prefLabel "Shopping arcade"@en .
 
 edintkosinftype:Fairground a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
-  skos:broader edintinftype:CommercialAggregation ;
+  skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Recinto ferial"@es ;
   skos:prefLabel "Fairground"@en .
 
@@ -163,9 +163,9 @@ edintkosinftype:Fairground a skos:Concept ;
 ##### CommercialSpace
 ##### Sin incluir subtipos 
 
-edintinftype:CommercialSpace a skos:Concept ;
+edintkosinftype:CommercialSpace a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintinftype:Facility ; 
+    skos:broader edintkosinftype:Facility ; 
     skos:prefLabel "Espacio comercial"@es ;
     skos:prefLabel  "Commercial space"@en .
 	
@@ -173,1640 +173,1640 @@ edintinftype:CommercialSpace a skos:Concept ;
 
 ###### Other: Resto de tipos de Facility sustituyendo uris en archivo tipo-equipamiento original de https://github.com/opencitydata/listas-codigos-skos/tree/master/urbanismo-infraestructuras/equipamiento y añadiendo "quiosco" como subtipo de "marquesinas-y-quioscos"
 
-edintkosiinftype:quiosco a skos:Concept ;
+edintkosinftype:quiosco a skos:Concept ;
 	skos:prefLabel "Quiosco"@es ;
 	skos:prefLabel "Stand"@en ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:marquesinas-y-quioscos .
+	skos:broader edintkosinftype:marquesinas-y-quioscos .
 
 
 
-edintkosiinftype:equipamiento-educativo a skos:Concept ;
+edintkosinftype:equipamiento-educativo a skos:Concept ;
 	skos:prefLabel "Equipamiento Educativo"@es .
 
-edintkosiinftype:equipamiento-educativo skos:inScheme edintkos:InfrastructureType ;
+edintkosinftype:equipamiento-educativo skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-educativo" .
 
-edintkosiinftype:centros-educativos a skos:Concept ;
+edintkosinftype:centros-educativos a skos:Concept ;
 	skos:prefLabel "Centros Educativos"@es ;
 	skos:notation "centros-educativos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-educativo .
+	skos:broader edintkosinftype:equipamiento-educativo .
 
-edintkosiinftype:colegio a skos:Concept ;
+edintkosinftype:colegio a skos:Concept ;
 	skos:prefLabel "Colegio"@es ;
 	skos:notation "colegio" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:colegio .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:colegio .
 
-edintkosiinftype:equipamiento-educativo skos:narrower edintkosiinftype:centros-educativos .
+edintkosinftype:equipamiento-educativo skos:narrower edintkosinftype:centros-educativos .
 
-edintkosiinftype:escuela-infantil a skos:Concept ;
+edintkosinftype:escuela-infantil a skos:Concept ;
 	skos:prefLabel "Escuela Infantil"@es ;
 	skos:notation "escuela-infantil" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:escuela-infantil .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:escuela-infantil .
 
-edintkosiinftype:instituto a skos:Concept ;
+edintkosinftype:instituto a skos:Concept ;
 	skos:prefLabel "Instituto"@es ;
 	skos:notation "instituto" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:instituto .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:instituto .
 
-edintkosiinftype:educacion-permanente-para-adultos a skos:Concept ;
+edintkosinftype:educacion-permanente-para-adultos a skos:Concept ;
 	skos:prefLabel "Educación Permanente para Adultos"@es ;
 	skos:notation "educacion-permanente-para-adultos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:educacion-permanente-para-adultos .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:educacion-permanente-para-adultos .
 
-edintkosiinftype:aula-de-estudio a skos:Concept ;
+edintkosinftype:aula-de-estudio a skos:Concept ;
 	skos:prefLabel "Aula de Estudio"@es ;
 	skos:notation "aula-de-estudio" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:aula-de-estudio .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:aula-de-estudio .
 
-edintkosiinftype:universidad a skos:Concept ;
+edintkosinftype:universidad a skos:Concept ;
 	skos:prefLabel "Universidad"@es ;
 	skos:notation "universidad" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:universidad .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:universidad .
 
-edintkosiinftype:escuela-de-musica a skos:Concept ;
+edintkosinftype:escuela-de-musica a skos:Concept ;
 	skos:prefLabel "Escuela de música"@es ;
 	skos:notation "escuela-de-musica" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:escuela-de-musica .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:escuela-de-musica .
 
-edintkosiinftype:gabinete-de-asistencia-psicologica-y-pedagogica a skos:Concept ;
+edintkosinftype:gabinete-de-asistencia-psicologica-y-pedagogica a skos:Concept ;
 	skos:prefLabel "Gabinete de Asistencia Psicológica y Pedagógica"@es ;
 	skos:notation "gabinete-de-asistencia-psicologica-y-pedagogica" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-educativos .
+	skos:broader edintkosinftype:centros-educativos .
 
-edintkosiinftype:centros-educativos skos:narrower edintkosiinftype:gabinete-de-asistencia-psicologica-y-pedagogica .
+edintkosinftype:centros-educativos skos:narrower edintkosinftype:gabinete-de-asistencia-psicologica-y-pedagogica .
 
-edintkosiinftype:equipamiento-medioambiental a skos:Concept ;
+edintkosinftype:equipamiento-medioambiental a skos:Concept ;
 	skos:prefLabel "Equipamiento Medioambiental"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-medioambiental" .
 
-edintkosiinftype:plantas a skos:Concept ;
+edintkosinftype:plantas a skos:Concept ;
 	skos:prefLabel "Plantas"@es ;
 	skos:notation "plantas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-medioambiental .
+	skos:broader edintkosinftype:equipamiento-medioambiental .
 
-edintkosiinftype:planta-de-compostaje a skos:Concept ;
+edintkosinftype:planta-de-compostaje a skos:Concept ;
 	skos:prefLabel "Planta de Compostaje"@es ;
 	skos:notation "planta-de-compostaje" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-compostaje .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-compostaje .
 
-edintkosiinftype:equipamiento-medioambiental skos:narrower edintkosiinftype:plantas .
+edintkosinftype:equipamiento-medioambiental skos:narrower edintkosinftype:plantas .
 
-edintkosiinftype:planta-de-purificacion-del-agua a skos:Concept ;
+edintkosinftype:planta-de-purificacion-del-agua a skos:Concept ;
 	skos:prefLabel "Planta de Purificación del Agua"@es ;
 	skos:notation "planta-de-purificacion-del-agua" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-purificacion-del-agua .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-purificacion-del-agua .
 
-edintkosiinftype:punto-limpio a skos:Concept ;
+edintkosinftype:punto-limpio a skos:Concept ;
 	skos:prefLabel "Punto Limpio"@es ;
 	skos:notation "punto-limpio" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:punto-limpio .
+edintkosinftype:plantas skos:narrower edintkosinftype:punto-limpio .
 
-edintkosiinftype:planta-de-reciclaje a skos:Concept ;
+edintkosinftype:planta-de-reciclaje a skos:Concept ;
 	skos:prefLabel "Planta de Reciclaje"@es ;
 	skos:notation "planta-de-reciclaje" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-reciclaje .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-reciclaje .
 
-edintkosiinftype:planta-de-recogida-de-residuos a skos:Concept ;
+edintkosinftype:planta-de-recogida-de-residuos a skos:Concept ;
 	skos:prefLabel "Planta de Recogida de Residuos"@es ;
 	skos:notation "planta-de-recogida-de-residuos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-recogida-de-residuos .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-recogida-de-residuos .
 
-edintkosiinftype:planta-de-desalacion a skos:Concept ;
+edintkosinftype:planta-de-desalacion a skos:Concept ;
 	skos:prefLabel "Planta de desalación"@es ;
 	skos:notation "planta-de-desalacion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-desalacion .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-desalacion .
 
-edintkosiinftype:planta-de-tratamiento-de-aguas-residuales a skos:Concept ;
+edintkosinftype:planta-de-tratamiento-de-aguas-residuales a skos:Concept ;
 	skos:prefLabel "Planta de tratamiento de aguas residuales"@es ;
 	skos:notation "planta-de-tratamiento-de-aguas-residuales" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-tratamiento-de-aguas-residuales .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-tratamiento-de-aguas-residuales .
 
-edintkosiinftype:planta-de-descalcificacion a skos:Concept ;
+edintkosinftype:planta-de-descalcificacion a skos:Concept ;
 	skos:prefLabel "Planta de descalcificación"@es ;
 	skos:notation "planta-de-descalcificacion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-descalcificacion .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-descalcificacion .
 
-edintkosiinftype:planta-de-potabilizacion-del-agua a skos:Concept ;
+edintkosinftype:planta-de-potabilizacion-del-agua a skos:Concept ;
 	skos:prefLabel "Planta de Potabilización del agua"@es ;
 	skos:notation "planta-de-potabilizacion-del-agua" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-potabilizacion-del-agua .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-potabilizacion-del-agua .
 
-edintkosiinftype:planta-de-filtracion-del-agua a skos:Concept ;
+edintkosinftype:planta-de-filtracion-del-agua a skos:Concept ;
 	skos:prefLabel "Planta de filtración del agua"@es ;
 	skos:notation "planta-de-filtracion-del-agua" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:plantas .
+	skos:broader edintkosinftype:plantas .
 
-edintkosiinftype:plantas skos:narrower edintkosiinftype:planta-de-filtracion-del-agua .
+edintkosinftype:plantas skos:narrower edintkosinftype:planta-de-filtracion-del-agua .
 
-edintkosiinftype:equipamiento-urbano a skos:Concept ;
+edintkosinftype:equipamiento-urbano a skos:Concept ;
 	skos:prefLabel "Equipamiento Urbano"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-urbano" .
 
-edintkosiinftype:mobiliario a skos:Concept ;
+edintkosinftype:mobiliario a skos:Concept ;
 	skos:prefLabel "Mobiliario"@es ;
 	skos:notation "mobiliario" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-urbano .
+	skos:broader edintkosinftype:equipamiento-urbano .
 
-edintkosiinftype:bancos a skos:Concept ;
+edintkosinftype:bancos a skos:Concept ;
 	skos:prefLabel "Bancos"@es ;
 	skos:notation "bancos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:bancos .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:bancos .
 
-edintkosiinftype:equipamiento-urbano skos:narrower edintkosiinftype:mobiliario .
+edintkosinftype:equipamiento-urbano skos:narrower edintkosinftype:mobiliario .
 
-edintkosiinftype:bancos-modulares a skos:Concept ;
+edintkosinftype:bancos-modulares a skos:Concept ;
 	skos:prefLabel "Bancos Modulares"@es ;
 	skos:notation "bancos-modulares" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:bancos-modulares .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:bancos-modulares .
 
-edintkosiinftype:elementos-para-viales-y-aparcamientos a skos:Concept ;
+edintkosinftype:elementos-para-viales-y-aparcamientos a skos:Concept ;
 	skos:prefLabel "Elementos para viales y aparcamientos"@es ;
 	skos:notation "elementos-para-viales-y-aparcamientos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:elementos-para-viales-y-aparcamientos .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:elementos-para-viales-y-aparcamientos .
 
-edintkosiinftype:pilonas-y-bolardos a skos:Concept ;
+edintkosinftype:pilonas-y-bolardos a skos:Concept ;
 	skos:prefLabel "Pilonas y bolardos"@es ;
 	skos:notation "pilonas-y-bolardos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:pilonas-y-bolardos .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:pilonas-y-bolardos .
 
-edintkosiinftype:vallas-y-barreras a skos:Concept ;
+edintkosinftype:vallas-y-barreras a skos:Concept ;
 	skos:prefLabel "Vallas y barreras"@es ;
 	skos:notation "vallas-y-barreras" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:vallas-y-barreras .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:vallas-y-barreras .
 
-edintkosiinftype:senalizaciones a skos:Concept ;
+edintkosinftype:senalizaciones a skos:Concept ;
 	skos:prefLabel "Señalizaciones"@es ;
 	skos:notation "senalizaciones" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:senalizaciones .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:senalizaciones .
 
-edintkosiinftype:farolas-y-balizas a skos:Concept ;
+edintkosinftype:farolas-y-balizas a skos:Concept ;
 	skos:prefLabel "Farolas y balizas"@es ;
 	skos:notation "farolas-y-balizas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:farolas-y-balizas .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:farolas-y-balizas .
 
-edintkosiinftype:cajas-y-armarios a skos:Concept ;
+edintkosinftype:cajas-y-armarios a skos:Concept ;
 	skos:prefLabel "Cajas y armarios"@es ;
 	skos:notation "cajas-y-armarios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:cajas-y-armarios .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:cajas-y-armarios .
 
-edintkosiinftype:fuentes a skos:Concept ;
+edintkosinftype:fuentes a skos:Concept ;
 	skos:prefLabel "Fuentes"@es ;
 	skos:notation "fuentes" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:fuentes .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:fuentes .
 
-edintkosiinftype:gradas-y-tribunas a skos:Concept ;
+edintkosinftype:gradas-y-tribunas a skos:Concept ;
 	skos:prefLabel "Gradas y tribunas"@es ;
 	skos:notation "gradas-y-tribunas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:gradas-y-tribunas .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:gradas-y-tribunas .
 
-edintkosiinftype:jardineras a skos:Concept ;
+edintkosinftype:jardineras a skos:Concept ;
 	skos:prefLabel "Jardineras"@es ;
 	skos:notation "jardineras" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:jardineras .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:jardineras .
 
-edintkosiinftype:marquesinas-y-quioscos a skos:Concept ;
+edintkosinftype:marquesinas-y-quioscos a skos:Concept ;
 	skos:prefLabel "Marquesinas y quioscos"@es ;
 	skos:notation "marquesinas-y-quioscos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:marquesinas-y-quioscos .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:marquesinas-y-quioscos .
 
-edintkosiinftype:papeleras a skos:Concept ;
+edintkosinftype:papeleras a skos:Concept ;
 	skos:prefLabel "Papeleras"@es ;
 	skos:notation "papeleras" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:papeleras .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:papeleras .
 
-edintkosiinftype:ceniceros-de-exterior a skos:Concept ;
+edintkosinftype:ceniceros-de-exterior a skos:Concept ;
 	skos:prefLabel "Ceniceros de exterior"@es ;
 	skos:notation "ceniceros-de-exterior" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:ceniceros-de-exterior .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:ceniceros-de-exterior .
 
-edintkosiinftype:aparcabicicletas a skos:Concept ;
+edintkosinftype:aparcabicicletas a skos:Concept ;
 	skos:prefLabel "Aparcabicicletas"@es ;
 	skos:notation "aparcabicicletas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:aparcabicicletas .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:aparcabicicletas .
 
-edintkosiinftype:extendedores-de-bolsas-higienicas a skos:Concept ;
+edintkosinftype:extendedores-de-bolsas-higienicas a skos:Concept ;
 	skos:prefLabel "Extendedores de bolsas higiénicas"@es ;
 	skos:notation "extendedores-de-bolsas-higienicas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:extendedores-de-bolsas-higienicas .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:extendedores-de-bolsas-higienicas .
 
-edintkosiinftype:sanitarios-y-aseos a skos:Concept ;
+edintkosinftype:sanitarios-y-aseos a skos:Concept ;
 	skos:prefLabel "Sanitarios y aseos"@es ;
 	skos:notation "sanitarios-y-aseos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:sanitarios-y-aseos .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:sanitarios-y-aseos .
 
-edintkosiinftype:equipamientos-para-playas a skos:Concept ;
+edintkosinftype:equipamientos-para-playas a skos:Concept ;
 	skos:prefLabel "Equipamientos para playas"@es ;
 	skos:notation "equipamientos-para-playas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:mobiliario .
+	skos:broader edintkosinftype:mobiliario .
 
-edintkosiinftype:mobiliario skos:narrower edintkosiinftype:equipamientos-para-playas .
+edintkosinftype:mobiliario skos:narrower edintkosinftype:equipamientos-para-playas .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables a skos:Concept ;
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables a skos:Concept ;
 	skos:prefLabel "Elementos para parques Infantiles y Circuitos Biosaludables"@es ;
 	skos:notation "elementos-para-parques-infantiles-y-circuitos-biosaludables" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-urbano .
+	skos:broader edintkosinftype:equipamiento-urbano .
 
-edintkosiinftype:columpios a skos:Concept ;
+edintkosinftype:columpios a skos:Concept ;
 	skos:prefLabel "Columpios"@es ;
 	skos:notation "columpios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:columpios .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:columpios .
 
-edintkosiinftype:equipamiento-urbano skos:narrower edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+edintkosinftype:equipamiento-urbano skos:narrower edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:toboganes a skos:Concept ;
+edintkosinftype:toboganes a skos:Concept ;
 	skos:prefLabel "Toboganes"@es ;
 	skos:notation "toboganes" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:toboganes .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:toboganes .
 
-edintkosiinftype:parques-infantiles a skos:Concept ;
+edintkosinftype:parques-infantiles a skos:Concept ;
 	skos:prefLabel "Parques Infantiles"@es ;
 	skos:notation "parques-infantiles" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:parques-infantiles .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:parques-infantiles .
 
-edintkosiinftype:parques-de-agua a skos:Concept ;
+edintkosinftype:parques-de-agua a skos:Concept ;
 	skos:prefLabel "Parques de Agua"@es ;
 	skos:notation "parques-de-agua" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:parques-de-agua .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:parques-de-agua .
 
-edintkosiinftype:fitness-de-exterior-y-circuitos-biosaludables a skos:Concept ;
+edintkosinftype:fitness-de-exterior-y-circuitos-biosaludables a skos:Concept ;
 	skos:prefLabel "Fitness de exterior y circuitos biosaludables"@es ;
 	skos:notation "fitness-de-exterior-y-circuitos-biosaludables" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:fitness-de-exterior-y-circuitos-biosaludables .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:fitness-de-exterior-y-circuitos-biosaludables .
 
-edintkosiinftype:juegos-de-exterior-para-mayores a skos:Concept ;
+edintkosinftype:juegos-de-exterior-para-mayores a skos:Concept ;
 	skos:prefLabel "Juegos de exterior para mayores"@es ;
 	skos:notation "juegos-de-exterior-para-mayores" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
+	skos:broader edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables .
 
-edintkosiinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosiinftype:juegos-de-exterior-para-mayores .
+edintkosinftype:elementos-para-parques-infantiles-y-circuitos-biosaludables skos:narrower edintkosinftype:juegos-de-exterior-para-mayores .
 
-edintkosiinftype:drenaje-y-depuracion a skos:Concept ;
+edintkosinftype:drenaje-y-depuracion a skos:Concept ;
 	skos:prefLabel "Drenaje y depuración"@es ;
 	skos:notation "drenaje-y-depuracion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-urbano .
+	skos:broader edintkosinftype:equipamiento-urbano .
 
-edintkosiinftype:arquetas-y-tapas-de-registro a skos:Concept ;
+edintkosinftype:arquetas-y-tapas-de-registro a skos:Concept ;
 	skos:prefLabel "Arquetas y tapas de registro"@es ;
 	skos:notation "arquetas-y-tapas-de-registro" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:drenaje-y-depuracion .
+	skos:broader edintkosinftype:drenaje-y-depuracion .
 
-edintkosiinftype:drenaje-y-depuracion skos:narrower edintkosiinftype:arquetas-y-tapas-de-registro .
+edintkosinftype:drenaje-y-depuracion skos:narrower edintkosinftype:arquetas-y-tapas-de-registro .
 
-edintkosiinftype:equipamiento-urbano skos:narrower edintkosiinftype:drenaje-y-depuracion .
+edintkosinftype:equipamiento-urbano skos:narrower edintkosinftype:drenaje-y-depuracion .
 
-edintkosiinftype:sumideros-y-desagues a skos:Concept ;
+edintkosinftype:sumideros-y-desagues a skos:Concept ;
 	skos:prefLabel "Sumideros y desagües"@es ;
 	skos:notation "sumideros-y-desagues" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:drenaje-y-depuracion .
+	skos:broader edintkosinftype:drenaje-y-depuracion .
 
-edintkosiinftype:drenaje-y-depuracion skos:narrower edintkosiinftype:sumideros-y-desagues .
+edintkosinftype:drenaje-y-depuracion skos:narrower edintkosinftype:sumideros-y-desagues .
 
-edintkosiinftype:canales-y-rejillas-de-drenaje a skos:Concept ;
+edintkosinftype:canales-y-rejillas-de-drenaje a skos:Concept ;
 	skos:prefLabel "Canales y rejillas de drenaje"@es ;
 	skos:notation "canales-y-rejillas-de-drenaje" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:drenaje-y-depuracion .
+	skos:broader edintkosinftype:drenaje-y-depuracion .
 
-edintkosiinftype:drenaje-y-depuracion skos:narrower edintkosiinftype:canales-y-rejillas-de-drenaje .
+edintkosinftype:drenaje-y-depuracion skos:narrower edintkosinftype:canales-y-rejillas-de-drenaje .
 
-edintkosiinftype:fosas-septicas a skos:Concept ;
+edintkosinftype:fosas-septicas a skos:Concept ;
 	skos:prefLabel "Fosas sépticas"@es ;
 	skos:notation "fosas-septicas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:drenaje-y-depuracion .
+	skos:broader edintkosinftype:drenaje-y-depuracion .
 
-edintkosiinftype:drenaje-y-depuracion skos:narrower edintkosiinftype:fosas-septicas .
+edintkosinftype:drenaje-y-depuracion skos:narrower edintkosinftype:fosas-septicas .
 
-edintkosiinftype:gestion-de-residuos a skos:Concept ;
+edintkosinftype:gestion-de-residuos a skos:Concept ;
 	skos:prefLabel "Gestión de residuos"@es ;
 	skos:notation "gestion-de-residuos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-urbano .
+	skos:broader edintkosinftype:equipamiento-urbano .
 
-edintkosiinftype:contenedores-de-basura a skos:Concept ;
+edintkosinftype:contenedores-de-basura a skos:Concept ;
 	skos:prefLabel "Contenedores de basura"@es ;
 	skos:notation "contenedores-de-basura" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:gestion-de-residuos .
+	skos:broader edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:gestion-de-residuos skos:narrower edintkosiinftype:contenedores-de-basura .
+edintkosinftype:gestion-de-residuos skos:narrower edintkosinftype:contenedores-de-basura .
 
-edintkosiinftype:equipamiento-urbano skos:narrower edintkosiinftype:gestion-de-residuos .
+edintkosinftype:equipamiento-urbano skos:narrower edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:cubos-de-basura a skos:Concept ;
+edintkosinftype:cubos-de-basura a skos:Concept ;
 	skos:prefLabel "Cubos de basura"@es ;
 	skos:notation "cubos-de-basura" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:gestion-de-residuos .
+	skos:broader edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:gestion-de-residuos skos:narrower edintkosiinftype:cubos-de-basura .
+edintkosinftype:gestion-de-residuos skos:narrower edintkosinftype:cubos-de-basura .
 
-edintkosiinftype:contenedores-soterrados a skos:Concept ;
+edintkosinftype:contenedores-soterrados a skos:Concept ;
 	skos:prefLabel "Contenedores Soterrados"@es ;
 	skos:notation "contenedores-soterrados" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:gestion-de-residuos .
+	skos:broader edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:gestion-de-residuos skos:narrower edintkosiinftype:contenedores-soterrados .
+edintkosinftype:gestion-de-residuos skos:narrower edintkosinftype:contenedores-soterrados .
 
-edintkosiinftype:contenedores-de-recogida-selectiva a skos:Concept ;
+edintkosinftype:contenedores-de-recogida-selectiva a skos:Concept ;
 	skos:prefLabel "Contenedores de recogida Selectiva"@es ;
 	skos:notation "contenedores-de-recogida-selectiva" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:gestion-de-residuos .
+	skos:broader edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:gestion-de-residuos skos:narrower edintkosiinftype:contenedores-de-recogida-selectiva .
+edintkosinftype:gestion-de-residuos skos:narrower edintkosinftype:contenedores-de-recogida-selectiva .
 
-edintkosiinftype:vehiculos-satelite a skos:Concept ;
+edintkosinftype:vehiculos-satelite a skos:Concept ;
 	skos:prefLabel "Vehículos satélite"@es ;
 	skos:notation "vehiculos-satelite" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:gestion-de-residuos .
+	skos:broader edintkosinftype:gestion-de-residuos .
 
-edintkosiinftype:gestion-de-residuos skos:narrower edintkosiinftype:vehiculos-satelite .
+edintkosinftype:gestion-de-residuos skos:narrower edintkosinftype:vehiculos-satelite .
 
-edintkosiinftype:equipamiento-cultural a skos:Concept ;
+edintkosinftype:equipamiento-cultural a skos:Concept ;
 	skos:prefLabel "Equipamiento Cultural"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-cultural" .
 
-edintkosiinftype:centros-de-patrimonio a skos:Concept ;
+edintkosinftype:centros-de-patrimonio a skos:Concept ;
 	skos:prefLabel "Centros de Patrimonio"@es ;
 	skos:notation "centros-de-patrimonio" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-cultural .
+	skos:broader edintkosinftype:equipamiento-cultural .
 
-edintkosiinftype:museos a skos:Concept ;
+edintkosinftype:museos a skos:Concept ;
 	skos:prefLabel "Museos"@es ;
 	skos:notation "museos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:museos .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:museos .
 
-edintkosiinftype:equipamiento-cultural skos:narrower edintkosiinftype:centros-de-patrimonio .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:archivos a skos:Concept ;
+edintkosinftype:archivos a skos:Concept ;
 	skos:prefLabel "Archivos"@es ;
 	skos:notation "archivos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:archivos .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:archivos .
 
-edintkosiinftype:bibliotecas a skos:Concept ;
+edintkosinftype:bibliotecas a skos:Concept ;
 	skos:prefLabel "Bibliotecas"@es ;
 	skos:notation "bibliotecas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:bibliotecas .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:bibliotecas .
 
-edintkosiinftype:fundaciones-culturales a skos:Concept ;
+edintkosinftype:fundaciones-culturales a skos:Concept ;
 	skos:prefLabel "Fundaciones Culturales"@es ;
 	skos:notation "fundaciones-culturales" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:fundaciones-culturales .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:fundaciones-culturales .
 
-edintkosiinftype:colecciones a skos:Concept ;
+edintkosinftype:colecciones a skos:Concept ;
 	skos:prefLabel "Colecciones"@es ;
 	skos:notation "colecciones" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:colecciones .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:colecciones .
 
-edintkosiinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural a skos:Concept ;
+edintkosinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural a skos:Concept ;
 	skos:prefLabel "Centros de Interpretación del Patrimonio Histórico y Natural"@es ;
 	skos:notation "centros-de-interpretacion-del-patrimonio-historico-y-natural" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:centros-de-interpretacion-del-patrimonio-historico-y-natural .
 
-edintkosiinftype:centros-de-documentacion-e-investigacion a skos:Concept ;
+edintkosinftype:centros-de-documentacion-e-investigacion a skos:Concept ;
 	skos:prefLabel "Centros de Documentación e Investigación"@es ;
 	skos:notation "centros-de-documentacion-e-investigacion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-patrimonio .
+	skos:broader edintkosinftype:centros-de-patrimonio .
 
-edintkosiinftype:centros-de-patrimonio skos:narrower edintkosiinftype:centros-de-documentacion-e-investigacion .
+edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:centros-de-documentacion-e-investigacion .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas a skos:Concept ;
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas a skos:Concept ;
 	skos:prefLabel "Centros de Artes escénicas, audiovisuales y plásticas"@es ;
 	skos:notation "centros-de-artes-escenicas,-audiovisuales-y-plasticas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-cultural .
+	skos:broader edintkosinftype:equipamiento-cultural .
 
-edintkosiinftype:teatros a skos:Concept ;
+edintkosinftype:teatros a skos:Concept ;
 	skos:prefLabel "Teatros"@es ;
 	skos:notation "teatros" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:teatros .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:teatros .
 
-edintkosiinftype:equipamiento-cultural skos:narrower edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:cines-y-multicines a skos:Concept ;
+edintkosinftype:cines-y-multicines a skos:Concept ;
 	skos:prefLabel "Cines y Multicines"@es ;
 	skos:notation "cines-y-multicines" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:cines-y-multicines .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:cines-y-multicines .
 
-edintkosiinftype:auditorios-y-recintos-escenicos a skos:Concept ;
+edintkosinftype:auditorios-y-recintos-escenicos a skos:Concept ;
 	skos:prefLabel "Auditorios y Recintos escénicos"@es ;
 	skos:notation "auditorios-y-recintos-escenicos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:auditorios-y-recintos-escenicos .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:auditorios-y-recintos-escenicos .
 
-edintkosiinftype:salones-de-actos a skos:Concept ;
+edintkosinftype:salones-de-actos a skos:Concept ;
 	skos:prefLabel "Salones de Actos"@es ;
 	skos:notation "salones-de-actos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:salones-de-actos .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salones-de-actos .
 
-edintkosiinftype:galerias-de-arte a skos:Concept ;
+edintkosinftype:galerias-de-arte a skos:Concept ;
 	skos:prefLabel "Galerías de Arte"@es ;
 	skos:notation "galerias-de-arte" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:galerias-de-arte .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:galerias-de-arte .
 
-edintkosiinftype:salas-de-exposiciones a skos:Concept ;
+edintkosinftype:salas-de-exposiciones a skos:Concept ;
 	skos:prefLabel "Salas de exposiciones"@es ;
 	skos:notation "salas-de-exposiciones" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:salas-de-exposiciones .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-exposiciones .
 
-edintkosiinftype:salas-de-usos-multiples a skos:Concept ;
+edintkosinftype:salas-de-usos-multiples a skos:Concept ;
 	skos:prefLabel "Salas de Usos Múltiples"@es ;
 	skos:notation "salas-de-usos-multiples" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
 
-edintkosiinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosiinftype:salas-de-usos-multiples .
+edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-usos-multiples .
 
-edintkosiinftype:centros-de-desarrollo-comunitario a skos:Concept ;
+edintkosinftype:centros-de-desarrollo-comunitario a skos:Concept ;
 	skos:prefLabel "Centros de Desarrollo Comunitario"@es ;
 	skos:notation "centros-de-desarrollo-comunitario" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-cultural .
+	skos:broader edintkosinftype:equipamiento-cultural .
 
-edintkosiinftype:casas-de-cultura a skos:Concept ;
+edintkosinftype:casas-de-cultura a skos:Concept ;
 	skos:prefLabel "Casas de Cultura"@es ;
 	skos:notation "casas-de-cultura" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-desarrollo-comunitario .
+	skos:broader edintkosinftype:centros-de-desarrollo-comunitario .
 
-edintkosiinftype:centros-de-desarrollo-comunitario skos:narrower edintkosiinftype:casas-de-cultura .
+edintkosinftype:centros-de-desarrollo-comunitario skos:narrower edintkosinftype:casas-de-cultura .
 
-edintkosiinftype:equipamiento-cultural skos:narrower edintkosiinftype:centros-de-desarrollo-comunitario .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-desarrollo-comunitario .
 
-edintkosiinftype:centros-civicos a skos:Concept ;
+edintkosinftype:centros-civicos a skos:Concept ;
 	skos:prefLabel "Centros Cívicos"@es ;
 	skos:notation "centros-civicos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-desarrollo-comunitario .
+	skos:broader edintkosinftype:centros-de-desarrollo-comunitario .
 
-edintkosiinftype:centros-de-desarrollo-comunitario skos:narrower edintkosiinftype:centros-civicos .
+edintkosinftype:centros-de-desarrollo-comunitario skos:narrower edintkosinftype:centros-civicos .
 
-edintkosiinftype:centros-culturales-polivalentes a skos:Concept ;
+edintkosinftype:centros-culturales-polivalentes a skos:Concept ;
 	skos:prefLabel "Centros Culturales Polivalentes"@es ;
 	skos:notation "centros-culturales-polivalentes" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-desarrollo-comunitario .
+	skos:broader edintkosinftype:centros-de-desarrollo-comunitario .
 
-edintkosiinftype:centros-de-desarrollo-comunitario skos:narrower edintkosiinftype:centros-culturales-polivalentes .
+edintkosinftype:centros-de-desarrollo-comunitario skos:narrower edintkosinftype:centros-culturales-polivalentes .
 
-edintkosiinftype:centros-de-formacion-y-produccion-cultural a skos:Concept ;
+edintkosinftype:centros-de-formacion-y-produccion-cultural a skos:Concept ;
 	skos:prefLabel "Centros de Formación y Producción Cultural"@es ;
 	skos:notation "centros-de-formacion-y-produccion-cultural" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-cultural .
+	skos:broader edintkosinftype:equipamiento-cultural .
 
-edintkosiinftype:escuelas-artisticas a skos:Concept ;
+edintkosinftype:escuelas-artisticas a skos:Concept ;
 	skos:prefLabel "Escuelas artísticas"@es ;
 	skos:notation "escuelas-artisticas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-formacion-y-produccion-cultural .
+	skos:broader edintkosinftype:centros-de-formacion-y-produccion-cultural .
 
-edintkosiinftype:centros-de-formacion-y-produccion-cultural skos:narrower edintkosiinftype:escuelas-artisticas .
+edintkosinftype:centros-de-formacion-y-produccion-cultural skos:narrower edintkosinftype:escuelas-artisticas .
 
-edintkosiinftype:equipamiento-cultural skos:narrower edintkosiinftype:centros-de-formacion-y-produccion-cultural .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-formacion-y-produccion-cultural .
 
-edintkosiinftype:centros-de-arte a skos:Concept ;
+edintkosinftype:centros-de-arte a skos:Concept ;
 	skos:prefLabel "Centros de Arte"@es ;
 	skos:notation "centros-de-arte" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-formacion-y-produccion-cultural .
+	skos:broader edintkosinftype:centros-de-formacion-y-produccion-cultural .
 
-edintkosiinftype:centros-de-formacion-y-produccion-cultural skos:narrower edintkosiinftype:centros-de-arte .
+edintkosinftype:centros-de-formacion-y-produccion-cultural skos:narrower edintkosinftype:centros-de-arte .
 
-edintkosiinftype:espacios-aptos-para-uso-cultural a skos:Concept ;
+edintkosinftype:espacios-aptos-para-uso-cultural a skos:Concept ;
 	skos:prefLabel "Espacios Aptos para uso cultural"@es ;
 	skos:notation "espacios-aptos-para-uso-cultural" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-cultural .
+	skos:broader edintkosinftype:equipamiento-cultural .
 
-edintkosiinftype:otros-espacios-culturales a skos:Concept ;
+edintkosinftype:otros-espacios-culturales a skos:Concept ;
 	skos:prefLabel "Otros espacios culturales"@es ;
 	skos:notation "otros-espacios-culturales" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-aptos-para-uso-cultural .
+	skos:broader edintkosinftype:espacios-aptos-para-uso-cultural .
 
-edintkosiinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosiinftype:otros-espacios-culturales .
+edintkosinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosinftype:otros-espacios-culturales .
 
-edintkosiinftype:equipamiento-cultural skos:narrower edintkosiinftype:espacios-aptos-para-uso-cultural .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:espacios-aptos-para-uso-cultural .
 
-edintkosiinftype:espacios-alternativos a skos:Concept ;
+edintkosinftype:espacios-alternativos a skos:Concept ;
 	skos:prefLabel "Espacios Alternativos"@es ;
 	skos:notation "espacios-alternativos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-aptos-para-uso-cultural .
+	skos:broader edintkosinftype:espacios-aptos-para-uso-cultural .
 
-edintkosiinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosiinftype:espacios-alternativos .
+edintkosinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosinftype:espacios-alternativos .
 
-edintkosiinftype:recintos-culturales-en-espacios-urbanos-abiertos a skos:Concept ;
+edintkosinftype:recintos-culturales-en-espacios-urbanos-abiertos a skos:Concept ;
 	skos:prefLabel "Recintos Culturales en espacios urbanos abiertos"@es ;
 	skos:notation "recintos-culturales-en-espacios-urbanos-abiertos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-aptos-para-uso-cultural .
+	skos:broader edintkosinftype:espacios-aptos-para-uso-cultural .
 
-edintkosiinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosiinftype:recintos-culturales-en-espacios-urbanos-abiertos .
+edintkosinftype:espacios-aptos-para-uso-cultural skos:narrower edintkosinftype:recintos-culturales-en-espacios-urbanos-abiertos .
 
-edintkosiinftype:equipamiento-deportivo a skos:Concept ;
+edintkosinftype:equipamiento-deportivo a skos:Concept ;
 	skos:prefLabel "Equipamiento Deportivo"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-deportivo" .
 
-edintkosiinftype:espacios-deportivos-convencionales a skos:Concept ;
+edintkosinftype:espacios-deportivos-convencionales a skos:Concept ;
 	skos:prefLabel "Espacios deportivos convencionales"@es ;
 	skos:notation "espacios-deportivos-convencionales" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-deportivo .
+	skos:broader edintkosinftype:equipamiento-deportivo .
 
-edintkosiinftype:campos-polideportivos a skos:Concept ;
+edintkosinftype:campos-polideportivos a skos:Concept ;
 	skos:prefLabel "Campos Polideportivos"@es ;
 	skos:notation "campos-polideportivos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campos-polideportivos .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campos-polideportivos .
 
-edintkosiinftype:equipamiento-deportivo skos:narrower edintkosiinftype:espacios-deportivos-convencionales .
+edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:campo-de-futbol a skos:Concept ;
+edintkosinftype:campo-de-futbol a skos:Concept ;
 	skos:prefLabel "Campo de Fútbol"@es ;
 	skos:notation "campo-de-futbol" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campo-de-futbol .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campo-de-futbol .
 
-edintkosiinftype:campo-de-futbol-7 a skos:Concept ;
+edintkosinftype:campo-de-futbol-7 a skos:Concept ;
 	skos:prefLabel "Campo de Fútbol 7"@es ;
 	skos:notation "campo-de-futbol-7" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campo-de-futbol-7 .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campo-de-futbol-7 .
 
-edintkosiinftype:campo-de-rugby a skos:Concept ;
+edintkosinftype:campo-de-rugby a skos:Concept ;
 	skos:prefLabel "Campo de Rugby"@es ;
 	skos:notation "campo-de-rugby" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campo-de-rugby .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campo-de-rugby .
 
-edintkosiinftype:campo-de-hockey-hierba a skos:Concept ;
+edintkosinftype:campo-de-hockey-hierba a skos:Concept ;
 	skos:prefLabel "Campo de Hockey hierba"@es ;
 	skos:notation "campo-de-hockey-hierba" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campo-de-hockey-hierba .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campo-de-hockey-hierba .
 
-edintkosiinftype:campo-de-beisbol a skos:Concept ;
+edintkosinftype:campo-de-beisbol a skos:Concept ;
 	skos:prefLabel "Campo de Béisbol"@es ;
 	skos:notation "campo-de-beisbol" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:campo-de-beisbol .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:campo-de-beisbol .
 
-edintkosiinftype:zonas-de-lanzamiento-de-atletismo a skos:Concept ;
+edintkosinftype:zonas-de-lanzamiento-de-atletismo a skos:Concept ;
 	skos:prefLabel "Zonas de lanzamiento de atletismo"@es ;
 	skos:notation "zonas-de-lanzamiento-de-atletismo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:zonas-de-lanzamiento-de-atletismo .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:zonas-de-lanzamiento-de-atletismo .
 
-edintkosiinftype:pistas-de-atletismo-(200m,-300m-o-400m) a skos:Concept ;
+edintkosinftype:pistas-de-atletismo-(200m,-300m-o-400m) a skos:Concept ;
 	skos:prefLabel "Pistas de atletismo (200m, 300m o 400m)"@es ;
 	skos:notation "pistas-de-atletismo-(200m,-300m-o-400m)" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pistas-de-atletismo-(200m,-300m-o-400m) .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pistas-de-atletismo-(200m,-300m-o-400m) .
 
-edintkosiinftype:rectas-de-saltos-atleticos a skos:Concept ;
+edintkosinftype:rectas-de-saltos-atleticos a skos:Concept ;
 	skos:prefLabel "Rectas de Saltos atléticos"@es ;
 	skos:notation "rectas-de-saltos-atleticos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:rectas-de-saltos-atleticos .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:rectas-de-saltos-atleticos .
 
-edintkosiinftype:velodromos a skos:Concept ;
+edintkosinftype:velodromos a skos:Concept ;
 	skos:prefLabel "Velódromos"@es ;
 	skos:notation "velodromos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:velodromos .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:velodromos .
 
-edintkosiinftype:patinodromos a skos:Concept ;
+edintkosinftype:patinodromos a skos:Concept ;
 	skos:prefLabel "Patinódromos"@es ;
 	skos:notation "patinodromos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:patinodromos .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:patinodromos .
 
-edintkosiinftype:pistas-polideportivas a skos:Concept ;
+edintkosinftype:pistas-polideportivas a skos:Concept ;
 	skos:prefLabel "Pistas Polideportivas"@es ;
 	skos:notation "pistas-polideportivas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pistas-polideportivas .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pistas-polideportivas .
 
-edintkosiinftype:pista-de-baloncesto a skos:Concept ;
+edintkosinftype:pista-de-baloncesto a skos:Concept ;
 	skos:prefLabel "Pista de Baloncesto"@es ;
 	skos:notation "pista-de-baloncesto" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-baloncesto .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-baloncesto .
 
-edintkosiinftype:pista-de-voleibol a skos:Concept ;
+edintkosinftype:pista-de-voleibol a skos:Concept ;
 	skos:prefLabel "Pista de Voleibol"@es ;
 	skos:notation "pista-de-voleibol" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-voleibol .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-voleibol .
 
-edintkosiinftype:pista-de-voley-playa a skos:Concept ;
+edintkosinftype:pista-de-voley-playa a skos:Concept ;
 	skos:prefLabel "Pista de Voley Playa"@es ;
 	skos:notation "pista-de-voley-playa" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-voley-playa .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-voley-playa .
 
-edintkosiinftype:pista-de-tenis a skos:Concept ;
+edintkosinftype:pista-de-tenis a skos:Concept ;
 	skos:prefLabel "Pista de Tenis"@es ;
 	skos:notation "pista-de-tenis" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-tenis .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-tenis .
 
-edintkosiinftype:pista-de-fronton a skos:Concept ;
+edintkosinftype:pista-de-fronton a skos:Concept ;
 	skos:prefLabel "Pista de Frontón"@es ;
 	skos:notation "pista-de-fronton" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-fronton .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-fronton .
 
-edintkosiinftype:pista-de-squash a skos:Concept ;
+edintkosinftype:pista-de-squash a skos:Concept ;
 	skos:prefLabel "Pista de Squash"@es ;
 	skos:notation "pista-de-squash" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-squash .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-squash .
 
-edintkosiinftype:pista-de-padel a skos:Concept ;
+edintkosinftype:pista-de-padel a skos:Concept ;
 	skos:prefLabel "Pista de Padel"@es ;
 	skos:notation "pista-de-padel" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-padel .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-padel .
 
-edintkosiinftype:pista-de-badminton a skos:Concept ;
+edintkosinftype:pista-de-badminton a skos:Concept ;
 	skos:prefLabel "Pista de Bádminton"@es ;
 	skos:notation "pista-de-badminton" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-badminton .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-badminton .
 
-edintkosiinftype:pista-de-patinaje-sobre-ruedas a skos:Concept ;
+edintkosinftype:pista-de-patinaje-sobre-ruedas a skos:Concept ;
 	skos:prefLabel "Pista de Patinaje sobre ruedas"@es ;
 	skos:notation "pista-de-patinaje-sobre-ruedas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-patinaje-sobre-ruedas .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-patinaje-sobre-ruedas .
 
-edintkosiinftype:pista-de-patinaje-sobre-hielo a skos:Concept ;
+edintkosinftype:pista-de-patinaje-sobre-hielo a skos:Concept ;
 	skos:prefLabel "Pista de Patinaje sobre hielo"@es ;
 	skos:notation "pista-de-patinaje-sobre-hielo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-patinaje-sobre-hielo .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-patinaje-sobre-hielo .
 
-edintkosiinftype:pista-de-hockey-sobre-hielo a skos:Concept ;
+edintkosinftype:pista-de-hockey-sobre-hielo a skos:Concept ;
 	skos:prefLabel "Pista de Hockey sobre hielo"@es ;
 	skos:notation "pista-de-hockey-sobre-hielo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:pista-de-hockey-sobre-hielo .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-hockey-sobre-hielo .
 
-edintkosiinftype:sala-de-artes-marciales a skos:Concept ;
+edintkosinftype:sala-de-artes-marciales a skos:Concept ;
 	skos:prefLabel "Sala de Artes Marciales"@es ;
 	skos:notation "sala-de-artes-marciales" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:sala-de-artes-marciales .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:sala-de-artes-marciales .
 
-edintkosiinftype:sala-de-esgrima a skos:Concept ;
+edintkosinftype:sala-de-esgrima a skos:Concept ;
 	skos:prefLabel "Sala de Esgrima"@es ;
 	skos:notation "sala-de-esgrima" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:sala-de-esgrima .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:sala-de-esgrima .
 
-edintkosiinftype:sala-de-gimnasia a skos:Concept ;
+edintkosinftype:sala-de-gimnasia a skos:Concept ;
 	skos:prefLabel "Sala de Gimnasia"@es ;
 	skos:notation "sala-de-gimnasia" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:sala-de-gimnasia .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:sala-de-gimnasia .
 
-edintkosiinftype:sala-de-halterofilia a skos:Concept ;
+edintkosinftype:sala-de-halterofilia a skos:Concept ;
 	skos:prefLabel "Sala de Halterofilia"@es ;
 	skos:notation "sala-de-halterofilia" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:sala-de-halterofilia .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:sala-de-halterofilia .
 
-edintkosiinftype:piscinas-de-natacion-(25m,-33m,-50m) a skos:Concept ;
+edintkosinftype:piscinas-de-natacion-(25m,-33m,-50m) a skos:Concept ;
 	skos:prefLabel "Piscinas de natación (25m, 33m, 50m)"@es ;
 	skos:notation "piscinas-de-natacion-(25m,-33m,-50m)" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:piscinas-de-natacion-(25m,-33m,-50m) .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:piscinas-de-natacion-(25m,-33m,-50m) .
 
-edintkosiinftype:piscinas-de-saltos a skos:Concept ;
+edintkosinftype:piscinas-de-saltos a skos:Concept ;
 	skos:prefLabel "Piscinas de saltos"@es ;
 	skos:notation "piscinas-de-saltos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:piscinas-de-saltos .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:piscinas-de-saltos .
 
-edintkosiinftype:piscinas-de-waterpolo a skos:Concept ;
+edintkosinftype:piscinas-de-waterpolo a skos:Concept ;
 	skos:prefLabel "Piscinas de waterpolo"@es ;
 	skos:notation "piscinas-de-waterpolo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-convencionales .
+	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosiinftype:espacios-deportivos-convencionales skos:narrower edintkosiinftype:piscinas-de-waterpolo .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:piscinas-de-waterpolo .
 
-edintkosiinftype:espacios-deportivos-singulares a skos:Concept ;
+edintkosinftype:espacios-deportivos-singulares a skos:Concept ;
 	skos:prefLabel "Espacios deportivos singulares"@es ;
 	skos:notation "espacios-deportivos-singulares" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-deportivo .
+	skos:broader edintkosinftype:equipamiento-deportivo .
 
-edintkosiinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) a skos:Concept ;
+edintkosinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) a skos:Concept ;
 	skos:prefLabel "Campos de golf o minigolf (9 hoyos, 18 hoyos)"@es ;
 	skos:notation "campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos)" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) .
 
-edintkosiinftype:equipamiento-deportivo skos:narrower edintkosiinftype:espacios-deportivos-singulares .
+edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:campo-de-tiro-con-arco a skos:Concept ;
+edintkosinftype:campo-de-tiro-con-arco a skos:Concept ;
 	skos:prefLabel "Campo de tiro con arco"@es ;
 	skos:notation "campo-de-tiro-con-arco" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:campo-de-tiro-con-arco .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campo-de-tiro-con-arco .
 
-edintkosiinftype:campo-de-tiro-de-precision a skos:Concept ;
+edintkosinftype:campo-de-tiro-de-precision a skos:Concept ;
 	skos:prefLabel "Campo de tiro de precisión"@es ;
 	skos:notation "campo-de-tiro-de-precision" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:campo-de-tiro-de-precision .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campo-de-tiro-de-precision .
 
-edintkosiinftype:campo-de-tiro-al-plato a skos:Concept ;
+edintkosinftype:campo-de-tiro-al-plato a skos:Concept ;
 	skos:prefLabel "Campo de tiro al plato"@es ;
 	skos:notation "campo-de-tiro-al-plato" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:campo-de-tiro-al-plato .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campo-de-tiro-al-plato .
 
-edintkosiinftype:canal-de-regatas-para-remo a skos:Concept ;
+edintkosinftype:canal-de-regatas-para-remo a skos:Concept ;
 	skos:prefLabel "Canal de regatas para remo"@es ;
 	skos:notation "canal-de-regatas-para-remo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:canal-de-regatas-para-remo .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:canal-de-regatas-para-remo .
 
-edintkosiinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas a skos:Concept ;
+edintkosinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas a skos:Concept ;
 	skos:prefLabel "Canal de regatas de piragüismo en aguas tranquilas"@es ;
 	skos:notation "canal-de-regatas-de-piraguismo-en-aguas-tranquilas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:canal-de-regatas-de-piraguismo-en-aguas-tranquilas .
 
-edintkosiinftype:canal-de-regatas-de-piraguismo-en-eslalon a skos:Concept ;
+edintkosinftype:canal-de-regatas-de-piraguismo-en-eslalon a skos:Concept ;
 	skos:prefLabel "Canal de regatas de piragüismo en eslalon"@es ;
 	skos:notation "canal-de-regatas-de-piraguismo-en-eslalon" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:canal-de-regatas-de-piraguismo-en-eslalon .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:canal-de-regatas-de-piraguismo-en-eslalon .
 
-edintkosiinftype:circuito-cerrado-de-bicicleta a skos:Concept ;
+edintkosinftype:circuito-cerrado-de-bicicleta a skos:Concept ;
 	skos:prefLabel "Circuito cerrado de bicicleta"@es ;
 	skos:notation "circuito-cerrado-de-bicicleta" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:circuito-cerrado-de-bicicleta .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-cerrado-de-bicicleta .
 
-edintkosiinftype:carril-bici a skos:Concept ;
+edintkosinftype:carril-bici a skos:Concept ;
 	skos:prefLabel "Carril bici"@es ;
 	skos:notation "carril-bici" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:carril-bici .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:carril-bici .
 
-edintkosiinftype:cicuitos-de-carrera-a-pie a skos:Concept ;
+edintkosinftype:cicuitos-de-carrera-a-pie a skos:Concept ;
 	skos:prefLabel "Cicuitos de carrera a pie"@es ;
 	skos:notation "cicuitos-de-carrera-a-pie" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:cicuitos-de-carrera-a-pie .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:cicuitos-de-carrera-a-pie .
 
-edintkosiinftype:circuito-de-velocidad-(para-motor) a skos:Concept ;
+edintkosinftype:circuito-de-velocidad-(para-motor) a skos:Concept ;
 	skos:prefLabel "Circuito de velocidad (para motor)"@es ;
 	skos:notation "circuito-de-velocidad-(para-motor)" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:circuito-de-velocidad-(para-motor) .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-de-velocidad-(para-motor) .
 
-edintkosiinftype:circuito-de-motocross a skos:Concept ;
+edintkosinftype:circuito-de-motocross a skos:Concept ;
 	skos:prefLabel "Circuito de motocross"@es ;
 	skos:notation "circuito-de-motocross" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:circuito-de-motocross .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-de-motocross .
 
-edintkosiinftype:circuito-de-kart a skos:Concept ;
+edintkosinftype:circuito-de-kart a skos:Concept ;
 	skos:prefLabel "Circuito de Kart"@es ;
 	skos:notation "circuito-de-kart" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:circuito-de-kart .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-de-kart .
 
-edintkosiinftype:espacios-de-hipica-para-doma a skos:Concept ;
+edintkosinftype:espacios-de-hipica-para-doma a skos:Concept ;
 	skos:prefLabel "Espacios de hípica para doma"@es ;
 	skos:notation "espacios-de-hipica-para-doma" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:espacios-de-hipica-para-doma .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:espacios-de-hipica-para-doma .
 
-edintkosiinftype:espacios-de-hipica-para-saltos a skos:Concept ;
+edintkosinftype:espacios-de-hipica-para-saltos a skos:Concept ;
 	skos:prefLabel "Espacios de hípica para saltos"@es ;
 	skos:notation "espacios-de-hipica-para-saltos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:espacios-de-hipica-para-saltos .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:espacios-de-hipica-para-saltos .
 
-edintkosiinftype:hipodromos a skos:Concept ;
+edintkosinftype:hipodromos a skos:Concept ;
 	skos:prefLabel "Hipódromos"@es ;
 	skos:notation "hipodromos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:hipodromos .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:hipodromos .
 
-edintkosiinftype:campos-de-polo a skos:Concept ;
+edintkosinftype:campos-de-polo a skos:Concept ;
 	skos:prefLabel "Campos de polo"@es ;
 	skos:notation "campos-de-polo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:campos-de-polo .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campos-de-polo .
 
-edintkosiinftype:estacion-de-esqui-de-fondo a skos:Concept ;
+edintkosinftype:estacion-de-esqui-de-fondo a skos:Concept ;
 	skos:prefLabel "Estación de esquí de fondo"@es ;
 	skos:notation "estacion-de-esqui-de-fondo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:estacion-de-esqui-de-fondo .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:estacion-de-esqui-de-fondo .
 
-edintkosiinftype:estacion-de-esqui-alpino a skos:Concept ;
+edintkosinftype:estacion-de-esqui-alpino a skos:Concept ;
 	skos:prefLabel "Estación de esquí alpino"@es ;
 	skos:notation "estacion-de-esqui-alpino" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:estacion-de-esqui-alpino .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:estacion-de-esqui-alpino .
 
-edintkosiinftype:estacion-de-snowboard a skos:Concept ;
+edintkosinftype:estacion-de-snowboard a skos:Concept ;
 	skos:prefLabel "Estación de snowboard"@es ;
 	skos:notation "estacion-de-snowboard" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:estacion-de-snowboard .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:estacion-de-snowboard .
 
-edintkosiinftype:rocodromos a skos:Concept ;
+edintkosinftype:rocodromos a skos:Concept ;
 	skos:prefLabel "Rocódromos"@es ;
 	skos:notation "rocodromos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:rocodromos .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:rocodromos .
 
-edintkosiinftype:bolera a skos:Concept ;
+edintkosinftype:bolera a skos:Concept ;
 	skos:prefLabel "Bolera"@es ;
 	skos:notation "bolera" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:bolera .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:bolera .
 
-edintkosiinftype:sala-de-billares a skos:Concept ;
+edintkosinftype:sala-de-billares a skos:Concept ;
 	skos:prefLabel "Sala de billares"@es ;
 	skos:notation "sala-de-billares" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:sala-de-billares .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:sala-de-billares .
 
-edintkosiinftype:pistas-de-petanca a skos:Concept ;
+edintkosinftype:pistas-de-petanca a skos:Concept ;
 	skos:prefLabel "Pistas de petanca"@es ;
 	skos:notation "pistas-de-petanca" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:espacios-deportivos-singulares .
+	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosiinftype:espacios-deportivos-singulares skos:narrower edintkosiinftype:pistas-de-petanca .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:pistas-de-petanca .
 
-edintkosiinftype:areas-de-activiades-deportivas a skos:Concept ;
+edintkosinftype:areas-de-activiades-deportivas a skos:Concept ;
 	skos:prefLabel "Áreas de activiades deportivas"@es ;
 	skos:notation "areas-de-activiades-deportivas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-deportivo .
+	skos:broader edintkosinftype:equipamiento-deportivo .
 
-edintkosiinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo a skos:Concept ;
+edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo a skos:Concept ;
 	skos:prefLabel "Embalses, lagos o bahías para actividades como remo o piragüismo"@es ;
 	skos:notation "embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-activiades-deportivas .
 
-edintkosiinftype:areas-de-activiades-deportivas skos:narrower edintkosiinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
+edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
 
-edintkosiinftype:equipamiento-deportivo skos:narrower edintkosiinftype:areas-de-activiades-deportivas .
+edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:areas-de-activiades-deportivas .
 
-edintkosiinftype:rutas-ecuestres a skos:Concept ;
+edintkosinftype:rutas-ecuestres a skos:Concept ;
 	skos:prefLabel "Rutas ecuestres"@es ;
 	skos:notation "rutas-ecuestres" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-activiades-deportivas .
 
-edintkosiinftype:areas-de-activiades-deportivas skos:narrower edintkosiinftype:rutas-ecuestres .
+edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:rutas-ecuestres .
 
-edintkosiinftype:zona-de-senderos-marcados a skos:Concept ;
+edintkosinftype:zona-de-senderos-marcados a skos:Concept ;
 	skos:prefLabel "Zona de senderos marcados"@es ;
 	skos:notation "zona-de-senderos-marcados" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-activiades-deportivas .
 
-edintkosiinftype:areas-de-activiades-deportivas skos:narrower edintkosiinftype:zona-de-senderos-marcados .
+edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:zona-de-senderos-marcados .
 
-edintkosiinftype:equipamiento-sanitario a skos:Concept ;
+edintkosinftype:equipamiento-sanitario a skos:Concept ;
 	skos:prefLabel "Equipamiento Sanitario"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamiento-sanitario" .
 
-edintkosiinftype:centros-de-atencion-y-prevencion a skos:Concept ;
+edintkosinftype:centros-de-atencion-y-prevencion a skos:Concept ;
 	skos:prefLabel "Centros de Atención y Prevención"@es ;
 	skos:notation "centros-de-atencion-y-prevencion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamiento-sanitario .
+	skos:broader edintkosinftype:equipamiento-sanitario .
 
-edintkosiinftype:hospital-general a skos:Concept ;
+edintkosinftype:hospital-general a skos:Concept ;
 	skos:prefLabel "Hospital General"@es ;
 	skos:notation "hospital-general" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-general .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-general .
 
-edintkosiinftype:equipamiento-sanitario skos:narrower edintkosiinftype:centros-de-atencion-y-prevencion .
+edintkosinftype:equipamiento-sanitario skos:narrower edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:hospital-quirurgico a skos:Concept ;
+edintkosinftype:hospital-quirurgico a skos:Concept ;
 	skos:prefLabel "Hospital Quirúrgico"@es ;
 	skos:notation "hospital-quirurgico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-quirurgico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-quirurgico .
 
-edintkosiinftype:hospital-maternal a skos:Concept ;
+edintkosinftype:hospital-maternal a skos:Concept ;
 	skos:prefLabel "Hospital Maternal"@es ;
 	skos:notation "hospital-maternal" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-maternal .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-maternal .
 
-edintkosiinftype:hospital-infantil a skos:Concept ;
+edintkosinftype:hospital-infantil a skos:Concept ;
 	skos:prefLabel "Hospital Infantil"@es ;
 	skos:notation "hospital-infantil" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-infantil .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-infantil .
 
-edintkosiinftype:hospital-materno-infantil a skos:Concept ;
+edintkosinftype:hospital-materno-infantil a skos:Concept ;
 	skos:prefLabel "Hospital Materno-Infantil"@es ;
 	skos:notation "hospital-materno-infantil" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-materno-infantil .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-materno-infantil .
 
-edintkosiinftype:hospital-psiquiatrico a skos:Concept ;
+edintkosinftype:hospital-psiquiatrico a skos:Concept ;
 	skos:prefLabel "Hospital Psiquiátrico"@es ;
 	skos:notation "hospital-psiquiatrico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-psiquiatrico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-psiquiatrico .
 
-edintkosiinftype:hospital-oncologico a skos:Concept ;
+edintkosinftype:hospital-oncologico a skos:Concept ;
 	skos:prefLabel "Hospital Oncológico"@es ;
 	skos:notation "hospital-oncologico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-oncologico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-oncologico .
 
-edintkosiinftype:hospital-oftalmico a skos:Concept ;
+edintkosinftype:hospital-oftalmico a skos:Concept ;
 	skos:prefLabel "Hospital Oftálmico"@es ;
 	skos:notation "hospital-oftalmico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-oftalmico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-oftalmico .
 
-edintkosiinftype:hospital-traumatologico-o-rehabilitacion a skos:Concept ;
+edintkosinftype:hospital-traumatologico-o-rehabilitacion a skos:Concept ;
 	skos:prefLabel "Hospital Traumatológico o Rehabilitación"@es ;
 	skos:notation "hospital-traumatologico-o-rehabilitacion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-traumatologico-o-rehabilitacion .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-traumatologico-o-rehabilitacion .
 
-edintkosiinftype:hospital-de-geriatria-y/o-larga-estancia a skos:Concept ;
+edintkosinftype:hospital-de-geriatria-y/o-larga-estancia a skos:Concept ;
 	skos:prefLabel "Hospital de Geriatría y/o Larga Estancia"@es ;
 	skos:notation "hospital-de-geriatria-y/o-larga-estancia" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-de-geriatria-y/o-larga-estancia .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-de-geriatria-y/o-larga-estancia .
 
-edintkosiinftype:hospital-dermatologico a skos:Concept ;
+edintkosinftype:hospital-dermatologico a skos:Concept ;
 	skos:prefLabel "Hospital dermatológico"@es ;
 	skos:notation "hospital-dermatologico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:hospital-dermatologico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-dermatologico .
 
-edintkosiinftype:centros-de-vacunacion a skos:Concept ;
+edintkosinftype:centros-de-vacunacion a skos:Concept ;
 	skos:prefLabel "Centros de Vacunación"@es ;
 	skos:notation "centros-de-vacunacion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-vacunacion .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-vacunacion .
 
-edintkosiinftype:centro-de-atencion-primaria a skos:Concept ;
+edintkosinftype:centro-de-atencion-primaria a skos:Concept ;
 	skos:prefLabel "Centro de Atención Primaria"@es ;
 	skos:notation "centro-de-atencion-primaria" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centro-de-atencion-primaria .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centro-de-atencion-primaria .
 
-edintkosiinftype:centro-de-atencion-urgente-extrahospitalaria a skos:Concept ;
+edintkosinftype:centro-de-atencion-urgente-extrahospitalaria a skos:Concept ;
 	skos:prefLabel "Centro de Atención Urgente Extrahospitalaria"@es ;
 	skos:notation "centro-de-atencion-urgente-extrahospitalaria" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centro-de-atencion-urgente-extrahospitalaria .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centro-de-atencion-urgente-extrahospitalaria .
 
-edintkosiinftype:proveedores-de-asistencia-sanitario-sin-intermediario a skos:Concept ;
+edintkosinftype:proveedores-de-asistencia-sanitario-sin-intermediario a skos:Concept ;
 	skos:prefLabel "Proveedores de asistencia Sanitario sin intermediario"@es ;
 	skos:notation "proveedores-de-asistencia-sanitario-sin-intermediario" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:proveedores-de-asistencia-sanitario-sin-intermediario .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:proveedores-de-asistencia-sanitario-sin-intermediario .
 
-edintkosiinftype:consultas-medicas a skos:Concept ;
+edintkosinftype:consultas-medicas a skos:Concept ;
 	skos:prefLabel "Consultas médicas"@es ;
 	skos:notation "consultas-medicas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:consultas-medicas .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:consultas-medicas .
 
-edintkosiinftype:centros-de-salud a skos:Concept ;
+edintkosinftype:centros-de-salud a skos:Concept ;
 	skos:prefLabel "Centros de Salud"@es ;
 	skos:notation "centros-de-salud" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-salud .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-salud .
 
-edintkosiinftype:centros-polivalentes a skos:Concept ;
+edintkosinftype:centros-polivalentes a skos:Concept ;
 	skos:prefLabel "Centros polivalentes"@es ;
 	skos:notation "centros-polivalentes" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-polivalentes .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-polivalentes .
 
-edintkosiinftype:centros-especializados a skos:Concept ;
+edintkosinftype:centros-especializados a skos:Concept ;
 	skos:prefLabel "Centros especializados"@es ;
 	skos:notation "centros-especializados" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-especializados .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-especializados .
 
-edintkosiinftype:clinicas-dentale a skos:Concept ;
+edintkosinftype:clinicas-dentale a skos:Concept ;
 	skos:prefLabel "Clínicas dentale"@es ;
 	skos:notation "clinicas-dentale" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:clinicas-dentale .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:clinicas-dentale .
 
-edintkosiinftype:centros-de-reproduccion-asistida a skos:Concept ;
+edintkosinftype:centros-de-reproduccion-asistida a skos:Concept ;
 	skos:prefLabel "Centros de Reproducción asistida"@es ;
 	skos:notation "centros-de-reproduccion-asistida" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-reproduccion-asistida .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-reproduccion-asistida .
 
-edintkosiinftype:centros-de-interrupcion-voluntaria-del-embarazo a skos:Concept ;
+edintkosinftype:centros-de-interrupcion-voluntaria-del-embarazo a skos:Concept ;
 	skos:prefLabel "Centros de interrupción voluntaria del embarazo"@es ;
 	skos:notation "centros-de-interrupcion-voluntaria-del-embarazo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-interrupcion-voluntaria-del-embarazo .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-interrupcion-voluntaria-del-embarazo .
 
-edintkosiinftype:centros-de-dialisis a skos:Concept ;
+edintkosinftype:centros-de-dialisis a skos:Concept ;
 	skos:prefLabel "Centros de diálisis"@es ;
 	skos:notation "centros-de-dialisis" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-dialisis .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-dialisis .
 
-edintkosiinftype:centros-de-diagnostico a skos:Concept ;
+edintkosinftype:centros-de-diagnostico a skos:Concept ;
 	skos:prefLabel "Centros de Diagnóstico"@es ;
 	skos:notation "centros-de-diagnostico" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-diagnostico .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-diagnostico .
 
-edintkosiinftype:centros-moviles-de-asistencia-sanitaria a skos:Concept ;
+edintkosinftype:centros-moviles-de-asistencia-sanitaria a skos:Concept ;
 	skos:prefLabel "Centros móviles de asistencia sanitaria"@es ;
 	skos:notation "centros-moviles-de-asistencia-sanitaria" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-moviles-de-asistencia-sanitaria .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-moviles-de-asistencia-sanitaria .
 
-edintkosiinftype:centros-de-transfusion a skos:Concept ;
+edintkosinftype:centros-de-transfusion a skos:Concept ;
 	skos:prefLabel "Centros de transfusión"@es ;
 	skos:notation "centros-de-transfusion" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-transfusion .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-transfusion .
 
-edintkosiinftype:bancos-de-tejidos a skos:Concept ;
+edintkosinftype:bancos-de-tejidos a skos:Concept ;
 	skos:prefLabel "Bancos de tejidos"@es ;
 	skos:notation "bancos-de-tejidos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:bancos-de-tejidos .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:bancos-de-tejidos .
 
-edintkosiinftype:centros-de-salud-mental a skos:Concept ;
+edintkosinftype:centros-de-salud-mental a skos:Concept ;
 	skos:prefLabel "Centros de Salud Mental"@es ;
 	skos:notation "centros-de-salud-mental" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:centros-de-atencion-y-prevencion .
+	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosiinftype:centros-de-atencion-y-prevencion skos:narrower edintkosiinftype:centros-de-salud-mental .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-de-salud-mental .
 
-edintkosiinftype:instalaciones-de-uso-administrativo a skos:Concept ;
+edintkosinftype:instalaciones-de-uso-administrativo a skos:Concept ;
 	skos:prefLabel "Instalaciones de uso administrativo"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "instalaciones-de-uso-administrativo" .
 
-edintkosiinftype:casa-consorcial a skos:Concept ;
+edintkosinftype:casa-consorcial a skos:Concept ;
 	skos:prefLabel "Casa Consorcial"@es ;
 	skos:notation "casa-consorcial" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:casa-consorcial .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:casa-consorcial .
 
-edintkosiinftype:sala-de-seminarios a skos:Concept ;
+edintkosinftype:sala-de-seminarios a skos:Concept ;
 	skos:prefLabel "Sala de Seminarios"@es ;
 	skos:notation "sala-de-seminarios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:sala-de-seminarios .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:sala-de-seminarios .
 
-edintkosiinftype:salas-de-juntas a skos:Concept ;
+edintkosinftype:salas-de-juntas a skos:Concept ;
 	skos:prefLabel "Salas de Juntas"@es ;
 	skos:notation "salas-de-juntas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:salas-de-juntas .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:salas-de-juntas .
 
-edintkosiinftype:salas-de-oficinas a skos:Concept ;
+edintkosinftype:salas-de-oficinas a skos:Concept ;
 	skos:prefLabel "Salas de Oficinas"@es ;
 	skos:notation "salas-de-oficinas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:salas-de-oficinas .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:salas-de-oficinas .
 
-edintkosiinftype:sala-de-talleres a skos:Concept ;
+edintkosinftype:sala-de-talleres a skos:Concept ;
 	skos:prefLabel "Sala de Talleres"@es ;
 	skos:notation "sala-de-talleres" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:sala-de-talleres .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:sala-de-talleres .
 
-edintkosiinftype:almacenes a skos:Concept ;
+edintkosinftype:almacenes a skos:Concept ;
 	skos:prefLabel "Almacenes"@es ;
 	skos:notation "almacenes" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-uso-administrativo .
+	skos:broader edintkosinftype:instalaciones-de-uso-administrativo .
 
-edintkosiinftype:instalaciones-de-uso-administrativo skos:narrower edintkosiinftype:almacenes .
+edintkosinftype:instalaciones-de-uso-administrativo skos:narrower edintkosinftype:almacenes .
 
-edintkosiinftype:instalaciones-de-usos-funerarios a skos:Concept ;
+edintkosinftype:instalaciones-de-usos-funerarios a skos:Concept ;
 	skos:prefLabel "Instalaciones de usos funerarios"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "instalaciones-de-usos-funerarios" .
 
-edintkosiinftype:cementerios a skos:Concept ;
+edintkosinftype:cementerios a skos:Concept ;
 	skos:prefLabel "Cementerios"@es ;
 	skos:notation "cementerios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-usos-funerarios .
+	skos:broader edintkosinftype:instalaciones-de-usos-funerarios .
 
-edintkosiinftype:instalaciones-de-usos-funerarios skos:narrower edintkosiinftype:cementerios .
+edintkosinftype:instalaciones-de-usos-funerarios skos:narrower edintkosinftype:cementerios .
 
-edintkosiinftype:hornos-crematorios a skos:Concept ;
+edintkosinftype:hornos-crematorios a skos:Concept ;
 	skos:prefLabel "Hornos Crematorios"@es ;
 	skos:notation "hornos-crematorios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-usos-funerarios .
+	skos:broader edintkosinftype:instalaciones-de-usos-funerarios .
 
-edintkosiinftype:instalaciones-de-usos-funerarios skos:narrower edintkosiinftype:hornos-crematorios .
+edintkosinftype:instalaciones-de-usos-funerarios skos:narrower edintkosinftype:hornos-crematorios .
 
-edintkosiinftype:capillas a skos:Concept ;
+edintkosinftype:capillas a skos:Concept ;
 	skos:prefLabel "Capillas"@es ;
 	skos:notation "capillas" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-usos-funerarios .
+	skos:broader edintkosinftype:instalaciones-de-usos-funerarios .
 
-edintkosiinftype:instalaciones-de-usos-funerarios skos:narrower edintkosiinftype:capillas .
+edintkosinftype:instalaciones-de-usos-funerarios skos:narrower edintkosinftype:capillas .
 
-edintkosiinftype:velatorios a skos:Concept ;
+edintkosinftype:velatorios a skos:Concept ;
 	skos:prefLabel "Velatorios"@es ;
 	skos:notation "velatorios" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:instalaciones-de-usos-funerarios .
+	skos:broader edintkosinftype:instalaciones-de-usos-funerarios .
 
-edintkosiinftype:instalaciones-de-usos-funerarios skos:narrower edintkosiinftype:velatorios .
+edintkosinftype:instalaciones-de-usos-funerarios skos:narrower edintkosinftype:velatorios .
 
-edintkosiinftype:equipamientos-de-asistencia-social a skos:Concept ;
+edintkosinftype:equipamientos-de-asistencia-social a skos:Concept ;
 	skos:prefLabel "Equipamientos de Asistencia Social"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "equipamientos-de-asistencia-social" .
 
-edintkosiinftype:casa-hogar-para-ancianos a skos:Concept ;
+edintkosinftype:casa-hogar-para-ancianos a skos:Concept ;
 	skos:prefLabel "Casa Hogar para Ancianos"@es ;
 	skos:notation "casa-hogar-para-ancianos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:casa-hogar-para-ancianos .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-hogar-para-ancianos .
 
-edintkosiinftype:casa-horgar-para-menores a skos:Concept ;
+edintkosinftype:casa-horgar-para-menores a skos:Concept ;
 	skos:prefLabel "Casa Horgar para Menores"@es ;
 	skos:notation "casa-horgar-para-menores" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:casa-horgar-para-menores .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-horgar-para-menores .
 
-edintkosiinftype:casa-social a skos:Concept ;
+edintkosinftype:casa-social a skos:Concept ;
 	skos:prefLabel "Casa Social"@es ;
 	skos:notation "casa-social" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:casa-social .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-social .
 
-edintkosiinftype:orfanato a skos:Concept ;
+edintkosinftype:orfanato a skos:Concept ;
 	skos:prefLabel "Orfanato"@es ;
 	skos:notation "orfanato" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:orfanato .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:orfanato .
 
-edintkosiinftype:centro-de-desarrollo-comunitario a skos:Concept ;
+edintkosinftype:centro-de-desarrollo-comunitario a skos:Concept ;
 	skos:prefLabel "Centro de Desarrollo Comunitario"@es ;
 	skos:notation "centro-de-desarrollo-comunitario" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:centro-de-desarrollo-comunitario .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:centro-de-desarrollo-comunitario .
 
-edintkosiinftype:centro-de-integracion-juvenil a skos:Concept ;
+edintkosinftype:centro-de-integracion-juvenil a skos:Concept ;
 	skos:prefLabel "Centro de Integración Juvenil"@es ;
 	skos:notation "centro-de-integracion-juvenil" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:centro-de-integracion-juvenil .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:centro-de-integracion-juvenil .
 
-edintkosiinftype:guarderia a skos:Concept ;
+edintkosinftype:guarderia a skos:Concept ;
 	skos:prefLabel "Guardería"@es ;
 	skos:notation "guarderia" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:guarderia .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:guarderia .
 
-edintkosiinftype:centro-de-bienestar-y-desarrollo-infantil a skos:Concept ;
+edintkosinftype:centro-de-bienestar-y-desarrollo-infantil a skos:Concept ;
 	skos:prefLabel "Centro de Bienestar y Desarrollo Infantil"@es ;
 	skos:notation "centro-de-bienestar-y-desarrollo-infantil" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:equipamientos-de-asistencia-social .
+	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosiinftype:equipamientos-de-asistencia-social skos:narrower edintkosiinftype:centro-de-bienestar-y-desarrollo-infantil .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:centro-de-bienestar-y-desarrollo-infantil .
 
-edintkosiinftype:circulacion-y-transporte a skos:Concept ;
+edintkosinftype:circulacion-y-transporte a skos:Concept ;
 	skos:prefLabel "Circulación y Transporte"@es ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:notation "circulacion-y-transporte" .
 
-edintkosiinftype:parada-de-bus a skos:Concept ;
+edintkosinftype:parada-de-bus a skos:Concept ;
 	skos:prefLabel "Parada de bus"@es ;
 	skos:notation "parada-de-bus" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:circulacion-y-transporte .
+	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:parada-de-bus .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:parada-de-bus .
 
-edintkosiinftype:zona-taxi a skos:Concept ;
+edintkosinftype:zona-taxi a skos:Concept ;
 	skos:prefLabel "Zona taxi"@es ;
 	skos:notation "zona-taxi" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:circulacion-y-transporte .
+	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:zona-taxi .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:zona-taxi .
 
-edintkosiinftype:carril-bus/taxi a skos:Concept ;
+edintkosinftype:carril-bus/taxi a skos:Concept ;
 	skos:prefLabel "Carril bus/taxi"@es ;
 	skos:notation "carril-bus/taxi" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:circulacion-y-transporte .
+	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:carril-bus/taxi .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:carril-bus/taxi .
 
-edintkosiinftype:estacion-de-metro a skos:Concept ;
+edintkosinftype:estacion-de-metro a skos:Concept ;
 	skos:prefLabel "Estación de metro"@es ;
 	skos:notation "estacion-de-metro" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:circulacion-y-transporte .
+	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:estacion-de-metro .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:estacion-de-metro .
 
-edintkosiinftype:estacion-de-cercanias a skos:Concept ;
+edintkosinftype:estacion-de-cercanias a skos:Concept ;
 	skos:prefLabel "Estación de cercanías"@es ;
 	skos:notation "estacion-de-cercanias" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosiinftype:circulacion-y-transporte .
+	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:estacion-de-cercanias .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:estacion-de-cercanias .
 
-edintkosiinftype:estacion-de-bicicletas a skos:Concept ;
+edintkosinftype:estacion-de-bicicletas a skos:Concept ;
 skos:prefLabel "Estación de bicicletas"@es ;
 skos:notation "estacion-de-bicicletas" ;
 skos:inScheme edintkos:InfrastructureType ;
-skos:broader edintkosiinftype:circulacion-y-transporte .
+skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosiinftype:circulacion-y-transporte skos:narrower edintkosiinftype:estacion-de-bicicletas .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:estacion-de-bicicletas .
 
 
 
