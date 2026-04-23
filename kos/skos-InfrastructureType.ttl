@@ -161,25 +161,55 @@ edintkosinftype:Fairground a skos:Concept ;
 
 
 ##### CommercialSpace
-##### Sin incluir subtipos 
+##### Con subtipos de ejemplo, no es una lista completa ni sigue una estructura jerárquica elaborada
 
 edintkosinftype:CommercialSpace a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
     skos:broader edintkosinftype:Facility ; 
     skos:prefLabel "Espacio comercial"@es ;
     skos:prefLabel  "Commercial space"@en .
+
+edintkosinftype:MarketStall a skos:Concept ;
+  skos:inScheme edintkos:InfrastructureType ;
+  skos:broader edintkosinftype:CommercialSpace ;
+  skos:prefLabel "Puesto de mercado"@es ;
+  skos:prefLabel "Market stall"@en .
 	
+edintkosinftype:Shop a skos:Concept ;
+  skos:inScheme edintkos:InfrastructureType ;
+  skos:broader edintkosinftype:CommercialSpace ;
+  skos:prefLabel "Tienda"@es ;
+  skos:prefLabel "Shop"@en .
+  
+edintkosinftype:Supermarket a skos:Concept ;
+  skos:inScheme edintkos:InfrastructureType ;
+  skos:broader edintkosinftype:CommercialSpace ;
+  skos:prefLabel "Supermercado"@es ;
+  skos:prefLabel "Supermarket"@en .  
 
+edintkosinftype:Bar a skos:Concept ;
+  skos:inScheme edintkos:InfrastructureType ;
+  skos:broader edintkosinftype:CommercialSpace ;
+  skos:prefLabel "Bar"@es ;
+  skos:prefLabel "Bar"@en .
 
-###### Other: Resto de tipos de Facility sustituyendo uris en archivo tipo-equipamiento original de https://github.com/opencitydata/listas-codigos-skos/tree/master/urbanismo-infraestructuras/equipamiento y añadiendo "quiosco" como subtipo de "marquesinas-y-quioscos"
-
-edintkosinftype:quiosco a skos:Concept ;
+edintkosinftype:Restaurant a skos:Concept ;
+  skos:inScheme edintkos:InfrastructureType ;
+  skos:broader edintkosinftype:CommercialSpace ;
+  skos:prefLabel "Restaurante"@es ;
+  skos:prefLabel "Restaurant"@en .
+  
+###### Aunque existe la categoría "marquesinas-y-quioscos" (ahora subtipo de Facility) se ha creado la categoría Stand (Quiosco) como subtipo de CommercialSpace también para que sea más fácil encontrar las categorías de CommercialSpace (espacios comerciales)
+edintkosinftype:Stand a skos:Concept ;
 	skos:prefLabel "Quiosco"@es ;
 	skos:prefLabel "Stand"@en ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:marquesinas-y-quioscos .
+	skos:broader edintkosinftype:marquesinas-y-quioscos ;
+	skos:broader edintkosinftype:CommercialSpace .
 
 
+
+###### Other: Resto de tipos de Facility sustituyendo uris en archivo tipo-equipamiento original de https://github.com/opencitydata/listas-codigos-skos/tree/master/urbanismo-infraestructuras/equipamiento 
 
 edintkosinftype:equipamiento-educativo a skos:Concept ;
 	skos:prefLabel "Equipamiento Educativo"@es .
