@@ -62,7 +62,7 @@
     font-style: italic;	
 }
 
-/* Stying the examples. */
+/* Styling the examples. */
 
 .anexample:before {
     content: "Example:";

@@ -64,16 +64,16 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                  skos:prefLabel "Archivos"@es .
 
 
-###  edintinftype:areas-de-activiades-deportivas
-<edintinftype:areas-de-activiades-deportivas> rdf:type 
+###  edintinftype:areas-de-actividades-deportivas
+<edintinftype:areas-de-actividades-deportivas> rdf:type 
                                                                                                                 skos:Concept ;
                                                                                                        skos:broader <edintinftype:equipamiento-deportivo> ;
                                                                                                        skos:inScheme edintkos:InfrastructureType ;
                                                                                                        skos:narrower <edintinftype:rutas-ecuestres> ,
                                                                                                                      <edintinftype:zona-de-senderos-marcados> ,
                                                                                                                      <edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo> ;
-                                                                                                       skos:notation "areas-de-activiades-deportivas" ;
-                                                                                                       skos:prefLabel "Áreas de activiades deportivas"@es .
+                                                                                                       skos:notation "areas-de-actividades-deportivas" ;
+                                                                                                       skos:prefLabel "Áreas de actividades deportivas"@es .
 
 
 ###  edintinftype:arquetas-y-tapas-de-registro
@@ -319,13 +319,13 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                  skos:prefLabel "Casa Hogar para Ancianos"@es .
 
 
-###  edintinftype:casa-horgar-para-menores
-<edintinftype:casa-horgar-para-menores> rdf:type 
+###  edintinftype:casa-hogar-para-menores
+<edintinftype:casa-hogar-para-menores> rdf:type 
                                                                                                           skos:Concept ;
                                                                                                  skos:broader <edintinftype:equipamientos-de-asistencia-social> ;
                                                                                                  skos:inScheme edintkos:InfrastructureType ;
-                                                                                                 skos:notation "casa-horgar-para-menores" ;
-                                                                                                 skos:prefLabel "Casa Horgar para Menores"@es .
+                                                                                                 skos:notation "casa-hogar-para-menores" ;
+                                                                                                 skos:prefLabel "Casa Hogar para Menores"@es .
 
 
 ###  edintinftype:casa-social
@@ -455,7 +455,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                                        <edintinftype:centros-especializados> ,
                                                                                                                        <edintinftype:centros-moviles-de-asistencia-sanitaria> ,
                                                                                                                        <edintinftype:centros-polivalentes> ,
-                                                                                                                       <edintinftype:clinicas-dentale> ,
+                                                                                                                       <edintinftype:clinicas-dentales> ,
                                                                                                                        <edintinftype:consultas-medicas> ,
                                                                                                                        <edintinftype:hospital-dermatologico> ,
                                                                                                                        <edintinftype:hospital-general> ,
@@ -646,13 +646,13 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                              skos:prefLabel "Centros polivalentes"@es .
 
 
-###  edintinftype:cicuitos-de-carrera-a-pie
-<edintinftype:cicuitos-de-carrera-a-pie> rdf:type 
+###  edintinftype:circuitos-de-carrera-a-pie
+<edintinftype:circuitos-de-carrera-a-pie> rdf:type 
                                                                                                            skos:Concept ;
                                                                                                   skos:broader <edintinftype:espacios-deportivos-singulares> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
-                                                                                                  skos:notation "cicuitos-de-carrera-a-pie" ;
-                                                                                                  skos:prefLabel "Cicuitos de carrera a pie"@es .
+                                                                                                  skos:notation "circuitos-de-carrera-a-pie" ;
+                                                                                                  skos:prefLabel "Circuitos de carrera a pie"@es .
 
 
 ###  edintinftype:cines-y-multicines
@@ -706,13 +706,13 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                  skos:prefLabel "Circulación y Transporte"@es .
 
 
-###  edintinftype:clinicas-dentale
-<edintinftype:clinicas-dentale> rdf:type 
+###  edintinftype:clinicas-dentales
+<edintinftype:clinicas-dentales> rdf:type 
                                                                                                   skos:Concept ;
                                                                                          skos:broader <edintinftype:centros-de-atencion-y-prevencion> ;
                                                                                          skos:inScheme edintkos:InfrastructureType ;
-                                                                                         skos:notation "clinicas-dentale" ;
-                                                                                         skos:prefLabel "Clínicas dentale"@es .
+                                                                                         skos:notation "clinicas-dentales" ;
+                                                                                         skos:prefLabel "Clínicas dentales"@es .
 
 
 ###  edintinftype:colecciones
@@ -852,7 +852,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                         skos:Concept ;
                                                                                                skos:broader <edintinftype:Facility> ;
                                                                                                skos:inScheme edintkos:InfrastructureType ;
-                                                                                               skos:narrower <edintinftype:areas-de-activiades-deportivas> ,
+                                                                                               skos:narrower <edintinftype:areas-de-actividades-deportivas> ,
                                                                                                              <edintinftype:espacios-deportivos-convencionales> ,
                                                                                                              <edintinftype:espacios-deportivos-singulares> ;
                                                                                                skos:notation "equipamiento-deportivo" ;
@@ -908,7 +908,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                            skos:broader <edintinftype:Facility> ;
                                                                                                            skos:inScheme edintkos:InfrastructureType ;
                                                                                                            skos:narrower <edintinftype:casa-hogar-para-ancianos> ,
-                                                                                                                         <edintinftype:casa-horgar-para-menores> ,
+                                                                                                                         <edintinftype:casa-hogar-para-menores> ,
                                                                                                                          <edintinftype:casa-social> ,
                                                                                                                          <edintinftype:centro-de-bienestar-y-desarrollo-infantil> ,
                                                                                                                          <edintinftype:centro-de-desarrollo-comunitario> ,
@@ -1047,7 +1047,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                                                      <edintinftype:canal-de-regatas-de-piraguismo-en-eslalon> ,
                                                                                                                      <edintinftype:canal-de-regatas-para-remo> ,
                                                                                                                      <edintinftype:carril-bici> ,
-                                                                                                                     <edintinftype:cicuitos-de-carrera-a-pie> ,
+                                                                                                                     <edintinftype:circuitos-de-carrera-a-pie> ,
                                                                                                                      <edintinftype:circuito-cerrado-de-bicicleta> ,
                                                                                                                      <edintinftype:circuito-de-kart> ,
                                                                                                                      <edintinftype:circuito-de-motocross> ,
@@ -1583,7 +1583,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                        skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                        skos:inScheme edintkos:InfrastructureType ;
                                                                                        skos:notation "pista-de-padel" ;
-                                                                                       skos:prefLabel "Pista de Padel"@es .
+                                                                                       skos:prefLabel "Pista de Pádel"@es .
 
 
 ###  edintinftype:pista-de-patinaje-sobre-hielo
@@ -1637,7 +1637,7 @@ edintinftype:bikeparking a skos:Concept ;
                                                                                              skos:broader <edintinftype:espacios-deportivos-convencionales> ;
                                                                                              skos:inScheme edintkos:InfrastructureType ;
                                                                                              skos:notation "pista-de-voley-playa" ;
-                                                                                             skos:prefLabel "Pista de Voley Playa"@es .
+                                                                                             skos:prefLabel "Pista de Vóley Playa"@es .
 
 
 ###  edintinftype:pistas-de-petanca
@@ -1806,7 +1806,7 @@ edintinftype:bikeparking a skos:Concept ;
 ###  edintinftype:rutas-ecuestres
 <edintinftype:rutas-ecuestres> rdf:type 
                                                                                                  skos:Concept ;
-                                                                                        skos:broader <edintinftype:areas-de-activiades-deportivas> ;
+                                                                                        skos:broader <edintinftype:areas-de-actividades-deportivas> ;
                                                                                         skos:inScheme edintkos:InfrastructureType ;
                                                                                         skos:notation "rutas-ecuestres" ;
                                                                                         skos:prefLabel "Rutas ecuestres"@es .
@@ -2054,7 +2054,7 @@ edintinftype:bikeparking a skos:Concept ;
 ###  edintinftype:zona-de-senderos-marcados
 <edintinftype:zona-de-senderos-marcados> rdf:type 
                                                                                                            skos:Concept ;
-                                                                                                  skos:broader <edintinftype:areas-de-activiades-deportivas> ;
+                                                                                                  skos:broader <edintinftype:areas-de-actividades-deportivas> ;
                                                                                                   skos:inScheme edintkos:InfrastructureType ;
                                                                                                   skos:notation "zona-de-senderos-marcados" ;
                                                                                                   skos:prefLabel "Zona de senderos marcados"@es .
@@ -2124,7 +2124,7 @@ edintinftype:bikeparking a skos:Concept ;
 ###  edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo
 <edintinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo> rdf:type 
                                                                                                                                                   skos:Concept ;
-                                                                                                                                         skos:broader <edintinftype:areas-de-activiades-deportivas> ;
+                                                                                                                                         skos:broader <edintinftype:areas-de-actividades-deportivas> ;
                                                                                                                                          skos:inScheme edintkos:InfrastructureType ;
                                                                                                                                          skos:notation "embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo" ;
                                                                                                                                          skos:prefLabel "Embalses, lagos o bahías para actividades como remo o piragüismo"@es .

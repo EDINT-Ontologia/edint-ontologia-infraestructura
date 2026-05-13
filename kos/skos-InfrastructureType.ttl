@@ -44,7 +44,7 @@ edintkosinftype:UrbanElement a skos:Concept ;
     skos:prefLabel "Elemento urbano"@es ;
     skos:prefLabel  "Urban element"@en .
 
-edintkosinftype:StreeLamp a skos:Concept ;
+edintkosinftype:StreetLamp a skos:Concept ;
     skos:inScheme edintkos:InfrastructureType ;
     skos:broader edintkosinftype:UrbanElement ; 
     skos:prefLabel "Farola"@es ;
@@ -112,7 +112,7 @@ edintkosinftype:Mall a skos:Concept ;
 	skos:prefLabel "Centro comercial"@es ;
 	skos:prefLabel "Mall"@en .
 
-edintkosinftype:UdergroundStation a skos:Concept ;
+edintkosinftype:UndergroundStation a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
   skos:broader edintkosinftype:CommercialAggregation ;
   skos:prefLabel "Underground station"@es .
@@ -1030,7 +1030,7 @@ edintkosinftype:pista-de-voleibol a skos:Concept ;
 edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-voleibol .
 
 edintkosinftype:pista-de-voley-playa a skos:Concept ;
-	skos:prefLabel "Pista de Voley Playa"@es ;
+	skos:prefLabel "Pista de Vóley Playa"@es ;
 	skos:notation "pista-de-voley-playa" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-convencionales .
@@ -1062,7 +1062,7 @@ edintkosinftype:pista-de-squash a skos:Concept ;
 edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pista-de-squash .
 
 edintkosinftype:pista-de-padel a skos:Concept ;
-	skos:prefLabel "Pista de Padel"@es ;
+	skos:prefLabel "Pista de Pádel"@es ;
 	skos:notation "pista-de-padel" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-convencionales .
@@ -1237,13 +1237,13 @@ edintkosinftype:carril-bici a skos:Concept ;
 
 edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:carril-bici .
 
-edintkosinftype:cicuitos-de-carrera-a-pie a skos:Concept ;
-	skos:prefLabel "Cicuitos de carrera a pie"@es ;
-	skos:notation "cicuitos-de-carrera-a-pie" ;
+edintkosinftype:circuitos-de-carrera-a-pie a skos:Concept ;
+	skos:prefLabel "Circuitos de carrera a pie"@es ;
+	skos:notation "circuitos-de-carrera-a-pie" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:cicuitos-de-carrera-a-pie .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuitos-de-carrera-a-pie .
 
 edintkosinftype:circuito-de-velocidad-(para-motor) a skos:Concept ;
 	skos:prefLabel "Circuito de velocidad (para motor)"@es ;
@@ -1357,9 +1357,9 @@ edintkosinftype:pistas-de-petanca a skos:Concept ;
 
 edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:pistas-de-petanca .
 
-edintkosinftype:areas-de-activiades-deportivas a skos:Concept ;
-	skos:prefLabel "Áreas de activiades deportivas"@es ;
-	skos:notation "areas-de-activiades-deportivas" ;
+edintkosinftype:areas-de-actividades-deportivas a skos:Concept ;
+	skos:prefLabel "Áreas de actividades deportivas"@es ;
+	skos:notation "areas-de-actividades-deportivas" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:equipamiento-deportivo .
 
@@ -1367,27 +1367,27 @@ edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo
 	skos:prefLabel "Embalses, lagos o bahías para actividades como remo o piragüismo"@es ;
 	skos:notation "embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-actividades-deportivas .
 
-edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
+edintkosinftype:areas-de-actividades-deportivas skos:narrower edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
 
-edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:areas-de-activiades-deportivas .
+edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:areas-de-actividades-deportivas .
 
 edintkosinftype:rutas-ecuestres a skos:Concept ;
 	skos:prefLabel "Rutas ecuestres"@es ;
 	skos:notation "rutas-ecuestres" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-actividades-deportivas .
 
-edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:rutas-ecuestres .
+edintkosinftype:areas-de-actividades-deportivas skos:narrower edintkosinftype:rutas-ecuestres .
 
 edintkosinftype:zona-de-senderos-marcados a skos:Concept ;
 	skos:prefLabel "Zona de senderos marcados"@es ;
 	skos:notation "zona-de-senderos-marcados" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:areas-de-activiades-deportivas .
+	skos:broader edintkosinftype:areas-de-actividades-deportivas .
 
-edintkosinftype:areas-de-activiades-deportivas skos:narrower edintkosinftype:zona-de-senderos-marcados .
+edintkosinftype:areas-de-actividades-deportivas skos:narrower edintkosinftype:zona-de-senderos-marcados .
 
 edintkosinftype:equipamiento-sanitario a skos:Concept ;
 	skos:prefLabel "Equipamiento Sanitario"@es ;
@@ -1554,13 +1554,13 @@ edintkosinftype:centros-especializados a skos:Concept ;
 
 edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:centros-especializados .
 
-edintkosinftype:clinicas-dentale a skos:Concept ;
-	skos:prefLabel "Clínicas dentale"@es ;
-	skos:notation "clinicas-dentale" ;
+edintkosinftype:clinicas-dentales a skos:Concept ;
+	skos:prefLabel "Clínicas dentales"@es ;
+	skos:notation "clinicas-dentales" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:clinicas-dentale .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:clinicas-dentales .
 
 edintkosinftype:centros-de-reproduccion-asistida a skos:Concept ;
 	skos:prefLabel "Centros de Reproducción asistida"@es ;
@@ -1729,13 +1729,13 @@ edintkosinftype:casa-hogar-para-ancianos a skos:Concept ;
 
 edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-hogar-para-ancianos .
 
-edintkosinftype:casa-horgar-para-menores a skos:Concept ;
-	skos:prefLabel "Casa Horgar para Menores"@es ;
-	skos:notation "casa-horgar-para-menores" ;
+edintkosinftype:casa-hogar-para-menores a skos:Concept ;
+	skos:prefLabel "Casa Hogar para Menores"@es ;
+	skos:notation "casa-hogar-para-menores" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:equipamientos-de-asistencia-social .
 
-edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-horgar-para-menores .
+edintkosinftype:equipamientos-de-asistencia-social skos:narrower edintkosinftype:casa-hogar-para-menores .
 
 edintkosinftype:casa-social a skos:Concept ;
 	skos:prefLabel "Casa Social"@es ;

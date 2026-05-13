@@ -203,7 +203,7 @@
     "@value" : "An unambiguous reference to the resource within a given context."
   }, {
     "@language" : "es",
-    "@value" : "Una referencia no ambigüa al recurso dentro de un contexto determinado."
+    "@value" : "Una referencia no ambigua al recurso dentro de un contexto determinado."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/terms/"
@@ -533,7 +533,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property of the Meassurement of Traffic: composition, load, occupation, intensity, level or speed."
+    "@value" : "Property of the Measurement of Traffic: composition, load, occupation, intensity, level or speed."
   }, {
     "@language" : "es",
     "@value" : "Propiedad de la Medición de Tráfico: composición, carga, ocupación, intensidad, nivel o velocidad."
@@ -546,7 +546,7 @@
     "@value" : "Propiedad Medición Tráfico"
   }, {
     "@language" : "en",
-    "@value" : "Traffic meassuring property"
+    "@value" : "Traffic measuring property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
@@ -793,7 +793,7 @@
     "@value" : "Relación de la Incidencia con el Tramo donde se produce la misma."
   }, {
     "@language" : "en",
-    "@value" : "Relationship of the Incidence withe the  Section, where it happens."
+    "@value" : "Relationship of the Incidence with the  Section, where it happens."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
@@ -995,7 +995,7 @@
     "@value" : "Tipo de equipo de tráfico, equipos de control y dispositivos de medición"
   }, {
     "@language" : "en",
-    "@value" : "Type of traffic equipment, monitor equipment or meassuring devices"
+    "@value" : "Type of traffic equipment, monitor equipment or measuring devices"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
@@ -1021,7 +1021,7 @@
     "@value" : "Tipo de incidencia, pueden ser planificadas o no planificadas."
   }, {
     "@language" : "en",
-    "@value" : "Type of incidence, planned or unplannedt"
+    "@value" : "Type of incidence, planned or unplanned"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
@@ -1053,7 +1053,7 @@
     "@value" : "In the case of the Service level (nivel), the possible measures are: green or fluid; yellow or slow; orange or dense; red or congestion; black or interrupted circulation; grey or no data."
   }, {
     "@language" : "en",
-    "@value" : "This property allows describing the unit of measurement of the Trafic Monitoring Device"
+    "@value" : "This property allows describing the unit of measurement of the Traffic Monitoring Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
@@ -1140,7 +1140,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Directly meassured speed with detectors"
+    "@value" : "Directly measured speed with detectors"
   }, {
     "@language" : "es",
     "@value" : "Velocidad medida directa con detectores"
@@ -1224,7 +1224,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"
+    "@value" : "Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del Registro Central de Cartografía del IGN.\nSu nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
@@ -1728,7 +1728,7 @@
     "@value" : "A  facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."
   }, {
     "@language" : "es",
-    "@value" : "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposiciòn, auditorios, etc."
+    "@value" : "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposición, auditorios, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"

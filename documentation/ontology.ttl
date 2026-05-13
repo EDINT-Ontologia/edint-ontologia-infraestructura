@@ -154,7 +154,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                                             rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
                                                                             rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo> ;
                                                                             rdfs:comment "Relación de la Incidencia con el Tramo donde se produce la misma."@es ,
-                                                                                         "Relationship of the Incidence withe the  Section, where it happens."@en ;
+                                                                                         "Relationship of the Incidence with the  Section, where it happens."@en ;
                                                                             rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
                                                                             rdfs:label "Incidence in Section"@en ,
                                                                                        "Incidencia en tramo"@es .
@@ -197,7 +197,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                                                          rdf:type owl:Class
                                                                                        ] ;
                                                                             rdfs:comment "Tipo de equipo de tráfico, equipos de control y dispositivos de medición"@es ,
-                                                                                         "Type of traffic equipment, monitor equipment or meassuring devices"@en ;
+                                                                                         "Type of traffic equipment, monitor equipment or measuring devices"@en ;
                                                                             rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
                                                                             rdfs:label "Tipo de Equipo de Tráfico"@es ,
                                                                                        "Type of Traffic Equipment"@en .
@@ -216,7 +216,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                                                       rdf:type owl:Class
                                                                                     ] ;
                                                                          rdfs:comment "Tipo de incidencia, pueden ser planificadas o no planificadas."@es ,
-                                                                                      "Type of incidence, planned or unplannedt"@en ;
+                                                                                      "Type of incidence, planned or unplanned"@en ;
                                                                          rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
                                                                          rdfs:label "Tipo de Incidencia"@es ,
                                                                                     "Type of Incidence"@en .
@@ -275,7 +275,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                   rdfs:domain :Facility ;
                   rdfs:range :Facility ;
                   rdfs:comment "A  facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."@en ,
-                               "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposiciòn, auditorios, etc."@es ;
+                               "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposición, auditorios, etc."@es ;
                   rdfs:label "contains facility"@en ,
                              "contiene equipamiento"@es .
 
@@ -560,7 +560,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
                                       rdfs:range rdfs:Literal ;
                                       rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
-                                                   "Una referencia no ambigüa al recurso dentro de un contexto determinado."@es ;
+                                                   "Una referencia no ambigua al recurso dentro de un contexto determinado."@es ;
                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                       rdfs:label "identificador"@es ,
                                                  "identifier"@en .
@@ -693,7 +693,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                                                        rdfs:comment "En el caso del nivel del servicio, las medidas posibles son: verde o fluido; amarillo o lento; naranja o denso; rojo o congestión; negro o circulación interrumpida; gris o sin datos."@es ,
                                                                                     "Esta propiedad permite describir la unidad de medida de la medición del Dispositivo de Medición de Tráfico."@es ,
                                                                                     "In the case of the Service level (nivel), the possible measures are: green or fluid; yellow or slow; orange or dense; red or congestion; black or interrupted circulation; grey or no data."@en ,
-                                                                                    "This property allows describing the unit of measurement of the Trafic Monitoring Device"@en ;
+                                                                                    "This property allows describing the unit of measurement of the Traffic Monitoring Device"@en ;
                                                                        rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico#> ;
                                                                        rdfs:label "Unidad de Medida"@es ,
                                                                                   "Unit of Measurement"@en .
@@ -905,11 +905,11 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> rdf:type owl:Class ;
                                                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                                   rdfs:comment "Property of the Meassurement of Traffic: composition, load, occupation, intensity, level or speed."@en ,
+                                                                                   rdfs:comment "Property of the Measurement of Traffic: composition, load, occupation, intensity, level or speed."@en ,
                                                                                                 "Propiedad de la Medición de Tráfico: composición, carga, ocupación, intensidad, nivel o velocidad."@es ;
                                                                                    rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
                                                                                    rdfs:label "Propiedad Medición Tráfico"@es ,
-                                                                                              "Traffic meassuring property"@en .
+                                                                                              "Traffic measuring property"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo
@@ -957,7 +957,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 ###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio
 <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> rdf:type owl:Class ;
                                                                                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
-                                                                                   rdfs:comment """Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.
+                                                                                   rdfs:comment """Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del Registro Central de Cartografía del IGN.
 Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"""@es ;
                                                                                    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
                                                                                    rdfs:label "Municipio"@es .
@@ -1256,7 +1256,7 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad> rdf:type owl:NamedIndividual ,
                                                                              <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> ;
-                                                                    rdfs:comment "Directly meassured speed with detectors"@en ,
+                                                                    rdfs:comment "Directly measured speed with detectors"@en ,
                                                                                  "Velocidad medida directa con detectores"@es ;
                                                                     rdfs:label "speed"@en ,
                                                                                "velocidad"@es .
