@@ -21,8 +21,8 @@ edintkos:RegularActivity a skos:ConceptScheme ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
     rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
-    rdfs:label "Tipo de actividad regular"@en ;
-    rdfs:label "Type of regular activity"@es ;
+    rdfs:label "Tipo de actividad regular"@es ;
+    rdfs:label "Type of regular activity"@en ;
     skos:hasTopConcept edintregularact:culturalcenteract;
     dct:title "Concept scheme grouping types of activities that are offered regularly in a facility."@en ;
     dct:title "Esquema de conceptos agrupando tipos de actividades que se ofrecen regularmente en un equipamiento."@es .
@@ -55,7 +55,7 @@ edintregularact:theatre a skos:Concept;
   skos:inScheme edintkos:RegularActivity;
   skos:broader edintregularact:culturalcenteract;
   skos:prefLabel "Teatro"@es ;
-  skos:prefLabel "Teatro"@en .
+  skos:prefLabel "Theatre"@en .
 
 edintregularact:workshop a skos:Concept;
   skos:inScheme edintkos:RegularActivity;
