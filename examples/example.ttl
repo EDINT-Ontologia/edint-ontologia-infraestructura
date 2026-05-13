@@ -6797,7 +6797,7 @@
   edintinf:offersRegularActivity edintregularact:workshop;
   edintinf:providesPublicService edintpublicservice:healthprograms;
   geosparql:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/6107330>;
-  rdfs:label "Centro de Día Infantil del Distrito Ciudad Lineal (en CEIP Ghandi)" .
+  rdfs:label "Centro de Día Infantil del Distrito Ciudad Lineal (en CEIP Gandhi)" .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/6107406>
   a edintinf:Facility;
