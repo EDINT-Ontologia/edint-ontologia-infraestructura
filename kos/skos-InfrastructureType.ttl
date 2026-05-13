@@ -115,7 +115,7 @@ edintkosinftype:Mall a skos:Concept ;
 edintkosinftype:UdergroundStation a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
   skos:broader edintkosinftype:CommercialAggregation ;
-  skos:prefLabel "Underground station"@es .
+  skos:prefLabel "Underground station"@en .
 
 edintkosinftype:TrainStation a skos:Concept ;
   skos:inScheme edintkos:InfrastructureType ;
