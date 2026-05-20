@@ -35,7 +35,7 @@ El repositorio contiene los siguientes directorios:
 
 # Mantenimiento y evolución (Maintenance and evolution)
 
-Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guía proporcionadas en ([Issues Management](https://github.com/telefonicasc/edint-ontologia-infraestructura/issues)) para generar una indicencia (trabajo en progreso).
+Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
 # Financiación (Funding)
 
