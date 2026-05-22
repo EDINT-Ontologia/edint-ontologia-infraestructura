@@ -752,9 +752,9 @@ edintkosinftype:centros-de-documentacion-e-investigacion a skos:Concept ;
 
 edintkosinftype:centros-de-patrimonio skos:narrower edintkosinftype:centros-de-documentacion-e-investigacion .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas a skos:Concept ;
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas a skos:Concept ;
 	skos:prefLabel "Centros de Artes escénicas, audiovisuales y plásticas"@es ;
-	skos:notation "centros-de-artes-escenicas,-audiovisuales-y-plasticas" ;
+	skos:notation "centros-de-artes-escenicas-audiovisuales-y-plasticas" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:equipamiento-cultural .
 
@@ -762,59 +762,59 @@ edintkosinftype:teatros a skos:Concept ;
 	skos:prefLabel "Teatros"@es ;
 	skos:notation "teatros" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:teatros .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:teatros .
 
-edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+edintkosinftype:equipamiento-cultural skos:narrower edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
 edintkosinftype:cines-y-multicines a skos:Concept ;
 	skos:prefLabel "Cines y Multicines"@es ;
 	skos:notation "cines-y-multicines" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:cines-y-multicines .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:cines-y-multicines .
 
 edintkosinftype:auditorios-y-recintos-escenicos a skos:Concept ;
 	skos:prefLabel "Auditorios y Recintos escénicos"@es ;
 	skos:notation "auditorios-y-recintos-escenicos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:auditorios-y-recintos-escenicos .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:auditorios-y-recintos-escenicos .
 
 edintkosinftype:salones-de-actos a skos:Concept ;
 	skos:prefLabel "Salones de Actos"@es ;
 	skos:notation "salones-de-actos" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salones-de-actos .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:salones-de-actos .
 
 edintkosinftype:galerias-de-arte a skos:Concept ;
 	skos:prefLabel "Galerías de Arte"@es ;
 	skos:notation "galerias-de-arte" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:galerias-de-arte .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:galerias-de-arte .
 
 edintkosinftype:salas-de-exposiciones a skos:Concept ;
 	skos:prefLabel "Salas de exposiciones"@es ;
 	skos:notation "salas-de-exposiciones" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-exposiciones .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-exposiciones .
 
 edintkosinftype:salas-de-usos-multiples a skos:Concept ;
 	skos:prefLabel "Salas de Usos Múltiples"@es ;
 	skos:notation "salas-de-usos-multiples" ;
 	skos:inScheme edintkos:InfrastructureType ;
-	skos:broader edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas .
+	skos:broader edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas .
 
-edintkosinftype:centros-de-artes-escenicas,-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-usos-multiples .
+edintkosinftype:centros-de-artes-escenicas-audiovisuales-y-plasticas skos:narrower edintkosinftype:salas-de-usos-multiples .
 
 edintkosinftype:centros-de-desarrollo-comunitario a skos:Concept ;
 	skos:prefLabel "Centros de Desarrollo Comunitario"@es ;
@@ -973,13 +973,13 @@ edintkosinftype:zonas-de-lanzamiento-de-atletismo a skos:Concept ;
 
 edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:zonas-de-lanzamiento-de-atletismo .
 
-edintkosinftype:pistas-de-atletismo-(200m,-300m-o-400m) a skos:Concept ;
+edintkosinftype:pistas-de-atletismo-200m-300m-o-400m a skos:Concept ;
 	skos:prefLabel "Pistas de atletismo (200m, 300m o 400m)"@es ;
-	skos:notation "pistas-de-atletismo-(200m,-300m-o-400m)" ;
+	skos:notation "pistas-de-atletismo-200m-300m-o-400m" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pistas-de-atletismo-(200m,-300m-o-400m) .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:pistas-de-atletismo-200m-300m-o-400m .
 
 edintkosinftype:rectas-de-saltos-atleticos a skos:Concept ;
 	skos:prefLabel "Rectas de Saltos atléticos"@es ;
@@ -1133,13 +1133,13 @@ edintkosinftype:sala-de-halterofilia a skos:Concept ;
 
 edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:sala-de-halterofilia .
 
-edintkosinftype:piscinas-de-natacion-(25m,-33m,-50m) a skos:Concept ;
+edintkosinftype:piscinas-de-natacion-25m-33m-50m a skos:Concept ;
 	skos:prefLabel "Piscinas de natación (25m, 33m, 50m)"@es ;
-	skos:notation "piscinas-de-natacion-(25m,-33m,-50m)" ;
+	skos:notation "piscinas-de-natacion-25m-33m-50m" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-convencionales .
 
-edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:piscinas-de-natacion-(25m,-33m,-50m) .
+edintkosinftype:espacios-deportivos-convencionales skos:narrower edintkosinftype:piscinas-de-natacion-25m-33m-50m .
 
 edintkosinftype:piscinas-de-saltos a skos:Concept ;
 	skos:prefLabel "Piscinas de saltos"@es ;
@@ -1163,13 +1163,13 @@ edintkosinftype:espacios-deportivos-singulares a skos:Concept ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:equipamiento-deportivo .
 
-edintkosinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) a skos:Concept ;
+edintkosinftype:campos-de-golf-o-minigolf-9-hoyos-18-hoyos a skos:Concept ;
 	skos:prefLabel "Campos de golf o minigolf (9 hoyos, 18 hoyos)"@es ;
-	skos:notation "campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos)" ;
+	skos:notation "campos-de-golf-o-minigolf-9-hoyos-18-hoyos" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campos-de-golf-o-minigolf-(9-hoyos,-18-hoyos) .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:campos-de-golf-o-minigolf-9-hoyos-18-hoyos .
 
 edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:espacios-deportivos-singulares .
 
@@ -1245,13 +1245,13 @@ edintkosinftype:circuitos-de-carrera-a-pie a skos:Concept ;
 
 edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuitos-de-carrera-a-pie .
 
-edintkosinftype:circuito-de-velocidad-(para-motor) a skos:Concept ;
+edintkosinftype:circuito-de-velocidad-para-motor a skos:Concept ;
 	skos:prefLabel "Circuito de velocidad (para motor)"@es ;
-	skos:notation "circuito-de-velocidad-(para-motor)" ;
+	skos:notation "circuito-de-velocidad-para-motor" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:espacios-deportivos-singulares .
 
-edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-de-velocidad-(para-motor) .
+edintkosinftype:espacios-deportivos-singulares skos:narrower edintkosinftype:circuito-de-velocidad-para-motor .
 
 edintkosinftype:circuito-de-motocross a skos:Concept ;
 	skos:prefLabel "Circuito de motocross"@es ;
@@ -1363,13 +1363,13 @@ edintkosinftype:areas-de-actividades-deportivas a skos:Concept ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:equipamiento-deportivo .
 
-edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo a skos:Concept ;
+edintkosinftype:embalses-lagos-o-bahias-para-actividades-como-remo-o-piraguismo a skos:Concept ;
 	skos:prefLabel "Embalses, lagos o bahías para actividades como remo o piragüismo"@es ;
-	skos:notation "embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo" ;
+	skos:notation "embalses-lagos-o-bahias-para-actividades-como-remo-o-piraguismo" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:areas-de-actividades-deportivas .
 
-edintkosinftype:areas-de-actividades-deportivas skos:narrower edintkosinftype:embalses,-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
+edintkosinftype:areas-de-actividades-deportivas skos:narrower edintkosinftype:embalses-lagos-o-bahias-para-actividades-como-remo-o-piraguismo .
 
 edintkosinftype:equipamiento-deportivo skos:narrower edintkosinftype:areas-de-actividades-deportivas .
 
@@ -1474,13 +1474,13 @@ edintkosinftype:hospital-traumatologico-o-rehabilitacion a skos:Concept ;
 
 edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-traumatologico-o-rehabilitacion .
 
-edintkosinftype:hospital-de-geriatria-y/o-larga-estancia a skos:Concept ;
+edintkosinftype:hospital-de-geriatria-y-o-larga-estancia a skos:Concept ;
 	skos:prefLabel "Hospital de Geriatría y/o Larga Estancia"@es ;
-	skos:notation "hospital-de-geriatria-y/o-larga-estancia" ;
+	skos:notation "hospital-de-geriatria-y-o-larga-estancia" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:centros-de-atencion-y-prevencion .
 
-edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-de-geriatria-y/o-larga-estancia .
+edintkosinftype:centros-de-atencion-y-prevencion skos:narrower edintkosinftype:hospital-de-geriatria-y-o-larga-estancia .
 
 edintkosinftype:hospital-dermatologico a skos:Concept ;
 	skos:prefLabel "Hospital dermatológico"@es ;
@@ -1806,13 +1806,13 @@ edintkosinftype:zona-taxi a skos:Concept ;
 
 edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:zona-taxi .
 
-edintkosinftype:carril-bus/taxi a skos:Concept ;
+edintkosinftype:carril-bus-taxi a skos:Concept ;
 	skos:prefLabel "Carril bus/taxi"@es ;
-	skos:notation "carril-bus/taxi" ;
+	skos:notation "carril-bus-taxi" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:circulacion-y-transporte .
 
-edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:carril-bus/taxi .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:carril-bus-taxi .
 
 edintkosinftype:estacion-de-metro a skos:Concept ;
 	skos:prefLabel "Estación de metro"@es ;
