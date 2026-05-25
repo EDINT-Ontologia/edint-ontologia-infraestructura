@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
      xml:base="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gsp="http://www.opengis.net/ont/geosparql#"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:org="http://www.w3.org/ns/org#"
@@ -36,6 +35,7 @@
         <dcterms:description xml:lang="es">La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros.</dcterms:description>
         <dcterms:description xml:lang="en">The infrastructure ontology describes all concepts related to a municipality&apos;s public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-30</dcterms:issued>
         <dcterms:title xml:lang="es">Ontología de Infraestructura</dcterms:title>
         <dcterms:title xml:lang="en">The Infrastructure Ontology</dcterms:title>
         <vann:preferredNamespacePrefix>edintinf</vann:preferredNamespacePrefix>
@@ -1103,7 +1103,7 @@
     <owl:DatatypeProperty rdf:about="https://datos.ign.es/def/geo_core#xETRS89">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/sf#Point"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100.</dc:source>
+        <dcterms:source xml:lang="es">Catálogo de Objetos Geográficos BTN100.</dcterms:source>
         <rdfs:comment xml:lang="es">Coordenada X en metros (ETRS89)</rdfs:comment>
         <rdfs:comment xml:lang="en">X-Coordinate in meters (ETRS89)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://datos.ign.es/def/geo_core#"/>
@@ -1117,7 +1117,7 @@
     <owl:DatatypeProperty rdf:about="https://datos.ign.es/def/geo_core#yETRS89">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/sf#Point"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100.</dc:source>
+        <dcterms:source xml:lang="es">Catálogo de Objetos Geográficos BTN100.</dcterms:source>
         <rdfs:comment xml:lang="es">Coordenada Y en metros (ETRS89)</rdfs:comment>
         <rdfs:comment xml:lang="en">Y-Coordinate in meters (ETRS89)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://datos.ign.es/def/geo_core#"/>
