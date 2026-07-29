@@ -7,9 +7,9 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintkosinftype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType/> .
+@prefix edintinf: <https://edint.es/def/infraestructura#> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintkosinftype: <https://edint.es/kos/InfrastructureType/> .
 @base <http://www.w3.org/2002/07/owl#> .
 
 #################################################################
@@ -27,42 +27,13 @@ edintkos:InfrastructureType a skos:ConceptScheme ;
     rdfs:label "Type of infrastructure element"@es ;
     dct:title "Concept scheme grouping types of infrastructure elements"@en ;
     dct:title "Esquema de conceptos que agrupa tipos de elementos de infraestructura"@es ;
-    skos:hasTopConcept edintkosinftype:Facility ;
-    skos:hasTopConcept edintkosinftype:UrbanElement .
+    skos:hasTopConcept edintkosinftype:Facility , edintkosinftype:equipamiento-urbano, edintkosinftype:equipamiento-deportivo, edintkosinftype:equipamiento-sanitario, edintkosinftype:equipamientos-de-asistencia-social, edintkosinftype:instalaciones-de-uso-administrativo, edintkosinftype:circulacion-y-transporte.
 
 #################################################################
 #
 #    Concepts
 #
 #################################################################
-
-
-############ Urban Element
-
-edintkosinftype:UrbanElement a skos:Concept ;
-    skos:inScheme edintkos:InfrastructureType ;
-    skos:prefLabel "Elemento urbano"@es ;
-    skos:prefLabel  "Urban element"@en .
-
-edintkosinftype:StreetLamp a skos:Concept ;
-    skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintkosinftype:UrbanElement ; 
-    skos:prefLabel "Farola"@es ;
-    skos:prefLabel  "Street lamp"@en .
-
-edintkosinftype:ZebraCrossing a skos:Concept ;
-    skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintkosinftype:UrbanElement ; 
-    skos:prefLabel "Paso de cebra"@es ;
-    skos:prefLabel  "Zebra crossing"@en .
-
-edintkosinftype:TrafficLight a skos:Concept ;
-    skos:inScheme edintkos:InfrastructureType ;
-    skos:broader edintkosinftype:UrbanElement ; 
-    skos:prefLabel "Semáforo"@es ;
-    skos:prefLabel  "Traffic light"@en .
-
-
 
 ##################  Facility
 
@@ -448,6 +419,14 @@ edintkosinftype:farolas-y-balizas a skos:Concept ;
 	skos:notation "farolas-y-balizas" ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:mobiliario .
+
+edintkosinftype:farolas a skos:Concept ;
+    skos:inScheme edintkos:InfrastructureType ;
+    skos:broader edintkosinftype:farolas-y-balizas ; 
+    skos:prefLabel "Farolas"@es ;
+    skos:prefLabel  "Street lamps"@en .
+
+edintkosinftype:farolas-y-balizas skos:narrower edintkosinftype:farolas .
 
 edintkosinftype:mobiliario skos:narrower edintkosinftype:farolas-y-balizas .
 
@@ -1804,7 +1783,21 @@ edintkosinftype:zona-taxi a skos:Concept ;
 	skos:inScheme edintkos:InfrastructureType ;
 	skos:broader edintkosinftype:circulacion-y-transporte .
 
+edintkosinftype:paso-de-cebra a skos:Concept ;
+    skos:inScheme edintkos:InfrastructureType ;
+    skos:broader edintkosinftype:circulacion-y-transporte ; 
+    skos:prefLabel "Paso de cebra"@es ;
+    skos:prefLabel  "Zebra crossing"@en .
+
+edintkosinftype:semaforo a skos:Concept ;
+    skos:inScheme edintkos:InfrastructureType ;
+    skos:broader edintkosinftype:circulacion-y-transporte ; 
+    skos:prefLabel "Semáforo"@es ;
+    skos:prefLabel  "Traffic light"@en .
+
 edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:zona-taxi .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:paso-de-cebra .
+edintkosinftype:circulacion-y-transporte skos:narrower edintkosinftype:semaforo .
 
 edintkosinftype:carril-bus-taxi a skos:Concept ;
 	skos:prefLabel "Carril bus/taxi"@es ;
