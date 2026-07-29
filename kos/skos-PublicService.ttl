@@ -5,9 +5,9 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintpublicservice: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/> .
+@prefix edintinfp: <https://edint.es/def/infraestructura#> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintpublicservice: <https://edint.es/kos/PublicService/> .
 
 #################################################################
 #

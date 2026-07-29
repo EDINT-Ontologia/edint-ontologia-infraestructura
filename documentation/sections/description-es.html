@@ -3,7 +3,7 @@
 <p>La Figura 1 presenta el modelo conceptual general de la ontología.</p>
 <p><center><img src="images/diagrama-conceptual-General-with-DP.png"/><figcaption>
 Figura 1. Modelo conceptual principal de la ontología</figcaption></center></p> 
-<p>Los elementos públicos y privados de la infraestructura de un municipio (<a href="#InfrastructureElement">Elemento de infraestructura</a>) incluyen las (sub)clases de <a href="#UrbanElement">Elemento urbano</a>, como los semáforos o los pasos de cebra, y de <a href="#Facility">Equipamiento</a>. Los equipamientos incluyen centros educativos, sociales y culturales, deportivos, así como <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking">aparcamientos</a> dentro y fuera de la vía pública  y <a href="#http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta">estaciones de bicicleta</a>  compartidas. 
+<p>Los elementos públicos y privados de la infraestructura de un municipio (<a href="#InfrastructureElement">Elemento de infraestructura</a>) incluyen las (sub)clases de <a href="#UrbanElement">Elemento urbano</a>, como los semáforos o los pasos de cebra, y de <a href="#Facility">Equipamiento</a>. Los equipamientos incluyen centros educativos, sociales y culturales, deportivos, así como <a href="#https://edint.es/def/aparcamiento#Parking">aparcamientos</a> dentro y fuera de la vía pública  y <a href="#https://edint.es/def/vehiculos-compartidos#SharedVehicleStation">estaciones de vehículos compartidos</a>. 
 
 Se reutilizan conceptos geoespaciales de la ontología <a href="https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.html">GeoSPARQL</a> para representar áreas o coordenadas de los elementos de la infraestructura utilizando el concepto de   <a href="#http://www.opengis.net/ont/geosparql#Feature">gsp:Feature</a> y la propiedad <a href="#http://www.opengis.net/ont/geosparql#hasGeometry">gsp:hasGeometry</a>. 
 Los elementos pertenecen a una unidad administrativa (<a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio">Municipio</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">Distrito</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">Barrio</a>), los cuales son conceptos de la <a href="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/">Ontología de representación de datos de territorio</a>  y tienen una  <a href="#http://schema.org/address">dirección postal</a>.
@@ -36,10 +36,10 @@ Figura 4. Modelo conceptual de Sensores de Tráfico</figcaption></center></p>
 Los sensores de cualquiera de los tres tipos considerados en la ontología (acceso, conteo y tráfico) tienen un <a href="#http://schema.org/manufacturer">fabricante</a> que es una organización.
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
 @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
-@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
-@prefix edintkos: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/&gt; .
-@prefix edintpublicservice: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/&gt; .
-@prefix edintregularact: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/&gt; .
+@prefix edintinf: &lt;https://edint.es/def/infraestructura#&gt; .
+@prefix edintkos: &lt;https://edint.es/kos/&gt; .
+@prefix edintpublicservice: &lt;https://edint.es/kos/PublicService/&gt; .
+@prefix edintregularact: &lt;https://edint.es/kos/RegularActivity/&gt; .
 @prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
 @prefix ester: &lt;http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&gt; .
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
@@ -48,44 +48,44 @@ Los sensores de cualquiera de los tres tipos considerados en la ontología (acce
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # Información del Centro de Día
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/10047540&gt;
+&lt;https://example.org/recurso/equipamiento-municipal/10047540&gt;
   a edintinf:Facility ;
   dct:identifier "10047540" ;
-  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt; ;
+  schema:address &lt;https://example.org/recurso/direccion-postal/28030&gt; ;
   schema:openingHours "De 8,15 a 18 horas de Lunes a Viernes." ;
-  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
+  edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
   edintinf:hasInfrastructureType &lt;edintkos:CentrosDiaMayores&gt; ;
-  edintinf:hasObservationPoint &lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt; ;
-  edintinf:hasRegisteredOwner &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt; ;
+  edintinf:hasObservationPoint &lt;https://example.org/recurso/punto-de-observacion/1398&gt; ;
+  edintinf:hasRegisteredOwner &lt;https://example.org/recurso/organizacion/10047540&gt; ;
   edintinf:providesPublicService edintpublicservice:medicalassistance ;
-  geosparql:hasGeometry &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt; ;
+  geosparql:hasGeometry &lt;https://example.org/recurso/equipamiento-municipal/locations/10047540&gt; ;
   rdfs:label "Centro de Día Municipal 'Nicanor Barroso'" .
 
 # Definición de la Geometría
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt;
+&lt;https://example.org/recurso/equipamiento-municipal/locations/10047540&gt;
   a geosparql:Geometry ;
   dct:identifier "10047540" ;
   geosparql:asWKT "POINT (-3.6420364042780338 40.398886698528045)"^^geosparql:wktLiteral .
 
 # Propietario (Organización)
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt;
+&lt;https://example.org/recurso/organizacion/10047540&gt;
   a edintinf:Organization ;
   rdfs:label "Ayuntamiento de Madrid" ;
   edintinf:isPublic "true"^^xsd:boolean .
 
 # Punto de observación asociado
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt;
+&lt;https://example.org/recurso/punto-de-observacion/1398&gt;
   a edintinf:ObservationPoint ;
   rdfs:comment "Punto de conteo de personas en el acceso principal" ;
-  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; .
+  edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; .
 
 # Dirección Postal
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt;
+&lt;https://example.org/recurso/direccion-postal/28030&gt;
   a esdir:DireccionPostal ;
   rdfs:label "C. de la Encomienda de Palacios, 224, Moratalaz, 28030 Madrid" .
 
 # Barrio
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt;
+&lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt;
   a ester:Barrio ;
   rdfs:label "Fontarrón" .
 </textarea></pre>

@@ -3,49 +3,50 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico"
+      "@id" : "https://edint.es/def/infraestructura#AccessSensor"
     }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#AccessSensor"
+      "@id" : "https://edint.es/def/infraestructura#CountingSensor"
     }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#CountingSensor"
+      "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
     } ]
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-incidencia"
+    "@id" : "https://edint.es/kos/RoleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ObservationPoint"
+      "@id" : "_:genid21"
     } ]
   } ]
 }, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
-    }, {
-      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"
-    } ]
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://edint.es/kos/ViolationType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid23",
@@ -61,7 +62,7 @@
   "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType"
+    "@id" : "https://edint.es/kos/RegularActivity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -80,7 +81,7 @@
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType"
+    "@id" : "https://edint.es/kos/PublicService"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -99,7 +100,7 @@
   "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity"
+    "@id" : "https://edint.es/kos/IncidenceType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -118,7 +119,7 @@
   "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService"
+    "@id" : "https://edint.es/kos/TrafficEquipmentType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -128,13 +129,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
+      "@id" : "https://edint.es/def/trafico#Incidence"
     }, {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
+      "@id" : "https://edint.es/def/trafico#TrafficEquipment"
     } ]
   } ]
 }, {
   "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://qudt.org/schema/qudt/hasUnit"
+  } ]
+}, {
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://www.geonames.org/ontology#R"
@@ -143,7 +154,7 @@
     "@id" : "http://www.geonames.org/ontology#featureClass"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://www.geonames.org/ontology#R.ST"
@@ -152,32 +163,41 @@
     "@id" : "http://www.geonames.org/ontology#featureCode"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+      "@id" : "http://www.w3.org/2006/time#Instant"
     }, {
-      "@id" : "_:genid7"
+      "@id" : "http://www.w3.org/2006/time#Interval"
     } ]
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-equipo-trafico"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+    }, {
+      "@id" : "https://edint.es/def/infraestructura#ObservationPoint"
+    } ]
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"
     }, {
-      "@id" : "_:genid11"
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
+    }, {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia"
     } ]
   } ]
 }, {
@@ -234,6 +254,86 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://qudt.org/schema/qudt/Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Quantifiable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/QuantityValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+    "@value" : "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Concept"
+  }, {
+    "@id" : "http://qudt.org/schema/qudt/Quantifiable"
+  }, {
+    "@id" : "_:genid42"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Concept"
+  }, {
+    "@id" : "http://qudt.org/schema/qudt/Verifiable"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Verifiable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+    "@value" : "This property relates a factor unit its unit"
+  }, {
+    "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+    "@value" : "This property relates a factor unit to its unit or a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has unit"
+  }, {
+    "@value" : "hasUnit"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/unitFor"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/unitFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+    "@value" : "A property to relate an observable thing with a value of any kind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://qudt.org/schema/qudt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "value"
+  } ]
+}, {
   "@id" : "http://schema.org/address",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -270,7 +370,7 @@
     "@value" : "end date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
+    "@id" : "https://edint.es/def/trafico#Incidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org"
@@ -319,7 +419,7 @@
     "@value" : "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
+    "@id" : "https://edint.es/def/infraestructura#Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org"
@@ -348,7 +448,7 @@
     "@value" : "The start date and time of the item (in ISO 8601 date format)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
+    "@id" : "https://edint.es/def/trafico#Incidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org"
@@ -362,795 +462,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Lugar donde se puede tanto dejar como recoger las bicicletas. Está compuesto de anclajes"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Estación de bicicletas"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Dispositivo de Medición de Tráfico, tipo de equipo de tráfico que realiza mediciones."
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic Measuring Device, type of Traffic Device which performs measurements."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Dispositivo de medición de tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic Measuring Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
-  }, {
-    "@id" : "http://www.w3.org/ns/sosa/Sensor"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A traffic equipment monitors the traffic of a city"
-  }, {
-    "@language" : "es",
-    "@value" : "Un Equipo de Tráfico es uno de los equipos que se encargan de controlar o monitorizar el tráfico de la ciudad."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Equipo de tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  }, {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Incidence in the traffic system of a city"
-  }, {
-    "@language" : "es",
-    "@value" : "Incidencia que ocurre en el sistema de tráfico de una ciudad"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Incidence"
-  }, {
-    "@language" : "es",
-    "@value" : "Incidencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaNoPlanificada",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Incidencia no planificada del tráfico de una ciudad"
-  }, {
-    "@language" : "en",
-    "@value" : "Unplanned traffic incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Incidencia no planificada"
-  }, {
-    "@language" : "en",
-    "@value" : "Unplanned incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Incidencia planificada, puede ser recurrente o no"
-  }, {
-    "@language" : "en",
-    "@value" : "Planned traffic incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Incidencia planificada"
-  }, {
-    "@language" : "en",
-    "@value" : "Planned incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observación realizada por un Dispositivo de Medición de Tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Observation by a Traffic Measuring Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Observación del tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic monitoring"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property of the Measurement of Traffic: composition, load, occupation, intensity, level or speed."
-  }, {
-    "@language" : "es",
-    "@value" : "Propiedad de la Medición de Tráfico: composición, carga, ocupación, intensidad, nivel o velocidad."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Propiedad Medición Tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Traffic measuring property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Section/s of a Track defined by a starting and an ending Point."
-  }, {
-    "@language" : "es",
-    "@value" : "Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Section of Track"
-  }, {
-    "@language" : "es",
-    "@value" : "Tramo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#carga",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "It is obtained by the equation of intensity and time of occupation with certain correction factors. It is expressed as a percentage: a 100% load implies circulatory collapse, interrupted circulation, while 0% implies empty street. It is similar to the Level of Service of the road that is usually measured with the letters A, B, C, D, E and F: level A, between 0% and 20% load; level F, between 90% and 100% load. The level of service is complex to measure and that is why the load is used."
-  }, {
-    "@language" : "es",
-    "@value" : "Se obtiene mediante ecuación de intensidad y tiempo de ocupación con ciertos factores de corrección. Se expresa en tanto por ciento: una carga del 100% implica colapso circulatorio, circulación interrumpida, mientras que 0% implica calle vacía. Es similar al Nivel de Servicio de la vía que habitualmente se mide con las letras A, B, C, D, E y F: nivel A, entre 0% y 20% de carga; nivel F, entre 90% y 100% de carga. El nivel de servicio es complejo de medir y por eso se usa la carga."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "carga"
-  }, {
-    "@language" : "en",
-    "@value" : "traffic load"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#composicion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "It is obtained by the equation of intensity and time of occupation with certain correction factors. It is expressed as a percentage: a 100% load implies circulatory collapse, interrupted circulation, while 0% implies empty street. It is similar to the Level of Service of the road that is usually measured with the letters A, B, C, D, E and F: level A, between 0% and 20% load; level F, between 90% and 100% load. The level of service is complex to measure and that is why the load is used."
-  }, {
-    "@language" : "es",
-    "@value" : "Se refiere al tipo de vehículos que se suman en la intensidad y a día de hoy sólo se pueden medir a mano mediante muestreo y calcular coeficientes de corrección para las intensidad. Los vehículos se deben referir a vehículos tipo y estiman valores aproximados: turismo=1 ; motocicleta=0,75; Bicicleta=0,5; Autobús=1,5; Camión grande=2."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "composicion"
-  }, {
-    "@language" : "en",
-    "@value" : "composition"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#enServicio",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite conocer si el dispositivo funciona o no."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows describing whether the device is working or not."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "En Servicio"
-  }, {
-    "@language" : "en",
-    "@value" : "Running device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#esRecurrente",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite describir si la incidencia es recurrente o no."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows describing whether there is a recurrence in the incidence or not"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Incidencia recurrente"
-  }, {
-    "@language" : "en",
-    "@value" : "Recurrent incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "La fecha y hora prevista de\n\tfinalización de una incidencia planificada (en formato fecha ISO 8601)"
-  }, {
-    "@language" : "en",
-    "@value" : "The end date and time of a planned incidence (in ISO 8601 date format)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "(expected) end date"
-  }, {
-    "@language" : "es",
-    "@value" : "fecha de fin (prevista)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#finTramo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación del tramo con el lugar donde finaliza el tramo."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship of the section with the point where it ends."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Fin del Tramo"
-  }, {
-    "@language" : "en",
-    "@value" : "Section end"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.opengis.net/ont/sf#Point"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#frecuenciaMedicion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite conocer la frecuencia de medición del dispositivo."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows to know the measurement frequency of the device."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Frecuencia Medición"
-  }, {
-    "@language" : "en",
-    "@value" : "Measurement Frequency"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A document where more information about the incidence can be found."
-  }, {
-    "@language" : "es",
-    "@value" : "Un documento donde se puede consultar la información sobre la incidencia."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "adjunto a la incidencia"
-  }, {
-    "@language" : "en",
-    "@value" : "attached to incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaEnTramo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación de la Incidencia con el Tramo donde se produce la misma."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship of the Incidence with the  Section, where it happens."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Incidence in Section"
-  }, {
-    "@language" : "es",
-    "@value" : "Incidencia en tramo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#inicioTramo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación del tramo con el lugar donde se inicia el tramo."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship of the section with the point where it starts."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Inicio del Tramo"
-  }, {
-    "@language" : "en",
-    "@value" : "Section start"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.opengis.net/ont/sf#Point"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#intensidad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Intensidad o aforo, número de vehículos en unidad de tiempo (hora, día, mes año). Los habituales son hora y día."
-  }, {
-    "@language" : "en",
-    "@value" : "Intensity or capacity, number of vehicles in time unit (hour, day, month, year). The usual ones are hour and day."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "intensidad"
-  }, {
-    "@language" : "en",
-    "@value" : "traffic intensity"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#monitorea",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación del Equipo de Tráfico con el Tramo que monitorea"
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between Traffic Equipment and the Section it monitors"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Monitorea"
-  }, {
-    "@language" : "en",
-    "@value" : "Monitors"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#nivel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Calculado a partir de la velocidad, requiere una ecuación o unos niveles de velocidad asociados: verde, fluido; amarillo, lento; naranja, denso; rojo, congestión; negro, circulación interrumpida; gris, sin datos"
-  }, {
-    "@language" : "en",
-    "@value" : "Calculated from the speed, it requires an equation or associated speed levels: green, fluid; yellow, slow; orange, dense; red, congestion; black, traffic interrupted; grey, no data."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "level"
-  }, {
-    "@language" : "es",
-    "@value" : "nivel"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Number of directions of traffic"
-  }, {
-    "@language" : "es",
-    "@value" : "Número de sentidos de circulación"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid39"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Sentidos de circulación"
-  }, {
-    "@language" : "en",
-    "@value" : "Street directions"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#ocupacion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Es la ocupación del detector mientras está pasando por encima un vehículo, está asociado a detectores tipo espira electromagnética, y es el tiempo desde que el detector detecta al vehículo hasta que deja detectarlo."
-  }, {
-    "@language" : "en",
-    "@value" : "It is the occupation of the detector while it is passing over a vehicle, it is associated with electromagnetic loop type detectors, and it is the time from when the detector detects the vehicle until it allows it to be detected."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "occupation"
-  }, {
-    "@language" : "es",
-    "@value" : "ocupación"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite describir la recurrencia."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows describing the recurrence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Recurrence"
-  }, {
-    "@language" : "es",
-    "@value" : "Recurrencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#tipoEquipoTrafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de equipo de tráfico, equipos de control y dispositivos de medición"
-  }, {
-    "@language" : "en",
-    "@value" : "Type of traffic equipment, monitor equipment or measuring devices"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de Equipo de Tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "Type of Traffic Equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid5"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#tipoIncidencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de incidencia, pueden ser planificadas o no planificadas."
-  }, {
-    "@language" : "en",
-    "@value" : "Type of incidence, planned or unplanned"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de Incidencia"
-  }, {
-    "@language" : "en",
-    "@value" : "Type of Incidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid9"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#unidadMedida",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "En el caso del nivel del servicio, las medidas posibles son: verde o fluido; amarillo o lento; naranja o denso; rojo o congestión; negro o circulación interrumpida; gris o sin datos."
-  }, {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite describir la unidad de medida de la medición del Dispositivo de Medición de Tráfico."
-  }, {
-    "@language" : "en",
-    "@value" : "In the case of the Service level (nivel), the possible measures are: green or fluid; yellow or slow; orange or dense; red or congestion; black or interrupted circulation; grey or no data."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows describing the unit of measurement of the Traffic Monitoring Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Unidad de Medida"
-  }, {
-    "@language" : "en",
-    "@value" : "Unit of Measurement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#urbano",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite describir si el dispositivo es urbano o no."
-  }, {
-    "@language" : "en",
-    "@value" : "This property allows knowing whether the device is urban or not"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#EquipoTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Urban"
-  }, {
-    "@language" : "es",
-    "@value" : "Urbano"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#validada",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Esta propiedad permite conocer si se ha producido una validación de la observación o no"
-  }, {
-    "@language" : "en",
-    "@value" : "This property states whether the observation is validated or not."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Validada"
-  }, {
-    "@language" : "en",
-    "@value" : "Validated Observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#velocidad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Directly measured speed with detectors"
-  }, {
-    "@language" : "es",
-    "@value" : "Velocidad medida directa con detectores"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "speed"
-  }, {
-    "@language" : "es",
-    "@value" : "velocidad"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia",
@@ -1270,46 +581,6 @@
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."
-  }, {
-    "@language" : "en",
-    "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "Vehículo"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."
-  }, {
-    "@language" : "en",
-    "@value" : "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Aparcamiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Parking"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ]
-}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Portal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1346,9 +617,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.geonames.org/ontology#Feature"
   }, {
-    "@id" : "_:genid42"
-  }, {
     "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid44"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal",
@@ -1403,810 +674,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Dirección postal"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2026-01-30"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Daniel Doña"
-  }, {
-    "@value" : "Edna Ruckhaus"
-  }, {
-    "@value" : "Lucía Sánchez"
-  }, {
-    "@value" : "Oscar Corcho"
-  }, {
-    "@value" : "Socorro Bernardos"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@language" : "es",
-    "@value" : "La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros."
-  }, {
-    "@language" : "en",
-    "@value" : "The infrastructure ontology describes all concepts related to a municipality's public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others."
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@language" : "es",
-    "@value" : "Ontología de Infraestructura"
-  }, {
-    "@language" : "en",
-    "@value" : "The Infrastructure Ontology"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "edintinf"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura/0.1.0"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.0"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#AccessObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos."
-  }, {
-    "@language" : "en",
-    "@value" : "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Access observation"
-  }, {
-    "@language" : "es",
-    "@value" : "Observación de acceso"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#AccessSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A device that records the access of people or vehicles. This could be an LPR camera, a building entrance door sensor, or other similar devices."
-  }, {
-    "@language" : "es",
-    "@value" : "Dispositivo que registra el acceso de personas o vehículos. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Access sensor"
-  }, {
-    "@language" : "es",
-    "@value" : "Sensor de acceso"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sensor"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#CountingObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Observación sobre el número de personas o vehículos que cuenta un sensor."
-  }, {
-    "@language" : "en",
-    "@value" : "Observation on the number of people or vehicles that a sensor counts."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Counting observation"
-  }, {
-    "@language" : "es",
-    "@value" : "Observación de conteo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#CountingSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A device that records the number of people or vehicles that is observes."
-  }, {
-    "@language" : "es",
-    "@value" : "Dispositivo que registra el número de personas o vehículos que observa."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Counting sensor"
-  }, {
-    "@language" : "es",
-    "@value" : "Sensor de conteo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sensor"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
-  }, {
-    "@language" : "en",
-    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Equipamiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."
-  }, {
-    "@language" : "en",
-    "@value" : "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Elemento de la infraestructura"
-  }, {
-    "@language" : "en",
-    "@value" : "Infrastructure element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ManagementRole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."
-  }, {
-    "@language" : "en",
-    "@value" : "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Management role"
-  }, {
-    "@language" : "es",
-    "@value" : "Rol de gestión"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ObservationPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Points where access or counting observations can be made using sensors."
-  }, {
-    "@language" : "es",
-    "@value" : "Puntos en donde se pueden realizar observaciones de acceso o de conteo a través de sensores."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Observation point"
-  }, {
-    "@language" : "es",
-    "@value" : "Punto de observación"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Any public or private organization that owns or manages an element of the infrastructure."
-  }, {
-    "@language" : "es",
-    "@value" : "Cualquier organización pública o privada que sea titular o gestione un elemento de la infraestructura."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Organización"
-  }, {
-    "@language" : "en",
-    "@value" : "Organization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://schema.org/Organization"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Comprende el inventario de elementos urbanos tales como señales viales, semáforos, pilonas, etc."
-  }, {
-    "@language" : "en",
-    "@value" : "It includes the inventory of urban elements such as road signs, traffic lights, bollards, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Elemento urbano"
-  }, {
-    "@language" : "en",
-    "@value" : "Urban element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Infracción"
-  }, {
-    "@language" : "en",
-    "@value" : "Violation"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#access",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "acceso"
-  }, {
-    "@language" : "en",
-    "@value" : "access"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#belongsTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un elemento de infraestructura y la división administrativa a la cual pertenece, incluido un Barrio."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an infrastructure element and the administrative division to which it belongs, including a neighborhood."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid13"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "belongs to"
-  }, {
-    "@language" : "es",
-    "@value" : "pertenece a"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid16"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#complaintCancelled",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "cancelled complaint"
-  }, {
-    "@language" : "es",
-    "@value" : "denuncia anulada"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#containsFacility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A  facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."
-  }, {
-    "@language" : "es",
-    "@value" : "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposición, auditorios, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contains facility"
-  }, {
-    "@language" : "es",
-    "@value" : "contiene equipamiento"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#facilityOccupancy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "facility Occupancy"
-  }, {
-    "@language" : "es",
-    "@value" : "ocupación de equipamiento"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasInfrastructureType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un elemento de infraestructura y un concepto de la taxonomía de tipos de elemento de infraestructura."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an infrastructure element and a concept from the taxonomy of infrastructure element types."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has infrastructure element type"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene tipo de elemento de infraestructura"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasObservationPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre un elemento de la infraestructura y un punto de observación."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an infrastructure element and an observation point."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has observation point"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene punto de observación"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ObservationPoint"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRegisteredOwner",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relación entre un elemento de infraestructura y su titular, generalmente una organización"
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an infrastructure element and its owner, which is usually an organization."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has registered owner"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene titular registrado"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasRoleType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el Rol de gestión y la taxonomía de roles de gestión."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the management role and the taxonomy of management roles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ManagementRole"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has role type"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene tipo de rol"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid23"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#hasViolationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."
-  }, {
-    "@language" : "en",
-    "@value" : "Relate an Infraction to a concept from the taxonomy of infraction types."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has violation type"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene tipo de infracción"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid27"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#includesVehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property that connects an observation to the observed vehicle."
-  }, {
-    "@language" : "es",
-    "@value" : "Propiedad que relaciona una observación con el vehículo observado"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#AccessObservation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "includes vehicle"
-  }, {
-    "@language" : "es",
-    "@value" : "incluye vehículo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#installationDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Date when an entity, especially a device, was installed."
-  }, {
-    "@language" : "es",
-    "@value" : "Fecha en la que se instaló una entidad, especialmente un dispositivo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "fecha de instalación"
-  }, {
-    "@language" : "en",
-    "@value" : "installation date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#isPublic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property that points out whether an entity, especially an organization, is public or not."
-  }, {
-    "@language" : "es",
-    "@value" : "Propiedad que indica si una entidad, especialmente una Organización, es pública"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://schema.org/Organization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "es público"
-  }, {
-    "@language" : "en",
-    "@value" : "is public"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#linkedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre una infracción y el vehículo que cometió la infracción."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an infraction and the vehicle that committed the infraction."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "asociado a"
-  }, {
-    "@language" : "en",
-    "@value" : "linked to"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#madeOnInfrastructure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el rol de gestion que ejerce una organización  y el elemento de infraestructura sobre el cual se realiza la gestión."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the management role exercised by an organization and the infrastructure element on which the management is carried out."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ManagementRole"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "made on an infrastructure element"
-  }, {
-    "@language" : "es",
-    "@value" : "realizado sobre elemento de infraestructura"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#InfrastructureElement"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#maintenanceDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Date when an entity was last maintained, especially an urban element."
-  }, {
-    "@language" : "es",
-    "@value" : "Fecha en la que se hizo mantenimiento de una entidad por última vez, especialmente un elemento urbano."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#UrbanElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "fecha de mantenimiento"
-  }, {
-    "@language" : "en",
-    "@value" : "maintenance date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#offersRegularActivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Actividad que se lleva a cabo regularmente en el equipamiento."
-  }, {
-    "@language" : "en",
-    "@value" : "Activity that is carried out regularly in a facility."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "offers regular activity"
-  }, {
-    "@language" : "es",
-    "@value" : "ofrece actividad regular"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid31"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#provesViolation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre la observación urbana y la infracción que está soportando."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between an observation and the infraction it is proving."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#AccessObservation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "demuestra infracción"
-  }, {
-    "@language" : "en",
-    "@value" : "proofs violation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Violation"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#providesPublicService",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Public service provided by a facility, for example internet via wifi."
-  }, {
-    "@language" : "es",
-    "@value" : "Servicio público prestado por un equipamiento, por ejemplo internet a través de una wifi."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "presta servicio público"
-  }, {
-    "@language" : "en",
-    "@value" : "provides public service"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid35"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#rolePlayedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."
-  }, {
-    "@language" : "en",
-    "@value" : "Relationship between the management role over a municipal facility and the organization that exercises it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#ManagementRole"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "rol ejercido por"
-  }, {
-    "@language" : "en",
-    "@value" : "role played by"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#Organization"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#trafficDensity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Propiedad que indica el número de vehículos que ocupan un tramo de vía (carretera, calzada o carril) por unidad de longitud en un instante determinado. Es un indicador clave de congestión que disminuye la velocidad y la libertad de maniobra."
-  }, {
-    "@value" : "Property that points out the number of vehicles  occupying a section of roadway (highway, carriageway, or lane) per unit of length at a given moment. It is a key congestion indicator that reduces speed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "densidad de tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "traffic density"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Infrastructure type"
-  }, {
-    "@language" : "es",
-    "@value" : "Tipo de infraestructura"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Public service type"
-  }, {
-    "@language" : "es",
-    "@value" : "Tipo de servicio público"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Regular activity type"
-  }, {
-    "@language" : "es",
-    "@value" : "Tipo de actividad regular"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Role type"
-  }, {
-    "@language" : "es",
-    "@value" : "Tipo de rol"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de infracción"
-  }, {
-    "@language" : "en",
-    "@value" : "Violation type"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-equipo-trafico",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de equipo de tráfico"
-  }, {
-    "@language" : "en",
-    "@value" : "type of traffic devices"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/transporte/tipo-incidencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "tipo de incidencia"
-  }, {
-    "@language" : "en",
-    "@value" : "type of incidence"
   } ]
 }, {
   "@id" : "http://www.geonames.org/ontology#Feature",
@@ -2287,6 +754,9 @@
     "@id" : "http://www.opengis.net/ont/sf#"
   } ]
 }, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#gYearMonth",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
@@ -2323,6 +793,90 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#note",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A temporal entity with zero extent or duration"
+  }, {
+    "@language" : "es",
+    "@value" : "Una entidad temporal con una extensión o duración cero."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Time instant"
+  }, {
+    "@language" : "es",
+    "@value" : "instante de tiempo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A temporal entity with zero extent or duration"
+  }, {
+    "@language" : "es",
+    "@value" : "Una entidad temporal con una extensión o duración cero."
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Interval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A temporal entity with an extent or duration"
+  }, {
+    "@language" : "es",
+    "@value" : "Una entidad temporal con una extensión o duración."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Time interval"
+  }, {
+    "@language" : "es",
+    "@value" : "intervalo de tiempo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A temporal entity with an extent or duration"
+  }, {
+    "@language" : "es",
+    "@value" : "Una entidad temporal con una extensión o duración."
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A temporal interval or instant."
+  }, {
+    "@language" : "es",
+    "@value" : "Un intervalo temporal o un instante."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Temporal entity"
+  }, {
+    "@language" : "es",
+    "@value" : "entidad temporal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid45"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A temporal interval or instant."
+  }, {
+    "@language" : "es",
+    "@value" : "Un intervalo temporal o un instante."
+  } ]
+}, {
   "@id" : "http://www.w3.org/2006/time#hasBeginning",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2332,12 +886,18 @@
     "@language" : "es",
     "@value" : "Comienzo de una entidad temporal."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has beginning"
   }, {
     "@language" : "es",
     "@value" : "tiene principio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2006/time#hasTime"
@@ -2359,12 +919,18 @@
     "@language" : "es",
     "@value" : "Final de una entidad temporal."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has end"
   }, {
     "@language" : "es",
     "@value" : "tiene fin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2006/time#hasTime"
@@ -2496,6 +1062,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://www.w3.org/TR/vocab-ssn/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has result"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
@@ -2644,6 +1227,9 @@
     "@language" : "en",
     "@value" : "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/sosa/"
   }, {
@@ -2655,6 +1241,9 @@
   }, {
     "@language" : "en",
     "@value" : "phenomenon time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2752,6 +1341,1742 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/aparcamiento#Parking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento para diferentes tipos de vehículo que incluye instalaciones o superficies de aparcamiento fuera de la vía pública o zonas de aparcamiento en la vía pública para residentes, no residentes o libres."
+  }, {
+    "@language" : "en",
+    "@value" : "Parking for different types of vehicles, including off-street parking facilities or on-street parking zones for residents, non-residents, or free parking."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/aparcamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Aparcamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Parking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/catastro#CadastralProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Bien inmueble inscrito en el Catastro. Puede ser un local, vivienda, o cualquier unidad de uso independiente dentro de una parcela. Un inmueble catastral puede tener una o más construcciones asociadas."
+  }, {
+    "@language" : "en",
+    "@value" : "Real estate property registered in the Cadastre. Can be a premises, dwelling, or any independent use unit within a parcel. A cadastral property may have one or more constructions associated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/catastro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cadastral property"
+  }, {
+    "@language" : "es",
+    "@value" : "Inmueble catastral"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/censovehiculos#Vehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."
+  }, {
+    "@language" : "en",
+    "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/censovehiculos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "Vehículo"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2026-01-30"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Daniel Doña"
+  }, {
+    "@value" : "Edna Ruckhaus"
+  }, {
+    "@value" : "Lucía Sánchez"
+  }, {
+    "@value" : "Oscar Corcho"
+  }, {
+    "@value" : "Socorro Bernardos"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "es",
+    "@value" : "La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros."
+  }, {
+    "@language" : "en",
+    "@value" : "The infrastructure ontology describes all concepts related to a municipality's public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de Infraestructura"
+  }, {
+    "@language" : "en",
+    "@value" : "The Infrastructure Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "edintinf"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://edint.es/def/infraestructura#"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "0.2.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://edint.es/def/infraestructura"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.2.1"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#AccessObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Observación que se realiza en cualquier acceso a un equipamiento municipal. Incluye acceso de personas o de vehículos."
+  }, {
+    "@language" : "en",
+    "@value" : "Observation carried out at any entrance to a municipal facility. This includes pedestrian or vehicle access."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access observation"
+  }, {
+    "@language" : "es",
+    "@value" : "Observación de acceso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#AccessSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device that records the access of people or vehicles. This could be an LPR camera, a building entrance door sensor, or other similar devices."
+  }, {
+    "@language" : "es",
+    "@value" : "Dispositivo que registra el acceso de personas o vehículos. Puede ser una cámara LPR, un sensor de puerta de entrada a un edificio, entre otros."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de acceso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#CountingObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Observación sobre el número de personas o vehículos que cuenta un sensor."
+  }, {
+    "@language" : "en",
+    "@value" : "Observation on the number of people or vehicles that a sensor counts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Counting observation"
+  }, {
+    "@language" : "es",
+    "@value" : "Observación de conteo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#CountingSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device that records the number of people or vehicles that is observes."
+  }, {
+    "@language" : "es",
+    "@value" : "Dispositivo que registra el número de personas o vehículos que observa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Counting sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de conteo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Facility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."
+  }, {
+    "@language" : "en",
+    "@value" : "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Equipamiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#InfrastructureElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Representa el conjunto de todos los elementos de la infraestructura que generan movilidad y elementos urbanos tales como semáforos, señales viales, pilonas, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "Represents the set of all infrastructure elements that generate mobility and urban elements such as traffic lights, road signs, bollards, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Elemento de la infraestructura"
+  }, {
+    "@language" : "en",
+    "@value" : "Infrastructure element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#ManagementRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Rol que realiza la administración municipal o alguna de sus dependencias en la gestión del equipamiento. Puede ser el rol de titularidad, mantenimiento, seguridad, entre otros."
+  }, {
+    "@language" : "en",
+    "@value" : "The role that the municipal administration or one of its departments plays in the management of a municipal facility. This may include ownership, maintenance, security, among others."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Management role"
+  }, {
+    "@language" : "es",
+    "@value" : "Rol de gestión"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#ObservationPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Points where access or counting observations can be made using sensors."
+  }, {
+    "@language" : "es",
+    "@value" : "Puntos en donde se pueden realizar observaciones de acceso o de conteo a través de sensores."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Observation point"
+  }, {
+    "@language" : "es",
+    "@value" : "Punto de observación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Any public or private organization that owns or manages an element of the infrastructure."
+  }, {
+    "@language" : "es",
+    "@value" : "Cualquier organización pública o privada que sea titular o gestione un elemento de la infraestructura."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Organización"
+  }, {
+    "@language" : "en",
+    "@value" : "Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#UrbanElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Comprende el inventario de elementos urbanos tales como señales viales, semáforos, pilonas, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "It includes the inventory of urban elements such as road signs, traffic lights, bollards, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Elemento urbano"
+  }, {
+    "@language" : "en",
+    "@value" : "Urban element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#Violation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Infracción"
+  }, {
+    "@language" : "en",
+    "@value" : "Violation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#access",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "acceso"
+  }, {
+    "@language" : "en",
+    "@value" : "access"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#accessibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Accesibilidad de un equipamiento. Por ejemplo, acceso y desplazamiento en zonas interiores y comunes de centros deportivos, culturales, sociales y otros edificios."
+  }, {
+    "@language" : "en",
+    "@value" : "Accessibility of a facility. For example, access and movement in interior and common areas of sports, cultural, social centers and other buildings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "accesibilidad"
+  }, {
+    "@language" : "en",
+    "@value" : "accessibility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un elemento de infraestructura y la división administrativa a la cual pertenece, incluido un Barrio."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an infrastructure element and the administrative division to which it belongs, including a neighborhood."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to"
+  }, {
+    "@language" : "es",
+    "@value" : "pertenece a"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#complaintCancelled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cancelled complaint"
+  }, {
+    "@language" : "es",
+    "@value" : "denuncia anulada"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#containsFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A  facility may contain other facilities. For example, a cultural center may contain exhibition halls, auditoriums, etc."
+  }, {
+    "@language" : "es",
+    "@value" : "Un equipamiento  puede contener otros equipamientos. Por ejemplo, un centro cultural puede contener salas de exposición, auditorios, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contains facility"
+  }, {
+    "@language" : "es",
+    "@value" : "contiene equipamiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#facilityOccupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "facility Occupancy"
+  }, {
+    "@language" : "es",
+    "@value" : "ocupación de equipamiento"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasInfrastructureType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un elemento de infraestructura y un concepto de la taxonomía de tipos de elemento de infraestructura."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an infrastructure element and a concept from the taxonomy of infrastructure element types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has infrastructure element type"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo de elemento de infraestructura"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasObservationPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un elemento de la infraestructura y un punto de observación."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an infrastructure element and an observation point."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has observation point"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene punto de observación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#ObservationPoint"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasRegisteredOwner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relación entre un elemento de infraestructura y su titular, generalmente una organización"
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an infrastructure element and its owner, which is usually an organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has registered owner"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene titular registrado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Organization"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasRoleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el Rol de gestión y la taxonomía de roles de gestión."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the management role and the taxonomy of management roles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#ManagementRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has role type"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo de rol"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasViolationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."
+  }, {
+    "@language" : "en",
+    "@value" : "Relate an Infraction to a concept from the taxonomy of infraction types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has violation type"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo de infracción"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#includesVehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that connects an observation to the observed vehicle."
+  }, {
+    "@language" : "es",
+    "@value" : "Propiedad que relaciona una observación con el vehículo observado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#AccessObservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "includes vehicle"
+  }, {
+    "@language" : "es",
+    "@value" : "incluye vehículo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#installationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date when an entity, especially a device, was installed."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la que se instaló una entidad, especialmente un dispositivo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#UrbanElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha de instalación"
+  }, {
+    "@language" : "en",
+    "@value" : "installation date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#isCadastralProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un equipamiento y el correspondiente inmueble en el catastro."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a Facility and the corresponding property in the city registry."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es inmueble catastral"
+  }, {
+    "@language" : "en",
+    "@value" : "is cadastral property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/catastro#CadastralProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#isPublic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that points out whether an entity, especially an organization, is public or not."
+  }, {
+    "@language" : "es",
+    "@value" : "Propiedad que indica si una entidad, especialmente una Organización, es pública"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es público"
+  }, {
+    "@language" : "en",
+    "@value" : "is public"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#linkedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre una infracción y el vehículo que cometió la infracción."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an infraction and the vehicle that committed the infraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "asociado a"
+  }, {
+    "@language" : "en",
+    "@value" : "linked to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#madeOnInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el rol de gestion que ejerce una organización  y el elemento de infraestructura sobre el cual se realiza la gestión."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the management role exercised by an organization and the infrastructure element on which the management is carried out."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#ManagementRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "made on an infrastructure element"
+  }, {
+    "@language" : "es",
+    "@value" : "realizado sobre elemento de infraestructura"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#maintenanceDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date when an entity was last maintained, especially an urban element."
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha en la que se hizo mantenimiento de una entidad por última vez, especialmente un elemento urbano."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#UrbanElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha de mantenimiento"
+  }, {
+    "@language" : "en",
+    "@value" : "maintenance date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#offersRegularActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Actividad que se lleva a cabo regularmente en el equipamiento."
+  }, {
+    "@language" : "en",
+    "@value" : "Activity that is carried out regularly in a facility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "offers regular activity"
+  }, {
+    "@language" : "es",
+    "@value" : "ofrece actividad regular"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#provesViolation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre la observación urbana y la infracción que está soportando."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between an observation and the infraction it is proving."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#AccessObservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "demuestra infracción"
+  }, {
+    "@language" : "en",
+    "@value" : "proofs violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Violation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#providesPublicService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public service provided by a facility, for example internet via wifi."
+  }, {
+    "@language" : "es",
+    "@value" : "Servicio público prestado por un equipamiento, por ejemplo internet a través de una wifi."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "presta servicio público"
+  }, {
+    "@language" : "en",
+    "@value" : "provides public service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#rolePlayedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre el rol de gestión sobre un equipamiento municipal y la organización que lo ejerce."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between the management role over a municipal facility and the organization that exercises it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#ManagementRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "rol ejercido por"
+  }, {
+    "@language" : "en",
+    "@value" : "role played by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Organization"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#trafficDensity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Propiedad que indica el número de vehículos que ocupan un tramo de vía (carretera, calzada o carril) por unidad de longitud en un instante determinado. Es un indicador clave de congestión que disminuye la velocidad y la libertad de maniobra."
+  }, {
+    "@value" : "Property that points out the number of vehicles  occupying a section of roadway (highway, carriageway, or lane) per unit of length at a given moment. It is a key congestion indicator that reduces speed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "densidad de tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "traffic density"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#Incidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Incidence in the traffic system of a city"
+  }, {
+    "@language" : "es",
+    "@value" : "Incidencia que ocurre en el sistema de tráfico de una ciudad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Incidence"
+  }, {
+    "@language" : "es",
+    "@value" : "Incidencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://edint.es/def/trafico#StreetSection"
+  }, {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#PlannedIncidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Incidencia planificada, puede ser recurrente o no"
+  }, {
+    "@language" : "en",
+    "@value" : "Planned traffic incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Incidencia planificada"
+  }, {
+    "@language" : "en",
+    "@value" : "Planned incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/trafico#Incidence"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#StreetSection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Section/s defined by a starting and an ending point that can belong to one or more street."
+  }, {
+    "@language" : "es",
+    "@value" : "Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Street section"
+  }, {
+    "@language" : "es",
+    "@value" : "Tramo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#TrafficEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A traffic equipment monitors the traffic of a city"
+  }, {
+    "@language" : "es",
+    "@value" : "Un Equipo de Tráfico es uno de los equipos que se encargan de controlar o monitorizar el tráfico de la ciudad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Equipo de tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "Traffic equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dispositivo de Medición de Tráfico, tipo de equipo de tráfico que realiza mediciones."
+  }, {
+    "@language" : "en",
+    "@value" : "Traffic Measuring Device, type of Traffic Device which performs measurements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Dispositivo de medición de tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "Traffic Measuring Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  }, {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#TrafficObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Observación mediante un dispositivo de medición de tráfico o un equipo de control, como radares de velocidad o sistemas de reconocimiento automático de matrículas (ANPR)."
+  }, {
+    "@language" : "en",
+    "@value" : "Observation by a traffic measuring device or a control equipment such as speed cameras or Automatic Number Plate Recognition (ANPR) systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Observación del tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "Traffic observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#TrafficProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Generalización de las propiedades observables de medición de tráfico y las propiedades observables de control de vehículos específicos."
+  }, {
+    "@language" : "en",
+    "@value" : "Generalization of the observable properties of traffic measurement and the observable properties of control of specific vehicles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Propiedad de tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "Traffic property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#UnplannedIncidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Incidencia no planificada del tráfico de una ciudad"
+  }, {
+    "@language" : "en",
+    "@value" : "Unplanned traffic incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Incidencia no planificada"
+  }, {
+    "@language" : "en",
+    "@value" : "Unplanned incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/trafico#Incidence"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#composition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "It is obtained by the equation of intensity and time of occupation with certain correction factors. It is expressed as a percentage: a 100% load implies circulatory collapse, interrupted circulation, while 0% implies empty street. It is similar to the Level of Service of the road that is usually measured with the letters A, B, C, D, E and F: level A, between 0% and 20% load; level F, between 90% and 100% load. The level of service is complex to measure and that is why the load is used."
+  }, {
+    "@language" : "es",
+    "@value" : "Se refiere al tipo de vehículos que se suman en la intensidad y a día de hoy sólo se pueden medir a mano mediante muestreo y calcular coeficientes de corrección para las intensidad. Los vehículos se deben referir a vehículos tipo y estiman valores aproximados: turismo=1 ; motocicleta=0,75; Bicicleta=0,5; Autobús=1,5; Camión grande=2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "composicion"
+  }, {
+    "@language" : "en",
+    "@value" : "composition"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#endOfSection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación del tramo con el lugar donde finaliza el tramo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship of the section with the point where it ends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#StreetSection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "end of section"
+  }, {
+    "@language" : "es",
+    "@value" : "fin del tramo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/sf#Point"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#expectedEndDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La fecha y hora prevista de\n\tfinalización de una incidencia planificada (en formato fecha ISO 8601)"
+  }, {
+    "@language" : "en",
+    "@value" : "The end date and time of a planned incidence (in ISO 8601 date format)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "(expected) end date"
+  }, {
+    "@language" : "es",
+    "@value" : "fecha de fin (prevista)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#inService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite conocer si el dispositivo funciona o no."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows describing whether the device is working or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "En Servicio"
+  }, {
+    "@language" : "en",
+    "@value" : "Running device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#incidenceAttachment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A document where more information about the incidence can be found."
+  }, {
+    "@language" : "es",
+    "@value" : "Un documento donde se puede consultar la información sobre la incidencia."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#Incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "adjunto a la incidencia"
+  }, {
+    "@language" : "en",
+    "@value" : "attached to incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#incidenceInSection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación de la Incidencia con el Tramo donde se produce la misma."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship of the Incidence with the Section, where it happens."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#Incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "incidence in section"
+  }, {
+    "@language" : "es",
+    "@value" : "incidencia en tramo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/trafico#StreetSection"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#incidenceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de incidencia, pueden ser planificadas o no planificadas."
+  }, {
+    "@language" : "en",
+    "@value" : "Type of incidence, planned or unplanned"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#Incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de Incidencia"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of Incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#intensity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Intensidad o aforo, número de vehículos en unidad de tiempo (hora, día, mes año). Los habituales son hora y día."
+  }, {
+    "@language" : "en",
+    "@value" : "Intensity or capacity, number of vehicles in time unit (hour, day, month, year). The usual ones are hour and day."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "intensidad"
+  }, {
+    "@language" : "en",
+    "@value" : "traffic intensity"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#isRecurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite describir si la incidencia es recurrente o no."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows describing whether there is a recurrence in the incidence or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Incidencia recurrente"
+  }, {
+    "@language" : "en",
+    "@value" : "Recurrent incidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Calculado a partir de la velocidad, requiere una ecuación o unos niveles de velocidad asociados: verde, fluido; amarillo, lento; naranja, denso; rojo, congestión; negro, circulación interrumpida; gris, sin datos"
+  }, {
+    "@language" : "en",
+    "@value" : "Calculated from the speed, it requires an equation or associated speed levels: green, fluid; yellow, slow; orange, dense; red, congestion; black, traffic interrupted; grey, no data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "level"
+  }, {
+    "@language" : "es",
+    "@value" : "nivel"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#load",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "It is obtained by the equation of intensity and time of occupation with certain correction factors. It is expressed as a percentage: a 100% load implies circulatory collapse, interrupted circulation, while 0% implies empty street. It is similar to the Level of Service of the road that is usually measured with the letters A, B, C, D, E and F: level A, between 0% and 20% load; level F, between 90% and 100% load. The level of service is complex to measure and that is why the load is used."
+  }, {
+    "@language" : "es",
+    "@value" : "Se obtiene mediante ecuación de intensidad y tiempo de ocupación con ciertos factores de corrección. Se expresa en tanto por ciento: una carga del 100% implica colapso circulatorio, circulación interrumpida, mientras que 0% implica calle vacía. Es similar al Nivel de Servicio de la vía que habitualmente se mide con las letras A, B, C, D, E y F: nivel A, entre 0% y 20% de carga; nivel F, entre 90% y 100% de carga. El nivel de servicio es complejo de medir y por eso se usa la carga."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "carga"
+  }, {
+    "@language" : "en",
+    "@value" : "traffic load"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#measurementFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite conocer la frecuencia de medición del dispositivo."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows to know the measurement frequency of the device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Frecuencia Medición"
+  }, {
+    "@language" : "en",
+    "@value" : "Measurement Frequency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#monitors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación del Equipo de Tráfico con el Tramo que monitorea"
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between Traffic Equipment and the Section it monitors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Monitorea"
+  }, {
+    "@language" : "en",
+    "@value" : "Monitors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/trafico#StreetSection"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#numDirections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of directions of traffic"
+  }, {
+    "@language" : "es",
+    "@value" : "Número de sentidos de circulación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid39"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Sentidos de circulación"
+  }, {
+    "@language" : "en",
+    "@value" : "Street directions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#occupation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Es la ocupación del detector mientras está pasando por encima un vehículo, está asociado a detectores tipo espira electromagnética, y es el tiempo desde que el detector detecta al vehículo hasta que deja detectarlo."
+  }, {
+    "@language" : "en",
+    "@value" : "It is the occupation of the detector while it is passing over a vehicle, it is associated with electromagnetic loop type detectors, and it is the time from when the detector detects the vehicle until it allows it to be detected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "occupation"
+  }, {
+    "@language" : "es",
+    "@value" : "ocupación"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#recurrence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite describir la recurrencia."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows describing the recurrence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recurrence"
+  }, {
+    "@language" : "es",
+    "@value" : "Recurrencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#startOfSection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación del tramo con el lugar donde se inicia el tramo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship of the section with the point where it starts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#StreetSection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "inicio del tramo"
+  }, {
+    "@language" : "en",
+    "@value" : "start of section"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/sf#Point"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#trafficEquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de equipo de tráfico, equipos de control y dispositivos de medición"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of traffic equipment, monitor equipment or measuring devices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de Equipo de Tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "Type of Traffic Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid35"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#urban",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite describir si el dispositivo es urbano o no."
+  }, {
+    "@language" : "en",
+    "@value" : "This property allows knowing whether the device is urban or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Urban"
+  }, {
+    "@language" : "es",
+    "@value" : "Urbano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#validated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Esta propiedad permite conocer si se ha producido una validación de la observación o no"
+  }, {
+    "@language" : "en",
+    "@value" : "This property states whether the observation is validated or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficObservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/trafico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Validada"
+  }, {
+    "@language" : "en",
+    "@value" : "Validated Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#vehicleAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Determina si en un vehículo ha pasado por un punto de acceso determinado, por ejemplo un punto de entrada a una zona de bajas emisiones."
+  }, {
+    "@language" : "en",
+    "@value" : "Determines if a vehicle has passed through a specific access point, for example an entry point to a low-emission zone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "acceso de vehículo"
+  }, {
+    "@language" : "en",
+    "@value" : "vehicle access"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#velocidad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Directly measured speed with detectors"
+  }, {
+    "@language" : "es",
+    "@value" : "Velocidad medida directa con detectores"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "speed"
+  }, {
+    "@language" : "es",
+    "@value" : "velocidad"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Lugar donde se puede tanto dejar como recoger los vehículos compartidos. Está compuesto de anclajes."
+  }, {
+    "@language" : "en",
+    "@value" : "Place where you can both leave and pick up a shared vehicles. It is composed of docks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://edint.es/def/vehiculos-compartidos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Estación de vehículos compartidos"
+  }, {
+    "@language" : "en",
+    "@value" : "Shared vehicle station"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/vehiculos-compartidos#locatedInZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relación entre un equipamiento y la zona donde está ubicada."
+  }, {
+    "@language" : "en",
+    "@value" : "Relationship between a municipal facility and the area where it is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "located in zone"
+  }, {
+    "@language" : "es",
+    "@value" : "ubicado en zona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://edint.es/def/zone#RegulatedZone"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/zone#RegulatedZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Area a la que se aplica una regulacion o normativa particular"
+  }, {
+    "@language" : "en",
+    "@value" : "Area to which a particular regulation or policy applies"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regulated zone"
+  }, {
+    "@language" : "es",
+    "@value" : "Zona regulatoria"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/IncidenceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tipo de incidencia"
+  }, {
+    "@language" : "en",
+    "@value" : "type of incidence"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/InfrastructureType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Infrastructure type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de infraestructura"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/PublicService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Public service type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de servicio público"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/RegularActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Regular activity type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de actividad regular"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/RoleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Role type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de rol"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/TrafficEquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tipo de equipo de tráfico"
+  }, {
+    "@language" : "en",
+    "@value" : "type of traffic devices"
+  } ]
+}, {
+  "@id" : "https://edint.es/kos/ViolationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tipo de infracción"
+  }, {
+    "@language" : "en",
+    "@value" : "Violation type"
   } ]
 }, {
   "@id" : "https://schema.org/Organization",

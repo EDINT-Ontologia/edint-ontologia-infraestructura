@@ -5,9 +5,9 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix edintinfp: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#> .
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
-@prefix edintrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType/> .
+@prefix edintinfp: <https://edint.es/def/infraestructura#> .
+@prefix edintkos: <https://edint.es/kos/> .
+@prefix edintrole: <https://edint.es/kos/RoleType/> .
 
 #################################################################
 #
@@ -21,8 +21,8 @@ edintkos:RoleType a skos:ConceptScheme ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
     rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
-    rdfs:label "Tipo de rol"@es ;
-    rdfs:label "Type of role"@en ;
+    rdfs:label "Tipo de rol"@en ;
+    rdfs:label "Type of role"@es ;
     dct:title "Concept scheme grouping types of  roles that are exercised by an organization on an infrastructure element"@en ;
     dct:title "Esquema de conceptos agrupando tipos de roles de gestión que ejerce una organización sobre un elemento de la infraestructura"@es .
     

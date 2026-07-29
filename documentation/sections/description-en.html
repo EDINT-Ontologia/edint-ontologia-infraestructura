@@ -3,15 +3,15 @@
 <p>Figure 1 captures the general conceptual model of the infrastructure ontology. </p>
 <p><center><img src="images/diagrama-conceptual-General-with-DP.png"/><figcaption>
 Figure 1. Main conceptual model of the infrastructure onology</figcaption></center></p> 
-<p>The public and private elements of a municipality’s infrastructure (<a href="#InfrastructureElement">infrastructure element</a>) include the (sub)classes  <a href="#UrbanElement">urban element</a> —such as traffic lights or pedestrian crossings— and <a href="#Facility">facility</a>. Facilities include educational, social, cultural, and sports facilities, as well as on‑street and off‑street <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/aparcamiento#Parking">parking areas</a> and <a href="#http://vocab.ciudadesabiertas.es/def/transporte/bicicleta-publica#EstacionBicicleta">shared bicycle stations</a>. Geospatial concepts from the <a href="https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.html">GeoSPARQL ontology</a> are reused to represent areas or coordinates of infrastructure elements by using the concept <a href="#http://www.opengis.net/ont/geosparql#Feature">gsp:Feature</a> and the property <a href="#http://www.opengis.net/ont/geosparql#hasGeometry">gsp:hasGeometry</a>. The elements belong to an administrative unit (<a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio">Municipality</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">District</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">Neighborhood</a>), which are concepts from the <a href="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/">Territorial Division Ontology</a>, and have a <a href="#http://schema.org/address">postal address</a></p>
-<p>In addition, infrastructure elements have an <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/InfrastructureType">infrastructure type</a>, which is a <a href="#http://www.w3.org/2004/02/skos/core#Concept">concept belonging to a SKOS taxonomy</a>, such as “Health Center,” “Cultural Center,” “Parking,” etc. An infrastructure element may <a href="#offersRegularActivity">offer regular activities</a> —for example, a cultural center may host concerts, exhibitions, etc. It may also <a href="#providesPublicService">provide public services</a>, such as Wi-Fi access. The infrastructure element has <a href="#rolePlayedBy">roles played by</a> <a href="#Organization">organizations</a>. Roles can <a href="#hasRoleType">have</a> a <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/RoleType">type</a>, such as security or maintenance, which are <a href="#http://www.w3.org/2004/02/skos/core#Concept">concepts belonging to a SKOS taxonomy</a>. In turn, the role is <a href="#madeOnInfrastructure">made on an infrastructure element</a>. Infrastructure elements are also related to the organizations that own them (<a href="#hasRegisteredOwner">has registered owner</a>). One facility may <a href="#containsFacility">contain other facilities</a>. This relationship allows representing different areas within a facility. For example, a cultural center may have auditoriums and exhibition halls; a sports center may contain a football field or a swimming pool.
+<p>The public and private elements of a municipality’s infrastructure (<a href="#InfrastructureElement">infrastructure element</a>) include the (sub)classes  <a href="#UrbanElement">urban element</a> —such as traffic lights or pedestrian crossings— and <a href="#Facility">facility</a>. Facilities include educational, social, cultural, and sports facilities, as well as on‑street and off‑street <a href="#https://edint.es/def/aparcamiento#Parking">parking areas</a> and <a href="#https://edint.es/def/vehiculos-compartidos#SharedVehicleStation">shared vehicle stations</a>. Geospatial concepts from the <a href="https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.html">GeoSPARQL ontology</a> are reused to represent areas or coordinates of infrastructure elements by using the concept <a href="#http://www.opengis.net/ont/geosparql#Feature">gsp:Feature</a> and the property <a href="#http://www.opengis.net/ont/geosparql#hasGeometry">gsp:hasGeometry</a>. The elements belong to an administrative unit (<a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio">Municipality</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">District</a>, <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">Neighborhood</a>), which are concepts from the <a href="https://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/">Territorial Division Ontology</a>, and have a <a href="#http://schema.org/address">postal address</a></p>
+<p>In addition, infrastructure elements have an <a href="#https://edint.es/kos/InfrastructureType">infrastructure type</a>, which is a <a href="#http://www.w3.org/2004/02/skos/core#Concept">concept belonging to a SKOS taxonomy</a>, such as “Health Center,” “Cultural Center,” “Parking,” etc. An infrastructure element may <a href="#offersRegularActivity">offer regular activities</a> —for example, a cultural center may host concerts, exhibitions, etc. It may also <a href="#providesPublicService">provide public services</a>, such as Wi-Fi access. The infrastructure element has <a href="#rolePlayedBy">roles played by</a> <a href="#Organization">organizations</a>. Roles can <a href="#hasRoleType">have</a> a <a href="#https://edint.es/kos/edint/RoleType">type</a>, such as security or maintenance, which are <a href="#http://www.w3.org/2004/02/skos/core#Concept">concepts belonging to a SKOS taxonomy</a>. In turn, the role is <a href="#madeOnInfrastructure">made on an infrastructure element</a>. Infrastructure elements are also related to the organizations that own them (<a href="#hasRegisteredOwner">has registered owner</a>). One facility may <a href="#containsFacility">contain other facilities</a>. This relationship allows representing different areas within a facility. For example, a cultural center may have auditoriums and exhibition halls; a sports center may contain a football field or a swimming pool.
 
 <p>The infrastructure ontology reuses sensor-related concepts from the (<a href="https://w3c.github.io/sdw-sosa-ssn/ssn/">Semantic Sensor Network Ontology</a>) to represent access and counts of people and vehicles at any infrastructure element, as well as vehicle traffic measurements. An infrastructure element may <a href="#hasObservationPoint">have observation points</a>. An <a href="#ObservationPoint">observation point</a> is a <a href="#FeatureOfInterest">feature of interest</a> of  <a href="#http://www.w3.org/ns/sosa/Observation">observations</a> <a href="#http://www.w3.org/ns/sosa/madeBySensor">made by sensors</a>, which in turn <a href="#http://www.w3.org/ns/sosa/observes">observes</a> an <a href="#http://www.w3.org/ns/sosa/ObservableProperty">observable property</a> such as vehicle speed, traffic density, or the access of a vehicle or a person. Figures 2, 3, and 4 illustrate the reuse of this ontology for access sensors, counting sensors, and traffic measurement devices, respectively.</p>
 <p>Figure 2 shows concepts related to access sensors.</p>
 <p><center><img src="images/diagrama-conceptual-AccessSensors-with-DP.png"/><figcaption>
 Figure 2. Conceptual model for access sensors</figcaption></center></p> 
 
-<p>In the case of <a href="#AccessObservation">access observations</a>, these are performed by <a href="#AccessSensor">access sensors</a> for an observable property called <a href="#access">access</a>. Access observations may <a href="#includesVehicle">include the vehicles</a> they detect and can be used to <a href="#provesViolation">document a violation</a>, which will be <a href="#linkedTo">linked to</a> a  <a href="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">vehicle</a> and will have a <a href="http://vocab.linkeddata.es/datosabiertos/kos/edint/ViolationType">violation type</a> —this type being a concept belonging to a SKOS taxonomy, such as speeding, mobile phone use, etc.</p>
+<p>In the case of <a href="#AccessObservation">access observations</a>, these are performed by <a href="#AccessSensor">access sensors</a> for an observable property called <a href="#access">access</a>. Access observations may <a href="#includesVehicle">include the vehicles</a> they detect and can be used to <a href="#provesViolation">document a violation</a>, which will be <a href="#linkedTo">linked to</a> a  <a href="https://edint.es/def/censovehiculos#Vehicle">vehicle</a> and will have a <a href="https://edint.es/kos/ViolationType">violation type</a> —this type being a concept belonging to a SKOS taxonomy, such as speeding, mobile phone use, etc.</p>
 <p>Figure 3 shows concepts related to counting sensors.</p>
 <p><center><img src="images/diagrama-conceptual-CountingSensors.png"/><figcaption>
 Figure 3. Conceptual model for the counting sensors</figcaption></center></p> 
@@ -23,10 +23,10 @@ Figure 4. Conceptual model for the traffic sensors</figcaption></center></p>
 <p>Sensors of any of the three types considered in the ontology (access, counting, and traffic) have a <a href="#http://schema.org/manufacturer">manufacturer</a>, which is an <a href="#Organization">organization</a>.</p>
 <pre><textarea style="resize:none" readonly id="code1" name="code" rows="25" cols="100">
 @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
-@prefix edintinf: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#&gt; .
-@prefix edintkos: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/&gt; .
-@prefix edintpublicservice: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/&gt; .
-@prefix edintregularact: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/&gt; .
+@prefix edintinf: &lt;https://edint.es/def/infraestructura#&gt; .
+@prefix edintkos: &lt;https://edint.es/kos/&gt; .
+@prefix edintpublicservice: &lt;https://edint.es/kos/PublicService/&gt; .
+@prefix edintregularact: &lt;https://edint.es/kos/RegularActivity/&gt; .
 @prefix esdir: &lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt; .
 @prefix ester: &lt;http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&gt; .
 @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
@@ -35,44 +35,44 @@ Figure 4. Conceptual model for the traffic sensors</figcaption></center></p>
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # Información del Centro de Día
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/10047540&gt;
+&lt;https://example.org/recurso/equipamiento-municipal/10047540&gt;
   a edintinf:Facility ;
   dct:identifier "10047540" ;
-  schema:address &lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt; ;
+  schema:address &lt;https://example.org/recurso/direccion-postal/28030&gt; ;
   schema:openingHours "De 8,15 a 18 horas de Lunes a Viernes." ;
-  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
+  edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
   edintinf:hasInfrastructureType &lt;edintkos:CentrosDiaMayores&gt; ;
-  edintinf:hasObservationPoint &lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt; ;
-  edintinf:hasRegisteredOwner &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt; ;
+  edintinf:hasObservationPoint &lt;https://example.org/recurso/punto-de-observacion/1398&gt; ;
+  edintinf:hasRegisteredOwner &lt;https://example.org/recurso/organizacion/10047540&gt; ;
   edintinf:providesPublicService edintpublicservice:medicalassistance ;
-  geosparql:hasGeometry &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt; ;
+  geosparql:hasGeometry &lt;https://example.org/recurso/equipamiento-municipal/locations/10047540&gt; ;
   rdfs:label "Centro de Día Municipal 'Nicanor Barroso'" .
 
 # Definición de la Geometría
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/10047540&gt;
+&lt;https://example.org/recurso/equipamiento-municipal/locations/10047540&gt;
   a geosparql:Geometry ;
   dct:identifier "10047540" ;
   geosparql:asWKT "POINT (-3.6420364042780338 40.398886698528045)"^^geosparql:wktLiteral .
 
 # Propietario (Organización)
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/10047540&gt;
+&lt;https://example.org/recurso/organizacion/10047540&gt;
   a edintinf:Organization ;
   rdfs:label "Ayuntamiento de Madrid" ;
   edintinf:isPublic "true"^^xsd:boolean .
 
 # Punto de observación asociado
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/1398&gt;
+&lt;https://example.org/recurso/punto-de-observacion/1398&gt;
   a edintinf:ObservationPoint ;
   rdfs:comment "Punto de conteo de personas en el acceso principal" ;
-  edintinf:belongsTo &lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt; .
+  edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; .
 
 # Dirección Postal
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/28030&gt;
+&lt;https://example.org/recurso/direccion-postal/28030&gt;
   a esdir:DireccionPostal ;
   rdfs:label "C. de la Encomienda de Palacios, 224, Moratalaz, 28030 Madrid" .
 
 # Barrio
-&lt;http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/FONTARRON&gt;
+&lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt;
   a ester:Barrio ;
   rdfs:label "Fontarrón" .
 </textarea></pre>
