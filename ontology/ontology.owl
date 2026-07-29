@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://edint.es/def/infraestructura#"
      xml:base="https://edint.es/def/infraestructura"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gsp="http://www.opengis.net/ont/geosparql#"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:org="http://www.w3.org/ns/org#"
@@ -40,6 +39,7 @@
         <dcterms:description xml:lang="es">La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros.</dcterms:description>
         <dcterms:description xml:lang="en">The infrastructure ontology describes all concepts related to a municipality&apos;s public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-30</dcterms:issued>
         <dcterms:title xml:lang="es">Ontología de Infraestructura</dcterms:title>
         <dcterms:title xml:lang="en">The Infrastructure Ontology</dcterms:title>
         <vann:preferredNamespacePrefix>edintinf</vann:preferredNamespacePrefix>
@@ -1119,9 +1119,7 @@
         <rdfs:comment xml:lang="en">This property allows describing whether there is a recurrence in the incidence or not</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
         <rdfs:label xml:lang="es">Incidencia recurrente</rdfs:label>
-        <rdfs:label xml:lang="en">Recurrent incidence</rdfs:label>
-    </owl:DatatypeProperty>
-    
+        <rdfs:label xml:lang="en">Recurrent incidence</rdfs:label>    
 
 
     <!-- https://edint.es/def/trafico#measurementFrequency -->
@@ -1134,9 +1132,7 @@
         <rdfs:comment xml:lang="en">This property allows to know the measurement frequency of the device.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
         <rdfs:label xml:lang="es">Frecuencia Medición</rdfs:label>
-        <rdfs:label xml:lang="en">Measurement Frequency</rdfs:label>
-    </owl:DatatypeProperty>
-    
+        <rdfs:label xml:lang="en">Measurement Frequency</rdfs:label>    
 
 
     <!-- https://edint.es/def/trafico#numDirections -->

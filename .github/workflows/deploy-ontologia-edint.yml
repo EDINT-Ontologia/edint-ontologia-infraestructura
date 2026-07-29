@@ -1,0 +1,81 @@
+name: Deploy EDINT ontology
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate documentation package
+        run: |
+          test -d documentation
+          test -s documentation/index-es.html
+          test -s documentation/index-en.html
+          test -s documentation/ontology.rdf
+          test -s documentation/ontology.ttl
+          test -s documentation/ontology.jsonld
+          test -s documentation/ontology.nt
+
+      - name: Prepare ontology package
+        run: |
+          mkdir -p edint-ontology-package
+          rsync -a documentation/ edint-ontology-package/
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.EDINT_SSH_PRIVATE_KEY }}" > ~/.ssh/edint_deploy_key
+          chmod 600 ~/.ssh/edint_deploy_key
+          printf '%s\n' "${{ secrets.EDINT_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      - name: Prepare remote workspace
+        run: |
+          ssh \
+            -i ~/.ssh/edint_deploy_key \
+            -p "${{ secrets.EDINT_SSH_PORT }}" \
+            "${{ secrets.EDINT_SSH_USER }}@${{ secrets.EDINT_SSH_HOST }}" \
+            "mkdir -p /tmp/edint-ontology-${{ github.run_id }}/source /tmp/edint-ontology-${{ github.run_id }}/scripts"
+
+      - name: Upload source package
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/edint_deploy_key -p ${{ secrets.EDINT_SSH_PORT }}" \
+            edint-ontology-package/ \
+            "${{ secrets.EDINT_SSH_USER }}@${{ secrets.EDINT_SSH_HOST }}:/tmp/edint-ontology-${{ github.run_id }}/source/"
+
+      - name: Upload deploy script
+        run: |
+          rsync -az \
+            -e "ssh -i ~/.ssh/edint_deploy_key -p ${{ secrets.EDINT_SSH_PORT }}" \
+            scripts/deploy-ontology-edint.sh \
+            "${{ secrets.EDINT_SSH_USER }}@${{ secrets.EDINT_SSH_HOST }}:/tmp/edint-ontology-${{ github.run_id }}/scripts/"
+
+      - name: Publish on server
+        run: |
+          ssh \
+            -i ~/.ssh/edint_deploy_key \
+            -p "${{ secrets.EDINT_SSH_PORT }}" \
+            "${{ secrets.EDINT_SSH_USER }}@${{ secrets.EDINT_SSH_HOST }}" \
+            "bash /tmp/edint-ontology-${{ github.run_id }}/scripts/deploy-ontology-edint.sh /tmp/edint-ontology-${{ github.run_id }}/source '${{ secrets.EDINT_DEF_PATH }}' '${{ secrets.EDINT_ONTOLOGY_SLUG }}'"
+
+      - name: Validate public routes
+        env:
+          SLUG: ${{ secrets.EDINT_ONTOLOGY_SLUG }}
+        run: |
+          base="https://edint.es/def/${SLUG}"
+          curl -sS -D headers-html.txt -o /dev/null "$base"
+          grep -q "303" headers-html.txt
+          grep -q "/def/${SLUG}/index-es.html" headers-html.txt
+          curl -sS -D headers-rdf.txt -o /dev/null -H "Accept: application/rdf+xml" "$base"
+          grep -q "303" headers-rdf.txt
+          grep -q "/def/${SLUG}/ontology.rdf" headers-rdf.txt
+          curl -fsSI "$base/ontology.rdf" | grep -qi "content-type: application/rdf+xml"
