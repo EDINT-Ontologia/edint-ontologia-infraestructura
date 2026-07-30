@@ -1,22 +1,26 @@
 # Ontología de Infraestructura (Infrastructure Ontology)
 
-La ontología de Infraestructura representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de bicicletas compartidas, entre otros.
+La ontología de Infraestructura representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de vehículos compartidos, entre otros.
 
 
 # Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamoientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
 
 # Prefijo y espacio de nombres (Prefix and namespace)
-El prefijo de la ontología de Infraestructura es: edintinf y es publicada en el espacio de nombres: [http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#) 
+El prefijo de la ontología de Infraestructura es: edintinf y es publicada en el espacio de nombres: [https:edint.es/def/infraestructura#](https:edint.es/def/infraestructura#) 
 
 # Modelo conceptual (Ontology conceptualization)
+## Diagrama General
 ![Modelo conceptual general](diagrams/diagrama-conceptual-General.png)
 
+## Diagrama sensores de acceso
 ![Modelo conceptual general](diagrams/diagrama-conceptual-AccessSensors.png)
 
+## Diagrama sensores de conteo
 ![Modelo conceptual general](diagrams/diagrama-conceptual-CountingSensors.png)
 
+## Diagrama sensores de tráfico
 ![Modelo conceptual general](diagrams/diagrama-conceptual-TrafficSensors.png)
 
 # Estructura del repositorio (Repository structure)
