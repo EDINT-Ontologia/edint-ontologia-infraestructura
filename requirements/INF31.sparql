@@ -1,7 +1,7 @@
 
 INF31: ¿En qué fecha y hora se registró un acceso determinado?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 

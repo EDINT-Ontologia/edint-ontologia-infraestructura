@@ -1,7 +1,7 @@
 
 # INF41: ¿Qué elementos de infraestructura por tipo tiene una división administrativa concreta?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -30,7 +30,7 @@ ORDER BY ?adminLabel ?typeLabel
 
 # Incluyendo el tipo de los elementos
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>

@@ -1,4 +1,4 @@
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>.
+@prefix edintinf: <https://edint.es/def/infraestructura#>.
 @prefix schema: <http://www.owl-ontologies.com/schema#>.
 @prefix edintmanagementrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/>.
 @prefix rr: <http://www.w3.org/ns/r2rml#>.

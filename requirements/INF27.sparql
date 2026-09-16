@@ -1,7 +1,7 @@
 
 # INF27: ¿Cuál es la localización de un punto de acceso concreto?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 PREFIX geo:      <https://datos.ign.es/def/geo_core#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -27,7 +27,7 @@ WHERE {
 
 # Localización junto con el equipamiento al que pertenece
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
 PREFIX geo:      <https://datos.ign.es/def/geo_core#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
