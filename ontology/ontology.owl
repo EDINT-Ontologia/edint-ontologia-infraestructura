@@ -30,7 +30,7 @@
      xmlns:edintzone="https://edint.es/def/zone#"
      xmlns:esequip-kos="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
-        <owl:versionIRI rdf:resource="https://edint.es/def/infraestructura"/>
+        <owl:versionIRI rdf:resource="https://edint.es/def/infraestructura/0.2.1"/>
         <dcterms:created>2026-01-30</dcterms:created>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
