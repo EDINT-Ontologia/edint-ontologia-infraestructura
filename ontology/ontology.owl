@@ -765,7 +765,7 @@
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidenceType"/>
+                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidentType"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1980,9 +1980,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/kos/IncidenceType -->
+    <!-- https://edint.es/kos/IncidentType -->
 
-    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidenceType">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidentType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">tipo de incidencia</rdfs:label>
         <rdfs:label xml:lang="en">type of incidence</rdfs:label>
