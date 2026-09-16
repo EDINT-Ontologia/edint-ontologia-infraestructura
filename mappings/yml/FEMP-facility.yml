@@ -1,8 +1,8 @@
 prefixes:
   esdir: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#
   edintinf: https://edint.es/def/infraestructura#
-  edintpublicservice: http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/
-  edintregularact: http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/
+  edintpublicservice: https://edint.es/kos/PublicService/
+  edintregularact: https://edint.es/kos/RegularActivity/
   schema: http://www.owl-ontologies.com/schema#
   geosparql: http://www.opengis.net/ont/geosparql#
   dct: http://purl.org/dc/terms/
