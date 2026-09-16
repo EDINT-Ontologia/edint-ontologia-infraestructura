@@ -1,9 +1,9 @@
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>.
 @prefix edintinf: <https://edint.es/def/infraestructura#>.
-@prefix edintpublicservice: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/>.
-@prefix edintregularact: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/>.
+@prefix edintpublicservice: <https://edint.es/kos/PublicService/>.
+@prefix edintregularact: <https://edint.es/kos/RegularActivity/>.
 @prefix schema: <http://www.owl-ontologies.com/schema#>.
-@prefix edintmanagementrole: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/>.
+@prefix edintmanagementrole: <https://edint.es/kos/ManagementRoleType/>.
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#>.
@@ -170,7 +170,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/{servicio}";
+			rr:template "https://edint.es/kos/PublicService/{servicio}";
 			rr:termType rr:IRI
 		];
 	];
@@ -181,7 +181,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/{actividad_regular}";
+			rr:template "https://edint.es/kos/RegularActivity/{actividad_regular}";
 			rr:termType rr:IRI
 		];
 	];
@@ -331,7 +331,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/{rol}";
+			rr:template "https://edint.es/kos/ManagementRoleType/{rol}";
 			rr:termType rr:IRI
 		];
 	];

@@ -1,10 +1,10 @@
 prefixes:
   esdir: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#
   edintinf: https://edint.es/def/infraestructura#
-  edintpublicservice: http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/
-  edintregularact: http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/
+  edintpublicservice: https://edint.es/kos/PublicService/
+  edintregularact: https://edint.es/kos/RegularActivity/
   schema: http://www.owl-ontologies.com/schema#
-  edintmanagementrole: http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/
+  edintmanagementrole: https://edint.es/kos/ManagementRoleType/
   edintkos: http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/
   dct: http://purl.org/dc/terms/
   geosparql: http://www.opengis.net/ont/geosparql#

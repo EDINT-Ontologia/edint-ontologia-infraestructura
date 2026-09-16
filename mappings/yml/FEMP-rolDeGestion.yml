@@ -1,7 +1,7 @@
 prefixes:
   edintinf: https://edint.es/def/infraestructura#
   schema: http://www.owl-ontologies.com/schema#
-  edintmanagementrole: http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/
+  edintmanagementrole: https://edint.es/kos/ManagementRoleType/
 
 sources:
   rolDeGestion-source: ['Madrid_con_punto_observ_id.csv~csv']
