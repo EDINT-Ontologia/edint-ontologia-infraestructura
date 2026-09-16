@@ -1,7 +1,7 @@
 
 #INF02: ¿Cuál es la dirección postal exacta (calle, portal) de un equipamiento específico?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX schema:   <http://schema.org/>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX escjr:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
@@ -28,7 +28,7 @@ WHERE {
 
 # Por nombre de equipamiento
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX schema:   <http://schema.org/>
 PREFIX esdir:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
 PREFIX escjr:    <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>

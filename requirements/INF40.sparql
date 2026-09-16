@@ -1,7 +1,7 @@
 
 # INF40: ¿Qué aparcamientos presentan un nivel de ocupación concreto (en un periodo)?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -45,7 +45,7 @@ ORDER BY ?parkingLabel ?obsPointLabel ?sensorLabel ?time
 
 # Solo la lista de aparcamientos que cumplen (al menos una lectura)
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>

@@ -1,8 +1,8 @@
 
 # INF44: ¿Por qué puntos de acceso pasó un vehículo (durante un periodo de tiempo)?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
-PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>

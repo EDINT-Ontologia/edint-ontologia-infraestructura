@@ -1,5 +1,5 @@
 prefixes:
-  edintinf: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#
+  edintinf: https://edint.es/def/infraestructura#
 
 sources:
   observation-point-source: ['Madrid_con_punto_observ_id.csv~csv']

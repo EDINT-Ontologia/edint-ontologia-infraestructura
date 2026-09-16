@@ -1,6 +1,6 @@
 prefixes:
   esdir: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#
-  edintinf: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#
+  edintinf: https://edint.es/def/infraestructura#
   edintpublicservice: http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/
   edintregularact: http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/
   schema: http://www.owl-ontologies.com/schema#

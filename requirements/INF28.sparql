@@ -1,7 +1,7 @@
 
 # INF28: ¿Cuál fue la fecha de instalación de un elemento urbano?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?element ?elementLabel
@@ -22,7 +22,7 @@ WHERE {
 
 #Para mantenimiento
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?element ?elementLabel

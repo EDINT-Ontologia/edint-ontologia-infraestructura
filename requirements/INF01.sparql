@@ -1,7 +1,7 @@
 
 #INF01: ¿Qué equipamientos se encuentran dentro de un determinado Municipio, Distrito o Barrio?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX esadm:   <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -29,7 +29,7 @@ ORDER BY ?facilityLabel
 
 # Para cualquier división administrativa
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX dcterms:  <http://purl.org/dc/terms/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -59,7 +59,7 @@ ORDER BY ?adminUnit ?facility
 
 # Para equipamientos públicos 
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
 PREFIX dcterms:  <http://purl.org/dc/terms/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>

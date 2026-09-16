@@ -6,7 +6,7 @@
 #  2. Deltas entre lecturas consecutivas (variación lectura a lectura)
 #  3. Resumen estadístico (mín., máx., media) en el período indicado
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -42,7 +42,7 @@ WHERE {
 ORDER BY ?obsPoint ?sensor ?time
 
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
@@ -102,7 +102,7 @@ ORDER BY ?obsPoint ?sensor ?t1
 
 
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>

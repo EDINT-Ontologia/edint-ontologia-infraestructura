@@ -1,5 +1,5 @@
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>.
-@prefix edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>.
+@prefix edintinf: <https://edint.es/def/infraestructura#>.
 @prefix edintpublicservice: <http://vocab.linkeddata.es/datosabiertos/kos/edint/PublicService/>.
 @prefix edintregularact: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RegularActivity/>.
 @prefix schema: <http://www.owl-ontologies.com/schema#>.

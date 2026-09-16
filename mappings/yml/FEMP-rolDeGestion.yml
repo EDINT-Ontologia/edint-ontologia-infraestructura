@@ -1,5 +1,5 @@
 prefixes:
-  edintinf: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#
+  edintinf: https://edint.es/def/infraestructura#
   schema: http://www.owl-ontologies.com/schema#
   edintmanagementrole: http://vocab.linkeddata.es/datosabiertos/kos/edint/ManagementRoleType/
 

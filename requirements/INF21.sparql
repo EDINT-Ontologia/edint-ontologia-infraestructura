@@ -1,7 +1,7 @@
 
 # INF21: ¿En qué elementos de infraestructura tiene un rol una organización concreta?
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?organization ?organizationLabel
@@ -36,7 +36,7 @@ ORDER BY ?infrastructure ?role
 
 # Para rol concreto
 
-PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/infraestructura#>
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
