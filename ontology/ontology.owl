@@ -60,7 +60,7 @@
         <dcterms:title xml:lang="en">EDINT Infrastructure Ontology</dcterms:title>
         <vann:preferredNamespacePrefix>edintinf</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/infraestructura#"/>
-        <owl:priorVersion>0.2.0</owl:priorVersion>
+        <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0"/>
         <owl:versionInfo>0.2.1</owl:versionInfo>
         <dcterms:publisher rdf:resource="https://www.femp.es/"/>
     <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Infraestructura. EDINT. Revision: v0.2.1.</dcterms:bibliographicCitation>
