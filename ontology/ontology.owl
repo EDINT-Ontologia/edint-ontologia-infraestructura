@@ -27,7 +27,7 @@
      xmlns:edintveh="https://edint.es/def/censovehiculos#"
      xmlns:esvehcom="https://edint.es/def/vehiculos-compartidos#"
      xmlns:edinttraf="https://edint.es/def/trafico#"
-     xmlns:edintzone="https://edint.es/def/zone#"
+     xmlns:edintzone="https://edint.es/def/zona-regulatoria#"
      xmlns:esequip-kos="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
@@ -867,7 +867,7 @@
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/vehiculos-compartidos#locatedInZone">
         <rdfs:domain rdf:resource="https://edint.es/def/infraestructura#Facility"/>
-        <rdfs:range rdf:resource="https://edint.es/def/zone#RegulatedZone"/>
+        <rdfs:range rdf:resource="https://edint.es/def/zona-regulatoria#RegulatedZone"/>
         <rdfs:comment xml:lang="es">Relación entre un equipamiento y la zona donde está ubicada.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a municipal facility and the area where it is located.</rdfs:comment>
         <rdfs:label xml:lang="en">located in zone</rdfs:label>
@@ -1843,9 +1843,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/zone#RegulatedZone -->
+    <!-- https://edint.es/def/zona-regulatoria#RegulatedZone -->
 
-    <owl:Class rdf:about="https://edint.es/def/zone#RegulatedZone">
+    <owl:Class rdf:about="https://edint.es/def/zona-regulatoria#RegulatedZone">
         <rdfs:comment xml:lang="es">Area a la que se aplica una regulacion o normativa particular</rdfs:comment>
         <rdfs:comment xml:lang="en">Area to which a particular regulation or policy applies</rdfs:comment>
         <rdfs:label xml:lang="en">Regulated zone</rdfs:label>
@@ -2082,7 +2082,112 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
         <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
         <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
-    </owl:Ontology>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+                <rdfs:label xml:lang="es">QUDT</rdfs:label>
+                <rdfs:label xml:lang="en">QUDT</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+                <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
+                <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero"/>
+                <rdfs:label xml:lang="es">Callejero (escjr)</rdfs:label>
+                <rdfs:label xml:lang="en">Street catalogue (escjr)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+                <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+                <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.geonames.org/ontology"/>
+                <rdfs:label xml:lang="es">GeoNames</rdfs:label>
+                <rdfs:label xml:lang="en">GeoNames</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
+                <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+                <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
+                <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
+                <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
+                <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
+                <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
+                <rdfs:label xml:lang="es">SOSA/SSN</rdfs:label>
+                <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://datos.ign.es/def/geo_core"/>
+                <rdfs:label xml:lang="es">geo_core (IGN)</rdfs:label>
+                <rdfs:label xml:lang="en">geo_core (IGN)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
+                <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
+                <rdfs:label xml:lang="en">Parking (edintapar)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/catastro"/>
+                <rdfs:label xml:lang="es">Catastro Español (edintcat)</rdfs:label>
+                <rdfs:label xml:lang="en">Spanish Cadastre (edintcat)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+                <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
+                <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/trafico"/>
+                <rdfs:label xml:lang="es">Tráfico (edinttraf)</rdfs:label>
+                <rdfs:label xml:lang="en">Traffic (edinttraf)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
+                <rdfs:label xml:lang="es">Vehículos Compartidos (edintvehcom)</rdfs:label>
+                <rdfs:label xml:lang="en">Shared Vehicles (edintvehcom)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+</owl:Ontology>
 </rdf:RDF>
 
 
