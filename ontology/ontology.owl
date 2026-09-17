@@ -2187,6 +2187,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                 <rdfs:label xml:lang="en">Shared Vehicles (edintvehcom)</rdfs:label>
             </rdf:Description>
         </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/zona-regulatoria"/>
+                <rdfs:label xml:lang="es">Zonas Regulatorias (edintzone)</rdfs:label>
+                <rdfs:label xml:lang="en">Regulated Zones (edintzone)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
 </owl:Ontology>
 </rdf:RDF>
 
