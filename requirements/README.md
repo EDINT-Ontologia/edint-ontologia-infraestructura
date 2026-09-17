@@ -27,9 +27,9 @@ You can use the following formats:
 - Ensure consistency between requirements, conceptualization diagrams, and implementation.  
 - Review and validate requirements with domain experts before ontology development begins. The [LOT methodology](https://doi.org/10.1016/j.engappai.2022.104755) proposes some guidelines:
   - A set of requirements is correct if each requirement refers to some features of the ontology to be developed.
-   A set of requirements is complete if users and domain experts review the requirements and confirm that they are not aware of additional requirements.
+  - A set of requirements is complete if users and domain experts review the requirements and confirm that they are not aware of additional requirements.
   - A set of requirements is internally consistent if no conflicts exist between them.
-  -A set of requirements is verifiable if there is a finite process with a reasonable cost that tests whether the final ontology satisfies each requirement.
+  - A set of requirements is verifiable if there is a finite process with a reasonable cost that tests whether the final ontology satisfies each requirement.
   - A set of requirements is comprehensible if each and every requirements is understandable to users and domain experts.
   - A set of requirements is unambiguous if each and every requirements has only one possible interpretation; that is, if it does not admit any doubt or misunderstanding.
   - A set of requirements is concise if each and every requirement is relevant, and no duplicated or irrelevant requirements exist.
