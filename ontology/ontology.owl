@@ -29,7 +29,8 @@
      xmlns:edinttraf="https://edint.es/def/trafico#"
      xmlns:edintzone="https://edint.es/def/zone#"
      xmlns:esequip-kos="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/"
-     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
+     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
         <owl:versionIRI rdf:resource="https://edint.es/def/infraestructura/0.2.1"/>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
@@ -2075,6 +2076,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         <rdfs:label xml:lang="es">Tipo de infracción</rdfs:label>
         <rdfs:label xml:lang="en">Violation type</rdfs:label>
     </owl:NamedIndividual>
+    <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
+    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+    </owl:Ontology>
 </rdf:RDF>
 
 
