@@ -7,23 +7,137 @@
 @base <https://edint.es/def/infraestructura#> .
 
 <https://edint.es/def/infraestructura> rdf:type owl:Ontology ;
-                                        owl:versionIRI <https://edint.es/def/infraestructura> ;
-                                        <http://purl.org/dc/terms/created> "2026-01-30" ;
-                                        <http://purl.org/dc/terms/creator> "Daniel Doña" ,
-                                                                           "Edna Ruckhaus" ,
-                                                                           "Lucía Sánchez" ,
-                                                                           "Oscar Corcho" ,
-                                                                           "Socorro Bernardos" ;
+                                        owl:versionIRI <https://edint.es/def/infraestructura/0.2.1> ;
+                                        <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales."@es ,
+                                                                            "The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of a municipality's infrastructure. This data includes educational centers, cultural and social centers, sports centers, and health centers, as well as on- and off-street parking. Its scope is limited to data that can be used to maintain and access the inventory of municipal facilities and to track their resource consumption (electricity, water, etc.) and to manage mobility (pedestrian access to municipal facilities and vehicle access to parking areas), which are part of the routine functions of local authorities."@en ;
+                                        <http://purl.org/dc/terms/bibliographicCitation> "EDINT Infrastructure Ontology. EDINT. Revision: v0.2.1."@en ,
+                                                                                         "Ontología EDINT de Infraestructura. EDINT. Revisión: v0.2.1."@es ;
+                                        <http://purl.org/dc/terms/created> "2026-01-30"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> _:genid1 ,
+                                                                           _:genid2 ,
+                                                                           _:genid3 ,
+                                                                           _:genid4 ,
+                                                                           _:genid5 ;
                                         <http://purl.org/dc/terms/description> "La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros."@es ,
                                                                                "The infrastructure ontology describes all concepts related to a municipality's public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others."@en ;
-                                        <http://purl.org/dc/terms/issued> "2026-01-30"^^xsd:date ;
+                                        <http://purl.org/dc/terms/issued> "2026-09-09"^^xsd:date ;
                                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                        <http://purl.org/dc/terms/title> "Ontología de Infraestructura"@es ,
-                                                                         "The Infrastructure Ontology"@en ;
+                                        <http://purl.org/dc/terms/modified> "2026-09-09"^^xsd:date ;
+                                        <http://purl.org/dc/terms/publisher> _:genid6 ;
+                                        <http://purl.org/dc/terms/title> "EDINT Infrastructure Ontology"@en ,
+                                                                         "Ontología EDINT de Infraestructura"@es ;
                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintinf" ;
                                         <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                                        owl:priorVersion "0.2.0" ;
-                                        owl:versionInfo "0.2.1" .
+                                        <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura> ;
+                                        <http://schema.org/creativeWorkStatus> "Ontology Specification"@en ;
+                                        <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" ;
+                                        rdfs:label "Infraestructura"@es ,
+                                                   "Infrastructure"@en ;
+                                        owl:priorVersion <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0> ;
+                                        owl:versionInfo "0.2.1" ;
+                                        <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" ;
+                                        <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" ;
+                                        <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" ;
+                                        <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" ;
+                                        <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid7 ,
+                                                                                        _:genid8 ,
+                                                                                        _:genid9 ,
+                                                                                        _:genid10 ,
+                                                                                        _:genid11 ,
+                                                                                        _:genid12 ,
+                                                                                        _:genid13 ,
+                                                                                        _:genid14 ,
+                                                                                        _:genid15 ,
+                                                                                        _:genid16 ,
+                                                                                        _:genid17 ,
+                                                                                        _:genid18 ,
+                                                                                        _:genid19 ,
+                                                                                        _:genid20 ,
+                                                                                        _:genid21 ,
+                                                                                        _:genid22 .
+
+_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+
+_:genid2 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
+
+_:genid3 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+
+_:genid4 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+
+_:genid5 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
+
+_:genid6 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" ;
+          <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> ;
+          <http://xmlns.com/foaf/0.1/name> "FEMP" .
+
+_:genid7 rdfs:label "QUDT"@en ,
+                     "QUDT"@es ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://qudt.org/schema/qudt> .
+
+_:genid8 rdfs:label "GeoNames"@en ,
+                     "GeoNames"@es ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.geonames.org/ontology> .
+
+_:genid9 rdfs:label "Dirección Postal (esdir)"@es ,
+                     "Postal Address (esdir)"@en ;
+          <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+
+_:genid10 rdfs:label "Callejero (escjr)"@es ,
+                      "Street catalogue (escjr)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+
+_:genid11 rdfs:label "Territorio (esadm)"@es ,
+                      "Territory (esadm)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+
+_:genid12 rdfs:label "GeoSPARQL"@en ,
+                      "GeoSPARQL"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+
+_:genid13 rdfs:label "OGC Simple Features"@en ,
+                      "OGC Simple Features"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/sf> .
+
+_:genid14 rdfs:label "OWL-Time"@en ,
+                      "OWL-Time"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
+
+_:genid15 rdfs:label "SOSA/SSN"@en ,
+                      "SOSA/SSN"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/ns/sosa> .
+
+_:genid16 rdfs:label "geo_core (IGN)"@en ,
+                      "geo_core (IGN)"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://datos.ign.es/def/geo_core> .
+
+_:genid17 rdfs:label "Aparcamiento (edintapar)"@es ,
+                      "Parking (edintapar)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/aparcamiento> .
+
+_:genid18 rdfs:label "Catastro Español (edintcat)"@es ,
+                      "Spanish Cadastre (edintcat)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/catastro> .
+
+_:genid19 rdfs:label "Censo de Vehículos (edintveh)"@es ,
+                      "Vehicle Census (edintveh)"@en ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/censovehiculos> .
+
+_:genid20 rdfs:label "Traffic (edinttraf)"@en ,
+                      "Tráfico (edinttraf)"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/trafico> .
+
+_:genid21 rdfs:label "Shared Vehicles (edintvehcom)"@en ,
+                      "Vehículos Compartidos (edintvehcom)"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/vehiculos-compartidos> .
+
+_:genid22 rdfs:label "Regulated Zones (edintzone)"@en ,
+                      "Zonas Regulatorias (edintzone)"@es ;
+           <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/zona-regulatoria> .
 
 #################################################################
 #    Annotation properties
@@ -31,6 +145,14 @@
 
 ###  http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
@@ -57,6 +179,14 @@
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
@@ -69,8 +199,24 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/codeRepository
+<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/creativeWorkStatus
+<http://schema.org/creativeWorkStatus> rdf:type owl:AnnotationProperty .
+
+
 ###  http://schema.org/domainIncludes
 <http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/funding
+<http://schema.org/funding> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/rangeIncludes
@@ -97,8 +243,40 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
 
 
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
 ###  https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#jsonldSerialization
+<https://w3id.org/widoco/vocab#jsonldSerialization> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#ntSerialization
+<https://w3id.org/widoco/vocab#ntSerialization> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#rdfxmlSerialization
+<https://w3id.org/widoco/vocab#rdfxmlSerialization> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#turtleSerialization
+<https://w3id.org/widoco/vocab#turtleSerialization> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#vocabularyIRI
+<https://w3id.org/widoco/vocab#vocabularyIRI> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#vocabularyLabel
+<https://w3id.org/widoco/vocab#vocabularyLabel> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -603,7 +781,7 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 ###  https://edint.es/def/vehiculos-compartidos#locatedInZone
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> rdf:type owl:ObjectProperty ;
                                                            rdfs:domain :Facility ;
-                                                           rdfs:range <https://edint.es/def/zone#RegulatedZone> ;
+                                                           rdfs:range <https://edint.es/def/zona-regulatoria#RegulatedZone> ;
                                                            rdfs:comment "Relación entre un equipamiento y la zona donde está ubicada."@es ,
                                                                         "Relationship between a municipal facility and the area where it is located."@en ;
                                                            rdfs:label "located in zone"@en ,
@@ -1335,12 +1513,12 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                                                              "Shared vehicle station"@en .
 
 
-###  https://edint.es/def/zone#RegulatedZone
-<https://edint.es/def/zone#RegulatedZone> rdf:type owl:Class ;
-                                          rdfs:comment "Area a la que se aplica una regulacion o normativa particular"@es ,
-                                                       "Area to which a particular regulation or policy applies"@en ;
-                                          rdfs:label "Regulated zone"@en ,
-                                                     "Zona regulatoria"@es .
+###  https://edint.es/def/zona-regulatoria#RegulatedZone
+<https://edint.es/def/zona-regulatoria#RegulatedZone> rdf:type owl:Class ;
+                                                      rdfs:comment "Area a la que se aplica una regulacion o normativa particular"@es ,
+                                                                   "Area to which a particular regulation or policy applies"@en ;
+                                                      rdfs:label "Regulated zone"@en ,
+                                                                 "Zona regulatoria"@es .
 
 
 ###  https://schema.org/Organization
@@ -1501,6 +1679,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                      rdfs:label "Tipo de infracción"@es ,
                                                 "Violation type"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
