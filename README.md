@@ -1,4 +1,4 @@
-# Ontología EDINT de Infraestructura
+# Ontología de Infraestructura (Infrastructure Ontology)
 
 La ontología de Infraestructura representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de vehículos compartidos, entre otros.
 
