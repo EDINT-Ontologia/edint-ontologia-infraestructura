@@ -57,6 +57,8 @@
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Infraestructura</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Infrastructure Ontology</dcterms:title>
+        <rdfs:label xml:lang="es">Infraestructura</rdfs:label>
+        <rdfs:label xml:lang="en">Infrastructure</rdfs:label>
         <vann:preferredNamespacePrefix>edintinf</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/infraestructura#"/>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0"/>
