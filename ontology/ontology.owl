@@ -24,13 +24,14 @@
      xmlns:edintmi="https://edint.es/def/movilidadinteligente#"
      xmlns:esequip="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento#"
      xmlns:edintcat="https://edint.es/def/catastro#"
-     xmlns:edintveh="https://edint.es/def/censovehiculos#"
+     xmlns:edintveh="https://edint.es/def/censo-vehiculos#"
      xmlns:esvehcom="https://edint.es/def/vehiculos-compartidos#"
      xmlns:edinttraf="https://edint.es/def/trafico#"
      xmlns:edintzone="https://edint.es/def/zona-regulatoria#"
      xmlns:esequip-kos="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:widoco="https://w3id.org/widoco/vocab#">    <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
+     xmlns:widoco="https://w3id.org/widoco/vocab#">   
+     <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
         <owl:versionIRI rdf:resource="https://edint.es/def/infraestructura/0.2.1"/>
         <dcterms:creator rdf:parseType="Resource">
             <foaf:name>Daniel Doña</foaf:name>
@@ -638,7 +639,7 @@
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#includesVehicle">
         <rdfs:domain rdf:resource="https://edint.es/def/infraestructura#AccessObservation"/>
-        <rdfs:range rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:range rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="en">Property that connects an observation to the observed vehicle.</rdfs:comment>
         <rdfs:comment xml:lang="es">Propiedad que relaciona una observación con el vehículo observado</rdfs:comment>
         <rdfs:label xml:lang="en">includes vehicle</rdfs:label>
@@ -664,7 +665,7 @@
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#linkedTo">
         <rdfs:domain rdf:resource="https://edint.es/def/infraestructura#Violation"/>
-        <rdfs:range rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:range rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="es">Relación entre una infracción y el vehículo que cometió la infracción.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an infraction and the vehicle that committed the infraction.</rdfs:comment>
         <rdfs:label xml:lang="es">asociado a</rdfs:label>
@@ -1585,9 +1586,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/censovehiculos#Vehicle -->
+    <!-- https://edint.es/def/censo-vehiculos#Vehicle -->
 
-    <owl:Class rdf:about="https://edint.es/def/censovehiculos#Vehicle">
+    <owl:Class rdf:about="https://edint.es/def/censo-vehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/censovehiculos"/>
