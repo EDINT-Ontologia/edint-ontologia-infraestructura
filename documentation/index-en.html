@@ -2,20 +2,34 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for the representation of the municipal infrastructure</title>
-<link rel="stylesheet" href="resources/codemirror.css" media="screen">
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/><link rel="stylesheet" href="resources/codemirror.css" media="screen"/>
 <script src="resources/codemirror.js"></script>
 <script src="resources/matchbrackets.js"></script>
 <script src="resources/turtle.js"></script>
+ <title>EDINT Infrastructure Ontology</title>
+
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://edint.es/def/infraestructura","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://edint.es/def/infraestructura","name":"Ontología para la representación de la infraestructura pública", "headline":"El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura pública de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamoientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.", "datePublished":"Date of release", "version":"v0.2.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Daniel Doña"},{"@type":"Person","name":"Edna Ruckhaus"},{"@type":"Person","name":"Lucía Sánchez"},{"@type":"Person","name":"Socorro Bernardos"},{"@type":"Person","name":"Oscar Corcho"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://edint.es/def/infraestructura#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://edint.es/def/infraestructura#","name":"EDINT Infrastructure Ontology", "headline":"The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of a municipality's infrastructure. This data includes educational centers, cultural and social centers, sports centers, and health centers, as well as on- and off-street parking. Its scope is limited to data that can be used to maintain and access the inventory of municipal facilities and to track their resource consumption (electricity, water, etc.) and to manage mobility (pedestrian access to municipal facilities and vehicle access to parking areas), which are part of the routine functions of local authorities.", "dateReleased":"2026-01-30", "dateModified":"2026-09-09", "version":"0.2.1", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura", "author":[{"@type":"Person","name":"Socorro Bernardos"},{"@type":"Person","name":"Oscar Corcho"},{"@type":"Person","name":"Lucía Sánchez"},{"@type":"Person","name":"Edna Ruckhaus"},{"@type":"Person","name":"Daniel Doña"}]}</script>
 
 <script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/marked@18.0.1/lib/marked.umd.min.js"></script> 
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.14.0/+esm';mermaid.initialize({startOnLoad:false});window.mermaid=mermaid;</script> 
     <script> 
 function loadHash() {
-  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+  jQuery(".markdown").each(function(el){var t=jQuery(this);if(t.find("pre,textarea,script,table,figure").length>0){return;}t.after(marked.parse(t.html())).remove()});
+  if (typeof window.mermaid !== 'undefined') { window.mermaid.run({ querySelector: 'pre code.language-mermaid' }); }
 	var hash = location.hash;
 	if($(hash).offset()!=null){
 	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
@@ -48,12 +62,16 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+      var loads = [];
+      function _ls(sel,url){var d=$.Deferred();$(sel).load(url,function(){d.resolve();});return d.promise();}
+      loads.push(_ls("#abstract","sections/abstract-en.html")); 
+      loads.push(_ls("#introduction","sections/introduction-en.html")); 
+      loads.push(_ls("#nstable","sections/ns-en.html")); 
+      loads.push(_ls("#overview","sections/overview-en.html")); 
+      loads.push(_ls("#description","sections/description-en.html")); 
+      loads.push(_ls("#references","sections/references-en.html")); 
+      loads.push(_ls("#crossref","sections/crossref-en.html")); 
+      $.when.apply($, loads).then(loadHash);
     });
     </script> 
   </head> 
@@ -62,29 +80,39 @@ function loadTOC(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
-<h1>Ontology for the representation of the municipal infrastructure</h1>
-<h2>Release date: 30-01-2026</h2>
+<h1>EDINT Infrastructure Ontology</h1>
+<h2>Release: 2026-01-30</h2>
 
 
 <dl>
+<dt>Modified on: 2026-09-09</dt>
 <dt>This version:</dt>
-<dd><a href="https://edint.es/def/infraestructura">https://edint.es/def/infraestructura</a></dd>
+<dd><a href="https://edint.es/def/infraestructura/0.2.1">https://edint.es/def/infraestructura/0.2.1</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://edint.es/def/infraestructura">https://edint.es/def/infraestructura</a></dd>
-<dt>Prior version:</dt>
-<dd><a href="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2">https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0">https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0</a></dd>
 <dt>Revision:</dt>
-<dd>v0.2.1</dd>
+<dd>0.2.1</dd>
+<dt>Issued on:</dt>
+<dd>2026-09-09</dd>
 <dt>Authors:</dt>
-<dd>Daniel Doña, (<a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a>)</dd><dd>Edna Ruckhaus</dd><dd>Lucía Sánchez</dd><dd>Socorro Bernardos</dd><dd>Oscar Corcho</dd>
+<dd>Socorro Bernardos, <a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a></dd><dd>Oscar Corcho, <a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a></dd><dd>Lucía Sánchez, <a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a></dd><dd>Edna Ruckhaus, <a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a></dd><dd>Daniel Doña, <a href="https://oeg.fi.upm.es/">Ontology Engineering Group, UPM</a></dd>
 
 <dt>Publisher:</dt>
 <dd><a href="https://www.femp.es/">FEMP</a></dd>
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
-<dt>Browse SKOS concept schemes:</dt>
-<dd><span><a href="kos/skos-en.html" target="_blank"> <img src="https://img.shields.io/badge/Format-HTML-blue.svg" alt="SKOS" /></a></span></dd>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Ontology for the representation of the municipal infrastructure. EDINT. Revision: v0.2.1.</dd>
+<dt>Reuses:</dt>
+<dd><a href="http://www.geonames.org/ontology">GeoNames</a></dd><dd><a href="http://www.opengis.net/ont/geosparql">GeoSPARQL</a></dd><dd><a href="http://www.opengis.net/ont/sf">OGC Simple Features</a></dd><dd><a href="http://www.w3.org/2006/time">OWL-Time</a></dd><dd><a href="https://edint.es/def/aparcamiento">Parking (edintapar)</a></dd><dd><a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal">Postal Address (esdir)</a></dd><dd><a href="http://qudt.org/schema/qudt">QUDT</a></dd><dd><a href="https://edint.es/def/zona-regulatoria">Regulated Zones (edintzone)</a></dd><dd><a href="http://www.w3.org/ns/sosa">SOSA/SSN</a></dd><dd><a href="https://edint.es/def/vehiculos-compartidos">Shared Vehicles (edintvehcom)</a></dd><dd><a href="https://edint.es/def/catastro">Spanish Cadastre (edintcat)</a></dd><dd><a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero">Street catalogue (escjr)</a></dd><dd><a href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio">Territory (esadm)</a></dd><dd><a href="https://edint.es/def/trafico">Traffic (edinttraf)</a></dd><dd><a href="https://edint.es/def/censovehiculos">Vehicle Census (edintveh)</a></dd><dd><a href="https://datos.ign.es/def/geo_core">geo_core (IGN)</a></dd>
+<dt>Funding:</dt>
+<dd>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Tesauros SKOS:</dt>
+<dd><span><a href="kos/skos-es.html" target="_blank"> <img src="https://img.shields.io/badge/Format-HTML-blue.svg" alt="skos-es" /></a></span> <span><a href="kos/skos-en.html" target="_blank"> <img src="https://img.shields.io/badge/Format-HTML-blue.svg" alt="skos-en" /></a></span> </dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>EDINT Infrastructure Ontology. EDINT. Revision: v0.2.1.</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura">https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura</a></dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -95,10 +123,12 @@ function loadTOC(){
 </div>
 </div>     <div id="abstract"></div>
 <div id="toc"></div>     <div id="introduction"></div>
+	  <div id="nstable"></div>
      <div id="overview"></div>
      <div id="description"></div>
      <div id="crossref"></div>
      <div id="references"></div>
+     <div id="changelog"></div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
