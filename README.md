@@ -1,4 +1,4 @@
-# Ontología de Infraestructura (Infrastructure Ontology)
+# Ontología EDINT de Infraestructura
 
 [![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/infraestructura)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintinf-informational)
