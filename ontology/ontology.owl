@@ -61,6 +61,7 @@
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/infraestructura#"/>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <owl:versionInfo>0.2.1</owl:versionInfo>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-30</dcterms:created>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-09</dcterms:issued>
