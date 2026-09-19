@@ -278,7 +278,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://edint.es/def/infraestructura#AccessSensor"/>
                     <rdf:Description rdf:about="https://edint.es/def/infraestructura#CountingSensor"/>
-                    <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+                    <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -774,11 +774,11 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceInSection -->
+    <!-- https://edint.es/def/trafico#incidentInSection -->
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidenceInSection">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidentInSection">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="https://edint.es/def/trafico#StreetSection"/>
         <rdfs:comment xml:lang="es">Relación de la Incidencia con el Tramo donde se produce la misma.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship of the Incidence with the Section, where it happens.</rdfs:comment>
@@ -789,18 +789,18 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceType -->
+    <!-- https://edint.es/def/trafico#incidentType -->
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidenceType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidentType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidenceType"/>
+                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidentType"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -919,7 +919,7 @@
     <!-- http://schema.org/endDate -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/endDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora de finalización del elemento (en formato de fecha ISO 8601).</rdfs:comment>
         <rdfs:comment xml:lang="en">The end date and time of the item (in ISO 8601 date format).</rdfs:comment>
@@ -947,7 +947,7 @@
     <!-- http://schema.org/startDate -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/startDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora de inicio del elemento (en formato de fecha ISO 8601).</rdfs:comment>
         <rdfs:comment xml:lang="en">The start date and time of the item (in ISO 8601 date format).</rdfs:comment>
@@ -1104,7 +1104,7 @@
     <!-- https://edint.es/def/trafico#expectedEndDate -->
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#expectedEndDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora prevista de
 	finalización de una incidencia planificada (en formato fecha ISO 8601)</rdfs:comment>
@@ -1120,7 +1120,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#inService">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite conocer si el dispositivo funciona o no.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing whether the device is working or not.</rdfs:comment>
@@ -1131,10 +1131,10 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceAttachment -->
+    <!-- https://edint.es/def/trafico#incidentAttachment -->
 
-    <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#incidenceAttachment">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#incidentAttachment">
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">A document where more information about the incidence can be found.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un documento donde se puede consultar la información sobre la incidencia.</rdfs:comment>
@@ -1149,7 +1149,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#isRecurrent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite describir si la incidencia es recurrente o no.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing whether there is a recurrence in the incidence or not</rdfs:comment>
@@ -1163,7 +1163,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#measurementFrequency">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite conocer la frecuencia de medición del dispositivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to know the measurement frequency of the device.</rdfs:comment>
@@ -1179,7 +1179,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://edint.es/def/trafico#Incidence"/>
+                    <rdf:Description rdf:about="https://edint.es/def/trafico#Incident"/>
                     <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficEquipment"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1198,7 +1198,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#recurrence">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite describir la recurrencia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing the recurrence</rdfs:comment>
@@ -1728,9 +1728,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#Incidence -->
+    <!-- https://edint.es/def/trafico#Incident -->
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#Incidence">
+    <owl:Class rdf:about="https://edint.es/def/trafico#Incident">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <owl:disjointWith rdf:resource="https://edint.es/def/trafico#StreetSection"/>
         <owl:disjointWith rdf:resource="https://edint.es/def/trafico#TrafficEquipment"/>
@@ -1743,10 +1743,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#PlannedIncidence -->
+    <!-- https://edint.es/def/trafico#PlannedIncident -->
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#PlannedIncidence">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:Class rdf:about="https://edint.es/def/trafico#PlannedIncident">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:comment xml:lang="es">Incidencia planificada, puede ser recurrente o no</rdfs:comment>
         <rdfs:comment xml:lang="en">Planned traffic incidence</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
@@ -1783,9 +1783,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#TrafficMeasuringDevice -->
+    <!-- https://edint.es/def/trafico#TrafficMeasurementDevice -->
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#TrafficMeasuringDevice">
+    <owl:Class rdf:about="https://edint.es/def/trafico#TrafficMeasurementDevice">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#TrafficEquipment"/>
         <rdfs:comment xml:lang="es">Dispositivo de Medición de Tráfico, tipo de equipo de tráfico que realiza mediciones.</rdfs:comment>
@@ -1823,10 +1823,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#UnplannedIncidence -->
+    <!-- https://edint.es/def/trafico#UnplannedIncident -->
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#UnplannedIncidence">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:Class rdf:about="https://edint.es/def/trafico#UnplannedIncident">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:comment xml:lang="es">Incidencia no planificada del tráfico de una ciudad</rdfs:comment>
         <rdfs:comment xml:lang="en">Unplanned traffic incidence</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
@@ -2003,9 +2003,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#velocidad -->
+    <!-- https://edint.es/def/trafico#speed -->
 
-    <owl:NamedIndividual rdf:about="https://edint.es/def/trafico#velocidad">
+    <owl:NamedIndividual rdf:about="https://edint.es/def/trafico#speed">
         <rdf:type rdf:resource="https://edint.es/def/trafico#TrafficProperty"/>
         <rdfs:comment xml:lang="en">Directly measured speed with detectors</rdfs:comment>
         <rdfs:comment xml:lang="es">Velocidad medida directa con detectores</rdfs:comment>
@@ -2015,9 +2015,9 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/kos/IncidenceType -->
+    <!-- https://edint.es/kos/IncidentType -->
 
-    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidenceType">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidentType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">tipo de incidencia</rdfs:label>
         <rdfs:label xml:lang="en">type of incidence</rdfs:label>

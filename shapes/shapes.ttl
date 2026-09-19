@@ -280,7 +280,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
     sh:property <https://astrea.linkeddata.es/shapes#0e844086fdb25cbf9d4ac00c05ac0ae1>,
         <https://astrea.linkeddata.es/shapes#3785ae40f091497ae1f8d118e56e95d4>,
         <https://astrea.linkeddata.es/shapes#e4f8f8b501b2ca66a414aa9bc2ee33cf> ;
-    sh:targetClass edinttraf:TrafficMeasuringDevice .
+    sh:targetClass edinttraf:TrafficMeasurementDevice .
 
 <https://astrea.linkeddata.es/shapes#3398ed0391751bb3a09e0aed51fffdb6> a sh:NodeShape ;
     rdfs:label "Cadastral property"@en,
@@ -501,7 +501,7 @@ Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad g
     sh:name "Unplanned incidence"@en,
         "Incidencia no planificada"@es ;
     sh:nodeKind sh:IRI ;
-    sh:targetClass edinttraf:UnplannedIncidence .
+    sh:targetClass edinttraf:UnplannedIncident .
 
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67> a sh:NodeShape ;
     rdfs:label "Geometry"@en ;
@@ -625,7 +625,7 @@ Por esta razón, se utiliza geonames:R.ST como valor principal de la propiedad g
         <https://astrea.linkeddata.es/shapes#88d50e1fd6d06812076022366fd5092e>,
         <https://astrea.linkeddata.es/shapes#91a4b7ea530843a4e68976e03536b0cb>,
         <https://astrea.linkeddata.es/shapes#d935c1c52c1b4e6a4eb06ad308910bb1> ;
-    sh:targetClass edinttraf:Incidence .
+    sh:targetClass edinttraf:Incident .
 
 <https://astrea.linkeddata.es/shapes#c31152868dfd36bf465d410b6884b764> a sh:NodeShape ;
     rdfs:label "Infrastructure element"@en,
@@ -816,7 +816,7 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     sh:property <https://astrea.linkeddata.es/shapes#bc319de1f2e369bf3299bf2d999e8f12>,
         <https://astrea.linkeddata.es/shapes#c5d521f278f928c3b426634a9bca91bf>,
         <https://astrea.linkeddata.es/shapes#d7d4289d2468461fa170eb3466c479d5> ;
-    sh:targetClass edinttraf:PlannedIncidence .
+    sh:targetClass edinttraf:PlannedIncident .
 
 <https://astrea.linkeddata.es/shapes#fb9875e11739e5b48ce7f56b25dacedd> a sh:NodeShape ;
     rdfs:label "Traffic equipment"@en,
@@ -1272,7 +1272,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
     sh:maxCount 1 ;
     sh:name "incidence in section"@en,
         "incidencia en tramo"@es ;
-    sh:path edinttraf:incidenceInSection .
+    sh:path edinttraf:incidentInSection .
 
 <https://astrea.linkeddata.es/shapes#955adc73edeafcb26458f931709cb993> sh:class edinttraf:StreetSection .
 
@@ -1395,7 +1395,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
     sh:name "attached to incidence"@en,
         "adjunto a la incidencia"@es ;
     sh:nodeKind sh:Literal ;
-    sh:path edinttraf:incidenceAttachment ;
+    sh:path edinttraf:incidentAttachment ;
     sh:pattern "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
 
 <https://astrea.linkeddata.es/shapes#de7f46aa7197553c2a5de8952fdfe0b8> a sh:PropertyShape ;
