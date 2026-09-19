@@ -1,29 +1,34 @@
-# Ontología de Infraestructura (Infrastructure Ontology)
+# Ontología EDINT de Infraestructura
+
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/infraestructura)
+![Prefijo](https://img.shields.io/badge/prefijo-edintinf-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
 La ontología de Infraestructura representa los datos de las instalaciones (equipamientos) de un municipio. Estos incluyen centros educativos, sociales y culturales, deportivos, así como aparcamientos dentro y fuera de la vía pública y estaciones de vehículos compartidos, entre otros.
 
 
-# Propósito y alcance de la ontología (Purpose and scope of the ontology)
+## Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
-El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todos los aparcamientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales.
 
-# Prefijo y espacio de nombres (Prefix and namespace)
-El prefijo de la ontología de Infraestructura es: edintinf y es publicada en el espacio de nombres: [https:edint.es/def/infraestructura#](https:edint.es/def/infraestructura#) 
+## Prefijo y espacio de nombres (Prefix and namespace)
 
-# Modelo conceptual (Ontology conceptualization)
-## Diagrama General
+El prefijo de esta ontología es `edintinf` y se publica bajo el espacio de nombres https://edint.es/def/infraestructura#
+
+## Modelo conceptual (Ontology conceptualization)
+### Diagrama General
 ![Modelo conceptual general](diagrams/diagrama-conceptual-General.png)
 
-## Diagrama sensores de acceso
+### Diagrama sensores de acceso
 ![Modelo conceptual general](diagrams/diagrama-conceptual-AccessSensors.png)
 
-## Diagrama sensores de conteo
+### Diagrama sensores de conteo
 ![Modelo conceptual general](diagrams/diagrama-conceptual-CountingSensors.png)
 
-## Diagrama sensores de tráfico
+### Diagrama sensores de tráfico
 ![Modelo conceptual general](diagrams/diagrama-conceptual-TrafficSensors.png)
 
-# Estructura del repositorio (Repository structure)
+## Estructura del repositorio (Repository structure)
 
 El repositorio contiene los siguientes directorios:
 
@@ -37,11 +42,11 @@ El repositorio contiene los siguientes directorios:
 | **requirements/** | Contains all documents used to define the ontology’s requirements: data example, competency questions, functional requirements, use cases, etc. |
 | **shapes/** | Contains the SHACL shapes used to define and validate ontology constraints. |
 
-# Mantenimiento y evolución (Maintenance and evolution)
+## Mantenimiento y evolución (Maintenance and evolution)
 
 Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
-# Financiación (Funding)
+## Financiación (Funding)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es)).
 
