@@ -34,4 +34,4 @@ WHERE {
 }
 GROUP BY ?admin ?adminLabel
 HAVING ( COUNT(DISTINCT ?element) < 5 )     # ← SUSTITUIR n
-ORDER BY ?numElements ASC ?adminLabel
+ORDER BY ?numElements ASC(?adminLabel)

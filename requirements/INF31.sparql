@@ -1,5 +1,5 @@
 
-INF31: ¿En qué fecha y hora se registró un acceso determinado?
+# INF31: ¿En qué fecha y hora se registró un acceso determinado?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>

@@ -1591,7 +1591,7 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     <owl:Class rdf:about="https://edint.es/def/censo-vehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://edint.es/def/censovehiculos"/>
+        <rdfs:isDefinedBy rdf:resource="https://edint.es/def/censo-vehiculos"/>
         <rdfs:label xml:lang="en">Vehicle</rdfs:label>
         <rdfs:label xml:lang="es">Vehículo</rdfs:label>
     </owl:Class>
@@ -2174,7 +2174,7 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
         </widoco:vocabularyLabel>
         <widoco:vocabularyLabel>
             <rdf:Description>
-                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/censo-vehiculos"/>
                 <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
                 <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
             </rdf:Description>
