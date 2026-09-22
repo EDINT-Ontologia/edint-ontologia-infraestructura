@@ -4,7 +4,7 @@
 @prefix edintregularact: <https://edint.es/kos/RegularActivity/>.
 @prefix schema: <http://www.owl-ontologies.com/schema#>.
 @prefix edintmanagementrole: <https://edint.es/kos/ManagementRoleType/>.
-@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/>.
+@prefix edintkos: <https://edint.es/kos/InfrastructureType/>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#>.
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
@@ -45,7 +45,7 @@ map:rules_000 schema:contributor map:person_000 ;
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{pk}";
+		rr:template "http://example.org/recurso/equipamiento-municipal/{pk}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -94,7 +94,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+			rr:template "http://example.org/recurso/equipamiento-municipal/locations/{pk}";
 			rr:termType rr:IRI
 		];
 	];
@@ -105,7 +105,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/{barrio}";
+			rr:template "http://example.org/recurso/sector-publico/territorio/barrio/{barrio}";
 			rr:termType rr:IRI
 		];
 	];
@@ -116,7 +116,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+			rr:template "http://example.org/recurso/punto-de-observacion/{punto_observ_id}";
 			rr:termType rr:IRI
 		];
 	];
@@ -127,7 +127,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/infraestructura/tipo-infraestructura/{tipo}";
+			rr:template "https://edint.es/kos/InfrastructureType/{tipo}";
 			rr:termType rr:IRI
 		];
 	];
@@ -138,7 +138,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{pk}";
+			rr:template "http://example.org/recurso/organizacion/{pk}";
 			rr:termType rr:IRI
 		];
 	];
@@ -149,7 +149,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/{codigo_postal}";
+			rr:template "http://example.org/recurso/direccion-postal/{codigo_postal}";
 			rr:termType rr:IRI
 		];
 	];
@@ -192,7 +192,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{parent_equipamiento_municipal_id}";
+			rr:template "http://example.org/recurso/equipamiento-municipal/{parent_equipamiento_municipal_id}";
 			rr:termType rr:IRI
 		];
 	].
@@ -208,7 +208,7 @@ map:rules_000 schema:contributor map:person_000 ;
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+		rr:template "http://example.org/recurso/equipamiento-municipal/locations/{pk}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -253,7 +253,7 @@ map:rules_000 schema:contributor map:person_000 ;
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+		rr:template "http://example.org/recurso/punto-de-observacion/{punto_observ_id}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -277,7 +277,7 @@ map:rules_000 schema:contributor map:person_000 ;
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/{codigo_postal}";
+		rr:template "http://example.org/recurso/direccion-postal/{codigo_postal}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -301,7 +301,7 @@ map:rules_000 schema:contributor map:person_000 ;
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/rol-de-gestion/{rol}";
+		rr:template "http://example.org/recurso/rol-de-gestion/{rol}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -320,7 +320,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{company}";
+			rr:template "http://example.org/recurso/organizacion/{company}";
 			rr:termType rr:IRI
 		];
 	];
@@ -342,7 +342,7 @@ map:rules_000 schema:contributor map:person_000 ;
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{equipamiento_municipal}";
+			rr:template "http://example.org/recurso/equipamiento-municipal/{equipamiento_municipal}";
 			rr:termType rr:IRI
 		];
 	].
