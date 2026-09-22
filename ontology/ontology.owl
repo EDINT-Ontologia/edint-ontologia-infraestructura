@@ -21,14 +21,11 @@
      xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:edintmi="https://edint.es/def/movilidadinteligente#"
-     xmlns:esequip="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento#"
      xmlns:edintcat="https://edint.es/def/catastro#"
      xmlns:edintveh="https://edint.es/def/censo-vehiculos#"
      xmlns:esvehcom="https://edint.es/def/vehiculos-compartidos#"
      xmlns:edinttraf="https://edint.es/def/trafico#"
      xmlns:edintzone="https://edint.es/def/zona-regulatoria#"
-     xmlns:esequip-kos="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/equipamiento/tipo-equipamiento/"
      xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:widoco="https://w3id.org/widoco/vocab#">   
      <owl:Ontology rdf:about="https://edint.es/def/infraestructura">
