@@ -1,21 +1,113 @@
 <https://edint.es/def/infraestructura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/infraestructura> .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/created> "2026-01-30" .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> "Daniel Doña" .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> "Edna Ruckhaus" .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> "Lucía Sánchez" .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> "Oscar Corcho" .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> "Socorro Bernardos" .
+<https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/infraestructura/0.2.1> .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/abstract> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales de la infraestructura de un municipio que pueden incluir tanto centros educativos, centros culturales y sociales, centros de salud así como todo los aparcamientos dentro y fuera de la vía pública. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de mantener y acceder al inventario de los equipamientos municipales y conocer su consumo de recursos (electricidad, agua, etc.), de gestionar el mantenimiento urbano, el de la gestión de la movilidad (accesos a las instalaciones municipales y accesos de vehículos a los aparcamientos), que son parte de las funciones habituales de las entidades locales."@es .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/abstract> "The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of a municipality's infrastructure. This data includes educational centers, cultural and social centers, sports centers, and health centers, as well as on- and off-street parking. Its scope is limited to data that can be used to maintain and access the inventory of municipal facilities and to track their resource consumption (electricity, water, etc.) and to manage mobility (pedestrian access to municipal facilities and vehicle access to parking areas), which are part of the routine functions of local authorities."@en .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Infrastructure Ontology. EDINT. Revision: v0.2.1."@en .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Infraestructura. EDINT. Revisión: v0.2.1."@es .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/created> "2026-01-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Socorro Bernardos" .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> _:genid4 .
+_:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/creator> _:genid5 .
+_:genid5 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
+_:genid5 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
 <https://edint.es/def/infraestructura> <http://purl.org/dc/terms/description> "La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros."@es .
 <https://edint.es/def/infraestructura> <http://purl.org/dc/terms/description> "The infrastructure ontology describes all concepts related to a municipality's public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others."@en .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/issued> "2026-01-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/issued> "2026-09-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://edint.es/def/infraestructura> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "Ontología de Infraestructura"@es .
-<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "The Infrastructure Ontology"@en .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/modified> "2026-09-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/publisher> _:genid6 .
+_:genid6 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
+_:genid6 <http://xmlns.com/foaf/0.1/name> "FEMP" .
+_:genid6 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "EDINT Infrastructure Ontology"@en .
+<https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "Ontología EDINT de Infraestructura"@es .
 <https://edint.es/def/infraestructura> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintinf" .
 <https://edint.es/def/infraestructura> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/infraestructura#> .
-<https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#priorVersion> "0.2.0" .
+<https://edint.es/def/infraestructura> <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura"@es .
+<https://edint.es/def/infraestructura> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure"@en .
+<https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0> .
 <https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.1" .
+<https://edint.es/def/infraestructura> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura> .
+<https://edint.es/def/infraestructura> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/infraestructura> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid7 .
+_:genid7 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://qudt.org/schema/qudt> .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@es .
+_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid8 .
+_:genid8 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.geonames.org/ontology> .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "GeoNames"@es .
+_:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "GeoNames"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid9 .
+_:genid9 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+_:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address (esdir)"@en .
+_:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid10 .
+_:genid10 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "Street catalogue (escjr)"@en .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "Callejero (escjr)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid11 .
+_:genid11 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid12 .
+_:genid12 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/geosparql> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@es .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "GeoSPARQL"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid13 .
+_:genid13 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.opengis.net/ont/sf> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "OGC Simple Features"@es .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "OGC Simple Features"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid14 .
+_:genid14 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/2006/time> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@es .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "OWL-Time"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid15 .
+_:genid15 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/ns/sosa> .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#label> "SOSA/SSN"@es .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#label> "SOSA/SSN"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid16 .
+_:genid16 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://datos.ign.es/def/geo_core> .
+_:genid16 <http://www.w3.org/2000/01/rdf-schema#label> "geo_core (IGN)"@es .
+_:genid16 <http://www.w3.org/2000/01/rdf-schema#label> "geo_core (IGN)"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid17 .
+_:genid17 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/aparcamiento> .
+_:genid17 <http://www.w3.org/2000/01/rdf-schema#label> "Parking (edintapar)"@en .
+_:genid17 <http://www.w3.org/2000/01/rdf-schema#label> "Aparcamiento (edintapar)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid18 .
+_:genid18 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/catastro> .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#label> "Spanish Cadastre (edintcat)"@en .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#label> "Catastro Español (edintcat)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid19 .
+_:genid19 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/censovehiculos> .
+_:genid19 <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Census (edintveh)"@en .
+_:genid19 <http://www.w3.org/2000/01/rdf-schema#label> "Censo de Vehículos (edintveh)"@es .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid20 .
+_:genid20 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/trafico> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Tráfico (edinttraf)"@es .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Traffic (edinttraf)"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid21 .
+_:genid21 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/vehiculos-compartidos> .
+_:genid21 <http://www.w3.org/2000/01/rdf-schema#label> "Vehículos Compartidos (edintvehcom)"@es .
+_:genid21 <http://www.w3.org/2000/01/rdf-schema#label> "Shared Vehicles (edintvehcom)"@en .
+<https://edint.es/def/infraestructura> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid22 .
+_:genid22 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/zona-regulatoria> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Zonas Regulatorias (edintzone)"@es .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Regulated Zones (edintzone)"@en .
 # 
 # 
 # #################################################################
@@ -27,6 +119,12 @@
 # 
 # http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -45,6 +143,12 @@
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -76,8 +180,50 @@
 # http://www.w3.org/2004/02/skos/core#note
 <http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#jsonldSerialization
+<https://w3id.org/widoco/vocab#jsonldSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#ntSerialization
+<https://w3id.org/widoco/vocab#ntSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#rdfxmlSerialization
+<https://w3id.org/widoco/vocab#rdfxmlSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#turtleSerialization
+<https://w3id.org/widoco/vocab#turtleSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyIRI
+<https://w3id.org/widoco/vocab#vocabularyIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#vocabularyLabel
+<https://w3id.org/widoco/vocab#vocabularyLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -128,18 +274,18 @@
 # 
 # http://schema.org/manufacturer
 <http://schema.org/manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#TrafficMeasuringDevice> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#CountingSensor> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#AccessSensor> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#TrafficMeasuringDevice> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#CountingSensor> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#AccessSensor> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Organization> .
 <http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "El fabricante del producto."@es .
 <http://schema.org/manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "The manufacturer of the product."@en .
@@ -249,10 +395,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/wasObservedBy> .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservableProperty> .
-<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
-<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> .
-<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Property> .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/obs/> .
@@ -260,6 +402,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2004/02/skos/core#definition> "\n  relation from an Observation or ObservationCollection to the property that was observed\n  "@en .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
 <http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2004/02/skos/core#note> "\n  'observed property' covers the concepts referred to in [VIM] as 'measurand' (quantitative values) and 'examinand' (categorical and nominal values — [VIM4]), as well as complex and structured properties whose values may be represented as lists, vectors, arrays, rasters, geometries, etc. More specific terms are used in other contexts for related concepts, such as 'analyte' (chemistry) and 'determinand' (water quality).\n  "@en .
+<http://www.w3.org/ns/sosa/observedProperty> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/observedProperty> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/observedProperty> <https://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <https://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Property> .
 # 
 # http://www.w3.org/ns/sosa/observes
 <http://www.w3.org/ns/sosa/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -274,10 +420,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
-<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
-<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "El momento en que el resultado de una observación, actuación o muestreo se aplica a la entidad de interés. No necesariamente coincide con el momento del resultado. Puede ser un intervalo, un instante o alguna otra entidad temporal compuesta."@es .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
@@ -285,6 +427,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "momento del fenómeno"@es .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "phenomenon time"@en .
 <http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2004/02/skos/core#definition> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en .
+<http://www.w3.org/ns/sosa/phenomenonTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 # 
 # http://www.w3.org/ns/sosa/wasObservedBy
 <http://www.w3.org/ns/sosa/wasObservedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -292,36 +438,36 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://edint.es/def/infraestructura#belongsTo
 <https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#ObservationPoint> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#InfrastructureElement> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#ObservationPoint> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/infraestructura#InfrastructureElement> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un elemento de infraestructura y la división administrativa a la cual pertenece, incluido un Barrio."@es .
 <https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an infrastructure element and the administrative division to which it belongs, including a neighborhood."@en .
 <https://edint.es/def/infraestructura#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
@@ -365,18 +511,18 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://edint.es/def/infraestructura#hasRoleType
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#ManagementRole> .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RoleType> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid37 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RoleType> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es .
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role and the taxonomy of management roles."@en .
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "has role type"@en .
@@ -385,18 +531,18 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://edint.es/def/infraestructura#hasViolationType
 <https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Violation> .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/ViolationType> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/ViolationType> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."@es .
 <https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relate an Infraction to a concept from the taxonomy of infraction types."@en .
 <https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "has violation type"@en .
@@ -441,18 +587,18 @@ _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://edint.es/def/infraestructura#offersRegularActivity
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Facility> .
-<https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid23 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
-_:genid25 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RegularActivity> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid45 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RegularActivity> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Actividad que se lleva a cabo regularmente en el equipamiento."@es .
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity that is carried out regularly in a facility."@en .
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "offers regular activity"@en .
@@ -470,18 +616,18 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://edint.es/def/infraestructura#providesPublicService
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Facility> .
-<https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#range> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/PublicService> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#range> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid49 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/PublicService> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "Public service provided by a facility, for example internet via wifi."@en .
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "Servicio público prestado por un equipamiento, por ejemplo internet a través de una wifi."@es .
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/2000/01/rdf-schema#label> "presta servicio público"@es .
@@ -522,18 +668,18 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/trafico#Incidence> .
-<https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid31 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/IncidenceType> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid53 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/IncidenceType> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de incidencia, pueden ser planificadas o no planificadas."@es .
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of incidence, planned or unplanned"@en .
 <https://edint.es/def/trafico#incidenceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://edint.es/def/trafico> .
@@ -566,18 +712,18 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/trafico#TrafficEquipment> .
-<https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
-_:genid37 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/TrafficEquipmentType> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid57 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/TrafficEquipmentType> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de equipo de tráfico, equipos de control y dispositivos de medición"@es .
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of traffic equipment, monitor equipment or measuring devices"@en .
 <https://edint.es/def/trafico#trafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://edint.es/def/trafico> .
@@ -587,7 +733,7 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://edint.es/def/vehiculos-compartidos#locatedInZone
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Facility> .
-<https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://edint.es/def/zone#RegulatedZone> .
+<https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://edint.es/def/zona-regulatoria#RegulatedZone> .
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre un equipamiento y la zona donde está ubicada."@es .
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a municipal facility and the area where it is located."@en .
 <https://edint.es/def/vehiculos-compartidos#locatedInZone> <http://www.w3.org/2000/01/rdf-schema#label> "located in zone"@en .
@@ -661,30 +807,30 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # http://www.w3.org/ns/sosa/hasSimpleResult
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
-<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
-<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The simple value of an Observation or Actuation or act of Sampling."@en .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/common/> .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#definition> "The simple value of an Observation or Actuation or act of Sampling."@en .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#example> "For instance, the values 23 or true."@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 # 
 # http://www.w3.org/ns/sosa/resultTime
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.w3.org/ns/sosa/resultTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
-<http://www.w3.org/ns/sosa/resultTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
-<http://www.w3.org/ns/sosa/resultTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
-<http://www.w3.org/ns/sosa/resultTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/common/> .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#label> "result time"@en .
 <http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2004/02/skos/core#definition> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en .
+<http://www.w3.org/ns/sosa/resultTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/resultTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/resultTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/resultTime> <https://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 # 
 # https://datos.ign.es/def/geo_core#xETRS89
 <https://datos.ign.es/def/geo_core#xETRS89> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -805,15 +951,15 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://edint.es/def/trafico#numDirections
 <https://edint.es/def/trafico#numDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://edint.es/def/trafico#numDirections> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#TrafficEquipment> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#Incidence> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/trafico#numDirections> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#unionOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#TrafficEquipment> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://edint.es/def/trafico#Incidence> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://edint.es/def/trafico#numDirections> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://edint.es/def/trafico#numDirections> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of directions of traffic"@en .
 <https://edint.es/def/trafico#numDirections> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de sentidos de circulación"@es .
@@ -873,10 +1019,10 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Concept> .
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Quantifiable> .
-<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/hasUnit> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/hasUnit> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> .
 <http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity value" .
@@ -943,14 +1089,14 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Feature> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureClass> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R.ST> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureCode> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureClass> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#hasValue> <http://www.geonames.org/ontology#R.ST> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.geonames.org/ontology#featureCode> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://purl.org/dc/terms/issued> "2013-03-28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#comment> "Vía de comunicación construida para la circulación. \nEn su definición según el modelo de direcciones de la Administración General del Estado, Incluye calles, carreteras de todo tipo, caminos, vías de agua, pantalanes, etc. Asimismo, incluye la pseudovía., es decir todo aquello que complementa o sustituye a la vía.\nEn nuestro caso, este término se utiliza para hacer referencia a las vías urbanas.\n\nPor esta razón, se utiliza geonames:R.ST como valor principal de la propiedad geonames:featureCode, dejando de lado otras opciones como R.PRMN (promenade), R.TRL (trail). Quizás en el futuro haya que relajar un poco esta opción, sobre todo, por ejemplo, para ciudades con costa y paseo marítimo."@es .
 <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero> .
@@ -1012,15 +1158,15 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.w3.org/2006/time#TemporalEntity
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#unionOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Interval> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#unionOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Interval> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2006/time#Instant> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal interval or instant."@en .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Un intervalo temporal o un instante."@es .
@@ -1253,12 +1399,12 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Estación de vehículos compartidos"@es .
 <https://edint.es/def/vehiculos-compartidos#SharedVehicleStation> <http://www.w3.org/2000/01/rdf-schema#label> "Shared vehicle station"@en .
 # 
-# https://edint.es/def/zone#RegulatedZone
-<https://edint.es/def/zone#RegulatedZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://edint.es/def/zone#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Area a la que se aplica una regulacion o normativa particular"@es .
-<https://edint.es/def/zone#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Area to which a particular regulation or policy applies"@en .
-<https://edint.es/def/zone#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Regulated zone"@en .
-<https://edint.es/def/zone#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Zona regulatoria"@es .
+# https://edint.es/def/zona-regulatoria#RegulatedZone
+<https://edint.es/def/zona-regulatoria#RegulatedZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/zona-regulatoria#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Area a la que se aplica una regulacion o normativa particular"@es .
+<https://edint.es/def/zona-regulatoria#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Area to which a particular regulation or policy applies"@en .
+<https://edint.es/def/zona-regulatoria#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Regulated zone"@en .
+<https://edint.es/def/zona-regulatoria#RegulatedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Zona regulatoria"@es .
 # 
 # https://schema.org/Organization
 <https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1404,5 +1550,16 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/kos/ViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <https://edint.es/kos/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de infracción"@es .
 <https://edint.es/kos/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Violation type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://oeg.fi.upm.es/> <http://xmlns.com/foaf/0.1/name> "Ontology Engineering Group, UPM" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
