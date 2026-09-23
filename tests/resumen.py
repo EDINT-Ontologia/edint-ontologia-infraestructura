@@ -36,11 +36,20 @@ def leer_resultados(xml: str) -> tuple[list[str], dict, dict]:
     return orden, filas, fallos
 
 
+def _sha_del_evento() -> str:
+    ruta = os.environ.get("GITHUB_EVENT_PATH")
+    if not ruta or not Path(ruta).exists():
+        return ""
+    evento = json.loads(Path(ruta).read_text())
+    return ((evento.get("pull_request") or {}).get("head") or {}).get("sha", "")
+
+
 def markdown(orden: list[str], filas: dict, fallos: dict) -> str:
     total = {k: sum(d[k] for d in filas.values()) for k in ("ok", "fail", "skip")}
-    lineas = [MARCADOR, "## Resultados verify", "",
-              f"Código: {os.environ.get('GITHUB_SHA', '')[:7]} · "
-              f"commit: {os.environ.get('GITHUB_HEAD_SHA', '')[:7] or '-'}", "",
+    sha = (os.environ.get("GITHUB_SHA") or "")[:7]
+    sha_pr = _sha_del_evento()[:7]
+    referencia = f"commit {sha}" + (f" · PR {sha_pr}" if sha_pr else "")
+    lineas = [MARCADOR, "## Resultados verify", "", referencia, "",
               "| Dimensión | Pasados | Fallos | Omitidos |", "|---|---:|---:|---:|"]
     for mod in orden:
         d = filas[mod]
