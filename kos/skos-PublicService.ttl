@@ -85,13 +85,11 @@ edintpublicservice:minorsurgery a skos:Concept;
   skos:inScheme edintkos:HealthCenterService;
   skos:broader edintpublicservice:healthcenterservice;
   skos:prefLabel "Fisioterapia y rehabilitación"@es ;
-  skos:prefLabel "Physiotherapy and rehabilitation"@en . 
+  skos:prefLabel "Physiotherapy and rehabilitation"@en .
 
-
-
-
-
-
-
-
+edintkos:HealthCenterService a skos:ConceptScheme ;
+    rdfs:label "Servicios de centro de salud"@es ;
+    rdfs:label "Health centre services"@en ;
+    dct:title "Esquema de conceptos agrupando los servicios propios de un centro de salud"@es ;
+    dct:title "Concept scheme grouping services provided by a health centre"@en .
 
