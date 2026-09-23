@@ -5,7 +5,7 @@ import pytest
 from rdflib import URIRef
 from rdflib.plugins.sparql import prepareQuery
 
-from util import ROOT, extraer_prefijos, prefijos_usados
+from util import ROOT, extraer_prefijos, prefijos_usados, NS_DEF
 
 
 def ficheros():
@@ -29,7 +29,7 @@ def test_consulta_parsea(path):
 @pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
 def test_terminos_citados_existen(path, grafo_local, slug):
     src = path.read_text(errors="replace")
-    propia = f"https://edint.es/def/{slug}#"
+    propia = f"{NS_DEF}{slug}#"
     prefijos = extraer_prefijos(src)
     mal = []
     for alias in prefijos_usados(src) & set(prefijos):

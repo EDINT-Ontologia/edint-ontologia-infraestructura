@@ -1,13 +1,21 @@
-"""Dimensión: diagramas sin prefijos legacy/fantasma."""
-from util import DIAGRAMA_PREFIJOS_MALOS, ROOT
+"""Dimensión: los prefijos citados en los diagramas existen en el modelo del repo."""
+from util import ROOT, prefijos_declarados_repo, prefijos_usados
+
+# Prefijos estructurales de los formatos XML de diagramas, no del modelo.
+IGNORADOS = {"xml", "mx", "html", "xhtml"}
 
 
-def test_sin_prefijos_malos():
+def test_prefijos_de_diagramas_declarados():
     d = ROOT / "diagrams"
+    if not d.is_dir():
+        return
+    declarados = prefijos_declarados_repo()
     mal = []
-    for p in sorted(d.rglob("*.xml")) if d.is_dir() else []:
-        texto = p.read_text(errors="replace")
-        for pref in DIAGRAMA_PREFIJOS_MALOS:
-            if pref in texto:
-                mal.append(f"{p.name}: {pref}")
-    assert not mal, "prefijos legacy/fantasma en diagramas:\n  " + "\n  ".join(sorted(set(mal)))
+    for p in sorted(d.rglob("*.xml")):
+        usados = prefijos_usados(p.read_text(errors="replace"))
+        for alias in sorted(usados - declarados - IGNORADOS):
+            mal.append(f"{p.name}: {alias}:")
+    assert not mal, (
+        "prefijos de diagrama no declarados en el modelo del repo:\n  "
+        + "\n  ".join(sorted(set(mal)))
+    )

@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from util import ROOT, sniff_parse
+from util import ROOT, TIMEOUT_SHACL_S, sniff_parse
 
 
 def test_ejemplos_conformes(ficheros_shapes, datos_ejemplos):
@@ -23,7 +23,7 @@ def test_ejemplos_conformes(ficheros_shapes, datos_ejemplos):
         "print('CONFORMS' if r[0] else 'VIOLATIONS:'+str(len(set(rg.subjects(RDF.type, VR))))); sys.exit(0)"
     )
     try:
-        out = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, timeout=600).stdout.strip()
+        out = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, timeout=TIMEOUT_SHACL_S).stdout.strip()
         assert out.startswith("CONFORMS"), f"ejemplos no conformes: {out}"
     finally:
         Path(d).unlink(missing_ok=True)

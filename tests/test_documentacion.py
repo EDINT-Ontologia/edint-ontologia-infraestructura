@@ -9,7 +9,7 @@ import pytest
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
-from util import ROOT, sniff_parse
+from util import ROOT, sniff_parse, UMBRAL_SECCION_BYTES
 
 
 def ficheros_del_deploy():
@@ -55,6 +55,6 @@ def test_secciones_es_en_parejadas():
         en = es.with_name(es.name.replace("-es.html", "-en.html"))
         if not en.exists():
             mal.append(f"sin pareja -en: {es.name}")
-        elif en.stat().st_size < 500 or es.stat().st_size < 500:
+        elif en.stat().st_size < UMBRAL_SECCION_BYTES or es.stat().st_size < UMBRAL_SECCION_BYTES:
             mal.append(f"pareja casi vacía: {es.name} ({es.stat().st_size}B) / {en.name} ({en.stat().st_size}B)")
     assert not mal, "\n  ".join(mal)

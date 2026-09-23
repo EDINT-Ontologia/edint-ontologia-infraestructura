@@ -11,7 +11,7 @@ CONCEPT = URIRef(SKOS + "ConceptScheme")  # se recalcula abajo
 CONCEPT = URIRef(SKOS + "Concept")
 PREF_LABEL = URIRef(SKOS + "prefLabel")
 
-from util import ROOT, extraer_prefijos, rdf_files, sniff_parse
+from util import ROOT, extraer_prefijos, rdf_files, sniff_parse, NS_KOS
 
 
 def ficheros_kos():
@@ -66,7 +66,7 @@ def test_prefijo_de_conceptos_coherente_con_esquema():
         prefijos = extraer_prefijos(p.read_text(errors="replace"))
         for s in g.subjects(None, CONCEPT_SCHEME):
             esperado = str(s) + "/"
-            if str(s).startswith("https://edint.es/kos/") and esperado not in prefijos.values():
+            if str(s).startswith(NS_KOS) and esperado not in prefijos.values():
                 mal.append(f"{p.name}: esquema {s} sin prefijo de conceptos {esperado}")
     assert not mal, str(mal)
 

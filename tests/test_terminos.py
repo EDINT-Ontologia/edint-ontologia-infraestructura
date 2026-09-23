@@ -6,6 +6,8 @@ propio usado como clase/propiedad/objetivo estructural debe estar declarado
 en algún fichero local del repo.
 """
 import pytest
+
+from util import NS_DEF
 from rdflib import URIRef
 from rdflib.namespace import RDF, RDFS
 
@@ -13,7 +15,7 @@ SH = "http://www.w3.org/ns/shacl#"
 
 
 def test_terminos_propios_definidos(grafo_local, grafo_ejemplos, slug):
-    propia = f"https://edint.es/def/{slug}"
+    propia = f"{NS_DEF}{slug}"
     g = type(grafo_local)()
     for t in grafo_local:
         g.add(t)

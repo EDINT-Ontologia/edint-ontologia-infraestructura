@@ -1,5 +1,7 @@
 """Dimensión: los ejemplos usan IRIs de instancia estándar y predicados válidos."""
 import pytest
+
+from util import INSTANCIAS_EJEMPLO, NS_DEF
 from rdflib import URIRef
 from rdflib.namespace import OWL, RDF
 
@@ -12,7 +14,7 @@ def test_instancias_bajo_example_org(grafo_ejemplos):
     mal = set()
     for s in grafo_ejemplos.subjects(RDF.type, None):
         if isinstance(s, URIRef) and not str(s).startswith("https://edint.es/"):
-            if not str(s).startswith(("http://example.org/", "https://example.org/")):
+            if not str(s).startswith(INSTANCIAS_EJEMPLO):
                 mal.add(str(s))
     assert not mal, (
         "sujetos de instancia fuera de example.org:\n  " + "\n  ".join(sorted(mal)[:15])
@@ -22,7 +24,7 @@ def test_instancias_bajo_example_org(grafo_ejemplos):
 def test_predicados_propios_son_propiedades(grafo_ejemplos, grafo_local, slug):
     if grafo_ejemplos is None or not len(grafo_ejemplos):
         pytest.skip("sin ejemplos")
-    propia = f"https://edint.es/def/{slug}"
+    propia = f"{NS_DEF}{slug}"
     mal = set()
     for p in set(grafo_ejemplos.predicates()):
         if isinstance(p, URIRef) and str(p).startswith(propia):

@@ -3,7 +3,7 @@ import re
 
 import pytest
 
-from util import ROOT, extraer_prefijos, prefijos_usados
+from util import ROOT, extraer_prefijos, prefijos_usados, NS_DEF
 
 
 def ficheros():
@@ -42,5 +42,5 @@ def test_prefijos_sin_duplicar(path):
 def test_prefijos_edint_bien_formados(path):
     texto = path.read_text(errors="replace")
     for alias, uri in extraer_prefijos(texto).items():
-        if uri.startswith("https://edint.es/def/"):
+        if uri.startswith(NS_DEF):
             assert uri.endswith("#"), f"prefijo {alias}: {uri} debe acabar en #"

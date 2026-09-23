@@ -1,4 +1,5 @@
 """Dimensión: cobertura de rdfs:label es/en en los términos propios."""
+from util import UMBRAL_LABELS
 from rdflib import Literal, URIRef
 from rdflib.namespace import OWL, RDFS
 
@@ -21,7 +22,7 @@ def test_labels_es_en(modelo, ns_propia):
             sin_en.append(str(t).split("#")[-1])
     total = len(propios)
     frac = (len(sin_es) + len(sin_en)) / max(1, total * 2)
-    assert frac <= 0.05, (
+    assert frac <= UMBRAL_LABELS, (
         f"labels incompletos: {len(sin_es)} sin @es y {len(sin_en)} sin @en de {total} "
         f"({frac:.0%} > 5%). Sin @es: {sin_es[:10]}"
     )

@@ -1,7 +1,7 @@
 """Utilidades compartidas de la suite de tests EDINT.
 
 Toda constante vive en tests/config.toml; aquí solo se carga y se exponen
-los mismos nombres que usan los módulos de test.
+los nombres que usan los módulos de test.
 """
 import re
 import tomllib
@@ -17,7 +17,11 @@ RDF_SUFFIXES = set(CONFIG["estructura"]["sufijos_rdf"])
 SRC_DIRS = CONFIG["estructura"]["carpetas_fuente"]
 SRC_SUFFIXES = set(CONFIG["estructura"]["sufijos_fuente"])
 CLAVES_CONFIG = set(CONFIG["estructura"]["claves_config"])
-PREFIJO_REGEX = CONFIG["estructura"]["prefijo"]
+
+ESQUEMAS_URI_VALIDOS = set(CONFIG["reglas"]["esquemas_uri_validos"])
+SLUG_EDINT = re.compile(CONFIG["reglas"]["slug_edint"])
+PREFIJO_REGEX = CONFIG["reglas"]["prefijo"]
+PATRONES_BASURA = CONFIG["reglas"]["patrones_basura"]
 
 NS_DEF = CONFIG["namespaces"]["def"]
 NS_KOS = CONFIG["namespaces"]["kos"]
@@ -26,13 +30,6 @@ INSTANCIAS_EJEMPLO = tuple(CONFIG["namespaces"]["instancias_ejemplo"])
 UMBRAL_LABELS = CONFIG["umbrales"]["labels_es_en"]
 UMBRAL_SECCION_BYTES = CONFIG["umbrales"]["seccion_bytes"]
 TIMEOUT_SHACL_S = CONFIG["umbrales"]["shacl_timeout_s"]
-
-URI_BLACKLIST = CONFIG["guardia"]["uris_rotas"]
-ERRATAS = CONFIG["guardia"]["erratas"]
-DIAGRAMA_PREFIJOS_MALOS = CONFIG["guardia"]["prefijos_diagramas_malos"]
-
-
-
 
 
 def repo_slug() -> str:
@@ -52,6 +49,7 @@ def sniff_parse(path: Path, g: Graph | None = None) -> Graph:
 
 
 def _sin_generados(p: Path) -> bool:
+    """Excluye artefactos generados (documentación y mapping_doc)."""
     return "mapping_doc" not in p.parts and "documentation" not in p.parts
 
 
@@ -104,3 +102,19 @@ def prefijos_usados(texto: str) -> set[str]:
     t = re.sub(r'"[^"]*"', " ", t)
     t = re.sub(r"(?m)#.*$", " ", t)
     return {m.group(1) for m in re.finditer(r"(?<![\w@.-])([A-Za-z][\w-]*):[A-Za-z_][\w.-]*", t)}
+
+
+def prefijos_declarados_repo() -> set[str]:
+    """Prefijos declarados por el propio repo (xmlns de los .owl + @prefix de turtle)."""
+    out = set()
+    for p in rdf_files("ontology"):
+        if p.suffix != ".owl":
+            continue
+        out |= set(re.findall(r'xmlns:([A-Za-z][\w-]*)=', p.read_text(errors="replace")))
+    for d in ("kos", "shapes", "examples", "mappings"):
+        base = ROOT / d
+        if base.is_dir():
+            for p in base.rglob("*.ttl"):
+                if _sin_generados(p):
+                    out |= set(extraer_prefijos(p.read_text(errors="replace")))
+    return out
