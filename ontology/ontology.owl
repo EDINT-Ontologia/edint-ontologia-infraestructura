@@ -55,7 +55,7 @@
         </dcterms:creator>
         <dcterms:description xml:lang="es">La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros.</dcterms:description>
         <dcterms:description xml:lang="en">The infrastructure ontology describes all concepts related to a municipality&apos;s public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others.</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <dcterms:title xml:lang="es">Ontología EDINT de Infraestructura</dcterms:title>
         <dcterms:title xml:lang="en">EDINT Infrastructure Ontology</dcterms:title>
         <rdfs:label xml:lang="es">Infraestructura</rdfs:label>
