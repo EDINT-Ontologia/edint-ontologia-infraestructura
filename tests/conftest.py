@@ -78,3 +78,23 @@ def datos_ejemplos(modelo) -> Graph | None:
         except Exception:
             pass
     return g
+
+
+@pytest.fixture(scope="session")
+def slug() -> str:
+    from util import repo_slug
+    return repo_slug()
+
+
+@pytest.fixture(scope="session")
+def grafo_ejemplos() -> Graph | None:
+    files = rdf_files("examples")
+    if not files:
+        return None
+    g = Graph()
+    for p in files:
+        try:
+            sniff_parse(p, g)
+        except Exception:
+            pass
+    return g

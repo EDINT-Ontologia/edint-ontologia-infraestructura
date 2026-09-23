@@ -31,3 +31,16 @@ def test_licencia(modelo, ontologia):
 
 def test_titulo(modelo, ontologia):
     assert list(modelo.objects(ontologia, RDFS.label)), "falta rdfs:label de la ontología"
+
+
+def test_fechas_coherentes(modelo, ontologia):
+    from rdflib import URIRef
+    DCT = "http://purl.org/dc/terms/"
+    fechas = {}
+    for nombre in ("created", "issued", "modified"):
+        v = next(modelo.objects(ontologia, URIRef(DCT + nombre)), None)
+        assert v is not None, f"falta dcterms:{nombre}"
+        fechas[nombre] = str(v)[:10]
+    assert fechas["created"] <= fechas["issued"] <= fechas["modified"], (
+        f"fechas incoherentes: {fechas}"
+    )
