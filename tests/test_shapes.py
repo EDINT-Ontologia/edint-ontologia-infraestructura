@@ -1,0 +1,24 @@
+"""Dimensión: las shapes citan términos que existen en el grafo local."""
+import pytest
+from rdflib import URIRef
+
+from util import sniff_parse
+
+SH_TARGET = URIRef("http://www.w3.org/ns/shacl#targetClass")
+SH_PATH = URIRef("http://www.w3.org/ns/shacl#path")
+
+
+def test_sin_terminos_fantasma(ficheros_shapes, grafo_local):
+    if not ficheros_shapes:
+        pytest.skip("sin shapes")
+    fantasmas = set()
+    for p in ficheros_shapes:
+        try:
+            g = sniff_parse(p)
+        except Exception:
+            continue
+        for pred in (SH_TARGET, SH_PATH):
+            for _, o in g.subject_objects(pred):
+                if isinstance(o, URIRef) and str(o).startswith("https://edint.es/") and (o, None, None) not in grafo_local:
+                    fantasmas.add(f"{p.name}: {pred.split('#')[-1]} -> {o}")
+    assert not fantasmas, f"targetClass/path inexistentes localmente:\n  " + "\n  ".join(sorted(fantasmas))

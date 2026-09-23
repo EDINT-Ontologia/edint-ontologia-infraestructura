@@ -1,2 +1,3 @@
+pytest>=8,<9
 rdflib>=7.1,<8
 pyshacl>=0.27,<1
