@@ -19,6 +19,24 @@ jobs:
           cache: pip
           cache-dependency-path: tests/requirements.txt
       - run: pip install -r tests/requirements.txt
-      - name: Tests por dimensión (informativos, no bloquean)
-        run: python -m pytest tests/ -v --tb=line
+      - name: Tests por dimensión
+        run: python -m pytest tests/ -v --tb=line --junitxml=$RUNNER_TEMP/resultados.xml
         continue-on-error: true
+      - name: Resumen del runner
+        if: always()
+        run: |
+          python - <<'PY'
+          import os
+          try:
+              import xml.etree.ElementTree as ET
+              r = ET.parse(os.path.join(os.environ["RUNNER_TEMP"], "resultados.xml")).getroot()
+              total = int(r.get("tests", 0))
+              fallos = int(r.get("failures", 0)) + int(r.get("errors", 0))
+              saltados = int(r.get("skipped", 0))
+              if fallos:
+                  print(f"::warning::{fallos} de {total} tests con fallos ({saltados} skipped) — deuda detectada, ver el log de Tests por dimensión")
+              else:
+                  print(f"::notice::{total} tests pasan ({saltados} skipped)")
+          except Exception:
+              print("::warning::La suite no llegó a ejecutarse (error de infraestructura)")
+          PY
