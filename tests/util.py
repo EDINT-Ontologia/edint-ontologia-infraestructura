@@ -28,7 +28,8 @@ NS_KOS = CONFIG["namespaces"]["kos"]
 INSTANCIAS_EJEMPLO = tuple(CONFIG["namespaces"]["instancias_ejemplo"])
 
 UMBRAL_LABELS = CONFIG["umbrales"]["labels_es_en"]
-UMBRAL_SECCION_BYTES = CONFIG["umbrales"]["seccion_bytes"]
+PARIDAD_SECCIONES = CONFIG["umbrales"]["paridad_secciones"]
+PALABRAS_MINIMAS = CONFIG["umbrales"]["palabras_minimas"]
 TIMEOUT_SHACL_S = CONFIG["umbrales"]["shacl_timeout_s"]
 
 

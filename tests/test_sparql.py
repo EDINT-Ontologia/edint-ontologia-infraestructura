@@ -21,7 +21,13 @@ def test_consulta_parsea(path):
         return
     except Exception:
         pass
-    for bloque in [b for b in re.split(r"(?m)^(?=PREFIX\s+\S+\s*<)", src) if b.strip()]:
+    consultas = [
+        b for b in re.split(r"(?m)^(?=PREFIX\s+\S+\s*<)", src)
+        if re.search(r"(?m)^\s*(SELECT|ASK|CONSTRUCT|DESCRIBE)\b", b)
+    ]
+    if not consultas:
+        pytest.fail("el fichero no contiene ninguna consulta")
+    for bloque in consultas:
         prepareQuery(bloque)
     pytest.fail("no parsea ni entera ni por bloques PREFIX")
 

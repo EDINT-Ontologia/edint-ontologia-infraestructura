@@ -1,7 +1,8 @@
 """Dimensión: documentación completa y coherente con la fuente.
 
 La lista de ficheros exigidos se deriva del propio workflow de deploy del
-repo (test -s documentation/...), no de una lista fija.
+repo. La paridad es/en se mide sobre el texto visible (palabras), no sobre
+el tamaño del HTML: el markup de Widoco domina el byte y falsea la señal.
 """
 import re
 
@@ -9,7 +10,14 @@ import pytest
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
-from util import ROOT, sniff_parse, UMBRAL_SECCION_BYTES
+from util import PALABRAS_MINIMAS, PARIDAD_SECCIONES, ROOT, sniff_parse
+
+
+def _palabras(path) -> int:
+    """Palabras de texto visible de un HTML (sin script/style ni etiquetas)."""
+    html = path.read_text(errors="replace")
+    html = re.sub(r"(?is)<(script|style).*?</\1>", " ", html)
+    return len(re.sub(r"(?s)<[^>]+>", " ", html).split())
 
 
 def ficheros_del_deploy():
@@ -55,6 +63,13 @@ def test_secciones_es_en_parejadas():
         en = es.with_name(es.name.replace("-es.html", "-en.html"))
         if not en.exists():
             mal.append(f"sin pareja -en: {es.name}")
-        elif en.stat().st_size < UMBRAL_SECCION_BYTES or es.stat().st_size < UMBRAL_SECCION_BYTES:
-            mal.append(f"pareja casi vacía: {es.name} ({es.stat().st_size}B) / {en.name} ({en.stat().st_size}B)")
+        else:
+            pe, pi = _palabras(es), _palabras(en)
+            if max(pe, pi) < PALABRAS_MINIMAS:
+                mal.append(f"sección sin contenido: {es.name} ({pe} palabras) / {en.name} ({pi} palabras)")
+            elif min(pe, pi) / max(pe, pi) < PARIDAD_SECCIONES:
+                mal.append(
+                    f"secciones descuadradas: {es.name} ({pe} palabras) / {en.name} ({pi} palabras), "
+                    f"la corta es {min(pe, pi) / max(pe, pi):.0%} de la larga"
+                )
     assert not mal, "\n  ".join(mal)
