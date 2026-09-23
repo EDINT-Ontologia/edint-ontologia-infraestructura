@@ -21,15 +21,15 @@ def test_consulta_parsea(path):
         return
     except Exception:
         pass
-    consultas = [
-        b for b in re.split(r"(?m)^(?=PREFIX\s+\S+\s*<)", src)
-        if re.search(r"(?m)^\s*(SELECT|ASK|CONSTRUCT|DESCRIBE)\b", b)
-    ]
+    # Los ficheros pueden contener varias consultas y declarar los PREFIX una
+    # sola vez arriba: se separa por consulta y se antepone la cabecera.
+    cabecera = "\n".join(re.findall(r"(?m)^\s*PREFIX\s+\S+\s*<[^>]+>\s*$", src))
+    consultas = [c for c in re.split(r"(?m)^(?=SELECT|ASK|CONSTRUCT|DESCRIBE\b)", src)[1:]]
     if not consultas:
         pytest.fail("el fichero no contiene ninguna consulta")
-    for bloque in consultas:
-        prepareQuery(bloque)
-    pytest.fail("no parsea ni entera ni por bloques PREFIX")
+    for consulta in consultas:
+        prepareQuery(f"{cabecera}\n{consulta}")
+    pytest.fail("alguna consulta del fichero no parsea")
 
 
 @pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
