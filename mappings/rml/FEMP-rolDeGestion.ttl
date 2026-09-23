@@ -24,11 +24,10 @@
 		a rml:LogicalSource;
 		rml:source "Madrid_con_punto_observ_id.csv";
 		rml:referenceFormulation ql:CSV
-
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/rol-de-gestion/{rol}";
+		rr:template "https://example.org/recurso/rol-de-gestion/{rol}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -47,7 +46,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{company}";
+			rr:template "https://example.org/recurso/organizacion/{company}";
 			rr:termType rr:IRI
 		];
 	];
@@ -69,7 +68,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{equipamiento_municipal}";
+			rr:template "https://example.org/recurso/equipamiento-municipal/{equipamiento_municipal}";
 			rr:termType rr:IRI
 		];
 	].

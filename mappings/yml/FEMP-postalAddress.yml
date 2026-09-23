@@ -8,6 +8,6 @@ mappings:
   postalAddress:
     sources:
       - postal-address-source
-    s: http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/$(codigo_postal)
+    s: https://example.org/recurso/direccion-postal/$(codigo_postal)
     po:
       - [a, esdir:DireccionPostal] # Reutilizado de Callejero

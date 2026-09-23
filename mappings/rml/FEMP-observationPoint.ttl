@@ -22,11 +22,10 @@
 		a rml:LogicalSource;
 		rml:source "Madrid_con_punto_observ_id.csv";
 		rml:referenceFormulation ql:CSV
-
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+		rr:template "https://example.org/recurso/punto-de-observacion/{punto_observ_id}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [

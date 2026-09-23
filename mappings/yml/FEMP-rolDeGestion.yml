@@ -10,9 +10,9 @@ mappings:
   rolDeGestion:
     sources:
       - rolDeGestion-source
-    s: http://vocab.linkeddata.es/datosabiertos/recurso/rol-de-gestion/$(rol) #
+    s: https://example.org/recurso/rol-de-gestion/$(rol) #
     po:
       - [a, edintinf:ManagementRole]
-      - [edintinf:rolePlayedBy, "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/$(company)~iri"] # Esto va a Organizacion
+      - [edintinf:rolePlayedBy, "https://example.org/recurso/organizacion/$(company)~iri"] # Esto va a Organizacion
       - [edintinf:hasRoleType, "edintmanagementrole:$(rol)~iri"] # SKOS: basicservices, facilitysecurity, humanresources, maintenance
-      - [edintinf:madeOnInfrastructure, "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/$(equipamiento_municipal)~iri"] # Esto va a equipamientoMunicipal
+      - [edintinf:madeOnInfrastructure, "https://example.org/recurso/equipamiento-municipal/$(equipamiento_municipal)~iri"] # Esto va a equipamientoMunicipal

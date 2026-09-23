@@ -8,6 +8,6 @@ mappings:
   observationPoint:
     sources:
       - observation-point-source
-    s: http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/$(punto_observ_id)
+    s: https://example.org/recurso/punto-de-observacion/$(punto_observ_id)
     po:
       - [a, edintinf:ObservationPoint]

@@ -28,11 +28,10 @@
 		a rml:LogicalSource;
 		rml:source "Madrid_atencion_social.csv";
 		rml:referenceFormulation ql:CSV
-
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{pk}";
+		rr:template "https://example.org/recurso/equipamiento-municipal/{pk}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [
@@ -81,7 +80,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+			rr:template "https://example.org/recurso/equipamiento-municipal/locations/{pk}";
 			rr:termType rr:IRI
 		];
 	];
@@ -92,7 +91,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/{barrio}";
+			rr:template "https://example.org/recurso/sector-publico/territorio/barrio/{barrio}";
 			rr:termType rr:IRI
 		];
 	];
@@ -103,7 +102,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/{punto_observ_id}";
+			rr:template "https://example.org/recurso/punto-de-observacion/{punto_observ_id}";
 			rr:termType rr:IRI
 		];
 	];
@@ -125,7 +124,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/{pk}";
+			rr:template "https://example.org/recurso/organizacion/{pk}";
 			rr:termType rr:IRI
 		];
 	];
@@ -136,7 +135,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/{codigo_postal}";
+			rr:template "https://example.org/recurso/direccion-postal/{codigo_postal}";
 			rr:termType rr:IRI
 		];
 	];
@@ -179,7 +178,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/{parent_equipamiento_municipal_id}";
+			rr:template "https://example.org/recurso/equipamiento-municipal/{parent_equipamiento_municipal_id}";
 			rr:termType rr:IRI
 		];
 	].
@@ -191,11 +190,10 @@
 		a rml:LogicalSource;
 		rml:source "Madrid_atencion_social.csv";
 		rml:referenceFormulation ql:CSV
-
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
-		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/{pk}";
+		rr:template "https://example.org/recurso/equipamiento-municipal/locations/{pk}";
 	];
 	rr:predicateObjectMap [
 		rr:predicateMap [

@@ -14,27 +14,27 @@ mappings:
   facility:
     sources:
       - facility-source
-    s: http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/$(pk) #equipamiento_municipal
+    s: https://example.org/recurso/equipamiento-municipal/$(pk) #equipamiento_municipal
     po:
       - [a, edintinf:Facility]
       - [dct:identifier,"$(pk)"]
       - [rdfs:label, "$(nombre)"]
       - [rdfs:comment, $(descripcion_entidad)]
-      - [geosparql:hasGeometry, "http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/$(pk)~iri"]
-      - [edintinf:belongsTo, "http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/barrio/$(barrio)~iri"] # Otros e.g territorio/Comarca/D.C._Zaragoza, sector-publico/territorio/Provincia/Zaragoza
-      - [edintinf:hasObservationPoint, "http://vocab.linkeddata.es/datosabiertos/recurso/punto-de-observacion/$(punto_observ_id)~iri"] # Check FEMP-observationPoint.yml
+      - [geosparql:hasGeometry, "https://example.org/recurso/equipamiento-municipal/locations/$(pk)~iri"]
+      - [edintinf:belongsTo, "https://example.org/recurso/sector-publico/territorio/barrio/$(barrio)~iri"] # Otros e.g territorio/Comarca/D.C._Zaragoza, sector-publico/territorio/Provincia/Zaragoza
+      - [edintinf:hasObservationPoint, "https://example.org/recurso/punto-de-observacion/$(punto_observ_id)~iri"] # Check FEMP-observationPoint.yml
       - [edintinf:hasInfrastructureType, "edintkos:$(tipo)~iri"] # SKOS tipo_infraestructura
-      - [edintinf:hasRegisteredOwner, "http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/$(pk)~iri"] # Organizacion
-      - [schema:address, "http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/$(codigo_postal)~iri"] # Check FEMP-postalAddress.yml
+      - [edintinf:hasRegisteredOwner, "https://example.org/recurso/organizacion/$(pk)~iri"] # Organizacion
+      - [schema:address, "https://example.org/recurso/direccion-postal/$(codigo_postal)~iri"] # Check FEMP-postalAddress.yml
       - [schema:openingHours,$(horario)]
       - [edintinf:providesPublicService,"edintpublicservice:$(servicio)~iri"] # SKOS: complementaryservice, wifi, phonesupport, cafeteria , etc.
       - [edintinf:offersRegularActivity,"edintregularact:$(actividad_regular)~iri"] #SKOS: culturalcenteract, exhibition, concert, theatre, workshop.
-      - [edintinf:containsFacility,"http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/$(parent_equipamiento_municipal_id)~iri" ]
+      - [edintinf:containsFacility,"https://example.org/recurso/equipamiento-municipal/$(parent_equipamiento_municipal_id)~iri" ]
 
   locations:
     sources:
       - facility-source
-    s: http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento-municipal/locations/$(pk)
+    s: https://example.org/recurso/equipamiento-municipal/locations/$(pk)
     po:
       - [a, geosparql:Geometry]
       - [dct:identifier,"$(pk)"]
