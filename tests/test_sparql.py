@@ -29,7 +29,7 @@ def separar_consultas(src: str) -> list[str]:
         if siguiente:
             cuerpo = cuerpo[:siguiente.start()]
         propios = "\n".join(RE_PREFIX.findall(bloque[:inicio.start()]))
-        salida.append(f"{propios or cabecera}\n{cuerpo}")
+        salida.append(f"{cabecera}\n{propios}\n{cuerpo}")
     return salida
 
 
