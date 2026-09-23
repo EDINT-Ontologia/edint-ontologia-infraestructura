@@ -6,11 +6,21 @@ pull_request, se publica o actualiza un comentario en el PR.
 """
 import json
 import os
+import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 MARCADOR = "<!-- verify-summary -->"
+
+
+def limpiar_mensaje(bruto: str) -> str:
+    """Descarta el volcado del assert y las rutas absolutas del runner."""
+    texto = " ".join((bruto or "").split())
+    texto = re.split(r"\s+assert\b", texto)[0].strip()
+    texto = re.sub(r"PosixPath\('[^']*'\)", "", texto)
+    texto = re.sub(r"/home/runner/\S+", "", texto)
+    return re.sub(r"\s+", " ", texto).strip()[:300]
 
 
 def leer_resultados(xml: str) -> tuple[list[str], dict, dict]:
@@ -26,8 +36,7 @@ def leer_resultados(xml: str) -> tuple[list[str], dict, dict]:
         nodo = tc.find("failure") if tc.find("failure") is not None else tc.find("error")
         if nodo is not None:
             filas[mod]["fail"] += 1
-            texto = (nodo.get("message") or nodo.text or "").strip()
-            texto = " ".join(texto.split())[:300]
+            texto = limpiar_mensaje(nodo.get("message") or nodo.text or "")
             fallos.setdefault(mod, []).append(f"{tc.get('name')} — {texto}")
         elif tc.find("skipped") is not None:
             filas[mod]["skip"] += 1
