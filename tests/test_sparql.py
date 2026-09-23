@@ -51,7 +51,6 @@ def test_consulta_parsea(path):
         pytest.fail("el fichero no contiene ninguna consulta")
     for consulta in consultas:
         prepareQuery(consulta)
-    pytest.fail("alguna consulta del fichero no parsea")
 
 
 @pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
