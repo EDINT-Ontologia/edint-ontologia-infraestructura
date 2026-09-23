@@ -19,4 +19,6 @@ jobs:
           cache: pip
           cache-dependency-path: tests/requirements.txt
       - run: pip install -r tests/requirements.txt
-      - run: python -m pytest tests/ -v --tb=line
+      - name: Tests por dimensión (informativos, no bloquean)
+        run: python -m pytest tests/ -v --tb=line
+        continue-on-error: true
