@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   verify:
@@ -39,4 +40,95 @@ jobs:
                   print(f"::notice::{total} tests pasan ({saltados} skipped)")
           except Exception:
               print("::warning::La suite no llegó a ejecutarse (error de infraestructura)")
+          PY
+      - name: Tabla resumen en el run
+        if: always()
+        run: |
+          python - <<'PY'
+          import os
+          import xml.etree.ElementTree as ET
+          xml = os.path.join(os.environ["RUNNER_TEMP"], "resultados.xml")
+          r = ET.parse(xml).getroot()
+          filas = {}
+          orden = []
+          for tc in r.iter("testcase"):
+              mod = tc.get("classname", "?").rsplit(".", 1)[-1]
+              if mod not in filas:
+                  filas[mod] = {"ok": 0, "fail": 0, "skip": 0}
+                  orden.append(mod)
+              if tc.find("failure") is not None or tc.find("error") is not None:
+                  filas[mod]["fail"] += 1
+              elif tc.find("skipped") is not None:
+                  filas[mod]["skip"] += 1
+              else:
+                  filas[mod]["ok"] += 1
+          tabla = ["| Dimensión | ✅ | ❌ | ⏭ |", "|---|---:|---:|---:|"]
+          t_ok = t_fail = t_skip = 0
+          for mod in orden:
+              d = filas[mod]
+              tabla.append(f"| {mod} | {d['ok']} | {d['fail']} | {d['skip']} |")
+              t_ok += d["ok"]; t_fail += d["fail"]; t_skip += d["skip"]
+          tabla.append(f"| **TOTAL** | {t_ok} | {t_fail} | {t_skip} |")
+          cuerpo = "\n".join(tabla)
+          if t_fail:
+              cuerpo += f"\n\n⚠️ {t_fail} tests con fallos: deuda detectada (ver el log de 'Tests por dimensión')."
+          else:
+              cuerpo += "\n\n✅ Todo pasa."
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write("## Resultados verify\n\n" + cuerpo + "\n")
+          if t_fail:
+              print("::warning::" + cuerpo.replace("\n", "\\n")[:500])
+          PY
+      - name: Tabla resumen en el PR
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import os, xml.etree.ElementTree as ET, urllib.request, json, sys
+          repo = os.environ["GITHUB_REPOSITORY"]
+          xml = os.path.join(os.environ["RUNNER_TEMP"], "resultados.xml")
+          r = ET.parse(xml).getroot()
+          filas, orden = {}, []
+          for tc in r.iter("testcase"):
+              mod = tc.get("classname", "?").rsplit(".", 1)[-1]
+              d = filas.setdefault(mod, {"ok": 0, "fail": 0, "skip": 0})
+              if mod not in orden:
+                  orden.append(mod)
+              if tc.find("failure") is not None or tc.find("error") is not None:
+                  d["fail"] += 1
+              elif tc.find("skipped") is not None:
+                  d["skip"] += 1
+              else:
+                  d["ok"] += 1
+          cuerpo = "## Resultados verify\n\n| Dimensión | ✅ | ❌ | ⏭ |\n|---|---:|---:|---:|\n"
+          for mod in orden:
+              d = filas[mod]
+              cuerpo += f"| {mod} | {d['ok']} | {d['fail']} | {d['skip']} |\n"
+          t_ok = sum(d['ok'] for d in filas.values()); t_fail = sum(d['fail'] for d in filas.values())
+          cuerpo += f"| **TOTAL** | {t_ok} | {t_fail} | {sum(d['skip'] for d in filas.values())} |\n"
+          cuerpo += f"\n⚠️ {t_fail} tests con fallos: deuda existente, ver el log del check 'verify'.\n" if t_fail else "\n✅ Todo pasa.\n"
+          cuerpo = "<!-- verify-summary -->\n" + cuerpo
+          base = f"https://api.github.com/repos/{repo}"
+          headers = {"Authorization": "token " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"}
+          # número de PR desde el evento
+          ev = json.load(open(os.environ["GITHUB_EVENT_PATH"]))
+          num = ev.get("pull_request", {}).get("number")
+          if not num:
+              print("no es un PR"); raise SystemExit(0)
+          # buscar comentario existente con el marcador
+          req = urllib.request.Request(base + f"/issues/{num}/comments", headers=headers)
+          existente = None
+          with urllib.request.urlopen(req) as resp:
+              for c in json.load(resp):
+                  if c.get("body", "").startswith("<!-- verify-summary -->"):
+                      existente = c["url"]
+                      break
+          data = json.dumps({"body": cuerpo}).encode()
+          if existente:
+              req = urllib.request.Request(existente, data=data, headers=headers, method="PATCH")
+          else:
+              req = urllib.request.Request(base + f"/issues/{num}/comments", data=data, headers=headers)
+          urllib.request.urlopen(req)
+          print("comentario del PR actualizado")
           PY
