@@ -1,54 +1,38 @@
-"""Utilidades compartidas de la suite de tests EDINT."""
+"""Utilidades compartidas de la suite de tests EDINT.
+
+Toda constante vive en tests/config.toml; aquí solo se carga y se exponen
+los mismos nombres que usan los módulos de test.
+"""
 import re
+import tomllib
 from pathlib import Path
 
 from rdflib import Graph
 
-ROOT = Path(__file__).resolve().parent.parent
+TESTS_DIR = Path(__file__).resolve().parent
+ROOT = TESTS_DIR.parent
+CONFIG = tomllib.loads((TESTS_DIR / "config.toml").read_text(encoding="utf-8"))
 
-RDF_SUFFIXES = {"ttl", "nt", "rdf", "jsonld", "xml", "owl"}
+RDF_SUFFIXES = set(CONFIG["estructura"]["sufijos_rdf"])
+SRC_DIRS = CONFIG["estructura"]["carpetas_fuente"]
+SRC_SUFFIXES = set(CONFIG["estructura"]["sufijos_fuente"])
+CLAVES_CONFIG = set(CONFIG["estructura"]["claves_config"])
+PREFIJO_REGEX = CONFIG["estructura"]["prefijo"]
 
-URI_BLACKLIST = [
-    "hhttps://",
-    "httos://",
-    "edint.es/def/censovehiculos",
-    "edint.es/def/medioambiente#",
-    "edint.es/def/contaminacionacustica",
-    "edint.es/def/zone#",
-    "edint.github.io",
-    "w3id.org/medioambiente",
-    "github.com/edint/",
-    "www.w3.org/TR/vocab-data-cube",
-    "vocab.linkeddata.es/datosabiertos/kos",
-]
+NS_DEF = CONFIG["namespaces"]["def"]
+NS_KOS = CONFIG["namespaces"]["kos"]
+INSTANCIAS_EJEMPLO = tuple(CONFIG["namespaces"]["instancias_ejemplo"])
 
-SRC_DIRS = ["ontology", "kos", "shapes", "examples", "mappings", "requirements"]
-SRC_SUFFIXES = {".owl", ".ttl", ".sparql", ".py", ".md", ".yml", ".csv", ".html"}
+UMBRAL_LABELS = CONFIG["umbrales"]["labels_es_en"]
+UMBRAL_SECCION_BYTES = CONFIG["umbrales"]["seccion_bytes"]
+TIMEOUT_SHACL_S = CONFIG["umbrales"]["shacl_timeout_s"]
 
-# Erratas reales encontradas en la org (regex; cada entrada, un incidente real).
-ERRATAS = [
-    r"utilizad(?![a-záéíóú])",
-    r"implmeentación",
-    r"reposity",
-    r"Graficos",
-    r"inlcuire",
-    r"spueden",
-    r"creados con\[",
-    r"reflejar os\b",
-    r"eventps",
-    r"climatolológicas",
-    r"\blu punto\b",
-    r"los nombre de las propiedades",
-    r"poderación",
-    r"IllumintationRegime",
-    r"Este catalogo\b",
-]
+URI_BLACKLIST = CONFIG["guardia"]["uris_rotas"]
+ERRATAS = CONFIG["guardia"]["erratas"]
+DIAGRAMA_PREFIJOS_MALOS = CONFIG["guardia"]["prefijos_diagramas_malos"]
 
-# Prefijos legacy/fantasma que no deben aparecer en los diagramas (incidentes reales).
-DIAGRAMA_PREFIJOS_MALOS = [
-    "edintmi:", "edintinfp:", "eidntkos:", "era:", "esapar:", "estraf:",
-    "esreg:", "zona:",
-]
+
+
 
 
 def repo_slug() -> str:

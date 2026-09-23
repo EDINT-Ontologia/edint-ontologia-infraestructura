@@ -5,6 +5,8 @@ import pytest
 from rdflib import URIRef
 from rdflib.namespace import OWL, RDF
 
+from util import NS_DEF, PREFIJO_REGEX, ROOT
+
 VANN = URIRef("http://purl.org/vocab/vann/preferredNamespacePrefix")
 
 
@@ -23,9 +25,9 @@ def test_iri_sin_almohadilla(iri_ontologia):
 
 
 def test_namespace_del_repo(iri_ontologia, slug):
-    if not iri_ontologia.startswith("https://edint.es/def/"):
+    if not iri_ontologia.startswith(NS_DEF):
         pytest.skip("namespace externo (p. ej. SEGITTUR)")
-    assert iri_ontologia == f"https://edint.es/def/{slug}", (
+    assert iri_ontologia == f"{NS_DEF}{slug}", (
         f"IRI {iri_ontologia} != edint.es/def/{slug} derivado del nombre del repo"
     )
 
@@ -41,7 +43,6 @@ def test_version_iri_semver(modelo):
 
 def test_prefijo_coherente_con_readme(modelo, iri_ontologia):
     readme = modelo and None
-    from util import ROOT
     p = ROOT / "README.md"
     if not p.exists():
         pytest.skip("sin README")
@@ -52,4 +53,4 @@ def test_prefijo_coherente_con_readme(modelo, iri_ontologia):
     assert citados, "el README no documenta el prefijo (frase: el prefijo de esta ontología es `X`)"
     assert vann[0] in citados, f"prefijo del OWL ({vann[0]}) != prefijo citado en el README ({citados})"
     if iri_ontologia.startswith("https://edint.es/"):
-        assert re.fullmatch(r"edint[a-z]+", vann[0]), f"prefijo no convencional: {vann[0]}"
+        assert re.fullmatch(PREFIJO_REGEX, vann[0]), f"prefijo no convencional: {vann[0]}"

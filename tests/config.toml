@@ -1,0 +1,61 @@
+# Configuración de la suite de tests EDINT (único punto de ajuste).
+
+[namespaces]
+def = "https://edint.es/def/"
+kos = "https://edint.es/kos/"
+instancias_ejemplo = ["http://example.org/", "https://example.org/"]
+
+[umbrales]
+labels_es_en = 0.05            # fracción máxima de labels es/en incompletos
+seccion_bytes = 500            # tamaño mínimo de una sección es/en no vacía
+shacl_timeout_s = 600          # límite de la validación SHACL
+
+[estructura]
+carpetas_fuente = ["ontology", "kos", "shapes", "examples", "mappings", "requirements"]
+sufijos_rdf = ["ttl", "nt", "rdf", "jsonld", "xml", "owl"]
+sufijos_fuente = [".owl", ".ttl", ".sparql", ".py", ".md", ".yml", ".csv", ".html"]
+claves_config = ["shapes", "examples", "tests", "requirements", "ontology", "kos", "documentation", "mappings"]
+prefijo = "edint[a-z]+"
+
+[guardia]
+# Cada entrada es un incidente real ocurrido en la org.
+uris_rotas = [
+    "hhttps://",
+    "httos://",
+    "edint.es/def/censovehiculos",
+    "edint.es/def/medioambiente#",
+    "edint.es/def/contaminacionacustica",
+    "edint.es/def/zone#",
+    "edint.github.io",
+    "w3id.org/medioambiente",
+    "github.com/edint/",
+    "www.w3.org/TR/vocab-data-cube",
+    "vocab.linkeddata.es/datosabiertos/kos",
+]
+erratas = [
+    'utilizad(?![a-záéíóú])',
+    'implmeentación',
+    'reposity',
+    'Graficos',
+    'inlcuire',
+    'spueden',
+    'creados con\[',
+    'reflejar os\b',
+    'eventps',
+    'climatológicamente',
+    '\blu punto\b',
+    'los nombre de las propiedades',
+    'poderación',
+    'IllumintationRegime',
+    'Este catalogo\b',
+]
+prefijos_diagramas_malos = [
+    "edintmi:",
+    "edintinfp:",
+    "eidntkos:",
+    "era:",
+    "esapar:",
+    "estraf:",
+    "esreg:",
+    "zona:",
+]

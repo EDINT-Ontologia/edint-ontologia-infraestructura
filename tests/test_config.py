@@ -5,7 +5,7 @@ import pytest
 
 from util import ROOT
 
-CLAVES = {"shapes", "examples", "tests", "requirements", "ontology", "kos", "documentation", "mappings"}
+from util import CLAVES_CONFIG as CLAVES
 
 
 def entradas():
