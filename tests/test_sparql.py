@@ -8,6 +8,31 @@ from rdflib.plugins.sparql import prepareQuery
 from util import ROOT, extraer_prefijos, prefijos_usados, NS_DEF
 
 
+RE_CONSULTA = re.compile(r"(?m)^\s*(SELECT|ASK|CONSTRUCT|DESCRIBE)\b")
+RE_PREFIX = re.compile(r"(?m)^\s*PREFIX\s+\S+\s*<[^>]+>\s*$")
+
+
+def separar_consultas(src: str) -> list[str]:
+    """Una entrada por consulta del fichero, con sus PREFIX disponibles.
+
+    Los ficheros de requirements combinan varias consultas: los PREFIX pueden
+    estar declarados una sola vez arriba, o repetidos entre consultas.
+    """
+    cabecera = "\n".join(RE_PREFIX.findall(src))
+    salida = []
+    for bloque in re.split(r"(?m)^(?=\s*PREFIX\s+\S+\s*<)", src):
+        inicio = RE_CONSULTA.search(bloque)
+        if not inicio:
+            continue
+        cuerpo = bloque[inicio.start():]
+        siguiente = RE_PREFIX.search(cuerpo)
+        if siguiente:
+            cuerpo = cuerpo[:siguiente.start()]
+        propios = "\n".join(RE_PREFIX.findall(bloque[:inicio.start()]))
+        salida.append(f"{propios or cabecera}\n{cuerpo}")
+    return salida
+
+
 def ficheros():
     d = ROOT / "requirements"
     return sorted(d.rglob("*.sparql")) if d.is_dir() else []
@@ -21,14 +46,11 @@ def test_consulta_parsea(path):
         return
     except Exception:
         pass
-    # Los ficheros pueden contener varias consultas y declarar los PREFIX una
-    # sola vez arriba: se separa por consulta y se antepone la cabecera.
-    cabecera = "\n".join(re.findall(r"(?m)^\s*PREFIX\s+\S+\s*<[^>]+>\s*$", src))
-    consultas = [c for c in re.split(r"(?m)^(?=SELECT|ASK|CONSTRUCT|DESCRIBE\b)", src)[1:]]
+    consultas = separar_consultas(src)
     if not consultas:
         pytest.fail("el fichero no contiene ninguna consulta")
     for consulta in consultas:
-        prepareQuery(f"{cabecera}\n{consulta}")
+        prepareQuery(consulta)
     pytest.fail("alguna consulta del fichero no parsea")
 
 
