@@ -1,4 +1,6 @@
 """Dimensión: coherencia de los vocabularios SKOS del repo."""
+import pytest
+
 from rdflib import URIRef
 
 SKOS = "http://www.w3.org/2004/02/skos/core#"

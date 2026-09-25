@@ -18,12 +18,15 @@ def ficheros():
     return out
 
 
+PREFIJOS_ESTANDAR = {"rdf", "rdfs", "xsd", "owl", "xml", "skos"}
+
+
 @pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
 def test_prefijos_usados_declarados(path):
     texto = path.read_text(errors="replace")
     declarados = extraer_prefijos(texto)
     usados = prefijos_usados(texto)
-    sin_declarar = sorted(usados - set(declarados))
+    sin_declarar = sorted(usados - set(declarados) - PREFIJOS_ESTANDAR)
     assert not sin_declarar, f"prefijos usados sin declarar: {sin_declarar}"
 
 

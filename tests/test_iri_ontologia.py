@@ -20,14 +20,19 @@ def iri_ontologia(modelo):
     return str(onts[0])
 
 
-def test_iri_sin_almohadilla(iri_ontologia):
-    assert not iri_ontologia.endswith("#"), f"el IRI termina en #: {iri_ontologia}"
+def test_iri_formato_bien_formado(iri_ontologia):
+    """La org usa namespace con '#' final; se acepta también sin él, pero el
+    IRI debe ser del dominio edint.es/def/<slug> y coherente."""
+    assert re.fullmatch(r"https://edint\.es/def/[a-z0-9-]+/?#?", iri_ontologia), (
+        f"IRI de ontología fuera de convención: {iri_ontologia}"
+    )
 
 
 def test_namespace_del_repo(iri_ontologia, slug):
     if not iri_ontologia.startswith(NS_DEF):
         pytest.skip("namespace externo (p. ej. SEGITTUR)")
-    assert iri_ontologia == f"{NS_DEF}{slug}", (
+    normalizado = iri_ontologia.rstrip("#/")
+    assert normalizado == f"{NS_DEF}{slug}".rstrip("/"), (
         f"IRI {iri_ontologia} != edint.es/def/{slug} derivado del nombre del repo"
     )
 

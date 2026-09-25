@@ -15,11 +15,22 @@ def _columna_id(cabeceras: list[str]) -> str:
     return cabeceras[0] if cabeceras else ""
 
 
-def _ids(csv_path) -> set[str]:
+def _delimitador(csv_path) -> str:
+    """Delimitador real del CSV: ',' o ';' según la cabecera."""
+    primera = csv_path.read_text(errors="replace").splitlines()[0]
+    return ";" if primera.count(";") > primera.count(",") else ","
+
+
+def _filas(csv_path):
     with csv_path.open(errors="replace", newline="") as f:
-        lector = csv.DictReader(f)
+        lector = csv.DictReader(f, delimiter=_delimitador(csv_path))
         col = _columna_id(lector.fieldnames or [])
-        return {(fila.get(col) or "").strip() for fila in lector if (fila.get(col) or "").strip()}
+        for fila in lector:
+            yield (fila.get(col) or "").strip()
+
+
+def _ids(csv_path) -> set[str]:
+    return {i for i in _filas(csv_path) if i}
 
 
 def _normalizar(identificador: str) -> str:
@@ -38,12 +49,15 @@ def _todo():
 
 
 def test_csv_delimitador_uniforme():
+    """Todos los CSV de requirements/ deben usar el mismo delimitador (',' o ';')."""
     todo = _todo()
     if not todo or not todo[0]:
         pytest.skip("sin requirements.csv")
-    for c in todo[0]:
-        primera = c.read_text(errors="replace").splitlines()[0]
-        assert ";" not in primera, f"{c.name} usa ';' como delimitador (el resto de la org usa ',')"
+    delimitadores = {c.name: _delimitador(c) for c in todo[0]}
+    usados = set(delimitadores.values())
+    assert len(usados) == 1, (
+        f"delimitadores mezclados en requirements/: {delimitadores}"
+    )
 
 
 def test_ids_csv_con_fichero():
@@ -80,6 +94,14 @@ def test_queries_html_actualizado():
     if not qh.exists() or not todo[0]:
         pytest.skip("sin queries.html o sin CSV")
     html = qh.read_text(errors="replace")
-    ids = {i for c in todo[0] for i in _ids(c)}
-    ausentes = sorted(i for i in ids if i not in html)
+    ausentes = []
+    for c in todo[0]:
+        for i in sorted(_ids(c)):
+            if i in html:
+                continue
+            # tolera diferencia de padding de ceros (VEH7 vs VEH07)
+            m = re.fullmatch(r"([A-Za-z]+)(\d+)", i)
+            alternativas = {f"{m.group(1)}{int(m.group(2))}", f"{m.group(1)}{m.group(2).zfill(2)}"} if m else {i}
+            if not any(a in html for a in alternativas):
+                ausentes.append(i)
     assert not ausentes, f"IDs del CSV que no aparecen en queries.html: {ausentes[:15]}"

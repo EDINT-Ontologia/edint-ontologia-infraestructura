@@ -15,22 +15,23 @@ RE_PREFIX = re.compile(r"(?m)^\s*PREFIX\s+\S+\s*<[^>]+>\s*$")
 def separar_consultas(src: str) -> list[str]:
     """Una entrada por consulta del fichero, con sus PREFIX disponibles.
 
-    Los ficheros de requirements combinan varias consultas: los PREFIX pueden
-    estar declarados una sola vez arriba, o repetidos entre consultas.
+    Corta en consultas de nivel superior (SELECT/ASK/CONSTRUCT/DESCRIBE en
+    columna 0); los sub-SELECT indentados no se separan. Los PREFIX pueden
+    estar declarados una sola vez arriba o repetidos entre consultas: se
+    deduplican conservando el orden.
     """
-    cabecera = "\n".join(RE_PREFIX.findall(src))
-    salida = []
-    for bloque in re.split(r"(?m)^(?=\s*PREFIX\s+\S+\s*<)", src):
-        inicio = RE_CONSULTA.search(bloque)
-        if not inicio:
-            continue
-        cuerpo = bloque[inicio.start():]
-        siguiente = RE_PREFIX.search(cuerpo)
-        if siguiente:
-            cuerpo = cuerpo[:siguiente.start()]
-        propios = "\n".join(RE_PREFIX.findall(bloque[:inicio.start()]))
-        salida.append(f"{cabecera}\n{propios}\n{cuerpo}")
-    return salida
+    vistos: set[str] = set()
+    cabecera = "\n".join(
+        p for p in RE_PREFIX.findall(src)
+        if not (p in vistos or vistos.add(p))
+    )
+    posiciones = [m.start() for m in re.finditer(r"(?m)^(SELECT|ASK|CONSTRUCT|DESCRIBE)\b", src)]
+    if not posiciones:
+        return []
+    trozos = [
+        src[a:b] for a, b in zip(posiciones, posiciones[1:] + [len(src)])
+    ]
+    return [f"{cabecera}\n\n{trozo}" for trozo in trozos]
 
 
 def ficheros():
