@@ -1,0 +1,25 @@
+# Configuración de la suite de tests EDINT (único punto de ajuste).
+
+[namespaces]
+def = "https://edint.es/def/"
+kos = "https://edint.es/kos/"
+instancias_ejemplo = ["http://example.org/", "https://example.org/"]
+
+[umbrales]
+labels_es_en = 0.05            # fracción máxima de labels es/en incompletos
+paridad_secciones = 0.5        # palabras de la sección es/en más corta respecto a la larga
+palabras_minimas = 20          # por debajo de esto, la sección se considera vacía
+shacl_timeout_s = 300          # límite del subproceso de validación SHACL
+
+[reglas]
+esquemas_uri_validos = ["http", "https"]
+slug_edint = "^[a-z0-9]+(-[a-z0-9]+)*$"
+prefijo = "edint[a-z]+"
+sufijos_datos = [".csv", ".xlsx", ".geojson", ".wkt", ".pdf"]
+patrones_basura = ["*.bak", "*.orig", "*.rej", ".DS_Store", "__pycache__/*", "*.pyc", ".pytest_cache/*", ".venv/*", ".shacl_*.ttl"]
+
+[estructura]
+carpetas_fuente = ["ontology", "kos", "shapes", "examples", "mappings", "requirements"]
+sufijos_rdf = ["ttl", "nt", "rdf", "jsonld", "xml", "owl"]
+sufijos_fuente = [".owl", ".ttl", ".sparql", ".py", ".md", ".yml", ".csv", ".html"]
+claves_config = ["shapes", "examples", "tests", "requirements", "ontology", "kos", "documentation", "mappings"]

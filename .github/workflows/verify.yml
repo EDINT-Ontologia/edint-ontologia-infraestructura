@@ -1,0 +1,31 @@
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [main, next-release]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: tests/requirements.txt
+      - run: pip install -r tests/requirements.txt
+      - name: Tests por dimensión
+        run: python -m pytest tests/ -q --tb=no --no-header -p no:cacheprovider -p no:warnings --timeout=300 --timeout-method=thread --junitxml=$RUNNER_TEMP/resultados.xml
+        continue-on-error: true
+      - name: Resumen (tabla y detalle) en el run y en el PR
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESULTADOS: ${{ runner.temp }}/resultados.xml
+        run: python tests/resumen.py
