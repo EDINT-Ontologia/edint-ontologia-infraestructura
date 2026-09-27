@@ -10,7 +10,7 @@ SELECT ?access ?accessLabel
 WHERE {
 
     # Sustituir por la URI concreta del acceso (AccessObservation)
-    BIND(<URI-del-acceso> AS ?access)
+    BIND(<http://example.org/placeholder/URI-del-acceso> AS ?access)
 
     # Comprobamos que es una observación de acceso
     ?access a edintinf:AccessObservation .

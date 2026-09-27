@@ -15,7 +15,7 @@ SELECT ?parking ?parkingLabel
 WHERE {
 
   # Aparcamiento concreto (SUSTITUIR)
-  BIND(<URI-del-aparcamiento> AS ?parking)
+  BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
   # Puntos de observación del aparcamiento

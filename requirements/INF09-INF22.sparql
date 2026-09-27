@@ -60,7 +60,7 @@ SELECT ?observation ?observationLabel
 WHERE {
 
     # Fijar el punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
 
     # Observaciones de acceso en ese punto
     ?observation a edintinf:AccessObservation ;

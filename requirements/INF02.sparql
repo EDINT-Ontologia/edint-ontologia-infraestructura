@@ -10,7 +10,7 @@ PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?facility ?facilityLabel ?address ?street ?streetLabel ?portal ?portalLabel
 WHERE {
     # El equipamiento concreto (puedes sustituir el IRI por el que quieras)
-    BIND(<URI-del-equipamiento> AS ?facility)
+    BIND(<http://example.org/placeholder/URI-del-equipamiento> AS ?facility)
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 
