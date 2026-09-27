@@ -31,7 +31,15 @@ def separar_consultas(src: str) -> list[str]:
     trozos = [
         src[a:b] for a, b in zip(posiciones, posiciones[1:] + [len(src)])
     ]
-    return [f"{cabecera}\n\n{trozo}" for trozo in trozos]
+    salida = []
+    for trozo in trozos:
+        # los PREFIX repetidos entre consultas (columna 0) no forman parte de
+        # esta consulta: corta el trozo en el primer PREFIX de nivel superior
+        fin = RE_PREFIX.search(trozo)
+        if fin and fin.start() > 0:
+            trozo = trozo[:fin.start()]
+        salida.append(f"{cabecera}\n\n{trozo}")
+    return salida
 
 
 def ficheros():
