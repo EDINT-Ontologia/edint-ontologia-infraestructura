@@ -67,12 +67,13 @@ def grafo_local(modelo, grafos_kos) -> Graph:
 @pytest.fixture(scope="session")
 def datos_ejemplos(modelo) -> Graph | None:
     files = rdf_files("examples")
-    if not files or modelo is None:
+    files_kos = rdf_files("kos")
+    if (not files and not files_kos) or modelo is None:
         return None
     g = Graph()
     for t in modelo:
         g.add(t)
-    for p in files:
+    for p in files + files_kos:
         try:
             sniff_parse(p, g)
         except Exception:
