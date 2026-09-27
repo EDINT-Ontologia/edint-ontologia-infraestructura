@@ -1,74 +1,64 @@
-
 # INF40: ¿Qué aparcamientos presentan un nivel de ocupación concreto (en un periodo)?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-       ?parking ?parkingLabel
-       ?obsPoint ?obsPointLabel
-       ?sensor ?sensorLabel
-       ?observation
-       ?time
-       ?result
+SELECT ?facility ?facilityLabel ?obsPoint
 WHERE {
+    ?facility a edintinf:Facility .
+    OPTIONAL { ?facility edintinf:hasObservationPoint ?obsPoint . }
 
-  # Aparcamientos y sus puntos de observación
-  ?parking a edintinf:Parking ;
-           edintinf:hasObservationPoint ?obsPoint .
-  OPTIONAL { ?parking  rdfs:label ?parkingLabel . }
-  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
-
-  # Observaciones de ocupación realizadas por SENSOR DE CONTEO
-  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
-               sosa:madeBySensor ?sensor ;
-               sosa:resultTime ?time ;
-               sosa:hasSimpleResult ?result .
-
-  ?sensor a edintinf:CountingSensor .
-  OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
-
-  # Filtro temporal (SUSTITUIR)
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
-
-  # Filtro por nivel de ocupación (SUSTITUIR condición)
-  # Si el resultado es string en tu endpoint, tipa: xsd:decimal(?result)
-  FILTER(xsd:decimal(?result) >= 75)
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 }
-ORDER BY ?parkingLabel ?obsPointLabel ?sensorLabel ?time
+ORDER BY ?facilityLabel
 
+#==============================================================================
+# VARIANTS (documentación)
+#==============================================================================
 
-# Solo la lista de aparcamientos que cumplen (al menos una lectura)
+# SELECT DISTINCT ?parking ?parkingLabel
+# WHERE {
+  # ?parking a edintinf:Parking ;
+           # edintinf:hasObservationPoint ?obsPoint .
 
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+  # ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+               # sosa:observedProperty edintinf:infrastructureOccupancy ;
+               # sosa:madeBySensor ?sensor ;
+               # sosa:resultTime ?time ;
+               # sosa:hasSimpleResult ?result .
 
-SELECT DISTINCT ?parking ?parkingLabel
-WHERE {
-  ?parking a edintinf:Parking ;
-           edintinf:hasObservationPoint ?obsPoint .
+  # ?sensor a edintinf:CountingSensor .
+  # OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
-  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
-               sosa:madeBySensor ?sensor ;
-               sosa:resultTime ?time ;
-               sosa:hasSimpleResult ?result .
-
-  ?sensor a edintinf:CountingSensor .
-  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
-
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    # FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             # ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
 
   # Cambia la condición según necesites (=, >=, BETWEEN…)
-  FILTER(xsd:decimal(?result) = 75)
-}
-ORDER BY ?parkingLabel
+  # FILTER(xsd:decimal(?result) = 75)
+# }
+# ORDER BY ?parkingLabel

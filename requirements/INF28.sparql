@@ -1,42 +1,57 @@
-
 # INF28: ¿Cuál fue la fecha de instalación de un elemento urbano?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?element ?elementLabel
-       ?installationDate
+SELECT ?facility ?facilityLabel ?infraType
 WHERE {
-
-    # Sustituir por la URI del elemento urbano
-    BIND(<URI-del-elemento-urbano> AS ?element)
-
-    # Debe ser un UrbanElement
-    ?element a edintinf:UrbanElement .
-
-    OPTIONAL { ?element rdfs:label ?elementLabel . }
-
-    # Fecha de instalación
-    OPTIONAL { ?element edintinf:installationDate ?installationDate . }
+    ?facility a edintinf:Facility .
+    OPTIONAL { ?facility rdfs:label ?facilityLabel }
+    OPTIONAL { ?facility edintinf:hasInfrastructureType ?infraType }
 }
+ORDER BY ?facilityLabel
 
-#Para mantenimiento
+#==============================================================================
+# VARIANTS (documentación)
+#==============================================================================
 
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?element ?elementLabel
-       ?maintenanceDate
-WHERE {
+# SELECT ?element ?elementLabel
+       # ?maintenanceDate
+# WHERE {
 
     # Sustituye este valor por la URI concreta del elemento urbano
-    BIND(<URI-del-elemento-urbano> AS ?element)
+    # BIND(<URI-del-elemento-urbano> AS ?element)
 
     # Debe ser un UrbanElement
-    ?element a edintinf:UrbanElement .
+    # ?element a edintinf:UrbanElement .
 
-    OPTIONAL { ?element rdfs:label ?elementLabel . }
+    # OPTIONAL { ?element rdfs:label ?elementLabel . }
 
     # Fecha de mantenimiento
-    OPTIONAL { ?element edintinf:maintenanceDate ?maintenanceDate . }
-}
+    # OPTIONAL { ?element edintinf:maintenanceDate ?maintenanceDate . }
+# }

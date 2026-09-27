@@ -1,40 +1,38 @@
-
-
 # INF23: ¿Qué observaciones se han producido en un punto de acceso concreto?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?observation ?observationLabel
-       ?type ?typeLabel
-       ?result ?time
-       ?sensor ?sensorLabel
+SELECT ?facility ?facilityLabel ?obsPoint
 WHERE {
+    ?facility a edintinf:Facility .
+    ?facility edintinf:hasObservationPoint ?obsPoint .
 
-    # Punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
-
-    # Observaciones registradas en ese punto
-    ?observation sosa:hasFeatureOfInterest ?obsPoint .
-
-    # Puede incluir observaciones de acceso, conteo u otras — opcional filtrar
-    OPTIONAL { ?observation a ?type .
-               OPTIONAL { ?type rdfs:label ?typeLabel . } }
-
-    # Etiqueta de la observación
-    OPTIONAL { ?observation rdfs:label ?observationLabel . }
-
-    # Resultado simple (si existe)
-    OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
-
-    # Momento de la observación
-    OPTIONAL { ?observation sosa:resultTime ?time . }
-
-    # Sensor que la realizó
-    OPTIONAL {
-        ?observation sosa:madeBySensor ?sensor .
-        OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
-    }
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 }
-ORDER BY ?time ?observation
+ORDER BY ?facilityLabel

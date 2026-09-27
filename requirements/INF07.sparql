@@ -1,36 +1,39 @@
-
-
 # INF7: ¿Qué organizaciones privadas tienen un rol en infraestructuras públicas?
 
-
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?infra ?infraLabel
-       ?publicOwner ?publicOwnerLabel
-       ?role ?roleLabel
-       ?privateOrg ?privateOrgLabel
+SELECT ?facility ?facilityLabel ?owner ?ownerLabel
 WHERE {
+    ?facility a edintinf:Facility ;
+              edintinf:registeredOwner ?owner .
 
-    # 1. Infraestructura pública
-    ?infra a edintinf:InfrastructureElement ;
-           edintinf:registeredOwner ?publicOwner .
-
-    ?publicOwner trafico:isPublic true .   # Titularidad pública
-
-    # 2. Rol de gestión sobre esa infraestructura
-    ?role edintinf:madeOnInfrastructure ?infra ;
-          edintinf:rolePlayedBy ?privateOrg .
-
-    OPTIONAL { ?role rdfs:label ?roleLabel . }
-
-    # 3. La organización que gestiona es privada
-    ?privateOrg trafico:isPublic false .
-
-    # Etiquetas opcionales
-    OPTIONAL { ?infra rdfs:label ?infraLabel . }
-    OPTIONAL { ?publicOwner rdfs:label ?publicOwnerLabel . }
-    OPTIONAL { ?privateOrg rdfs:label ?privateOrgLabel . }
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?owner rdfs:label ?ownerLabel . }
 }
-ORDER BY ?infra ?privateOrg
+ORDER BY ?ownerLabel ?facilityLabel

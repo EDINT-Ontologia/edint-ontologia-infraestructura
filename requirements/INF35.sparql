@@ -1,34 +1,36 @@
-
 # INF35: ¿Qué infracciones (por tipo) han ocurrido en un punto concreto?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?obsPoint ?obsPointLabel
-       ?infraction ?infractionLabel
-       ?type ?typeLabel
+SELECT ?activity ?activityLabel
 WHERE {
-
-    # Punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
-    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
-
-    # Observación realizada sobre este punto
-    ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-                 edintinf:provesViolation ?infraction .
-
-    OPTIONAL { ?observation rdfs:label ?obsLabel . }
-
-    # Infracción registrada
-    OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
-
-    # Tipo de infracción (concepto SKOS)
-    OPTIONAL {
-        ?infraction edintinf:hasViolationType ?type .
-        OPTIONAL { ?type skos:prefLabel ?typeLabel . }
-        OPTIONAL { ?type rdfs:label ?typeLabel . }
-    }
+    ?activity a <https://edint.es/def/kos#RegularActivity> .
+    OPTIONAL { ?activity rdfs:label ?activityLabel . }
 }
-ORDER BY ?typeLabel ?infraction
+ORDER BY ?activityLabel

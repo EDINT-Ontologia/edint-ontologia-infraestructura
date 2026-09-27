@@ -1,55 +1,64 @@
-
 # INF27: ¿Cuál es la localización de un punto de acceso concreto?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
-PREFIX geo:      <https://datos.ign.es/def/geo_core#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?obsPoint ?obsPointLabel
-       ?geom
-       ?x ?y
+SELECT ?facility ?facilityLabel ?obsPoint
 WHERE {
-
-    # Sustituir por la URI del punto de acceso (ObservationPoint)
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
-
-    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
-
-    # Geometría del punto de acceso
-    ?obsPoint gsp:hasGeometry ?geom .
-
-    # Coordenadas ETRS89
-    OPTIONAL { ?geom geo:xETRS89 ?x . }
-    OPTIONAL { ?geom geo:yETRS89 ?y . }
+    ?facility a edintinf:Facility .
+    OPTIONAL { ?facility edintinf:hasObservationPoint ?obsPoint }
+    OPTIONAL { ?facility rdfs:label ?facilityLabel }
 }
+ORDER BY ?facilityLabel
 
+#==============================================================================
+# VARIANTS (documentación)
+#==============================================================================
 
-# Localización junto con el equipamiento al que pertenece
-
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
-PREFIX geo:      <https://datos.ign.es/def/geo_core#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?obsPoint ?obsPointLabel
-       ?facility ?facilityLabel
-       ?geom
-       ?x ?y
-WHERE {
+# SELECT ?obsPoint ?obsPointLabel
+       # ?facility ?facilityLabel
+       # ?geom
+       # ?x ?y
+# WHERE {
 
     # Punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+    # BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
 
-    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+    # OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
     # Equipamiento que contiene ese punto de acceso
-    ?facility edintinf:hasObservationPoint ?obsPoint .
-    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    # ?facility edintinf:hasObservationPoint ?obsPoint .
+    # OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 
     # Geometría y coordenadas del punto
-    ?obsPoint gsp:hasGeometry ?geom .
+    # ?obsPoint gsp:hasGeometry ?geom .
 
-    OPTIONAL { ?geom geo:xETRS89 ?x . }
-    OPTIONAL { ?geom geo:yETRS89 ?y . }
-}
+    # OPTIONAL { ?geom geo:xETRS89 ?x . }
+    # OPTIONAL { ?geom geo:yETRS89 ?y . }
+# }
+

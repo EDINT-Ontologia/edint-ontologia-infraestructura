@@ -1,43 +1,37 @@
-
 # INF37: ¿Cuál es el nivel de ocupación registrado para un aparcamiento en una fecha y hora determinadas?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?parking ?parkingLabel
-       ?obsPoint ?obsPointLabel
-       ?sensor ?sensorLabel
-       ?observation ?observationLabel
-       ?result ?time
+SELECT ?facility ?facilityLabel ?infraType
 WHERE {
-
-  # Aparcamiento concreto (SUSTITUIR)
-  BIND(<URI-del-aparcamiento> AS ?parking)
-  OPTIONAL { ?parking rdfs:label ?parkingLabel . }
-
-  # Puntos de observación del aparcamiento
-  ?parking edintinf:hasObservationPoint ?obsPoint .
-  OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
-
-  # Observaciones en esos puntos, realizadas por un sensor de conteo (CountingSensor),
-  #    cuya propiedad observada sea 'ocupación'
-  ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
-               sosa:madeBySensor ?sensor ;
-               sosa:resultTime ?time .
-
-  ?sensor a edintinf:CountingSensor .
-
-  OPTIONAL { ?sensor      rdfs:label ?sensorLabel . }
-  OPTIONAL { ?observation rdfs:label ?observationLabel . }
-
-  # Valor observado (ocupación)
-  OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
-
-  # Filtro temporal (SUSTITUIR por el instante deseado)
-  FILTER( ?time = "FECHA-HORA"^^xsd:dateTime )
+    ?facility a edintinf:Facility .
+    OPTIONAL { ?facility edintinf:hasInfrastructureType ?infraType }
+    OPTIONAL { ?facility rdfs:label ?facilityLabel }
 }
-ORDER BY ?time
+ORDER BY ?facilityLabel

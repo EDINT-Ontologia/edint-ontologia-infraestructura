@@ -1,58 +1,66 @@
-
 # INF33: ¿En qué punto de acceso se produjo una infracción concreta?
 # También vale para INF34: ¿Qué acceso/observación apoya una infracción concreta?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?infraction ?infractionLabel
-       ?observation ?observationLabel
-       ?obsPoint ?obsPointLabel
-WHERE {
-
-    # Infracción concreta (sustituir la URI)
-    BIND(<URI-de-la-infraccion> AS ?infraction)
-
-    OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
-
-    # Observación que soporta esta infracción
-    ?observation edintinf:provesViolation ?infraction .
-    OPTIONAL { ?observation rdfs:label ?observationLabel . }
-
-    # Punto de acceso (observación) donde se produjo
-    ?observation sosa:hasFeatureOfInterest ?obsPoint .
-    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
-}
-
-# Variante para incluir el vehículo de la infracción
-
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX edintkos: <https://edint.es/def/kos#>
 PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
-PREFIX sosa:     <http://www.w3.org/ns/sosa/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?infraction ?infractionLabel
-       ?observation ?observationLabel
-       ?obsPoint ?obsPointLabel
-       ?vehicle ?vehicleLabel
+SELECT ?service ?serviceLabel
 WHERE {
+    ?service a <https://edint.es/def/kos#PublicService> .
+    OPTIONAL { ?service rdfs:label ?serviceLabel . }
+}
+ORDER BY ?serviceLabel
+
+#==============================================================================
+# VARIANTS (documentación)
+#==============================================================================
+
+# SELECT ?infraction ?infractionLabel
+       # ?observation ?observationLabel
+       # ?obsPoint ?obsPointLabel
+       # ?vehicle ?vehicleLabel
+# WHERE {
 
   # Infracción concreta (sustituir la URI)
-  BIND(<URI-de-la-infraccion> AS ?infraction)
-  OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
+  # BIND(<URI-de-la-infraccion> AS ?infraction)
+  # OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
   # Observación que apoya esta infracción  →  punto de acceso
-  ?observation edintinf:provesViolation ?infraction ;
-               sosa:hasFeatureOfInterest ?obsPoint .
-  OPTIONAL { ?observation rdfs:label ?observationLabel . }
-  OPTIONAL { ?obsPoint    rdfs:label ?obsPointLabel . }
+  # ?observation edintinf:provesViolation ?infraction ;
+               # sosa:hasFeatureOfInterest ?obsPoint .
+  # OPTIONAL { ?observation rdfs:label ?observationLabel . }
+  # OPTIONAL { ?obsPoint    rdfs:label ?obsPointLabel . }
 
   # Vehículo: por cualquiera de los dos caminos (robusto)
-  OPTIONAL {?infraction edintinf:linkedTo ?vehicle .}
+  # OPTIONAL {?infraction edintinf:linkedTo ?vehicle .}
   #Puede haber errores con la siguiente si la observación indluye varios vehículos
   # OPTIONAL { ?observation edintinf:includesVehicle ?vehicle . }
 
 
-  OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
-}
+  # OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
+# }

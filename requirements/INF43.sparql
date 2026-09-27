@@ -1,37 +1,39 @@
-
 # INF43: ¿En qué divisiones administrativas hay menos de n elementos de infraestructura de un tipo concreto?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?admin ?adminLabel
-       (COUNT(DISTINCT ?element) AS ?numElements)
+SELECT ?adminUnit ?adminUnitLabel (COUNT(?facility) AS ?infraCount)
 WHERE {
-
-  # 1) Divisiones administrativas (municipio, distrito, barrio, etc.)
-  ?admin a ?adminClass .
-  VALUES ?adminClass { 
-      esadm:Municipio 
-      esadm:Distrito 
-      esadm:Barrio 
-      esadm:Provincia
-      esadm:Ciudad
-      esadm:Autonomia
-  }
-  OPTIONAL { ?admin rdfs:label ?adminLabel . }
-
-  # 2) Elementos de infraestructura que pertenecen a esa división
-  ?element a edintinf:InfrastructureElement ;
-           edintinf:belongsTo ?admin ;
-           edintinf:hasInfrastructureType ?type .
-
-  # 3) Filtro por tipo de infraestructura (SUSTITUIR etiqueta o IRI)
-  ?type (skos:prefLabel | rdfs:label) ?typeLabel .
-  FILTER( LCASE(STR(?typeLabel)) = LCASE("señal de tráfico") )
-
+    ?facility a edintinf:Facility .
+    ?facility edintinf:belongsTo ?adminUnit .
+    OPTIONAL { ?adminUnit rdfs:label ?adminUnitLabel }
 }
-GROUP BY ?admin ?adminLabel
-HAVING ( COUNT(DISTINCT ?element) < 5 )     # ← SUSTITUIR n
-ORDER BY ?numElements ASC(?adminLabel)
+GROUP BY ?adminUnit ?adminUnitLabel
+ORDER BY DESC(?infraCount)
+LIMIT 10

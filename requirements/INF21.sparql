@@ -1,70 +1,70 @@
-
 # INF21: ¿En qué elementos de infraestructura tiene un rol una organización concreta?
 
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX edintkos: <https://edint.es/def/kos#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX formats: <http://www.w3.org/ns/formats/>
+PREFIX geo: <https://datos.ign.es/def/geo_core#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?organization ?organizationLabel
-       ?role ?roleLabel
-       ?roleType ?roleTypeLabel
-       ?infrastructure ?infraLabel
+SELECT ?org ?orgLabel ?facility ?facilityLabel
 WHERE {
-
-    # Sustituye por la URI de la organización concreta
-    BIND(<URI-de-la-organizacion> AS ?organization)
-
-    OPTIONAL { ?organization rdfs:label ?organizationLabel . }
-
-    # Encontrar roles desempeñados por esta organización
-    ?role a edintinf:ManagementRole ;
-          edintinf:rolePlayedBy ?organization ;
-          edintinf:madeOnInfrastructure ?infrastructure .
-
-    OPTIONAL { ?role rdfs:label ?roleLabel . }
-
-    # Tipo SKOS del rol (opcional)
-    OPTIONAL {
-        ?role edintinf:hasRoleType ?roleType .
-        OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
-        OPTIONAL { ?roleType <http://www.w3.org/2004/02/skos/core#prefLabel> ?roleTypeLabel . }
-    }
-
-    OPTIONAL { ?infrastructure rdfs:label ?infraLabel . }
+    ?facility edintinf:registeredOwner ?org .
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?org rdfs:label ?orgLabel . }
 }
-ORDER BY ?infrastructure ?role
+ORDER BY ?orgLabel ?facilityLabel
 
+#==============================================================================
+# VARIANTS (documentación)
+#==============================================================================
 
-# Para rol concreto
-
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-
-SELECT ?organization ?organizationLabel
-       ?role ?roleLabel
-       ?roleType ?roleTypeLabel
-       ?infrastructure ?infraLabel
-WHERE {
+# SELECT ?organization ?organizationLabel
+       # ?role ?roleLabel
+       # ?roleType ?roleTypeLabel
+       # ?infrastructure ?infraLabel
+# WHERE {
 
     # Organización concreta
-    BIND(<URI-de-la-organizacion> AS ?organization)
-    OPTIONAL { ?organization rdfs:label ?organizationLabel . }
+    # BIND(<URI-de-la-organizacion> AS ?organization)
+    # OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 
     # Rol realizado por esa organización
-    ?role a edintinf:ManagementRole ;
-          edintinf:rolePlayedBy ?organization ;
-          edintinf:madeOnInfrastructure ?infrastructure .
+    # ?role a edintinf:ManagementRole ;
+          # edintinf:rolePlayedBy ?organization ;
+          # edintinf:madeOnInfrastructure ?infrastructure .
 
-    OPTIONAL { ?role rdfs:label ?roleLabel . }
+    # OPTIONAL { ?role rdfs:label ?roleLabel . }
 
     # Tipo SKOS de rol
-    ?role edintinf:hasRoleType ?roleType .
-    OPTIONAL { ?roleType skos:prefLabel ?roleTypeLabel . }
-    OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
+    # ?role edintinf:hasRoleType ?roleType .
+    # OPTIONAL { ?roleType skos:prefLabel ?roleTypeLabel . }
+    # OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
 
     # FILTRO por el tipo de rol deseado (por etiqueta)
-    FILTER( LCASE(STR(?roleTypeLabel)) = LCASE("tipo_de_rol") )
+    # FILTER( LCASE(STR(?roleTypeLabel)) = LCASE("tipo_de_rol") )
 
-    OPTIONAL { ?infrastructure rdfs:label ?infraLabel . }
-}
-ORDER BY ?infrastructure ?role
+    # OPTIONAL { ?infrastructure rdfs:label ?infraLabel . }
+# }
+# ORDER BY ?infrastructure ?role
