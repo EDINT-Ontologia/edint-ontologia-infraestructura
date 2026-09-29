@@ -54,7 +54,7 @@ SELECT ?parking ?parkingLabel
        ?obs1 ?t1 ?r1
        ?obs2 ?t2 ?r2
        (?r2 - ?r1 AS ?delta)
-       (IF(?r1 != 0, ( (?r2 - ?r1) / ?r1 ) * 100.0, UNDEF) AS ?pctChange)
+       (IF(?r1 != 0, ( (?r2 - ?r1) / ?r1 ) * 100.0, ?sinValor) AS ?pctChange)
 WHERE {
   # Aparcamiento (SUSTITUIR)
   BIND(<URI-del-aparcamiento> AS ?parking)

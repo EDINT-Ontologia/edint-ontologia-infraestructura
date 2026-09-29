@@ -1,5 +1,5 @@
 
-INF29: ¿Cuál es el horario de actividad de un equipamiento?
+# INF29: ¿Cuál es el horario de actividad de un equipamiento?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX schema:   <http://schema.org/>

@@ -1,5 +1,5 @@
 
-INF30: ¿Cuál es el sensor de un punto de acceso y sus observaciones durante un periodo determinado?
+# INF30: ¿Cuál es el sensor de un punto de acceso y sus observaciones durante un periodo determinado?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX sosa:     <http://www.w3.org/ns/sosa/>
@@ -35,6 +35,5 @@ WHERE {
              ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
 
 
-    )
 }
 ORDER BY ?time
