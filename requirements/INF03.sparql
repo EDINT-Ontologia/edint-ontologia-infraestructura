@@ -8,7 +8,7 @@ PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?facility ?facilityLabel ?type ?typeLabel
 WHERE {
     # Sustituir por la URI concreta de la instalación
-    BIND(<URI-de-la-instalacion> AS ?facility)
+    BIND(<http://example.org/placeholder/URI-de-la-instalacion> AS ?facility)
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 
@@ -30,7 +30,7 @@ PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 SELECT ?element ?elementLabel ?type ?typeLabel
 WHERE {
     # Sustituir por la URI del elemento de infraestructura
-    BIND(<URI-del-elemento> AS ?element)
+    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
 
     # Nombre del elemento
     OPTIONAL { ?element rdfs:label ?elementLabel . }

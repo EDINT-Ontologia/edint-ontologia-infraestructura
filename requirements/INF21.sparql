@@ -11,7 +11,7 @@ SELECT ?organization ?organizationLabel
 WHERE {
 
     # Sustituye por la URI de la organización concreta
-    BIND(<URI-de-la-organizacion> AS ?organization)
+    BIND(<http://example.org/placeholder/URI-de-la-organizacion> AS ?organization)
 
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 
@@ -47,7 +47,7 @@ SELECT ?organization ?organizationLabel
 WHERE {
 
     # Organización concreta
-    BIND(<URI-de-la-organizacion> AS ?organization)
+    BIND(<http://example.org/placeholder/URI-de-la-organizacion> AS ?organization)
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 
     # Rol realizado por esa organización

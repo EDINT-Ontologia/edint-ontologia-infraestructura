@@ -12,7 +12,7 @@ SELECT ?obsPoint ?obsPointLabel
 WHERE {
 
     # Sustituir por la URI del punto de acceso (ObservationPoint)
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
 
     OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
@@ -39,7 +39,7 @@ SELECT ?obsPoint ?obsPointLabel
 WHERE {
 
     # Punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
 
     OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
