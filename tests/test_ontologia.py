@@ -44,3 +44,22 @@ def test_fechas_coherentes(modelo, ontologia):
     assert fechas["created"] <= fechas["issued"] <= fechas["modified"], (
         f"fechas incoherentes: {fechas}"
     )
+
+
+@pytest.mark.usefixtures("root")
+def test_ontology_bloque_unico_xml(root):
+    """El fichero ontology.owl debe contener UN solo bloque <owl:Ontology>.
+
+    Un segundo bloque (mismo rdf:about) es un artefacto de regeneración de
+    Widoco: el grafo RDF lo fusiona y los tests semánticos no lo ven, pero
+    corrompe la serialización y confunde a validadores y humanos."""
+    owl = None
+    for cand in ("ontology/ontology.owl", "documentation/ontology.owl"):
+        p = root / cand
+        if p.exists():
+            owl = p
+            break
+    if owl is None:
+        pytest.skip("sin ontology.owl")
+    n = owl.read_text(errors="replace").count("<owl:Ontology")
+    assert n == 1, f"{owl}: {n} bloques <owl:Ontology> (debe ser 1) — fusiona los metadatos en un único bloque"
