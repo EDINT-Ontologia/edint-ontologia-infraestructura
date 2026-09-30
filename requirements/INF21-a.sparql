@@ -1,7 +1,8 @@
-# INF21: ¿En qué elementos de infraestructura tiene un rol una organización concreta?
+# Para rol concreto
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
 
 SELECT ?organization ?organizationLabel
        ?role ?roleLabel
@@ -9,24 +10,24 @@ SELECT ?organization ?organizationLabel
        ?infrastructure ?infraLabel
 WHERE {
 
-    # Sustituye por la URI de la organización concreta
+    # Organización concreta
     BIND(<URI-de-la-organizacion> AS ?organization)
-
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 
-    # Encontrar roles desempeñados por esta organización
+    # Rol realizado por esa organización
     ?role a edintinf:ManagementRole ;
           edintinf:rolePlayedBy ?organization ;
           edintinf:madeOnInfrastructure ?infrastructure .
 
     OPTIONAL { ?role rdfs:label ?roleLabel . }
 
-    # Tipo SKOS del rol (opcional)
-    OPTIONAL {
-        ?role edintinf:hasRoleType ?roleType .
-        OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
-        OPTIONAL { ?roleType <http://www.w3.org/2004/02/skos/core#prefLabel> ?roleTypeLabel . }
-    }
+    # Tipo SKOS de rol
+    ?role edintinf:hasRoleType ?roleType .
+    OPTIONAL { ?roleType skos:prefLabel ?roleTypeLabel . }
+    OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
+
+    # FILTRO por el tipo de rol deseado (por etiqueta)
+    FILTER( LCASE(STR(?roleTypeLabel)) = LCASE("tipo_de_rol") )
 
     OPTIONAL { ?infrastructure rdfs:label ?infraLabel . }
 }
