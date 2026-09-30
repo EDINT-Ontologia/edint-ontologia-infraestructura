@@ -120,3 +120,25 @@ def prefijos_declarados_repo() -> set[str]:
                 if _sin_generados(p):
                     out |= set(extraer_prefijos(p.read_text(errors="replace")))
     return out
+
+
+def cargar_grafo_ejemplos():
+    """Une examples/** + ontology/*.owl + kos/*.ttl en un solo grafo (None si hay errores de parseo)."""
+    import glob
+    from rdflib import Graph
+    g = Graph()
+    ok = False
+    patrones = [
+        ("examples", "**", "*.ttl"),
+        ("examples", "**", "*.owl"),
+        ("ontology", "*.owl"),
+        ("kos", "*.ttl"),
+    ]
+    for patron in patrones:
+        for f in glob.glob(str(ROOT.joinpath(*patron)), recursive=True):
+            try:
+                g.parse(f)
+                ok = True
+            except Exception:
+                return None
+    return g if ok else None
