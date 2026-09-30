@@ -1,12 +1,11 @@
-# INF26: ¿Cuál es la localización de un elemento de movilidad concreto?
+# Localización en formato WKT
 
 PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
-PREFIX geo:      <https://datos.ign.es/def/geo_core#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?element ?elementLabel
        ?geom
-       ?x ?y
+       ?wkt
 WHERE {
 
     # Sustituye por la URI del elemento de movilidad
@@ -14,10 +13,9 @@ WHERE {
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 
-    # Geometría asociada al elemento
+    # Geometría del elemento
     ?element gsp:hasGeometry ?geom .
 
-    # Coordenadas ETRS89 del elemento
-    OPTIONAL { ?geom geo:xETRS89 ?x . }
-    OPTIONAL { ?geom geo:yETRS89 ?y . }
+    # Representación geométrica en WKT
+    OPTIONAL { ?geom gsp:asWKT ?wkt . }
 }
