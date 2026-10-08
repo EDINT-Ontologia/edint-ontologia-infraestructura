@@ -1,3 +1,4 @@
+
 # INF28: ¿Cuál fue la fecha de instalación de un elemento urbano?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
@@ -8,7 +9,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituir por la URI del elemento urbano
-    BIND(<URI-del-elemento-urbano> AS ?element)
+    BIND(<http://example.org/placeholder/URI-del-elemento-urbano> AS ?element)
 
     # Debe ser un UrbanElement
     ?element a edintinf:UrbanElement .
@@ -17,4 +18,25 @@ WHERE {
 
     # Fecha de instalación
     OPTIONAL { ?element edintinf:installationDate ?installationDate . }
+}
+
+#Para mantenimiento
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?element ?elementLabel
+       ?maintenanceDate
+WHERE {
+
+    # Sustituye este valor por la URI concreta del elemento urbano
+    BIND(<http://example.org/placeholder/URI-del-elemento-urbano> AS ?element)
+
+    # Debe ser un UrbanElement
+    ?element a edintinf:UrbanElement .
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+
+    # Fecha de mantenimiento
+    OPTIONAL { ?element edintinf:maintenanceDate ?maintenanceDate . }
 }

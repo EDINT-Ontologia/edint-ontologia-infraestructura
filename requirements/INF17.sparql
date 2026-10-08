@@ -1,3 +1,4 @@
+
 # INF17: ¿Qué sensores están instalados en un aparcamiento concreto?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
@@ -11,7 +12,7 @@ SELECT DISTINCT
 WHERE {
 
     # Sustituir por el IRI del aparcamiento concreto
-    BIND(<URI-del-aparcamiento> AS ?parking)
+    BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
 
     OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
@@ -24,5 +25,46 @@ WHERE {
                  sosa:madeBySensor ?sensor .
 
     OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+}
+ORDER BY ?obsPoint ?sensor
+
+
+#Con geolocalización de sensores
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX geo:      <https://datos.ign.es/def/geo_core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+       ?parking ?parkingLabel
+       ?obsPoint ?obsPointLabel
+       ?sensor ?sensorLabel
+       ?geom
+       ?x ?y
+WHERE {
+
+    # Aparcamiento concreto
+    BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
+
+    OPTIONAL { ?parking rdfs:label ?parkingLabel . }
+
+    # Puntos de observación asociados al aparcamiento
+    ?parking edintinf:hasObservationPoint ?obsPoint .
+    OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+
+    # Sensores vinculados a esos puntos (vía observaciones SOSA)
+    ?observation sosa:hasFeatureOfInterest ?obsPoint ;
+                 sosa:madeBySensor ?sensor .
+
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+
+    # Geometría del sensor
+    ?sensor gsp:hasGeometry ?geom .
+
+    # Coordenadas ETRS89 del sensor (X/Y)
+    OPTIONAL { ?geom geo:xETRS89 ?x . }
+    OPTIONAL { ?geom geo:yETRS89 ?y . }
 }
 ORDER BY ?obsPoint ?sensor

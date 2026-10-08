@@ -11,7 +11,7 @@ SELECT ?infraction ?infractionLabel
 WHERE {
 
     # Infracción concreta (sustituir la URI)
-    BIND(<URI-de-la-infraccion> AS ?infraction)
+    BIND(<http://example.org/placeholder/URI-de-la-infraccion> AS ?infraction)
 
     OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
@@ -22,4 +22,36 @@ WHERE {
     # Punto de acceso (observación) donde se produjo
     ?observation sosa:hasFeatureOfInterest ?obsPoint .
     OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
+}
+
+# Variante para incluir el vehículo de la infracción
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX edintveh: <https://edint.es/def/censo-vehiculos#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?infraction ?infractionLabel
+       ?observation ?observationLabel
+       ?obsPoint ?obsPointLabel
+       ?vehicle ?vehicleLabel
+WHERE {
+
+  # Infracción concreta (sustituir la URI)
+  BIND(<http://example.org/placeholder/URI-de-la-infraccion> AS ?infraction)
+  OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
+
+  # Observación que apoya esta infracción  →  punto de acceso
+  ?observation edintinf:provesViolation ?infraction ;
+               sosa:hasFeatureOfInterest ?obsPoint .
+  OPTIONAL { ?observation rdfs:label ?observationLabel . }
+  OPTIONAL { ?obsPoint    rdfs:label ?obsPointLabel . }
+
+  # Vehículo: por cualquiera de los dos caminos (robusto)
+  OPTIONAL {?infraction edintinf:linkedTo ?vehicle .}
+  #Puede haber errores con la siguiente si la observación indluye varios vehículos
+  # OPTIONAL { ?observation edintinf:includesVehicle ?vehicle . }
+
+
+  OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
 }

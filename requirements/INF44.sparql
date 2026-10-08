@@ -14,7 +14,7 @@ SELECT DISTINCT
 WHERE {
 
   # 1) Vehículo concreto (SUSTITUIR URI)
-  BIND(<URI-del-vehiculo> AS ?vehicle)
+  BIND(<http://example.org/placeholder/URI-del-vehiculo> AS ?vehicle)
   OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
 
   # 2) Observaciones en las que aparece ese vehículo
