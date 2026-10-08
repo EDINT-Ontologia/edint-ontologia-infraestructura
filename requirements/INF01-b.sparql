@@ -1,0 +1,30 @@
+# Para equipamientos públicos
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX esadm:   <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel ?adminUnit ?adminLabel ?owner ?ownerLabel
+WHERE {
+    # Equipamientos
+    ?facility a edintinf:Facility ;
+              edintinf:belongsTo ?adminUnit ;
+              edintinf:registeredOwner ?owner .
+
+    # La unidad administrativa puede ser Municipio, Distrito o Barrio
+    VALUES ?adminClass {
+        esadm:Municipio
+        esadm:Distrito
+        esadm:Barrio
+    }
+    ?adminUnit a ?adminClass .
+
+    # Organización titular
+    ?owner edintinf:isPublic true .
+
+    # Etiquetas opcionales
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+    OPTIONAL { ?adminUnit rdfs:label ?adminLabel . }
+    OPTIONAL { ?owner     rdfs:label ?ownerLabel . }
+}
+ORDER BY ?adminUnit ?facility
