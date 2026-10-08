@@ -1,6 +1,3 @@
-
-# INF39: ¿Qué variación de ocupación presenta un aparcamiento según lecturas disponibles?
-
 # A través de tres consultas complementarias:
 #  1. Serie temporal de ocupación (todas las lecturas ordenadas)
 #  2. Deltas entre lecturas consecutivas (variación lectura a lectura)
