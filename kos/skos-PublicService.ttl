@@ -58,31 +58,31 @@ edintpublicservice:cafeteria a skos:Concept;
   skos:prefLabel "Cafeteria"@en .
 
 edintpublicservice:healthcenterservice a skos:Concept;
-  skos:inScheme edintkos:HealthCenterService;
+  skos:inScheme edintkos:PublicService;
   skos:prefLabel "Servicio de Centro de salud"@es ;
   skos:broader edintpublicservice:complementaryservice;
   skos:prefLabel "Health facility service"@en .
 
 edintpublicservice:medicalassistance a skos:Concept;
-  skos:inScheme edintkos:HealthCenterService;
+  skos:inScheme edintkos:PublicService;
   skos:broader edintpublicservice:healthcenterservice;
   skos:prefLabel "Asistencia médica y enfermería"@es ;
   skos:prefLabel "Medical and nursing care"@en . 
 
 edintpublicservice:healthprograms a skos:Concept;
-  skos:inScheme edintkos:HealthCenterService;
+  skos:inScheme edintkos:PublicService;
   skos:broader edintpublicservice:healthcenterservice;
   skos:prefLabel "Programas de salud"@es ;
   skos:prefLabel "Health programs"@en . 
 
 edintpublicservice:minorsurgery a skos:Concept;
-  skos:inScheme edintkos:HealthCenterService;
+  skos:inScheme edintkos:PublicService;
   skos:broader edintpublicservice:healthcenterservice;
   skos:prefLabel "Diagnosis y cirugía menor"@es ;
   skos:prefLabel "Diagnosis and minor surgery"@en . 
 
  edintpublicservice:fisioterapia a skos:Concept;
-  skos:inScheme edintkos:HealthCenterService;
+  skos:inScheme edintkos:PublicService;
   skos:broader edintpublicservice:healthcenterservice;
   skos:prefLabel "Fisioterapia y rehabilitación"@es ;
   skos:prefLabel "Physiotherapy and rehabilitation"@en . 

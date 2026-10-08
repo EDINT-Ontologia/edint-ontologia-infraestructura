@@ -12,7 +12,7 @@ SELECT ?facility ?facilityLabel
 WHERE {
 
     # Sustituye por el IRI del equipamiento concreto
-    BIND(<URI-del-equipamiento> AS ?facility)
+    BIND(<http://example.org/placeholder/URI-del-equipamiento> AS ?facility)
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 

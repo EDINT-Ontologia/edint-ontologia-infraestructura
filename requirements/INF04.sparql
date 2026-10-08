@@ -8,7 +8,7 @@ PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?facility ?facilityLabel ?service ?serviceLabel
 WHERE {
     # Sustituye por la URI del equipamiento concreto
-    BIND(<URI-del-equipamiento> AS ?facility)
+    BIND(<http://example.org/placeholder/URI-del-equipamiento> AS ?facility)
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 

@@ -1,5 +1,4 @@
-
-INF33: ¿En qué punto de acceso se produjo una infracción concreta?
+# INF33: ¿En qué punto de acceso se produjo una infracción concreta?
 # También vale para INF34: ¿Qué acceso/observación apoya una infracción concreta?
 
 PREFIX edintinf: <https://edint.es/def/infraestructura#>
@@ -12,7 +11,7 @@ SELECT ?infraction ?infractionLabel
 WHERE {
 
     # Infracción concreta (sustituir la URI)
-    BIND(<URI-de-la-infraccion> AS ?infraction)
+    BIND(<http://example.org/placeholder/URI-de-la-infraccion> AS ?infraction)
 
     OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
@@ -39,7 +38,7 @@ SELECT ?infraction ?infractionLabel
 WHERE {
 
   # Infracción concreta (sustituir la URI)
-  BIND(<URI-de-la-infraccion> AS ?infraction)
+  BIND(<http://example.org/placeholder/URI-de-la-infraccion> AS ?infraction)
   OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
   # Observación que apoya esta infracción  →  punto de acceso

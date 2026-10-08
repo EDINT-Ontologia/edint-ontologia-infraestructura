@@ -11,7 +11,7 @@ SELECT ?admin ?adminLabel
        (COUNT(DISTINCT ?element) AS ?numElements)
 WHERE {
   # División administrativa concreta (sustituir)
-  BIND(<URI-de-la-division> AS ?admin)
+  BIND(<http://example.org/placeholder/URI-de-la-division> AS ?admin)
   OPTIONAL { ?admin rdfs:label ?adminLabel . }
 
   # Elementos de infraestructura que pertenecen a esa división
@@ -40,7 +40,7 @@ SELECT ?admin ?adminLabel
        ?type ?typeLabel
 WHERE {
   # División administrativa concreta (sustituir)
-  BIND(<URI-de-la-division> AS ?admin)
+  BIND(<http://example.org/placeholder/URI-de-la-division> AS ?admin)
   OPTIONAL { ?admin rdfs:label ?adminLabel . }
 
   # Elementos pertenecientes a esa división, con su tipo

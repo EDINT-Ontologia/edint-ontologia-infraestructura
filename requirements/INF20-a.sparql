@@ -1,0 +1,15 @@
+# Lista única por equipamiento
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?facility ?facilityLabel (COUNT(DISTINCT ?service) AS ?numServices)
+WHERE {
+    ?facility a edintinf:Facility ;
+              edintinf:providesPublicService ?service .
+
+    OPTIONAL { ?facility rdfs:label ?facilityLabel . }
+}
+GROUP BY ?facility ?facilityLabel
+HAVING (COUNT(DISTINCT ?service) >= 2)
+ORDER BY DESC(?numServices)

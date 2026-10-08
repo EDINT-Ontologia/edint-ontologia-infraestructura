@@ -1,0 +1,22 @@
+# Para cualquier elemento de infraestructura
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?element ?elementLabel
+       ?type ?typeLabel
+WHERE {
+
+    # Cualquier elemento de infraestructura que tenga tipo asignado
+    ?element a edintinf:InfrastructureElement ;
+             edintinf:hasInfrastructureType ?type .
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+    OPTIONAL { ?type skos:prefLabel ?typeLabel . }
+    OPTIONAL { ?type rdfs:label ?typeLabel . }
+
+    # Filtrar por el tipo concreto (por etiqueta)
+    FILTER( LCASE(STR(?typeLabel)) = LCASE("tipo_elemento") )
+}
+ORDER BY ?elementLabel

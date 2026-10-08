@@ -10,7 +10,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituir por el URI del elemento de infraestructura
-    BIND(<URI-del-elemento> AS ?element)
+    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 

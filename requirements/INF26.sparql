@@ -12,7 +12,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituye por la URI del elemento de movilidad
-    BIND(<URI-del-elemento> AS ?element)
+    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 
@@ -37,7 +37,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituye por la URI del elemento de movilidad
-    BIND(<URI-del-elemento> AS ?element)
+    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 

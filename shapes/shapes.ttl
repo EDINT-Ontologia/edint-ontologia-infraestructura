@@ -166,7 +166,7 @@
 <https://astrea.linkeddata.es/shapes#097a9d4a5025630f43b0d6511bcbfc68> a sh:NodeShape ;
     rdfs:label "Vehicle"@en,
         "Vehículo"@es ;
-    rdfs:isDefinedBy <https://edint.es/def/censovehiculos> ;
+    rdfs:isDefinedBy <https://edint.es/def/censo-vehiculos> ;
     sh:description "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en,
         "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))."@es ;
     sh:name "Vehicle"@en,

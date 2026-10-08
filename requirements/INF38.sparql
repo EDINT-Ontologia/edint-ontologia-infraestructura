@@ -1,6 +1,3 @@
-
-# INF39: ¿Qué variación de ocupación presenta un aparcamiento según lecturas disponibles?
-
 # A través de tres consultas complementarias:
 #  1. Serie temporal de ocupación (todas las lecturas ordenadas)
 #  2. Deltas entre lecturas consecutivas (variación lectura a lectura)
@@ -18,7 +15,7 @@ SELECT ?parking ?parkingLabel
        ?observation ?time ?result
 WHERE {
   # Aparcamiento (SUSTITUIR)
-  BIND(<URI-del-aparcamiento> AS ?parking)
+  BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
   # Puntos de observación del aparcamiento
@@ -54,10 +51,10 @@ SELECT ?parking ?parkingLabel
        ?obs1 ?t1 ?r1
        ?obs2 ?t2 ?r2
        (?r2 - ?r1 AS ?delta)
-       (IF(?r1 != 0, ( (?r2 - ?r1) / ?r1 ) * 100.0, UNDEF) AS ?pctChange)
+       (IF(?r1 != 0, ( (?r2 - ?r1) / ?r1 ) * 100.0, ?sinValor) AS ?pctChange)
 WHERE {
   # Aparcamiento (SUSTITUIR)
-  BIND(<URI-del-aparcamiento> AS ?parking)
+  BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
   # Puntos del aparcamiento
@@ -114,7 +111,7 @@ SELECT ?parking ?parkingLabel
        (AVG(?r) AS ?avgOcc)
        (COUNT(?r) AS ?numReadings)
 WHERE {
-  BIND(<URI-del-aparcamiento> AS ?parking)
+  BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
   ?parking edintinf:hasObservationPoint ?obsPoint .

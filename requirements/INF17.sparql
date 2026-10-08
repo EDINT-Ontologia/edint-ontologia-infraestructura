@@ -12,7 +12,7 @@ SELECT DISTINCT
 WHERE {
 
     # Sustituir por el IRI del aparcamiento concreto
-    BIND(<URI-del-aparcamiento> AS ?parking)
+    BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
 
     OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
@@ -46,7 +46,7 @@ SELECT DISTINCT
 WHERE {
 
     # Aparcamiento concreto
-    BIND(<URI-del-aparcamiento> AS ?parking)
+    BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
 
     OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 

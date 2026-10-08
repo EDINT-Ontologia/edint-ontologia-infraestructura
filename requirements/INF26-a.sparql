@@ -1,0 +1,21 @@
+# Localización en formato WKT
+
+PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?element ?elementLabel
+       ?geom
+       ?wkt
+WHERE {
+
+    # Sustituye por la URI del elemento de movilidad
+    BIND(<URI-del-elemento> AS ?element)
+
+    OPTIONAL { ?element rdfs:label ?elementLabel . }
+
+    # Geometría del elemento
+    ?element gsp:hasGeometry ?geom .
+
+    # Representación geométrica en WKT
+    OPTIONAL { ?geom gsp:asWKT ?wkt . }
+}

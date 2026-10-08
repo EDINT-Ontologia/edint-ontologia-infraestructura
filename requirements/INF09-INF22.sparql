@@ -1,4 +1,3 @@
-
 # INF09: ¿Qué observaciones de acceso de vehículos se han registrado en un intervalo de tiempo determinado?
 # También vale para INF22: ¿Cuántas observaciones de acceso de vehículos se han registrado por sensor en un intervalo de tiempo determinado?
 
@@ -60,7 +59,7 @@ SELECT ?observation ?observationLabel
 WHERE {
 
     # Fijar el punto de acceso concreto
-    BIND(<URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
 
     # Observaciones de acceso en ese punto
     ?observation a edintinf:AccessObservation ;
