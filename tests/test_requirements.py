@@ -26,11 +26,39 @@ def _filas(csv_path):
         lector = csv.DictReader(f, delimiter=_delimitador(csv_path))
         col = _columna_id(lector.fieldnames or [])
         for fila in lector:
-            yield (fila.get(col) or "").strip()
+            yield fila, (fila.get(col) or "").strip()
+
+
+def _columna_estado(cabeceras: list[str]) -> str | None:
+    """La columna de estado del requisito (Status...), si existe."""
+    for c in cabeceras:
+        if c and re.search(r"status", c, re.I):
+            return c
+    return None
 
 
 def _ids(csv_path) -> set[str]:
-    return {i for i in _filas(csv_path) if i}
+    return {i for _, i in _filas(csv_path) if i}
+
+
+def _ids_activos(csv_path) -> set[str]:
+    """IDs de requisitos no rechazados/descartados (los que deben tener
+    consulta y aparecer en queries.html). Las filas Rejected/Deprecated se
+    conservan en el CSV por trazabilidad pero no generan obligaciones."""
+    activos = set()
+    with csv_path.open(errors="replace", newline="") as f:
+        lector = csv.DictReader(f, delimiter=_delimitador(csv_path))
+        col = _columna_id(lector.fieldnames or [])
+        col_est = _columna_estado(lector.fieldnames or [])
+        for fila in lector:
+            i = (fila.get(col) or "").strip()
+            if not i:
+                continue
+            estado = (fila.get(col_est) or "").strip() if col_est else ""
+            if re.fullmatch(r"(rejected|deprecated)", estado, re.I):
+                continue
+            activos.add(i)
+    return activos
 
 
 def _normalizar(identificador: str) -> str:
@@ -67,7 +95,7 @@ def test_ids_csv_con_fichero():
     presentes = {_normalizar(p.name.split(".")[0]) for p in todo[1]}
     sin_fichero = []
     for c in todo[0]:
-        for idv in sorted(_ids(c)):
+        for idv in sorted(_ids_activos(c)):
             if re.fullmatch(r"[A-Za-z]+\d+", idv) and _normalizar(idv) not in presentes:
                 sin_fichero.append(f"{c.name}: {idv}")
     assert not sin_fichero, f"IDs en CSV sin fichero .sparql:\n  " + "\n  ".join(sin_fichero[:15])
@@ -96,7 +124,7 @@ def test_queries_html_actualizado():
     html = qh.read_text(errors="replace")
     ausentes = []
     for c in todo[0]:
-        for i in sorted(_ids(c)):
+        for i in sorted(_ids_activos(c)):
             if i in html:
                 continue
             # tolera diferencia de padding de ceros (VEH7 vs VEH07)
