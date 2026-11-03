@@ -31,4 +31,3 @@ WHERE {
     OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
 }
 ORDER BY ?obsPoint ?sensor
-
