@@ -18,6 +18,6 @@ WHERE {
     OPTIONAL { ?type rdfs:label ?typeLabel . }
 
     # Filtra por el tipo concreto (por nombre)
-    FILTER( LCASE(STR(?typeLabel)) = LCASE("tipo_instalación") )
+    FILTER( LCASE(STR(?typeLabel)) = LCASE("centro de día de mayores") )
 }
 ORDER BY ?installationLabel

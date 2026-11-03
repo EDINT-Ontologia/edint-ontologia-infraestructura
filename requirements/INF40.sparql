@@ -31,8 +31,8 @@ WHERE {
   OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
 
   # Filtro temporal (SUSTITUIR)
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    FILTER ( ?time >= "2025-01-01T00:00:00"^^xsd:dateTime &&
+             ?time <= "2026-01-01T00:00:00"^^xsd:dateTime )
 
   # Filtro por nivel de ocupación (SUSTITUIR condición)
   # Si el resultado es string en tu endpoint, tipa: xsd:decimal(?result)

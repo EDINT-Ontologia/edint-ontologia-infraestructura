@@ -14,7 +14,7 @@ SELECT DISTINCT
 WHERE {
 
     # Sensor de conteo concreto (SUSTITUIR)
-    BIND(<http://example.org/placeholder/URI-del-sensor-de-conteo> AS ?sensor)
+    BIND(<https://example.org/recurso/sensor1> AS ?sensor)
     ?sensor a edintinf:CountingSensor .
     OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
 

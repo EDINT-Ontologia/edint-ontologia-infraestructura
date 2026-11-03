@@ -12,7 +12,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituye por la URI del elemento de movilidad
-    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 

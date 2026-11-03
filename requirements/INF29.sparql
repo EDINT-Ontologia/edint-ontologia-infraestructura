@@ -10,7 +10,7 @@ SELECT ?facility ?facilityLabel
 WHERE {
 
     # Sustituir por el URI del equipamiento concreto
-    BIND(<http://example.org/placeholder/URI-del-equipamiento> AS ?facility)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?facility)
 
     # Debe ser un equipamiento
     ?facility a edintinf:Facility .
