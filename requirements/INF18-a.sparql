@@ -17,6 +17,6 @@ WHERE {
     OPTIONAL { ?type rdfs:label ?typeLabel . }
 
     # Filtrar por el tipo concreto (por etiqueta)
-    FILTER( LCASE(STR(?typeLabel)) = LCASE("tipo_elemento") )
+    FILTER( LCASE(STR(?typeLabel)) = LCASE("centro de día de mayores") )
 }
 ORDER BY ?elementLabel

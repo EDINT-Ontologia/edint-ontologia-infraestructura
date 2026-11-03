@@ -19,6 +19,6 @@ WHERE {
     OPTIONAL { ?service rdfs:label ?serviceLabel . }
 
     # Filtra por el servicio deseado (por etiqueta)
-    FILTER(LCASE(STR(?serviceLabel)) = LCASE("nombre_servicio"))
+    FILTER(LCASE(STR(?serviceLabel)) = LCASE("alquiler de salas"))
 }
 ORDER BY ?facility

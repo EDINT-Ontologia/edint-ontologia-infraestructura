@@ -15,7 +15,7 @@ SELECT ?parking ?parkingLabel
 WHERE {
 
   # Aparcamiento concreto (SUSTITUIR)
-  BIND(<http://example.org/placeholder/URI-del-aparcamiento> AS ?parking)
+  BIND(<https://example.org/recurso/equipamiento-municipal/4852632> AS ?parking)
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
   # Puntos de observación del aparcamiento
@@ -38,6 +38,6 @@ WHERE {
   OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
 
   # Filtro temporal (SUSTITUIR por el instante deseado)
-  FILTER( ?time = "FECHA-HORA"^^xsd:dateTime )
+  FILTER( ?time = "2025-05-01T11:00:00"^^xsd:dateTime )
 }
 ORDER BY ?time

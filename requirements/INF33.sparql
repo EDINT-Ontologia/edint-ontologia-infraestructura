@@ -10,7 +10,7 @@ SELECT ?infraction ?infractionLabel
 WHERE {
 
     # Infracción concreta (sustituir la URI)
-    BIND(<http://example.org/placeholder/URI-de-la-infraccion> AS ?infraction)
+    BIND(<https://example.org/recurso/infraccion1> AS ?infraction)
 
     OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 

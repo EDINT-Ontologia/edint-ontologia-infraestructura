@@ -11,7 +11,7 @@ SELECT ?admin ?adminLabel
        (COUNT(DISTINCT ?element) AS ?numElements)
 WHERE {
   # División administrativa concreta (sustituir)
-  BIND(<http://example.org/placeholder/URI-de-la-division> AS ?admin)
+  BIND(<https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON> AS ?admin)
   OPTIONAL { ?admin rdfs:label ?adminLabel . }
 
   # Elementos de infraestructura que pertenecen a esa división

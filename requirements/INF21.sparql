@@ -11,7 +11,7 @@ SELECT ?organization ?organizationLabel
 WHERE {
 
     # Sustituye por la URI de la organización concreta
-    BIND(<http://example.org/placeholder/URI-de-la-organizacion> AS ?organization)
+    BIND(<https://example.org/recurso/organizacion/org1> AS ?organization)
 
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 

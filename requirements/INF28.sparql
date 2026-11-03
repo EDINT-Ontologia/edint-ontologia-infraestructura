@@ -9,7 +9,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituir por la URI del elemento urbano
-    BIND(<http://example.org/placeholder/URI-del-elemento-urbano> AS ?element)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?element)
 
     # Debe ser un UrbanElement
     ?element a edintinf:UrbanElement .

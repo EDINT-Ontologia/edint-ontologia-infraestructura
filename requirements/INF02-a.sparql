@@ -12,7 +12,7 @@ WHERE {
           rdfs:label ?facilityLabel ;
           schema:address ?address .
    
-    FILTER(CONTAINS(LCASE(?facilityLabel), "nombre_de_equipamiento"))
+    FILTER(CONTAINS(LCASE(?facilityLabel), "nicanor barroso"))
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 
