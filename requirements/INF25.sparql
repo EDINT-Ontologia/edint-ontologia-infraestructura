@@ -21,4 +21,3 @@ WHERE {
     OPTIONAL { ?type skos:prefLabel ?typeLabel . }
     OPTIONAL { ?type rdfs:label     ?typeLabel . }
 }
-

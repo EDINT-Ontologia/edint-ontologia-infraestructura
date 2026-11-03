@@ -34,4 +34,3 @@ WHERE {
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 }
 ORDER BY ?role ?organization
-

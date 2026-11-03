@@ -1,0 +1,18 @@
+# INF22: ¿Cuántas observaciones de acceso de vehículos se han registrado por sensor en un intervalo de tiempo determinado?
+
+PREFIX edintinf: <https://edint.es/def/infraestructura#>
+PREFIX sosa:     <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?sensor ?sensorLabel (COUNT(DISTINCT ?observation) AS ?numObservations)
+WHERE {
+    ?observation a edintinf:AccessObservation .
+    ?observation sosa:resultTime ?time .
+    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
+             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    ?observation sosa:madeBySensor ?sensor .
+    OPTIONAL { ?sensor rdfs:label ?sensorLabel . }
+}
+GROUP BY ?sensor ?sensorLabel
+ORDER BY DESC(?numObservations)
