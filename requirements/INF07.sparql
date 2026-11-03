@@ -15,7 +15,7 @@ WHERE {
 
     # 1. Infraestructura pública
     ?infra a edintinf:InfrastructureElement ;
-           edintinf:registeredOwner ?publicOwner .
+           edintinf:hasRegisteredOwner ?publicOwner .
 
     ?publicOwner trafico:isPublic true .   # Titularidad pública
 

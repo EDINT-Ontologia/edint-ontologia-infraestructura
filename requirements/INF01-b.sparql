@@ -9,7 +9,7 @@ WHERE {
     # Equipamientos
     ?facility a edintinf:Facility ;
               edintinf:belongsTo ?adminUnit ;
-              edintinf:registeredOwner ?owner .
+              edintinf:hasRegisteredOwner ?owner .
 
     # La unidad administrativa puede ser Municipio, Distrito o Barrio
     VALUES ?adminClass {
