@@ -24,7 +24,7 @@ WHERE {
 
   # Observaciones de ocupación en esos puntos
   ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               a edintinf:CountingObservation ;
                sosa:madeBySensor ?sensor ;
                sosa:resultTime ?time .
   OPTIONAL { ?observation sosa:hasSimpleResult ?result . }

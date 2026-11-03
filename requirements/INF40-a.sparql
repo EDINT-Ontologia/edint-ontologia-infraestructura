@@ -7,11 +7,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?parking ?parkingLabel
 WHERE {
-  ?parking a edintinf:Parking ;
+  ?parking a edintinf:Facility ;
            edintinf:hasObservationPoint ?obsPoint .
 
   ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               a edintinf:CountingObservation ;
                sosa:madeBySensor ?sensor ;
                sosa:resultTime ?time ;
                sosa:hasSimpleResult ?result .

@@ -23,7 +23,7 @@ WHERE {
 
     # Tipo del rol (titularidad, mantenimiento, seguridad...)
     OPTIONAL {
-        ?role edintinf:hasManagementRoleType ?roleType .
+        ?role edintinf:hasRoleType ?roleType .
         OPTIONAL { ?roleType skos:prefLabel ?roleTypeLabel . }
         OPTIONAL { ?roleType rdfs:label ?roleTypeLabel . }
     }

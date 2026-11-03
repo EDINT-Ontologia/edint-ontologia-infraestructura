@@ -17,7 +17,7 @@ WHERE {
   ?parking edintinf:hasObservationPoint ?obsPoint .
 
   ?obs sosa:hasFeatureOfInterest ?obsPoint ;
-       sosa:observedProperty edintinf:infrastructureOccupancy ;
+       a edintinf:CountingObservation ;
        sosa:resultTime ?t ;
        sosa:hasSimpleResult ?r .
 

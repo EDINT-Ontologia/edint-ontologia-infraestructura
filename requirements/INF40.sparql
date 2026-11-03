@@ -15,14 +15,14 @@ SELECT DISTINCT
 WHERE {
 
   # Aparcamientos y sus puntos de observación
-  ?parking a edintinf:Parking ;
+  ?parking a edintinf:Facility ;
            edintinf:hasObservationPoint ?obsPoint .
   OPTIONAL { ?parking  rdfs:label ?parkingLabel . }
   OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
   # Observaciones de ocupación realizadas por SENSOR DE CONTEO
   ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               a edintinf:CountingObservation ;
                sosa:madeBySensor ?sensor ;
                sosa:resultTime ?time ;
                sosa:hasSimpleResult ?result .

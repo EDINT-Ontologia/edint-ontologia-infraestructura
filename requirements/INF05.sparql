@@ -22,7 +22,7 @@ WHERE {
     OPTIONAL { ?role rdfs:label ?roleLabel . }
 
     # Tipo de rol (SKOS)
-    ?role edintinf:hasManagementRoleType ?roleType .
+    ?role edintinf:hasRoleType ?roleType .
 
     # Filtrar para que el tipo exacto sea "responsable de gestión". Revisar valores concretos de skos
     ?roleType (skos:prefLabel|rdfs:label) ?roleTypeLabel .
