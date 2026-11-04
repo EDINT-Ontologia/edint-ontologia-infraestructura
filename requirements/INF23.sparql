@@ -13,7 +13,7 @@ SELECT ?observation ?observationLabel
 WHERE {
 
     # Punto de acceso concreto
-    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<https://example.org/recurso/punto-de-observacion/1000> AS ?obsPoint)
 
     # Observaciones registradas en ese punto
     ?observation sosa:hasFeatureOfInterest ?obsPoint .

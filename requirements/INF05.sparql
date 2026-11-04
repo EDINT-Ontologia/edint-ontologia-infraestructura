@@ -12,7 +12,7 @@ SELECT ?facility ?facilityLabel
 WHERE {
 
     # Sustituye por el IRI del equipamiento concreto
-    BIND(<http://example.org/placeholder/URI-del-equipamiento> AS ?facility)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?facility)
 
     OPTIONAL { ?facility rdfs:label ?facilityLabel . }
 
@@ -22,7 +22,7 @@ WHERE {
     OPTIONAL { ?role rdfs:label ?roleLabel . }
 
     # Tipo de rol (SKOS)
-    ?role edintinf:hasManagementRoleType ?roleType .
+    ?role edintinf:hasRoleType ?roleType .
 
     # Filtrar para que el tipo exacto sea "responsable de gestión". Revisar valores concretos de skos
     ?roleType (skos:prefLabel|rdfs:label) ?roleTypeLabel .
@@ -33,5 +33,3 @@ WHERE {
     OPTIONAL { ?organization rdfs:label ?organizationLabel . }
 }
 ORDER BY ?role ?organization
-
-

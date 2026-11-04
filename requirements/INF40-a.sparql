@@ -7,11 +7,11 @@ PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?parking ?parkingLabel
 WHERE {
-  ?parking a edintinf:Parking ;
+  ?parking a edintinf:Facility ;
            edintinf:hasObservationPoint ?obsPoint .
 
   ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               sosa:observedProperty edintinf:infrastructureOccupancy ;
+               a edintinf:CountingObservation ;
                sosa:madeBySensor ?sensor ;
                sosa:resultTime ?time ;
                sosa:hasSimpleResult ?result .
@@ -19,10 +19,10 @@ WHERE {
   ?sensor a edintinf:CountingSensor .
   OPTIONAL { ?parking rdfs:label ?parkingLabel . }
 
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    FILTER ( ?time >= "2025-01-01T00:00:00"^^xsd:dateTime &&
+             ?time <= "2026-01-01T00:00:00"^^xsd:dateTime )
 
   # Cambia la condición según necesites (=, >=, BETWEEN…)
-  FILTER(xsd:decimal(?result) = 75)
+  FILTER(xsd:decimal(?result) = 82)
 }
 ORDER BY ?parkingLabel

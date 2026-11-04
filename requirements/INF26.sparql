@@ -12,7 +12,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituye por la URI del elemento de movilidad
-    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 
@@ -22,28 +22,4 @@ WHERE {
     # Coordenadas ETRS89 del elemento
     OPTIONAL { ?geom geo:xETRS89 ?x . }
     OPTIONAL { ?geom geo:yETRS89 ?y . }
-}
-
-
-# Localización en formato WKT
-
-PREFIX edintinf: <https://edint.es/def/infraestructura#>
-PREFIX gsp:      <http://www.opengis.net/ont/geosparql#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?element ?elementLabel
-       ?geom
-       ?wkt
-WHERE {
-
-    # Sustituye por la URI del elemento de movilidad
-    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
-
-    OPTIONAL { ?element rdfs:label ?elementLabel . }
-
-    # Geometría del elemento
-    ?element gsp:hasGeometry ?geom .
-
-    # Representación geométrica en WKT
-    OPTIONAL { ?geom gsp:asWKT ?wkt . }
 }

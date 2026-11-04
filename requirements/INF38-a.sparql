@@ -23,14 +23,14 @@ WHERE {
 
   # Observación 1 (o1)
   ?obs1 sosa:hasFeatureOfInterest ?obsPoint ;
-        sosa:observedProperty edintinf:infrastructureOccupancy ;
+        a edintinf:CountingObservation ;
         sosa:madeBySensor ?sensor ;
         sosa:resultTime ?t1 ;
         sosa:hasSimpleResult ?r1 .
 
   # Observación 2 (o2) del mismo punto y sensor, posterior a o1
   ?obs2 sosa:hasFeatureOfInterest ?obsPoint ;
-        sosa:observedProperty edintinf:infrastructureOccupancy ;
+        a edintinf:CountingObservation ;
         sosa:madeBySensor ?sensor ;
         sosa:resultTime ?t2 ;
         sosa:hasSimpleResult ?r2 .
@@ -40,7 +40,7 @@ WHERE {
   # Asegurar que o2 es la siguiente inmediata a o1 (no existe t3 entre t1 y t2)
   FILTER NOT EXISTS {
     ?obs3 sosa:hasFeatureOfInterest ?obsPoint ;
-          sosa:observedProperty edintinf:infrastructureOccupancy ;
+          a edintinf:CountingObservation ;
           sosa:madeBySensor ?sensor ;
           sosa:resultTime ?t3 .
     FILTER(?t3 > ?t1 && ?t3 < ?t2)

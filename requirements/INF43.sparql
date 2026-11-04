@@ -29,7 +29,7 @@ WHERE {
 
   # 3) Filtro por tipo de infraestructura (SUSTITUIR etiqueta o IRI)
   ?type (skos:prefLabel | rdfs:label) ?typeLabel .
-  FILTER( LCASE(STR(?typeLabel)) = LCASE("señal de tráfico") )
+  FILTER( LCASE(STR(?typeLabel)) = LCASE("centro de día de mayores") )
 
 }
 GROUP BY ?admin ?adminLabel

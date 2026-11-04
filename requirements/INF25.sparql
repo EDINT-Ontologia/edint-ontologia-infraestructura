@@ -10,7 +10,7 @@ SELECT ?element ?elementLabel
 WHERE {
 
     # Sustituir por el URI del elemento de infraestructura
-    BIND(<http://example.org/placeholder/URI-del-elemento> AS ?element)
+    BIND(<https://example.org/recurso/equipamiento-municipal/10047540> AS ?element)
 
     OPTIONAL { ?element rdfs:label ?elementLabel . }
 
@@ -21,4 +21,3 @@ WHERE {
     OPTIONAL { ?type skos:prefLabel ?typeLabel . }
     OPTIONAL { ?type rdfs:label     ?typeLabel . }
 }
-

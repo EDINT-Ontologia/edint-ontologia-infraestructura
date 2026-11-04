@@ -13,7 +13,7 @@ SELECT ?obsPoint ?obsPointLabel
 WHERE {
 
     # Punto de acceso concreto
-    BIND(<http://example.org/placeholder/URI-del-punto-de-acceso> AS ?obsPoint)
+    BIND(<https://example.org/recurso/punto-de-observacion/1000> AS ?obsPoint)
 
     OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
@@ -31,8 +31,8 @@ WHERE {
     OPTIONAL { ?observation sosa:hasSimpleResult ?result . }
 
     # Sustituir por fechas de intervalo con formato: "Año-Mes-DíaTHora:Minuto:Segundo"^^xsd:dateTime
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    FILTER ( ?time >= "2025-01-01T00:00:00"^^xsd:dateTime &&
+             ?time <= "2026-01-01T00:00:00"^^xsd:dateTime )
 
 
 }

@@ -14,7 +14,7 @@ SELECT DISTINCT
 WHERE {
 
   # 1) Vehículo concreto (SUSTITUIR URI)
-  BIND(<http://example.org/placeholder/URI-del-vehiculo> AS ?vehicle)
+  BIND(<https://example.org/recurso/veh1> AS ?vehicle)
   OPTIONAL { ?vehicle rdfs:label ?vehicleLabel . }
 
   # 2) Observaciones en las que aparece ese vehículo
@@ -26,8 +26,8 @@ WHERE {
   OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }
 
   # 4) Filtro temporal (SUSTITUIR RANGO)
-    FILTER ( ?time >= "FECHA_INICIO_INTERVALO"^^xsd:dateTime &&
-             ?time <= "FECHA_FIN_INTERVALO"^^xsd:dateTime )
+    FILTER ( ?time >= "2025-01-01T00:00:00"^^xsd:dateTime &&
+             ?time <= "2026-01-01T00:00:00"^^xsd:dateTime )
 
 }
 ORDER BY ?time
