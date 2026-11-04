@@ -42,6 +42,27 @@ def test_prefijos_sin_duplicar(path):
 
 
 @pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
+def test_namespaces_sin_duplicar(path):
+    """Una misma IRI de namespace no debe declararse bajo alias distintos.
+
+    En SPARQL multi-consulta repeticiones del par alias+IRI son legales, y
+    aliases repetidos dentro de una misma consulta también; se limita a
+    Turtle (ficheros .ttl). El fallo típico es declarar el mismo namespace
+    con dos prefijos (p. ej. geo: y geosparql: hacia GeoSPARQL), lo que
+    produce datos anotados con dos vocabularios aparentes.
+    """
+    if path.suffix == ".sparql":
+        pytest.skip("solo aplica a Turtle")
+    texto = path.read_text(errors="replace")
+    decl = re.findall(r"@prefix\s+([A-Za-z][\w-]*)\s*:\s*<([^>]+)>", texto)
+    por_ns: dict[str, set[str]] = {}
+    for alias, uri in decl:
+        por_ns.setdefault(uri, set()).add(alias)
+    duplicados = sorted(f"{sorted(als)} -> {uri}" for uri, als in por_ns.items() if len(als) > 1)
+    assert not duplicados, f"namespace declarado bajo varios alias: {duplicados}"
+
+
+@pytest.mark.parametrize("path", ficheros(), ids=lambda p: str(p.relative_to(ROOT)))
 def test_prefijos_edint_bien_formados(path):
     texto = path.read_text(errors="replace")
     for alias, uri in extraer_prefijos(texto).items():
