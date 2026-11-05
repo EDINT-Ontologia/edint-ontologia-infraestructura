@@ -17,7 +17,7 @@ WHERE {
 
     # Observación realizada sobre este punto
     ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-                 edintinf:provesViolation ?infraction .
+                 edintinf:provesAccessViolation ?infraction .
 
     OPTIONAL { ?observation rdfs:label ?obsLabel . }
 
