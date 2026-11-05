@@ -15,7 +15,7 @@ WHERE {
   OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
   # Observación que apoya esta infracción  →  punto de acceso
-  ?observation edintinf:provesViolation ?infraction ;
+  ?observation edintinf:provesAccessViolation ?infraction ;
                sosa:hasFeatureOfInterest ?obsPoint .
   OPTIONAL { ?observation rdfs:label ?observationLabel . }
   OPTIONAL { ?obsPoint    rdfs:label ?obsPointLabel . }
