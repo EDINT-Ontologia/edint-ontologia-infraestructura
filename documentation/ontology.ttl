@@ -27,7 +27,7 @@
                                         <http://purl.org/dc/terms/title> "EDINT Infrastructure Ontology"@en ,
                                                                          "Ontología EDINT de Infraestructura"@es ;
                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintinf" ;
-                                        <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/infraestructura#" ;
                                         rdfs:label "Infraestructura"@es ,
                                                    "Infrastructure"@en ;
                                         owl:priorVersion <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0> ;

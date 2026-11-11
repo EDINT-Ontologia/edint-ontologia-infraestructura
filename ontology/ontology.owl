@@ -58,7 +58,7 @@
         <rdfs:label xml:lang="es">Infraestructura</rdfs:label>
         <rdfs:label xml:lang="en">Infrastructure</rdfs:label>
         <vann:preferredNamespacePrefix>edintinf</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/infraestructura#"/>
+        <vann:preferredNamespaceUri>https://edint.es/def/infraestructura#</vann:preferredNamespaceUri>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura"/>
         <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>

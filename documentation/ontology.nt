@@ -32,7 +32,7 @@ _:genid6 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
 <https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "EDINT Infrastructure Ontology"@en .
 <https://edint.es/def/infraestructura> <http://purl.org/dc/terms/title> "Ontología EDINT de Infraestructura"@es .
 <https://edint.es/def/infraestructura> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintinf" .
-<https://edint.es/def/infraestructura> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/infraestructura#> .
+<https://edint.es/def/infraestructura> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/infraestructura#" .
 <https://edint.es/def/infraestructura> <http://www.w3.org/2000/01/rdf-schema#label> "Infraestructura"@es .
 <https://edint.es/def/infraestructura> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure"@en .
 <https://edint.es/def/infraestructura> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0> .

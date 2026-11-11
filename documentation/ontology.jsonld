@@ -1733,7 +1733,7 @@
     "@value" : "edintinf"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://edint.es/def/infraestructura#"
+    "@value" : "https://edint.es/def/infraestructura#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
