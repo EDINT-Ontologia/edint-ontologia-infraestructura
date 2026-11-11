@@ -10,40 +10,28 @@
   "@id" : "_:genid10",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Street catalogue (escjr)"
+    "@value" : "Spanish Cadastre (edintcat)"
   }, {
     "@language" : "es",
-    "@value" : "Callejero (escjr)"
+    "@value" : "Catastro Español (edintcat)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero"
+    "@id" : "https://edint.es/def/catastro"
   } ]
 }, {
   "@id" : "_:genid11",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Territory (esadm)"
-  }, {
     "@language" : "es",
-    "@value" : "Territorio (esadm)"
+    "@value" : "Zonas Regulatorias (edintzone)"
+  }, {
+    "@language" : "en",
+    "@value" : "Regulated Zones (edintzone)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+    "@id" : "https://edint.es/def/zona-regulatoria"
   } ]
 }, {
   "@id" : "_:genid12",
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "GeoSPARQL"
-  }, {
-    "@language" : "en",
-    "@value" : "GeoSPARQL"
-  } ],
-  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql"
-  } ]
-}, {
-  "@id" : "_:genid13",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "OGC Simple Features"
@@ -55,16 +43,28 @@
     "@id" : "http://www.opengis.net/ont/sf"
   } ]
 }, {
+  "@id" : "_:genid13",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parking (edintapar)"
+  }, {
+    "@language" : "es",
+    "@value" : "Aparcamiento (edintapar)"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
+    "@id" : "https://edint.es/def/aparcamiento"
+  } ]
+}, {
   "@id" : "_:genid14",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "OWL-Time"
+    "@value" : "geo_core (IGN)"
   }, {
     "@language" : "en",
-    "@value" : "OWL-Time"
+    "@value" : "geo_core (IGN)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.w3.org/2006/time"
+    "@id" : "https://datos.ign.es/def/geo_core"
   } ]
 }, {
   "@id" : "_:genid15",
@@ -82,49 +82,49 @@
   "@id" : "_:genid16",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "geo_core (IGN)"
+    "@value" : "OWL-Time"
   }, {
     "@language" : "en",
-    "@value" : "geo_core (IGN)"
+    "@value" : "OWL-Time"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://datos.ign.es/def/geo_core"
+    "@id" : "http://www.w3.org/2006/time"
   } ]
 }, {
   "@id" : "_:genid17",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Parking (edintapar)"
+    "@value" : "Postal Address (esdir)"
   }, {
     "@language" : "es",
-    "@value" : "Aparcamiento (edintapar)"
+    "@value" : "Dirección Postal (esdir)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/aparcamiento"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
   } ]
 }, {
   "@id" : "_:genid18",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Spanish Cadastre (edintcat)"
+    "@value" : "Street catalogue (escjr)"
   }, {
     "@language" : "es",
-    "@value" : "Catastro Español (edintcat)"
+    "@value" : "Callejero (escjr)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/catastro"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero"
   } ]
 }, {
   "@id" : "_:genid19",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Vehicle Census (edintveh)"
+    "@value" : "Territory (esadm)"
   }, {
     "@language" : "es",
-    "@value" : "Censo de Vehículos (edintveh)"
+    "@value" : "Territorio (esadm)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/censovehiculos"
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -138,37 +138,37 @@
   "@id" : "_:genid20",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Tráfico (edinttraf)"
+    "@value" : "QUDT"
   }, {
     "@language" : "en",
-    "@value" : "Traffic (edinttraf)"
+    "@value" : "QUDT"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/trafico"
+    "@id" : "http://qudt.org/schema/qudt"
   } ]
 }, {
   "@id" : "_:genid21",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Vehículos Compartidos (edintvehcom)"
+    "@value" : "GeoSPARQL"
   }, {
     "@language" : "en",
-    "@value" : "Shared Vehicles (edintvehcom)"
+    "@value" : "GeoSPARQL"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/vehiculos-compartidos"
+    "@id" : "http://www.opengis.net/ont/geosparql"
   } ]
 }, {
   "@id" : "_:genid22",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Zonas Regulatorias (edintzone)"
+    "@value" : "GeoNames"
   }, {
     "@language" : "en",
-    "@value" : "Regulated Zones (edintzone)"
+    "@value" : "GeoNames"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "https://edint.es/def/zona-regulatoria"
+    "@id" : "http://www.geonames.org/ontology"
   } ]
 }, {
   "@id" : "_:genid23",
@@ -179,7 +179,7 @@
     }, {
       "@id" : "https://edint.es/def/infraestructura#CountingSensor"
     }, {
-      "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
+      "@id" : "https://edint.es/def/trafico#TrafficMeasurementDevice"
     } ]
   } ]
 }, {
@@ -324,7 +324,7 @@
   "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://edint.es/kos/IncidenceType"
+    "@id" : "https://edint.es/kos/IncidentType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -364,7 +364,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://edint.es/def/trafico#Incidence"
+      "@id" : "https://edint.es/def/trafico#Incident"
     }, {
       "@id" : "https://edint.es/def/trafico#TrafficEquipment"
     } ]
@@ -411,37 +411,37 @@
   "@id" : "_:genid7",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "QUDT"
+    "@value" : "Vehículos Compartidos (edintvehcom)"
   }, {
     "@language" : "en",
-    "@value" : "QUDT"
+    "@value" : "Shared Vehicles (edintvehcom)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://qudt.org/schema/qudt"
+    "@id" : "https://edint.es/def/vehiculos-compartidos"
   } ]
 }, {
   "@id" : "_:genid8",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "GeoNames"
+    "@value" : "Tráfico (edinttraf)"
   }, {
     "@language" : "en",
-    "@value" : "GeoNames"
+    "@value" : "Traffic (edinttraf)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://www.geonames.org/ontology"
+    "@id" : "https://edint.es/def/trafico"
   } ]
 }, {
   "@id" : "_:genid9",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Postal Address (esdir)"
+    "@value" : "Vehicle Census (edintveh)"
   }, {
     "@language" : "es",
-    "@value" : "Dirección Postal (esdir)"
+    "@value" : "Censo de Vehículos (edintveh)"
   } ],
   "https://w3id.org/widoco/vocab#vocabularyIRI" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
+    "@id" : "https://edint.es/def/censo-vehiculos"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/source",
@@ -625,7 +625,7 @@
     "@value" : "end date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org"
@@ -703,7 +703,7 @@
     "@value" : "The start date and time of the item (in ISO 8601 date format)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org"
@@ -1650,7 +1650,7 @@
     "@value" : "Inmueble catastral"
   } ]
 }, {
-  "@id" : "https://edint.es/def/censovehiculos#Vehicle",
+  "@id" : "https://edint.es/def/censo-vehiculos#Vehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1660,7 +1660,7 @@
     "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://edint.es/def/censovehiculos"
+    "@id" : "https://edint.es/def/censo-vehiculos"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1713,7 +1713,7 @@
     "@value" : "2026-09-09"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+    "@id" : "https://creativecommons.org/licenses/by-sa/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -2268,7 +2268,7 @@
     "@value" : "incluye vehículo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+    "@id" : "https://edint.es/def/censo-vehiculos#Vehicle"
   } ]
 }, {
   "@id" : "https://edint.es/def/infraestructura#installationDate",
@@ -2360,7 +2360,7 @@
     "@value" : "linked to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://edint.es/def/censovehiculos#Vehicle"
+    "@id" : "https://edint.es/def/censo-vehiculos#Vehicle"
   } ]
 }, {
   "@id" : "https://edint.es/def/infraestructura#madeOnInfrastructure",
@@ -2520,7 +2520,7 @@
     "@value" : "traffic density"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#Incidence",
+  "@id" : "https://edint.es/def/trafico#Incident",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2548,7 +2548,7 @@
     "@id" : "https://edint.es/def/trafico#TrafficEquipment"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#PlannedIncidence",
+  "@id" : "https://edint.es/def/trafico#PlannedIncident",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2568,7 +2568,7 @@
     "@value" : "Planned incidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ]
 }, {
   "@id" : "https://edint.es/def/trafico#StreetSection",
@@ -2620,7 +2620,7 @@
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice",
+  "@id" : "https://edint.es/def/trafico#TrafficMeasurementDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2691,7 +2691,7 @@
     "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#UnplannedIncidence",
+  "@id" : "https://edint.es/def/trafico#UnplannedIncident",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2711,7 +2711,7 @@
     "@value" : "Unplanned incidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ]
 }, {
   "@id" : "https://edint.es/def/trafico#composition",
@@ -2773,7 +2773,7 @@
     "@value" : "The end date and time of a planned incidence (in ISO 8601 date format)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+    "@id" : "https://edint.es/def/trafico#PlannedIncident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -2799,7 +2799,7 @@
     "@value" : "This property allows describing whether the device is working or not."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
+    "@id" : "https://edint.es/def/trafico#TrafficMeasurementDevice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -2818,7 +2818,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#incidenceAttachment",
+  "@id" : "https://edint.es/def/trafico#incidentAttachment",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2828,7 +2828,7 @@
     "@value" : "Un documento donde se puede consultar la información sobre la incidencia."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -2844,7 +2844,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#incidenceInSection",
+  "@id" : "https://edint.es/def/trafico#incidentInSection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2854,7 +2854,7 @@
     "@value" : "Relationship of the Incidence with the Section, where it happens."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -2870,7 +2870,7 @@
     "@id" : "https://edint.es/def/trafico#StreetSection"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#incidenceType",
+  "@id" : "https://edint.es/def/trafico#incidentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2880,7 +2880,7 @@
     "@value" : "Type of incidence, planned or unplanned"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#Incidence"
+    "@id" : "https://edint.es/def/trafico#Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -2929,7 +2929,7 @@
     "@value" : "This property allows describing whether there is a recurrence in the incidence or not"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+    "@id" : "https://edint.es/def/trafico#PlannedIncident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -3004,7 +3004,7 @@
     "@value" : "This property allows to know the measurement frequency of the device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#TrafficMeasuringDevice"
+    "@id" : "https://edint.es/def/trafico#TrafficMeasurementDevice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico"
@@ -3108,7 +3108,7 @@
     "@value" : "This property allows describing the recurrence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/trafico#PlannedIncidence"
+    "@id" : "https://edint.es/def/trafico#PlannedIncident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://edint.es/def/trafico#"
@@ -3125,6 +3125,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/trafico#speed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://edint.es/def/trafico#TrafficProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Directly measured speed with detectors"
+  }, {
+    "@language" : "es",
+    "@value" : "Velocidad medida directa con detectores"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "speed"
+  }, {
+    "@language" : "es",
+    "@value" : "velocidad"
   } ]
 }, {
   "@id" : "https://edint.es/def/trafico#startOfSection",
@@ -3257,26 +3277,6 @@
     "@value" : "vehicle access"
   } ]
 }, {
-  "@id" : "https://edint.es/def/trafico#velocidad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://edint.es/def/trafico#TrafficProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Directly measured speed with detectors"
-  }, {
-    "@language" : "es",
-    "@value" : "Velocidad medida directa con detectores"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "speed"
-  }, {
-    "@language" : "es",
-    "@value" : "velocidad"
-  } ]
-}, {
   "@id" : "https://edint.es/def/vehiculos-compartidos#SharedVehicleStation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3340,7 +3340,7 @@
     "@value" : "Zona regulatoria"
   } ]
 }, {
-  "@id" : "https://edint.es/kos/IncidenceType",
+  "@id" : "https://edint.es/kos/IncidentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"

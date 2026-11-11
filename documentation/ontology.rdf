@@ -30,7 +30,7 @@
         <terms:description xml:lang="es">La ontología de infraestructura describe todos los conceptos relacionados con las instalaciones públicas y privadas de un municipio.  Estas incluyen aparcamientos dentro y fuera de la vía pública, bibliotecas, centros de salud, centros sociales, juzgados, comisarías, centros educativos, entre otros.</terms:description>
         <terms:description xml:lang="en">The infrastructure ontology describes all concepts related to a municipality&apos;s public and private facilities. These include on-street and off-street parking, libraries, health centers, community centers, courthouses, police stations, educational centers, among others.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-09</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-09</terms:modified>
         <terms:publisher rdf:nodeID="genid6"/>
         <terms:title xml:lang="en">EDINT Infrastructure Ontology</terms:title>
@@ -91,44 +91,44 @@
         <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid7">
-        <rdfs:label xml:lang="en">QUDT</rdfs:label>
-        <rdfs:label xml:lang="es">QUDT</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label xml:lang="en">Shared Vehicles (edintvehcom)</rdfs:label>
+        <rdfs:label xml:lang="es">Vehículos Compartidos (edintvehcom)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid8">
-        <rdfs:label xml:lang="en">GeoNames</rdfs:label>
-        <rdfs:label xml:lang="es">GeoNames</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.geonames.org/ontology"/>
+        <rdfs:label xml:lang="en">Traffic (edinttraf)</rdfs:label>
+        <rdfs:label xml:lang="es">Tráfico (edinttraf)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/trafico"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid9">
-        <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
-        <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+        <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/censo-vehiculos"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid10">
-        <rdfs:label xml:lang="es">Callejero (escjr)</rdfs:label>
-        <rdfs:label xml:lang="en">Street catalogue (escjr)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero"/>
+        <rdfs:label xml:lang="es">Catastro Español (edintcat)</rdfs:label>
+        <rdfs:label xml:lang="en">Spanish Cadastre (edintcat)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/catastro"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid11">
-        <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
-        <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+        <rdfs:label xml:lang="en">Regulated Zones (edintzone)</rdfs:label>
+        <rdfs:label xml:lang="es">Zonas Regulatorias (edintzone)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/zona-regulatoria"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid12">
-        <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
-        <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid13">
         <rdfs:label xml:lang="en">OGC Simple Features</rdfs:label>
         <rdfs:label xml:lang="es">OGC Simple Features</rdfs:label>
         <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/sf"/>
     </rdf:Description>
+    <rdf:Description rdf:nodeID="genid13">
+        <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
+        <rdfs:label xml:lang="en">Parking (edintapar)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
+    </rdf:Description>
     <rdf:Description rdf:nodeID="genid14">
-        <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
-        <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
+        <rdfs:label xml:lang="en">geo_core (IGN)</rdfs:label>
+        <rdfs:label xml:lang="es">geo_core (IGN)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="https://datos.ign.es/def/geo_core"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid15">
         <rdfs:label xml:lang="en">SOSA/SSN</rdfs:label>
@@ -136,39 +136,39 @@
         <vocab:vocabularyIRI rdf:resource="http://www.w3.org/ns/sosa"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid16">
-        <rdfs:label xml:lang="en">geo_core (IGN)</rdfs:label>
-        <rdfs:label xml:lang="es">geo_core (IGN)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://datos.ign.es/def/geo_core"/>
+        <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+        <rdfs:label xml:lang="es">OWL-Time</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.w3.org/2006/time"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid17">
-        <rdfs:label xml:lang="es">Aparcamiento (edintapar)</rdfs:label>
-        <rdfs:label xml:lang="en">Parking (edintapar)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/aparcamiento"/>
+        <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+        <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid18">
-        <rdfs:label xml:lang="es">Catastro Español (edintcat)</rdfs:label>
-        <rdfs:label xml:lang="en">Spanish Cadastre (edintcat)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/catastro"/>
+        <rdfs:label xml:lang="es">Callejero (escjr)</rdfs:label>
+        <rdfs:label xml:lang="en">Street catalogue (escjr)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid19">
-        <rdfs:label xml:lang="es">Censo de Vehículos (edintveh)</rdfs:label>
-        <rdfs:label xml:lang="en">Vehicle Census (edintveh)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/censovehiculos"/>
+        <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
+        <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid20">
-        <rdfs:label xml:lang="en">Traffic (edinttraf)</rdfs:label>
-        <rdfs:label xml:lang="es">Tráfico (edinttraf)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/trafico"/>
+        <rdfs:label xml:lang="en">QUDT</rdfs:label>
+        <rdfs:label xml:lang="es">QUDT</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid21">
-        <rdfs:label xml:lang="en">Shared Vehicles (edintvehcom)</rdfs:label>
-        <rdfs:label xml:lang="es">Vehículos Compartidos (edintvehcom)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/vehiculos-compartidos"/>
+        <rdfs:label xml:lang="en">GeoSPARQL</rdfs:label>
+        <rdfs:label xml:lang="es">GeoSPARQL</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.opengis.net/ont/geosparql"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid22">
-        <rdfs:label xml:lang="en">Regulated Zones (edintzone)</rdfs:label>
-        <rdfs:label xml:lang="es">Zonas Regulatorias (edintzone)</rdfs:label>
-        <vocab:vocabularyIRI rdf:resource="https://edint.es/def/zona-regulatoria"/>
+        <rdfs:label xml:lang="en">GeoNames</rdfs:label>
+        <rdfs:label xml:lang="es">GeoNames</rdfs:label>
+        <vocab:vocabularyIRI rdf:resource="http://www.geonames.org/ontology"/>
     </rdf:Description>
     
 
@@ -525,7 +525,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://edint.es/def/infraestructura#AccessSensor"/>
                     <rdf:Description rdf:about="https://edint.es/def/infraestructura#CountingSensor"/>
-                    <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+                    <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -912,7 +912,7 @@
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#includesVehicle">
         <rdfs:domain rdf:resource="https://edint.es/def/infraestructura#AccessObservation"/>
-        <rdfs:range rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:range rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="en">Property that connects an observation to the observed vehicle.</rdfs:comment>
         <rdfs:comment xml:lang="es">Propiedad que relaciona una observación con el vehículo observado</rdfs:comment>
         <rdfs:label xml:lang="en">includes vehicle</rdfs:label>
@@ -940,7 +940,7 @@
 
     <owl:ObjectProperty rdf:about="https://edint.es/def/infraestructura#linkedTo">
         <rdfs:domain rdf:resource="https://edint.es/def/infraestructura#Violation"/>
-        <rdfs:range rdf:resource="https://edint.es/def/censovehiculos#Vehicle"/>
+        <rdfs:range rdf:resource="https://edint.es/def/censo-vehiculos#Vehicle"/>
         <rdfs:comment xml:lang="es">Relación entre una infracción y el vehículo que cometió la infracción.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an infraction and the vehicle that committed the infraction.</rdfs:comment>
         <rdfs:label xml:lang="es">asociado a</rdfs:label>
@@ -1055,12 +1055,12 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceInSection -->
+    <!-- https://edint.es/def/trafico#incidentInSection -->
 
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidenceInSection">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidentInSection">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="https://edint.es/def/trafico#StreetSection"/>
         <rdfs:comment xml:lang="es">Relación de la Incidencia con el Tramo donde se produce la misma.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship of the Incidence with the Section, where it happens.</rdfs:comment>
@@ -1071,19 +1071,19 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceType -->
+    <!-- https://edint.es/def/trafico#incidentType -->
 
 
-    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidenceType">
+    <owl:ObjectProperty rdf:about="https://edint.es/def/trafico#incidentType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidenceType"/>
+                        <owl:hasValue rdf:resource="https://edint.es/kos/IncidentType"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1210,7 +1210,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://schema.org/endDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora de finalización del elemento (en formato de fecha ISO 8601).</rdfs:comment>
         <rdfs:comment xml:lang="en">The end date and time of the item (in ISO 8601 date format).</rdfs:comment>
@@ -1240,7 +1240,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://schema.org/startDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora de inicio del elemento (en formato de fecha ISO 8601).</rdfs:comment>
         <rdfs:comment xml:lang="en">The start date and time of the item (in ISO 8601 date format).</rdfs:comment>
@@ -1408,7 +1408,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#expectedEndDate">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="es">La fecha y hora prevista de
 	finalización de una incidencia planificada (en formato fecha ISO 8601)</rdfs:comment>
@@ -1425,7 +1425,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#inService">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite conocer si el dispositivo funciona o no.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing whether the device is working or not.</rdfs:comment>
@@ -1436,11 +1436,11 @@
     
 
 
-    <!-- https://edint.es/def/trafico#incidenceAttachment -->
+    <!-- https://edint.es/def/trafico#incidentAttachment -->
 
 
-    <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#incidenceAttachment">
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#incidentAttachment">
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">A document where more information about the incidence can be found.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un documento donde se puede consultar la información sobre la incidencia.</rdfs:comment>
@@ -1456,7 +1456,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#isRecurrent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite describir si la incidencia es recurrente o no.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing whether there is a recurrence in the incidence or not</rdfs:comment>
@@ -1472,7 +1472,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#measurementFrequency">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasuringDevice"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#TrafficMeasurementDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite conocer la frecuencia de medición del dispositivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to know the measurement frequency of the device.</rdfs:comment>
@@ -1490,7 +1490,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://edint.es/def/trafico#Incidence"/>
+                    <rdf:Description rdf:about="https://edint.es/def/trafico#Incident"/>
                     <rdf:Description rdf:about="https://edint.es/def/trafico#TrafficEquipment"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1510,7 +1510,7 @@
 
     <owl:DatatypeProperty rdf:about="https://edint.es/def/trafico#recurrence">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncidence"/>
+        <rdfs:domain rdf:resource="https://edint.es/def/trafico#PlannedIncident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Esta propiedad permite describir la recurrencia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows describing the recurrence</rdfs:comment>
@@ -1930,13 +1930,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/censovehiculos#Vehicle -->
+    <!-- https://edint.es/def/censo-vehiculos#Vehicle -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/censovehiculos#Vehicle">
+    <owl:Class rdf:about="https://edint.es/def/censo-vehiculos#Vehicle">
         <rdfs:comment xml:lang="es">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en)).</rdfs:comment>
         <rdfs:comment xml:lang="en">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://edint.es/def/censovehiculos"/>
+        <rdfs:isDefinedBy rdf:resource="https://edint.es/def/censo-vehiculos"/>
         <rdfs:label xml:lang="en">Vehicle</rdfs:label>
         <rdfs:label xml:lang="es">Vehículo</rdfs:label>
     </owl:Class>
@@ -2084,10 +2084,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#Incidence -->
+    <!-- https://edint.es/def/trafico#Incident -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#Incidence">
+    <owl:Class rdf:about="https://edint.es/def/trafico#Incident">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <owl:disjointWith rdf:resource="https://edint.es/def/trafico#StreetSection"/>
         <owl:disjointWith rdf:resource="https://edint.es/def/trafico#TrafficEquipment"/>
@@ -2100,11 +2100,11 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#PlannedIncidence -->
+    <!-- https://edint.es/def/trafico#PlannedIncident -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#PlannedIncidence">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:Class rdf:about="https://edint.es/def/trafico#PlannedIncident">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:comment xml:lang="es">Incidencia planificada, puede ser recurrente o no</rdfs:comment>
         <rdfs:comment xml:lang="en">Planned traffic incidence</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
@@ -2143,10 +2143,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#TrafficMeasuringDevice -->
+    <!-- https://edint.es/def/trafico#TrafficMeasurementDevice -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#TrafficMeasuringDevice">
+    <owl:Class rdf:about="https://edint.es/def/trafico#TrafficMeasurementDevice">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#TrafficEquipment"/>
         <rdfs:comment xml:lang="es">Dispositivo de Medición de Tráfico, tipo de equipo de tráfico que realiza mediciones.</rdfs:comment>
@@ -2186,11 +2186,11 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#UnplannedIncidence -->
+    <!-- https://edint.es/def/trafico#UnplannedIncident -->
 
 
-    <owl:Class rdf:about="https://edint.es/def/trafico#UnplannedIncidence">
-        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incidence"/>
+    <owl:Class rdf:about="https://edint.es/def/trafico#UnplannedIncident">
+        <rdfs:subClassOf rdf:resource="https://edint.es/def/trafico#Incident"/>
         <rdfs:comment xml:lang="es">Incidencia no planificada del tráfico de una ciudad</rdfs:comment>
         <rdfs:comment xml:lang="en">Unplanned traffic incidence</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://edint.es/def/trafico"/>
@@ -2369,6 +2369,19 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
+    <!-- https://edint.es/def/trafico#speed -->
+
+
+    <owl:NamedIndividual rdf:about="https://edint.es/def/trafico#speed">
+        <rdf:type rdf:resource="https://edint.es/def/trafico#TrafficProperty"/>
+        <rdfs:comment xml:lang="en">Directly measured speed with detectors</rdfs:comment>
+        <rdfs:comment xml:lang="es">Velocidad medida directa con detectores</rdfs:comment>
+        <rdfs:label xml:lang="en">speed</rdfs:label>
+        <rdfs:label xml:lang="es">velocidad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://edint.es/def/trafico#vehicleAccess -->
 
 
@@ -2382,23 +2395,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
     
 
 
-    <!-- https://edint.es/def/trafico#velocidad -->
+    <!-- https://edint.es/kos/IncidentType -->
 
 
-    <owl:NamedIndividual rdf:about="https://edint.es/def/trafico#velocidad">
-        <rdf:type rdf:resource="https://edint.es/def/trafico#TrafficProperty"/>
-        <rdfs:comment xml:lang="en">Directly measured speed with detectors</rdfs:comment>
-        <rdfs:comment xml:lang="es">Velocidad medida directa con detectores</rdfs:comment>
-        <rdfs:label xml:lang="en">speed</rdfs:label>
-        <rdfs:label xml:lang="es">velocidad</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://edint.es/kos/IncidenceType -->
-
-
-    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidenceType">
+    <owl:NamedIndividual rdf:about="https://edint.es/kos/IncidentType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">tipo de incidencia</rdfs:label>
         <rdfs:label xml:lang="en">type of incidence</rdfs:label>
