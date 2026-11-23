@@ -10,7 +10,7 @@ SELECT ?obsPoint ?obsPointLabel
 WHERE {
   # Observaciones en puntos de acceso
   ?observation sosa:hasFeatureOfInterest ?obsPoint ;
-               edintinf:provesViolation ?infraction .
+               edintinf:provesAccessViolation ?infraction .
 
   # Etiqueta del punto (opcional)
   OPTIONAL { ?obsPoint rdfs:label ?obsPointLabel . }

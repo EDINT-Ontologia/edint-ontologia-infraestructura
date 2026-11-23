@@ -15,7 +15,7 @@ WHERE {
     OPTIONAL { ?infraction rdfs:label ?infractionLabel . }
 
     # Observación que soporta esta infracción
-    ?observation edintinf:provesViolation ?infraction .
+    ?observation edintinf:provesAccessViolation ?infraction .
     OPTIONAL { ?observation rdfs:label ?observationLabel . }
 
     # Punto de acceso (observación) donde se produjo

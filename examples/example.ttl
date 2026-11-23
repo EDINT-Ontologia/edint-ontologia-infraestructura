@@ -13887,9 +13887,9 @@ ex:obsAcc2 a edintinf:AccessObservation ;
     sosa:resultTime "2025-07-20T18:40:00"^^xsd:dateTime .
 
 # Infracción apoyada por la observación de acceso 1
-<https://example.org/recurso/infraccion1> a edintinf:Violation ;
+<https://example.org/recurso/infraccion1> a edintinf:AccessViolation ;
     rdfs:label "Infracción de acceso 1"@es .
-ex:obsAcc1 edintinf:provesViolation <https://example.org/recurso/infraccion1> .
+ex:obsAcc1 edintinf:provesAccessViolation <https://example.org/recurso/infraccion1> .
 
 # Lecturas de ocupación (observaciones de conteo) en el punto 1000
 ex:obsCnt1 a edintinf:CountingObservation ;
@@ -13949,9 +13949,9 @@ ex:direccion-10047540 a esdir:DireccionPostal ;
     esdir:codigoPostal "28047"@es .
 ex:calle-aldesorsur rdfs:label "Calle Aldehuela, Aldeasur (Aldehuela, Aldeasur)"@es .
 ex:portal-aldesorsur-3 rdfs:label "Portal 3"@es .
-<https://example.org/recurso/infraccion2> a edintinf:Violation ;
+<https://example.org/recurso/infraccion2> a edintinf:AccessViolation ;
     rdfs:label "Infracción de acceso 2"@es .
-<https://example.org/recurso/obsAcc2> edintinf:provesViolation <https://example.org/recurso/infraccion2> .
+<https://example.org/recurso/obsAcc2> edintinf:provesAccessViolation <https://example.org/recurso/infraccion2> .
 <https://example.org/recurso/obsCnt4> a edintinf:CountingObservation ;
     rdfs:label "Lectura de ocupación 4"@es ;
     sosa:hasFeatureOfInterest <https://example.org/recurso/punto-de-observacion/1000> ;
