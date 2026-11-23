@@ -14,8 +14,8 @@
 	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-infraestructura/releases/tag/v0.2.0>;
 	 prov:wasGeneratedAt "2026-01-30";
 .
-:agent0 a prov:Agent; foaf:name "Socorro Bernardos".
-:agent1 a prov:Agent; foaf:name "Oscar Corcho".
+:agent0 a prov:Agent; foaf:name "Daniel Doña".
+:agent1 a prov:Agent; foaf:name "Edna Ruckhaus".
 :agent2 a prov:Agent; foaf:name "Lucía Sánchez".
-:agent3 a prov:Agent; foaf:name "Edna Ruckhaus".
-:agent4 a prov:Agent; foaf:name "Daniel Doña".
+:agent3 a prov:Agent; foaf:name "Oscar Corcho".
+:agent4 a prov:Agent; foaf:name "Socorro Bernardos".
