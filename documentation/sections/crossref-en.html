@@ -5,6 +5,7 @@ This section provides details for each class and property defined by Infrastruct
  <ul class="hlist">
   <li><a href="#AccessObservation" title="https://edint.es/def/infraestructura#AccessObservation">Access observation</a></li>
   <li><a href="#AccessSensor" title="https://edint.es/def/infraestructura#AccessSensor">Access sensor</a></li>
+  <li><a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Access violation</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia" title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia">Autonomía</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio" title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio">Barrio</a></li>
   <li><a href="#https://edint.es/def/catastro#CadastralProperty" title="https://edint.es/def/catastro#CadastralProperty">Cadastral property</a></li>
@@ -49,7 +50,6 @@ This section provides details for each class and property defined by Infrastruct
   <li><a href="#https://edint.es/def/trafico#UnplannedIncident" title="https://edint.es/def/trafico#UnplannedIncident">Unplanned incidence</a></li>
   <li><a href="#UrbanElement" title="https://edint.es/def/infraestructura#UrbanElement">Urban element</a></li>
   <li><a href="#https://edint.es/def/censo-vehiculos#Vehicle" title="https://edint.es/def/censo-vehiculos#Vehicle">Vehicle</a></li>
-  <li><a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Violation</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via">Vía</a></li>
  </ul>
  <div class="entity" id="AccessObservation">
@@ -65,7 +65,7 @@ This section provides details for each class and property defined by Infrastruct
    </dd>
    <dt>is in domain of</dt>
    <dd>
-    <a href="#includesVehicle" title="https://edint.es/def/infraestructura#includesVehicle">includes vehicle</a> <sup class="type-op" title="object property">op</sup>, <a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">proofs violation</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#includesVehicle" title="https://edint.es/def/infraestructura#includesVehicle">includes vehicle</a> <sup class="type-op" title="object property">op</sup>, <a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">proofs access violation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -83,6 +83,23 @@ This section provides details for each class and property defined by Infrastruct
    <dt>is in domain of</dt>
    <dd>
     <a href="#http://schema.org/manufacturer" title="http://schema.org/manufacturer">manufacturer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AccessViolation">
+  <h3>Access violation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#AccessViolation</p>
+  <div class="comment">
+   <span class="markdown">Non-compliance or violation of access rules by a person or a driver or owner of a vehicle.</span>
+  </div>
+  <dl class="description">
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#complaintCancelled" title="https://edint.es/def/infraestructura#complaintCancelled">cancelled complaint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAccessViolationSeverity" title="https://edint.es/def/infraestructura#hasAccessViolationSeverity">has access violation severity</a> <sup class="type-op" title="object property">op</sup>, <a href="#linkedTo" title="https://edint.es/def/infraestructura#linkedTo">linked to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">proofs access violation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -196,7 +213,7 @@ This section provides details for each class and property defined by Infrastruct
   <dl class="description">
    <dt>has members</dt>
    <dd>
-    <a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Infrastructure type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/PublicService" title="https://edint.es/kos/PublicService">Public service type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/RegularActivity" title="https://edint.es/kos/RegularActivity">Regular activity type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/RoleType" title="https://edint.es/kos/RoleType">Role type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Violation type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">type of incidence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">type of traffic devices</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Access violation severity</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Infrastructure type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/PublicService" title="https://edint.es/kos/PublicService">Public service type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/RegularActivity" title="https://edint.es/kos/RegularActivity">Regular activity type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/RoleType" title="https://edint.es/kos/RoleType">Role type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">type of incidence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">type of traffic devices</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1020,23 +1037,6 @@ This section provides details for each class and property defined by Infrastruct
    </dd>
   </dl>
  </div>
- <div class="entity" id="Violation">
-  <h3>Violation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#Violation</p>
-  <div class="comment">
-   <span class="markdown">Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle.</span>
-  </div>
-  <dl class="description">
-   <dt>is in domain of</dt>
-   <dd>
-    <a href="#complaintCancelled" title="https://edint.es/def/infraestructura#complaintCancelled">cancelled complaint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasViolationType" title="https://edint.es/def/infraestructura#hasViolationType">has violation type</a> <sup class="type-op" title="object property">op</sup>, <a href="#linkedTo" title="https://edint.es/def/infraestructura#linkedTo">linked to</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>is in range of</dt>
-   <dd>
-    <a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">proofs violation</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via">
   <h3>Vía<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via</p>
@@ -1073,6 +1073,7 @@ This section provides details for each class and property defined by Infrastruct
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal">contiene portal</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contieneVia" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contieneVia">contiene vía</a></li>
   <li><a href="#https://edint.es/def/trafico#endOfSection" title="https://edint.es/def/trafico#endOfSection">end of section</a></li>
+  <li><a href="#hasAccessViolationSeverity" title="https://edint.es/def/infraestructura#hasAccessViolationSeverity">has access violation severity</a></li>
   <li><a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">has beginning</a></li>
   <li><a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">has end</a></li>
   <li><a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry</a></li>
@@ -1082,7 +1083,6 @@ This section provides details for each class and property defined by Infrastruct
   <li><a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a></li>
   <li><a href="#hasRoleType" title="https://edint.es/def/infraestructura#hasRoleType">has role type</a></li>
   <li><a href="#http://qudt.org/schema/qudt/hasUnit" title="http://qudt.org/schema/qudt/hasUnit">has unit</a></li>
-  <li><a href="#hasViolationType" title="https://edint.es/def/infraestructura#hasViolationType">has violation type</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
   <li><a href="#https://edint.es/def/trafico#incidentInSection" title="https://edint.es/def/trafico#incidentInSection">incidence in section</a></li>
   <li><a href="#includesVehicle" title="https://edint.es/def/infraestructura#includesVehicle">includes vehicle</a></li>
@@ -1098,7 +1098,7 @@ This section provides details for each class and property defined by Infrastruct
   <li><a href="#offersRegularActivity" title="https://edint.es/def/infraestructura#offersRegularActivity">offers regular activity</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#municipio" title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#municipio">pertenece a municipio</a></li>
   <li><a href="#http://www.w3.org/ns/sosa/phenomenonTime" title="http://www.w3.org/ns/sosa/phenomenonTime">phenomenon time</a></li>
-  <li><a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">proofs violation</a></li>
+  <li><a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">proofs access violation</a></li>
   <li><a href="#providesPublicService" title="https://edint.es/def/infraestructura#providesPublicService">provides public service</a></li>
   <li><a href="#rolePlayedBy" title="https://edint.es/def/infraestructura#rolePlayedBy">role played by</a></li>
   <li><a href="#https://edint.es/def/trafico#startOfSection" title="https://edint.es/def/trafico#startOfSection">start of section</a></li>
@@ -1234,6 +1234,25 @@ This section provides details for each class and property defined by Infrastruct
     <dt>has range</dt>
     <dd>
      <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAccessViolationSeverity">
+  <h3>has access violation severity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#hasAccessViolationSeverity</p>
+  <div class="comment">
+   <span class="markdown">Relates an access violation to a concept from the taxonomy of access violation types.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Access violation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Access violation severity</a> <sup class="type-ni" title="named individual">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -1426,25 +1445,6 @@ This section provides details for each class and property defined by Infrastruct
    </dl>
   </div>
  </div>
- <div class="entity" id="hasViolationType">
-  <h3>has violation type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#hasViolationType</p>
-  <div class="comment">
-   <span class="markdown">Relate an Infraction to a concept from the taxonomy of infraction types.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>has domain</dt>
-    <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Violation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>has range</dt>
-    <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Violation type</a> <sup class="type-ni" title="named individual">ni</sup>)
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
   <h3>in Scheme<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
@@ -1523,13 +1523,13 @@ This section provides details for each class and property defined by Infrastruct
   <h3>linked to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/infraestructura#linkedTo</p>
   <div class="comment">
-   <span class="markdown">Relationship between an infraction and the vehicle that committed the infraction.</span>
+   <span class="markdown">Relationship between an access violation and the vehicle that committed the violation.</span>
   </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Violation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Access violation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>has range</dt>
     <dd>
@@ -1783,11 +1783,11 @@ This section provides details for each class and property defined by Infrastruct
    </dl>
   </div>
  </div>
- <div class="entity" id="provesViolation">
-  <h3>proofs violation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#provesViolation</p>
+ <div class="entity" id="provesAccessViolation">
+  <h3>proofs access violation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#provesAccessViolation</p>
   <div class="comment">
-   <span class="markdown">Relationship between an observation and the infraction it is proving.</span>
+   <span class="markdown">Relationship between an observation and the violation it is proving.</span>
   </div>
   <div class="description">
    <dl>
@@ -1797,7 +1797,7 @@ This section provides details for each class and property defined by Infrastruct
     </dd>
     <dt>has range</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Violation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Access violation</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2062,13 +2062,13 @@ This section provides details for each class and property defined by Infrastruct
   <h3>cancelled complaint<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/infraestructura#complaintCancelled</p>
   <div class="comment">
-   <span class="markdown">Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no</span>
+   <span class="markdown">Propiedad que indica si la denuncia (de una infracción de acceso) ha sido anulada o no</span>
   </div>
   <div class="description">
    <dl>
     <dt>has domain</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Violation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Access violation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>has range</dt>
     <dd>
@@ -2581,6 +2581,7 @@ This section provides details for each class and property defined by Infrastruct
  <h3 id="namedindividuals-headline" class="list">Named Individuals</h3>
  <ul class="hlist">
   <li><a href="#access" title="https://edint.es/def/infraestructura#access">access</a></li>
+  <li><a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Access violation severity</a></li>
   <li><a href="#https://edint.es/def/trafico#composition" title="https://edint.es/def/trafico#composition">composition</a></li>
   <li><a href="#facilityOccupancy" title="https://edint.es/def/infraestructura#facilityOccupancy">facility Occupancy</a></li>
   <li><a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Infrastructure type</a></li>
@@ -2596,7 +2597,6 @@ This section provides details for each class and property defined by Infrastruct
   <li><a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">type of incidence</a></li>
   <li><a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">type of traffic devices</a></li>
   <li><a href="#https://edint.es/def/trafico#vehicleAccess" title="https://edint.es/def/trafico#vehicleAccess">vehicle access</a></li>
-  <li><a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Violation type</a></li>
  </ul>
  <div class="entity" id="access">
   <h3>access<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -2605,6 +2605,16 @@ This section provides details for each class and property defined by Infrastruct
    <dt>belongs to</dt>
    <dd>
     <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Propiedad observable</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://edint.es/kos/AccessViolationSeverity">
+  <h3>Access violation severity<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/kos/AccessViolationSeverity</p>
+  <dl class="description">
+   <dt>belongs to</dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2809,16 +2819,6 @@ This section provides details for each class and property defined by Infrastruct
    <dt>belongs to</dt>
    <dd>
     <a href="#https://edint.es/def/trafico#TrafficProperty" title="https://edint.es/def/trafico#TrafficProperty">Traffic property</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://edint.es/kos/ViolationType">
-  <h3>Violation type<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/kos/ViolationType</p>
-  <dl class="description">
-   <dt>belongs to</dt>
-   <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>

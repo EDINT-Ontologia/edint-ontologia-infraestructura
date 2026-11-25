@@ -543,6 +543,23 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                              "contiene equipamiento"@es .
 
 
+###  https://edint.es/def/infraestructura#hasAccessViolationSeverity
+:hasAccessViolationSeverity rdf:type owl:ObjectProperty ;
+                            rdfs:domain :AccessViolation ;
+                            rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                owl:hasValue <https://edint.es/kos/AccessViolationSeverity>
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                            rdfs:comment "Relaciona a una infracción de acceso con un concepto de la taxonomía de tipos de infracción de acceso."@es ,
+                                         "Relates an access violation to a concept from the taxonomy of access violation types."@en ;
+                            rdfs:label "has access violation severity"@en ,
+                                       "tiene gravedad de infracción de acceso"@es .
+
+
 ###  https://edint.es/def/infraestructura#hasInfrastructureType
 :hasInfrastructureType rdf:type owl:ObjectProperty ;
                        rdfs:domain :InfrastructureElement ;
@@ -589,23 +606,6 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                         "tiene tipo de rol"@es .
 
 
-###  https://edint.es/def/infraestructura#hasViolationType
-:hasViolationType rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Violation ;
-                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                      owl:hasValue <https://edint.es/kos/ViolationType>
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-                  rdfs:comment "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."@es ,
-                               "Relate an Infraction to a concept from the taxonomy of infraction types."@en ;
-                  rdfs:label "has violation type"@en ,
-                             "tiene tipo de infracción"@es .
-
-
 ###  https://edint.es/def/infraestructura#includesVehicle
 :includesVehicle rdf:type owl:ObjectProperty ;
                  rdfs:domain :AccessObservation ;
@@ -628,10 +628,10 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 
 ###  https://edint.es/def/infraestructura#linkedTo
 :linkedTo rdf:type owl:ObjectProperty ;
-          rdfs:domain :Violation ;
+          rdfs:domain :AccessViolation ;
           rdfs:range <https://edint.es/def/censo-vehiculos#Vehicle> ;
-          rdfs:comment "Relación entre una infracción y el vehículo que cometió la infracción."@es ,
-                       "Relationship between an infraction and the vehicle that committed the infraction."@en ;
+          rdfs:comment "Relación entre una infracción de acceso y el vehículo que cometió la infracción."@es ,
+                       "Relationship between an access violation and the vehicle that committed the violation."@en ;
           rdfs:label "asociado a"@es ,
                      "linked to"@en .
 
@@ -663,14 +663,14 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
                                   "ofrece actividad regular"@es .
 
 
-###  https://edint.es/def/infraestructura#provesViolation
-:provesViolation rdf:type owl:ObjectProperty ;
-                 rdfs:domain :AccessObservation ;
-                 rdfs:range :Violation ;
-                 rdfs:comment "Relación entre la observación urbana y la infracción que está soportando."@es ,
-                              "Relationship between an observation and the infraction it is proving."@en ;
-                 rdfs:label "demuestra infracción"@es ,
-                            "proofs violation"@en .
+###  https://edint.es/def/infraestructura#provesAccessViolation
+:provesAccessViolation rdf:type owl:ObjectProperty ;
+                       rdfs:domain :AccessObservation ;
+                       rdfs:range :AccessViolation ;
+                       rdfs:comment "Relación entre la observación urbana y la infracción de acceso que está demostrando."@es ,
+                                    "Relationship between an observation and the violation it is proving."@en ;
+                       rdfs:label "demuestra infracción de acceso"@es ,
+                                  "proofs access violation"@en .
 
 
 ###  https://edint.es/def/infraestructura#providesPublicService
@@ -926,9 +926,9 @@ xsd:gYearMonth rdf:type rdfs:Datatype .
 
 ###  https://edint.es/def/infraestructura#complaintCancelled
 :complaintCancelled rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Violation ;
+                    rdfs:domain :AccessViolation ;
                     rdfs:range xsd:boolean ;
-                    rdfs:comment "Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no"@es ;
+                    rdfs:comment "Propiedad que indica si la denuncia (de una infracción de acceso) ha sido anulada o no"@es ;
                     rdfs:label "cancelled complaint"@en ,
                                "denuncia anulada"@es .
 
@@ -1348,6 +1348,14 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                          "Sensor de acceso"@es .
 
 
+###  https://edint.es/def/infraestructura#AccessViolation
+:AccessViolation rdf:type owl:Class ;
+                 rdfs:comment "Incumplimiento o violación de las normas de acceso por parte de una persona o de un conductor o propietario de un vehículo."@es ,
+                              "Non-compliance or violation of access rules by a person or a driver or owner of a vehicle."@en ;
+                 rdfs:label "Access violation"@en ,
+                            "Infracción de acceso"@es .
+
+
 ###  https://edint.es/def/infraestructura#CountingObservation
 :CountingObservation rdf:type owl:Class ;
                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
@@ -1417,14 +1425,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                            "It includes the inventory of urban elements such as road signs, traffic lights, bollards, etc."@en ;
               rdfs:label "Elemento urbano"@es ,
                          "Urban element"@en .
-
-
-###  https://edint.es/def/infraestructura#Violation
-:Violation rdf:type owl:Class ;
-           rdfs:comment "Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo."@es ,
-                        "Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle."@en ;
-           rdfs:label "Infracción"@es ,
-                      "Violation"@en .
 
 
 ###  https://edint.es/def/trafico#Incident
@@ -1640,6 +1640,13 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                                         "vehicle access"@en .
 
 
+###  https://edint.es/kos/AccessViolationSeverity
+<https://edint.es/kos/AccessViolationSeverity> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               rdfs:label "Access violation severity"@en ,
+                                                          "Gravedad de infracción de acceso"@es .
+
+
 ###  https://edint.es/kos/IncidentType
 <https://edint.es/kos/IncidentType> rdf:type owl:NamedIndividual ,
                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
@@ -1680,13 +1687,6 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
                                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                             rdfs:label "tipo de equipo de tráfico"@es ,
                                                        "type of traffic devices"@en .
-
-
-###  https://edint.es/kos/ViolationType
-<https://edint.es/kos/ViolationType> rdf:type owl:NamedIndividual ,
-                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                     rdfs:label "Tipo de infracción"@es ,
-                                                "Violation type"@en .
 
 
 #################################################################
