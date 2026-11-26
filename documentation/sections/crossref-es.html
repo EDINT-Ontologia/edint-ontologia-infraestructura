@@ -24,7 +24,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#https://edint.es/def/trafico#Incident" title="https://edint.es/def/trafico#Incident">Incidencia</a></li>
   <li><a href="#https://edint.es/def/trafico#UnplannedIncident" title="https://edint.es/def/trafico#UnplannedIncident">Incidencia no planificada</a></li>
   <li><a href="#https://edint.es/def/trafico#PlannedIncident" title="https://edint.es/def/trafico#PlannedIncident">Incidencia planificada</a></li>
-  <li><a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Infracción</a></li>
+  <li><a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Infracción de acceso</a></li>
   <li><a href="#https://edint.es/def/catastro#CadastralProperty" title="https://edint.es/def/catastro#CadastralProperty">Inmueble catastral</a></li>
   <li><a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">instante de tiempo.</a></li>
   <li><a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">intervalo de tiempo</a></li>
@@ -162,7 +162,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <dl class="description">
    <dt>miembros</dt>
    <dd>
-    <a href="#https://edint.es/kos/RegularActivity" title="https://edint.es/kos/RegularActivity">Regular activity type</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Tipo de infracción</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Tipo de infraestructura</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/RoleType" title="https://edint.es/kos/RoleType">Tipo de rol</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/PublicService" title="https://edint.es/kos/PublicService">Tipo de servicio público</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">tipo de equipo de tráfico</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">tipo de incidencia</a> <sup class="type-ni" title="Individuo">ni</sup>
+    <a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Gravedad de infracción de acceso</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/RegularActivity" title="https://edint.es/kos/RegularActivity">Regular activity type</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Tipo de infraestructura</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/RoleType" title="https://edint.es/kos/RoleType">Tipo de rol</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/PublicService" title="https://edint.es/kos/PublicService">Tipo de servicio público</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">tipo de equipo de tráfico</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">tipo de incidencia</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
   </dl>
  </div>
@@ -515,20 +515,20 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
- <div class="entity" id="Violation">
-  <h3>Infracción<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#Violation</p>
+ <div class="entity" id="AccessViolation">
+  <h3>Infracción de acceso<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#AccessViolation</p>
   <div class="comment">
-   <span class="markdown">Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo.</span>
+   <span class="markdown">Incumplimiento o violación de las normas de acceso por parte de una persona o de un conductor o propietario de un vehículo.</span>
   </div>
   <dl class="description">
    <dt>en dominio de</dt>
    <dd>
-    <a href="#linkedTo" title="https://edint.es/def/infraestructura#linkedTo">asociado a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#complaintCancelled" title="https://edint.es/def/infraestructura#complaintCancelled">denuncia anulada</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasViolationType" title="https://edint.es/def/infraestructura#hasViolationType">tiene tipo de infracción</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#linkedTo" title="https://edint.es/def/infraestructura#linkedTo">asociado a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#complaintCancelled" title="https://edint.es/def/infraestructura#complaintCancelled">denuncia anulada</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasAccessViolationSeverity" title="https://edint.es/def/infraestructura#hasAccessViolationSeverity">tiene gravedad de infracción de acceso</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>en rango de</dt>
    <dd>
-    <a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">demuestra infracción</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">demuestra infracción de acceso</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
@@ -650,7 +650,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
    <dt>en dominio de</dt>
    <dd>
-    <a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">demuestra infracción</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#includesVehicle" title="https://edint.es/def/infraestructura#includesVehicle">incluye vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">demuestra infracción de acceso</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#includesVehicle" title="https://edint.es/def/infraestructura#includesVehicle">incluye vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
   </dl>
  </div>
@@ -1072,7 +1072,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#containsFacility" title="https://edint.es/def/infraestructura#containsFacility">contiene equipamiento</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contienePortal">contiene portal</a></li>
   <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contieneVia" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#contieneVia">contiene vía</a></li>
-  <li><a href="#provesViolation" title="https://edint.es/def/infraestructura#provesViolation">demuestra infracción</a></li>
+  <li><a href="#provesAccessViolation" title="https://edint.es/def/infraestructura#provesAccessViolation">demuestra infracción de acceso</a></li>
   <li><a href="#isCadastralProperty" title="https://edint.es/def/infraestructura#isCadastralProperty">es inmueble catastral</a></li>
   <li><a href="#http://schema.org/manufacturer" title="http://schema.org/manufacturer">fabricante</a></li>
   <li><a href="#https://edint.es/def/trafico#endOfSection" title="https://edint.es/def/trafico#endOfSection">fin del tramo</a></li>
@@ -1096,10 +1096,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">tiene entidad de interés</a></li>
   <li><a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">tiene fin</a></li>
   <li><a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">tiene geometría</a></li>
+  <li><a href="#hasAccessViolationSeverity" title="https://edint.es/def/infraestructura#hasAccessViolationSeverity">tiene gravedad de infracción de acceso</a></li>
   <li><a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">tiene principio</a></li>
   <li><a href="#hasObservationPoint" title="https://edint.es/def/infraestructura#hasObservationPoint">tiene punto de observación</a></li>
   <li><a href="#hasInfrastructureType" title="https://edint.es/def/infraestructura#hasInfrastructureType">tiene tipo de elemento de infraestructura</a></li>
-  <li><a href="#hasViolationType" title="https://edint.es/def/infraestructura#hasViolationType">tiene tipo de infracción</a></li>
   <li><a href="#hasRoleType" title="https://edint.es/def/infraestructura#hasRoleType">tiene tipo de rol</a></li>
   <li><a href="#hasRegisteredOwner" title="https://edint.es/def/infraestructura#hasRegisteredOwner">tiene titular registrado</a></li>
   <li><a href="#https://edint.es/def/trafico#trafficEquipmentType" title="https://edint.es/def/trafico#trafficEquipmentType">Tipo de Equipo de Tráfico</a></li>
@@ -1132,13 +1132,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>asociado a<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/infraestructura#linkedTo</p>
   <div class="comment">
-   <span class="markdown">Relación entre una infracción y el vehículo que cometió la infracción.</span>
+   <span class="markdown">Relación entre una infracción de acceso y el vehículo que cometió la infracción.</span>
   </div>
   <div class="description">
    <dl>
     <dt>dominio</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Infracción</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Infracción de acceso</a> <sup class="type-c" title="clase">c</sup>
     </dd>
     <dt>rango</dt>
     <dd>
@@ -1212,11 +1212,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
- <div class="entity" id="provesViolation">
-  <h3>demuestra infracción<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#provesViolation</p>
+ <div class="entity" id="provesAccessViolation">
+  <h3>demuestra infracción de acceso<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#provesAccessViolation</p>
   <div class="comment">
-   <span class="markdown">Relación entre la observación urbana y la infracción que está soportando.</span>
+   <span class="markdown">Relación entre la observación urbana y la infracción de acceso que está demostrando.</span>
   </div>
   <div class="description">
    <dl>
@@ -1226,7 +1226,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     </dd>
     <dt>rango</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Infracción</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Infracción de acceso</a> <sup class="type-c" title="clase">c</sup>
     </dd>
    </dl>
   </div>
@@ -1755,6 +1755,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasAccessViolationSeverity">
+  <h3>tiene gravedad de infracción de acceso<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#hasAccessViolationSeverity</p>
+  <div class="comment">
+   <span class="markdown">Relaciona a una infracción de acceso con un concepto de la taxonomía de tipos de infracción de acceso.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>dominio</dt>
+    <dd>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Infracción de acceso</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>rango</dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Gravedad de infracción de acceso</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://www.w3.org/2006/time#hasBeginning">
   <h3>tiene principio<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/2006/time#hasBeginning</p>
@@ -1811,25 +1830,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     <dt>dominio</dt>
     <dd>
      <a href="#InfrastructureElement" title="https://edint.es/def/infraestructura#InfrastructureElement">Elemento de la infraestructura</a> <sup class="type-c" title="clase">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="hasViolationType">
-  <h3>tiene tipo de infracción<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/def/infraestructura#hasViolationType</p>
-  <div class="comment">
-   <span class="markdown">Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>dominio</dt>
-    <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Infracción</a> <sup class="type-c" title="clase">c</sup>
-    </dd>
-    <dt>rango</dt>
-    <dd>
-     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Tipo de infracción</a> <sup class="type-ni" title="Individuo">ni</sup>)
     </dd>
    </dl>
   </div>
@@ -2037,13 +2037,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>denuncia anulada<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/def/infraestructura#complaintCancelled</p>
   <div class="comment">
-   <span class="markdown">Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no</span>
+   <span class="markdown">Propiedad que indica si la denuncia (de una infracción de acceso) ha sido anulada o no</span>
   </div>
   <div class="description">
    <dl>
     <dt>dominio</dt>
     <dd>
-     <a href="#Violation" title="https://edint.es/def/infraestructura#Violation">Infracción</a> <sup class="type-c" title="clase">c</sup>
+     <a href="#AccessViolation" title="https://edint.es/def/infraestructura#AccessViolation">Infracción de acceso</a> <sup class="type-c" title="clase">c</sup>
     </dd>
     <dt>rango</dt>
     <dd>
@@ -2585,6 +2585,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#https://edint.es/def/trafico#load" title="https://edint.es/def/trafico#load">carga</a></li>
   <li><a href="#https://edint.es/def/trafico#composition" title="https://edint.es/def/trafico#composition">composicion</a></li>
   <li><a href="#trafficDensity" title="https://edint.es/def/infraestructura#trafficDensity">densidad de tráfico</a></li>
+  <li><a href="#https://edint.es/kos/AccessViolationSeverity" title="https://edint.es/kos/AccessViolationSeverity">Gravedad de infracción de acceso</a></li>
   <li><a href="#https://edint.es/def/trafico#intensity" title="https://edint.es/def/trafico#intensity">intensidad</a></li>
   <li><a href="#https://edint.es/def/trafico#level" title="https://edint.es/def/trafico#level">nivel</a></li>
   <li><a href="#https://edint.es/def/trafico#occupation" title="https://edint.es/def/trafico#occupation">ocupación</a></li>
@@ -2592,7 +2593,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#https://edint.es/kos/RegularActivity" title="https://edint.es/kos/RegularActivity">Regular activity type</a></li>
   <li><a href="#https://edint.es/kos/TrafficEquipmentType" title="https://edint.es/kos/TrafficEquipmentType">tipo de equipo de tráfico</a></li>
   <li><a href="#https://edint.es/kos/IncidentType" title="https://edint.es/kos/IncidentType">tipo de incidencia</a></li>
-  <li><a href="#https://edint.es/kos/ViolationType" title="https://edint.es/kos/ViolationType">Tipo de infracción</a></li>
   <li><a href="#https://edint.es/kos/InfrastructureType" title="https://edint.es/kos/InfrastructureType">Tipo de infraestructura</a></li>
   <li><a href="#https://edint.es/kos/RoleType" title="https://edint.es/kos/RoleType">Tipo de rol</a></li>
   <li><a href="#https://edint.es/kos/PublicService" title="https://edint.es/kos/PublicService">Tipo de servicio público</a></li>
@@ -2669,6 +2669,16 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    <dt>pertenece a</dt>
    <dd>
     <a href="#https://edint.es/def/trafico#TrafficProperty" title="https://edint.es/def/trafico#TrafficProperty">Propiedad de tráfico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://edint.es/kos/AccessViolationSeverity">
+  <h3>Gravedad de infracción de acceso<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://edint.es/kos/AccessViolationSeverity</p>
+  <dl class="description">
+   <dt>pertenece a</dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -2762,16 +2772,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
  <div class="entity" id="https://edint.es/kos/IncidentType">
   <h3>tipo de incidencia<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://edint.es/kos/IncidentType</p>
-  <dl class="description">
-   <dt>pertenece a</dt>
-   <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://edint.es/kos/ViolationType">
-  <h3>Tipo de infracción<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
-  <p><strong>IRI:</strong> https://edint.es/kos/ViolationType</p>
   <dl class="description">
    <dt>pertenece a</dt>
    <dd>

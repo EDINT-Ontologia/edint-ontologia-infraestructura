@@ -232,7 +232,7 @@
   "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://edint.es/kos/RoleType"
+    "@id" : "https://edint.es/kos/AccessViolationSeverity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -259,7 +259,7 @@
   "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://edint.es/kos/ViolationType"
+    "@id" : "https://edint.es/kos/RoleType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -1847,6 +1847,23 @@
     "@id" : "http://www.w3.org/ns/sosa/Sensor"
   } ]
 }, {
+  "@id" : "https://edint.es/def/infraestructura#AccessViolation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Incumplimiento o violación de las normas de acceso por parte de una persona o de un conductor o propietario de un vehículo."
+  }, {
+    "@language" : "en",
+    "@value" : "Non-compliance or violation of access rules by a person or a driver or owner of a vehicle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access violation"
+  }, {
+    "@language" : "es",
+    "@value" : "Infracción de acceso"
+  } ]
+}, {
   "@id" : "https://edint.es/def/infraestructura#CountingObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2004,23 +2021,6 @@
     "@id" : "https://edint.es/def/infraestructura#InfrastructureElement"
   } ]
 }, {
-  "@id" : "https://edint.es/def/infraestructura#Violation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo."
-  }, {
-    "@language" : "en",
-    "@value" : "Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Infracción"
-  }, {
-    "@language" : "en",
-    "@value" : "Violation"
-  } ]
-}, {
   "@id" : "https://edint.es/def/infraestructura#access",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2084,10 +2084,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no"
+    "@value" : "Propiedad que indica si la denuncia (de una infracción de acceso) ha sido anulada o no"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/infraestructura#Violation"
+    "@id" : "https://edint.es/def/infraestructura#AccessViolation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2134,6 +2134,29 @@
   }, {
     "@language" : "es",
     "@value" : "ocupación de equipamiento"
+  } ]
+}, {
+  "@id" : "https://edint.es/def/infraestructura#hasAccessViolationSeverity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona a una infracción de acceso con un concepto de la taxonomía de tipos de infracción de acceso."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an access violation to a concept from the taxonomy of access violation types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://edint.es/def/infraestructura#AccessViolation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has access violation severity"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene gravedad de infracción de acceso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://edint.es/def/infraestructura#hasInfrastructureType",
@@ -2220,29 +2243,6 @@
   }, {
     "@language" : "es",
     "@value" : "tiene tipo de rol"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid37"
-  } ]
-}, {
-  "@id" : "https://edint.es/def/infraestructura#hasViolationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."
-  }, {
-    "@language" : "en",
-    "@value" : "Relate an Infraction to a concept from the taxonomy of infraction types."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/infraestructura#Violation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has violation type"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene tipo de infracción"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid41"
@@ -2344,13 +2344,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Relación entre una infracción y el vehículo que cometió la infracción."
+    "@value" : "Relación entre una infracción de acceso y el vehículo que cometió la infracción."
   }, {
     "@language" : "en",
-    "@value" : "Relationship between an infraction and the vehicle that committed the infraction."
+    "@value" : "Relationship between an access violation and the vehicle that committed the violation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://edint.es/def/infraestructura#Violation"
+    "@id" : "https://edint.es/def/infraestructura#AccessViolation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2432,27 +2432,27 @@
     "@id" : "_:genid45"
   } ]
 }, {
-  "@id" : "https://edint.es/def/infraestructura#provesViolation",
+  "@id" : "https://edint.es/def/infraestructura#provesAccessViolation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Relación entre la observación urbana y la infracción que está soportando."
+    "@value" : "Relación entre la observación urbana y la infracción de acceso que está demostrando."
   }, {
     "@language" : "en",
-    "@value" : "Relationship between an observation and the infraction it is proving."
+    "@value" : "Relationship between an observation and the violation it is proving."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/infraestructura#AccessObservation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "demuestra infracción"
+    "@value" : "demuestra infracción de acceso"
   }, {
     "@language" : "en",
-    "@value" : "proofs violation"
+    "@value" : "proofs access violation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://edint.es/def/infraestructura#Violation"
+    "@id" : "https://edint.es/def/infraestructura#AccessViolation"
   } ]
 }, {
   "@id" : "https://edint.es/def/infraestructura#providesPublicService",
@@ -3340,6 +3340,19 @@
     "@value" : "Zona regulatoria"
   } ]
 }, {
+  "@id" : "https://edint.es/kos/AccessViolationSeverity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access violation severity"
+  }, {
+    "@language" : "es",
+    "@value" : "Gravedad de infracción de acceso"
+  } ]
+}, {
   "@id" : "https://edint.es/kos/IncidentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3416,19 +3429,6 @@
   }, {
     "@language" : "en",
     "@value" : "type of traffic devices"
-  } ]
-}, {
-  "@id" : "https://edint.es/kos/ViolationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Tipo de infracción"
-  }, {
-    "@language" : "en",
-    "@value" : "Violation type"
   } ]
 }, {
   "@id" : "https://oeg.fi.upm.es/",
