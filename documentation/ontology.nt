@@ -482,6 +482,26 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/infraestructura#containsFacility> <http://www.w3.org/2000/01/rdf-schema#label> "contains facility"@en .
 <https://edint.es/def/infraestructura#containsFacility> <http://www.w3.org/2000/01/rdf-schema#label> "contiene equipamiento"@es .
 # 
+# https://edint.es/def/infraestructura#hasAccessViolationSeverity
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#AccessViolation> .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#range> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid37 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/AccessViolationSeverity> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona a una infracción de acceso con un concepto de la taxonomía de tipos de infracción de acceso."@es .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an access violation to a concept from the taxonomy of access violation types."@en .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "has access violation severity"@en .
+<https://edint.es/def/infraestructura#hasAccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "tiene gravedad de infracción de acceso"@es .
+# 
 # https://edint.es/def/infraestructura#hasInfrastructureType
 <https://edint.es/def/infraestructura#hasInfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#InfrastructureElement> .
@@ -511,42 +531,22 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://edint.es/def/infraestructura#hasRoleType
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#ManagementRole> .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid37 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RoleType> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role and the taxonomy of management roles."@en .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "has role type"@en .
-<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo de rol"@es .
-# 
-# https://edint.es/def/infraestructura#hasViolationType
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Violation> .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid41 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid44 .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/ViolationType> .
+_:genid43 <http://www.w3.org/2002/07/owl#hasValue> <https://edint.es/kos/RoleType> .
 _:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona a una Infracción con un concepto de la taxonomía de tipos de infracción."@es .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relate an Infraction to a concept from the taxonomy of infraction types."@en .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "has violation type"@en .
-<https://edint.es/def/infraestructura#hasViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo de infracción"@es .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre el Rol de gestión y la taxonomía de roles de gestión."@es .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the management role and the taxonomy of management roles."@en .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "has role type"@en .
+<https://edint.es/def/infraestructura#hasRoleType> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo de rol"@es .
 # 
 # https://edint.es/def/infraestructura#includesVehicle
 <https://edint.es/def/infraestructura#includesVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -568,10 +568,10 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://edint.es/def/infraestructura#linkedTo
 <https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Violation> .
+<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#AccessViolation> .
 <https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://edint.es/def/censo-vehiculos#Vehicle> .
-<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una infracción y el vehículo que cometió la infracción."@es .
-<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an infraction and the vehicle that committed the infraction."@en .
+<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una infracción de acceso y el vehículo que cometió la infracción."@es .
+<https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an access violation and the vehicle that committed the violation."@en .
 <https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#label> "asociado a"@es .
 <https://edint.es/def/infraestructura#linkedTo> <http://www.w3.org/2000/01/rdf-schema#label> "linked to"@en .
 # 
@@ -604,14 +604,14 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "offers regular activity"@en .
 <https://edint.es/def/infraestructura#offersRegularActivity> <http://www.w3.org/2000/01/rdf-schema#label> "ofrece actividad regular"@es .
 # 
-# https://edint.es/def/infraestructura#provesViolation
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#AccessObservation> .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#range> <https://edint.es/def/infraestructura#Violation> .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre la observación urbana y la infracción que está soportando."@es .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an observation and the infraction it is proving."@en .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#label> "demuestra infracción"@es .
-<https://edint.es/def/infraestructura#provesViolation> <http://www.w3.org/2000/01/rdf-schema#label> "proofs violation"@en .
+# https://edint.es/def/infraestructura#provesAccessViolation
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#AccessObservation> .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#range> <https://edint.es/def/infraestructura#AccessViolation> .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre la observación urbana y la infracción de acceso que está demostrando."@es .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an observation and the violation it is proving."@en .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#label> "demuestra infracción de acceso"@es .
+<https://edint.es/def/infraestructura#provesAccessViolation> <http://www.w3.org/2000/01/rdf-schema#label> "proofs access violation"@en .
 # 
 # https://edint.es/def/infraestructura#providesPublicService
 <https://edint.es/def/infraestructura#providesPublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -863,9 +863,9 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://edint.es/def/infraestructura#complaintCancelled
 <https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#Violation> .
+<https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#domain> <https://edint.es/def/infraestructura#AccessViolation> .
 <https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#comment> "Propiedad que indica si la denuncia (de una infracción) ha sido anulada o no"@es .
+<https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#comment> "Propiedad que indica si la denuncia (de una infracción de acceso) ha sido anulada o no"@es .
 <https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#label> "cancelled complaint"@en .
 <https://edint.es/def/infraestructura#complaintCancelled> <http://www.w3.org/2000/01/rdf-schema#label> "denuncia anulada"@es .
 # 
@@ -1244,6 +1244,13 @@ _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/infraestructura#AccessSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Access sensor"@en .
 <https://edint.es/def/infraestructura#AccessSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor de acceso"@es .
 # 
+# https://edint.es/def/infraestructura#AccessViolation
+<https://edint.es/def/infraestructura#AccessViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://edint.es/def/infraestructura#AccessViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Incumplimiento o violación de las normas de acceso por parte de una persona o de un conductor o propietario de un vehículo."@es .
+<https://edint.es/def/infraestructura#AccessViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "Non-compliance or violation of access rules by a person or a driver or owner of a vehicle."@en .
+<https://edint.es/def/infraestructura#AccessViolation> <http://www.w3.org/2000/01/rdf-schema#label> "Access violation"@en .
+<https://edint.es/def/infraestructura#AccessViolation> <http://www.w3.org/2000/01/rdf-schema#label> "Infracción de acceso"@es .
+# 
 # https://edint.es/def/infraestructura#CountingObservation
 <https://edint.es/def/infraestructura#CountingObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://edint.es/def/infraestructura#CountingObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
@@ -1306,13 +1313,6 @@ _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/infraestructura#UrbanElement> <http://www.w3.org/2000/01/rdf-schema#comment> "It includes the inventory of urban elements such as road signs, traffic lights, bollards, etc."@en .
 <https://edint.es/def/infraestructura#UrbanElement> <http://www.w3.org/2000/01/rdf-schema#label> "Elemento urbano"@es .
 <https://edint.es/def/infraestructura#UrbanElement> <http://www.w3.org/2000/01/rdf-schema#label> "Urban element"@en .
-# 
-# https://edint.es/def/infraestructura#Violation
-<https://edint.es/def/infraestructura#Violation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://edint.es/def/infraestructura#Violation> <http://www.w3.org/2000/01/rdf-schema#comment> "Incumplimiento o violación de las normas de tránsito o acceso, leyes de circulación u ordenanzas locales por parte de una persona o de un conductor o propietario de un vehículo."@es .
-<https://edint.es/def/infraestructura#Violation> <http://www.w3.org/2000/01/rdf-schema#comment> "Non-compliance or violation of traffic or access rules, road laws or local ordinances by a person or a driver or owner of a vehicle."@en .
-<https://edint.es/def/infraestructura#Violation> <http://www.w3.org/2000/01/rdf-schema#label> "Infracción"@es .
-<https://edint.es/def/infraestructura#Violation> <http://www.w3.org/2000/01/rdf-schema#label> "Violation"@en .
 # 
 # https://edint.es/def/trafico#Incident
 <https://edint.es/def/trafico#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1509,6 +1509,12 @@ _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/def/trafico#vehicleAccess> <http://www.w3.org/2000/01/rdf-schema#label> "acceso de vehículo"@es .
 <https://edint.es/def/trafico#vehicleAccess> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle access"@en .
 # 
+# https://edint.es/kos/AccessViolationSeverity
+<https://edint.es/kos/AccessViolationSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://edint.es/kos/AccessViolationSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://edint.es/kos/AccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "Access violation severity"@en .
+<https://edint.es/kos/AccessViolationSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "Gravedad de infracción de acceso"@es .
+# 
 # https://edint.es/kos/IncidentType
 <https://edint.es/kos/IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://edint.es/kos/IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
@@ -1544,12 +1550,6 @@ _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://edint.es/kos/TrafficEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <https://edint.es/kos/TrafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de equipo de tráfico"@es .
 <https://edint.es/kos/TrafficEquipmentType> <http://www.w3.org/2000/01/rdf-schema#label> "type of traffic devices"@en .
-# 
-# https://edint.es/kos/ViolationType
-<https://edint.es/kos/ViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://edint.es/kos/ViolationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://edint.es/kos/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo de infracción"@es .
-<https://edint.es/kos/ViolationType> <http://www.w3.org/2000/01/rdf-schema#label> "Violation type"@en .
 # 
 # 
 # 

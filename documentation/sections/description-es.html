@@ -24,7 +24,7 @@ Un equipamiento puede <a href="#containsFacility">contener otro equipamiento</a>
 <p>La Figura 2 desarrolla el concepto de sensores de acceso.</p>
 <p><center><img src="images/diagrama-conceptual-AccessSensors-with-DP.png"/><figcaption>
 Figura 2. Modelo conceptual de Sensores de Acceso</figcaption></center></p> 
-<p>En el caso de las <a href="#AccessObservation">observaciones de acceso</a>, estas las harán <a href="#AccessSensor">sensores de acceso</a> para la propiedad observable <a href="#access">acceso</a>.  Las observaciones de acceso pueden <a href="#includesVehicle">incluir los vehículos</a> que captan y pueden servir para  <a href="#provesViolation">demostrar una infracción</a>, que estará <a href="#linkedTo">relacionada con</a> a un vehículo, y que tendrá un <a href="#hasViolationType">tipo de infracción</a>, que es un concepto que pertenece a una taxonomía SKOS, tal como exceso de velocidad, uso del móvil, etc.</p>
+<p>En el caso de las <a href="#AccessObservation">observaciones de acceso</a>, estas las harán <a href="#AccessSensor">sensores de acceso</a> para la propiedad observable <a href="#access">acceso</a>.  Las observaciones de acceso pueden <a href="#includesVehicle">incluir los vehículos</a> que captan y pueden servir para  <a href="#provesAccessViolation">demostrar una infracción</a>, que estará <a href="#linkedTo">relacionada con</a> a un vehículo, y que tendrá un <a href="#hasAccessViolationSeverity">tipo de infracción</a>, que es un concepto que pertenece a una taxonomía SKOS, tal como exceso de velocidad, uso del móvil, etc.</p>
 <p>La Figura 3 desarrolla el concepto de sensores de conteo.</p>
 <p><center><img src="images/diagrama-conceptual-CountingSensors.png"/><figcaption>
 Figura 3. Modelo conceptual de Sensores de Conteo</figcaption></center></p> 
@@ -54,7 +54,7 @@ Los sensores de cualquiera de los tres tipos considerados en la ontología (acce
   schema:address &lt;https://example.org/recurso/direccion-postal/28030&gt; ;
   schema:openingHours "De 8,15 a 18 horas de Lunes a Viernes." ;
   edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
-  edintinf:hasInfrastructureType &lt;edintkos:CentrosDiaMayores&gt; ;
+  edintinf:hasInfrastructureType &lt;https://edint.es/kos/InfrastructureType/equipamientos-de-asistencia-social&gt; ;
   edintinf:hasObservationPoint &lt;https://example.org/recurso/punto-de-observacion/1398&gt; ;
   edintinf:hasRegisteredOwner &lt;https://example.org/recurso/organizacion/10047540&gt; ;
   edintinf:providesPublicService edintpublicservice:medicalassistance ;

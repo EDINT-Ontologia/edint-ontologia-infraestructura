@@ -11,7 +11,7 @@ Figure 1. Main conceptual model of the infrastructure onology</figcaption></cent
 <p><center><img src="images/diagrama-conceptual-AccessSensors-with-DP.png"/><figcaption>
 Figure 2. Conceptual model for access sensors</figcaption></center></p> 
 
-<p>In the case of <a href="#AccessObservation">access observations</a>, these are performed by <a href="#AccessSensor">access sensors</a> for an observable property called <a href="#access">access</a>. Access observations may <a href="#includesVehicle">include the vehicles</a> they detect and can be used to <a href="#provesViolation">document a violation</a>, which will be <a href="#linkedTo">linked to</a> a  <a href="https://edint.es/def/censovehiculos#Vehicle">vehicle</a> and will have a <a href="https://edint.es/kos/ViolationType">violation type</a> —this type being a concept belonging to a SKOS taxonomy, such as speeding, mobile phone use, etc.</p>
+<p>In the case of <a href="#AccessObservation">access observations</a>, these are performed by <a href="#AccessSensor">access sensors</a> for an observable property called <a href="#access">access</a>. Access observations may <a href="#includesVehicle">include the vehicles</a> they detect and can be used to <a href="#provesAccessViolation">document a violation</a>, which will be <a href="#linkedTo">linked to</a> a  <a href="https://edint.es/def/censovehiculos#Vehicle">vehicle</a> and will have a <a href="https://edint.es/kos/ViolationType">violation type</a> —this type being a concept belonging to a SKOS taxonomy, such as speeding, mobile phone use, etc.</p>
 <p>Figure 3 shows concepts related to counting sensors.</p>
 <p><center><img src="images/diagrama-conceptual-CountingSensors.png"/><figcaption>
 Figure 3. Conceptual model for the counting sensors</figcaption></center></p> 
@@ -41,7 +41,7 @@ Figure 4. Conceptual model for the traffic sensors</figcaption></center></p>
   schema:address &lt;https://example.org/recurso/direccion-postal/28030&gt; ;
   schema:openingHours "De 8,15 a 18 horas de Lunes a Viernes." ;
   edintinf:belongsTo &lt;https://example.org/recurso/sector-publico/territorio/barrio/FONTARRON&gt; ;
-  edintinf:hasInfrastructureType &lt;edintkos:CentrosDiaMayores&gt; ;
+  edintinf:hasInfrastructureType &lt;https://edint.es/kos/InfrastructureType/equipamientos-de-asistencia-social&gt; ;
   edintinf:hasObservationPoint &lt;https://example.org/recurso/punto-de-observacion/1398&gt; ;
   edintinf:hasRegisteredOwner &lt;https://example.org/recurso/organizacion/10047540&gt; ;
   edintinf:providesPublicService edintpublicservice:medicalassistance ;
